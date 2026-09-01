@@ -1,0 +1,7 @@
+dataset,source_name,official_url,source_type,verified_date,notes
+CISS,Crash Investigation Sampling System,https://www.nhtsa.gov/crash-data-systems/crash-investigation-sampling-system,Program,2026-09-01,Official NHTSA CISS program page
+CRSS,Crash Report Sampling System,https://www.nhtsa.gov/research-data/data-modernization,Program,2026-09-01,Official NHTSA Data Modernization page describing CRSS
+FARS,Fatality Analysis Reporting System,https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars,Program,2026-09-01,Official NHTSA FARS page
+SCI,Special Crash Investigations,https://www.nhtsa.gov/research-data/special-crash-investigations-sci,Program,2026-09-01,Official NHTSA SCI page
+NTS,Non-Traffic Surveillance,https://www.nhtsa.gov/crash-data-systems/non-traffic-surveillance,Program,2026-09-01,Official NHTSA NTS page
+SGO_ADAS_ADS,Standing General Order on Crash Reporting,https://www.nhtsa.gov/vehicle-safety/standing-general-order-crash-reporting,Program/Data,2026-09-01,Official NHTSA advanced-vehicle technology crash reporting source

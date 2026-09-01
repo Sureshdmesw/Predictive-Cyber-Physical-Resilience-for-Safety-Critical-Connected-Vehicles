@@ -1,0 +1,9 @@
+source_domain,data_type,temporal_role,cyber_role,safety_role,allowed_use,not_allowed
+NHTSA_CISS,Historical,Offline,Indirect,Primary,Contextual safety modeling,Direct cyberattack detection
+NHTSA_CRSS,Historical,Offline,Indirect,Primary,Population-level safety baseline,Direct cyberattack detection
+NHTSA_FARS,Historical,Offline,Indirect,Primary,Fatality consequence modeling,Direct cyberattack detection
+NHTSA_SCI,Historical,Offline,Indirect,Primary,Detailed mechanism/context analysis,Direct cyberattack detection
+NHTSA_NTS,Historical,Offline,Indirect,Primary,Non-traffic safety context,Direct cyberattack detection
+NHTSA_SGO_ADAS_ADS,Historical/Reported,Offline,Indirect,Primary,ADAS/ADS safety context,Direct cyberattack detection
+EDGE_VEHICLE,Telemetry,Near-real-time,Primary,Primary,Cyber-physical detection and prediction,Replace historical NHTSA evidence
+CORTEX_XDR,Security_Event,Near-real-time,Primary,Secondary,SOC detection/correlation/investigation,Vehicle safety control

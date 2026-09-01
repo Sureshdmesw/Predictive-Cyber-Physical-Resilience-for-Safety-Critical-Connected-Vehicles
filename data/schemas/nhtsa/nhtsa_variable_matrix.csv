@@ -1,0 +1,1 @@
+dataset,entity,variable,source_table,source_codebook,variable_type,temporal,spatial,safety_relevance,cyber_physical_relevance,occupant_relevance,vehicle_relevance,adas_relevance,model_feature_candidate,training_candidate,validation_candidate,notes,verified

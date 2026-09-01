@@ -1,0 +1,7 @@
+dataset,role,description,example_use,model_layer,priority
+CISS,Safety_Context,Deep crash and occupant context,Estimate potential occupant consequences of abnormal vehicle behavior,Safety Knowledge Layer,1
+CRSS,Population_Context,National crash distribution and trends,Establish baseline crash/safety patterns,Safety Knowledge Layer,2
+FARS,Fatality_Context,Fatal crash and fatal outcome information,Model high-severity safety consequences,Safety Knowledge Layer,1
+SCI,Mechanism_Context,Highly detailed engineering crash investigations,Understand detailed vehicle/safety-system failure mechanisms,Safety Knowledge Layer,1
+NTS,Edge_Case_Context,Non-traffic crashes and non-crash injury/fatality events,Identify unusual safety scenarios,Safety Knowledge Layer,3
+SGO_ADAS_ADS,Advanced_Technology_Context,Advanced vehicle technology crash/incident information,Connect ADAS/ADS operational context with safety outcomes,ADAS Safety Layer,1
