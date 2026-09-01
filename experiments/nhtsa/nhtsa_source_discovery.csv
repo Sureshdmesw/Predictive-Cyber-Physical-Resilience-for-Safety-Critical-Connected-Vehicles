@@ -1,0 +1,11 @@
+dataset,source_type,source_url,http_status,content_type,discovered_text,discovered_url
+CISS,program_page,https://www.nhtsa.gov/crash-data-systems/crash-investigation-sampling-system,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/crash-data-systems/crash-investigation-sampling-system,
+CISS,download_repository,https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/CISS/,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/CISS/,
+CRSS,program_page,https://www.nhtsa.gov/data/crash-data-systems,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/data/crash-data-systems,
+CRSS,download_repository,https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/CRSS/,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/CRSS/,
+FARS,program_page,https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars,
+FARS,download_repository,https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/,
+NTS,program_page,https://www.nhtsa.gov/crash-data-systems/non-traffic-surveillance,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/crash-data-systems/non-traffic-surveillance,
+NTS,download_repository,https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/NTS/,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/NTS/,
+SCI,program_page,https://www.nhtsa.gov/research-data/special-crash-investigations-sci,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/research-data/special-crash-investigations-sci,
+SGO_ADAS_ADS,program_page,https://www.nhtsa.gov/vehicle-safety/standing-general-order-crash-reporting,,,403 Client Error: Forbidden for url: https://www.nhtsa.gov/vehicle-safety/standing-general-order-crash-reporting,
