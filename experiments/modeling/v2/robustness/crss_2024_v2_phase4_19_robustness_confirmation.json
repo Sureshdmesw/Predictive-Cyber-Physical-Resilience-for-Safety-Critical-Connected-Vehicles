@@ -1,0 +1,181 @@
+{
+  "phase": "4.19",
+  "status": "PASS",
+  "task": "Robustness confirmation",
+  "model": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\baseline\\crss_2024_v2_hgb_y6.joblib",
+  "evaluation_boundary": {
+    "test_only": true,
+    "model_retrained": false,
+    "model_modified": false,
+    "purpose": "stress-test existing baseline under controlled input perturbations"
+  },
+  "baseline": {
+    "condition": "clean",
+    "pr_auc": 0.1348723906332306,
+    "roc_auc": 0.6666171680223287,
+    "mean_probability": 0.16781015536932845,
+    "positive_prediction_rate_050": 0.003150723518794796,
+    "pr_auc_delta_vs_clean": 0.0,
+    "roc_auc_delta_vs_clean": 0.0
+  },
+  "robustness_results": [
+    {
+      "condition": "clean",
+      "pr_auc": 0.1348723906332306,
+      "roc_auc": 0.6666171680223287,
+      "mean_probability": 0.16781015536932845,
+      "positive_prediction_rate_050": 0.003150723518794796,
+      "pr_auc_delta_vs_clean": 0.0,
+      "roc_auc_delta_vs_clean": 0.0
+    },
+    {
+      "condition": "multiplicative_noise_5%",
+      "pr_auc": 0.13834463829025895,
+      "roc_auc": 0.696310699494357,
+      "mean_probability": 0.1494052252947114,
+      "positive_prediction_rate_050": 0.003129857800127281,
+      "pr_auc_delta_vs_clean": 0.00347224765702836,
+      "roc_auc_delta_vs_clean": 0.029693531472028245
+    },
+    {
+      "condition": "multiplicative_noise_10%",
+      "pr_auc": 0.13720026382633377,
+      "roc_auc": 0.6886753629762845,
+      "mean_probability": 0.1492324346090635,
+      "positive_prediction_rate_050": 0.0030672606441247354,
+      "pr_auc_delta_vs_clean": 0.0023278731931031804,
+      "roc_auc_delta_vs_clean": 0.02205819495395578
+    },
+    {
+      "condition": "multiplicative_noise_20%",
+      "pr_auc": 0.13227364266285538,
+      "roc_auc": 0.6820769025721634,
+      "mean_probability": 0.1491350666605485,
+      "positive_prediction_rate_050": 0.0030150963474559474,
+      "pr_auc_delta_vs_clean": -0.002598747970375209,
+      "roc_auc_delta_vs_clean": 0.015459734549834625
+    },
+    {
+      "condition": "temporal_mask_last_1_steps",
+      "pr_auc": 0.11951544118176463,
+      "roc_auc": 0.6541335412044248,
+      "mean_probability": 0.16778468410549713,
+      "positive_prediction_rate_050": 0.0031924549561298263,
+      "pr_auc_delta_vs_clean": -0.015356949451465957,
+      "roc_auc_delta_vs_clean": -0.012483626817903937
+    },
+    {
+      "condition": "temporal_mask_last_2_steps",
+      "pr_auc": 0.11473109419970275,
+      "roc_auc": 0.6492683969435253,
+      "mean_probability": 0.16774126430262806,
+      "positive_prediction_rate_050": 0.0031194249407935234,
+      "pr_auc_delta_vs_clean": -0.02014129643352784,
+      "roc_auc_delta_vs_clean": -0.017348771078803393
+    },
+    {
+      "condition": "temporal_mask_last_3_steps",
+      "pr_auc": 0.11244758972691968,
+      "roc_auc": 0.6450708924032168,
+      "mean_probability": 0.16768330329040587,
+      "positive_prediction_rate_050": 0.003025529206789705,
+      "pr_auc_delta_vs_clean": -0.02242480090631091,
+      "roc_auc_delta_vs_clean": -0.021546275619111932
+    },
+    {
+      "condition": "group_scale_early_features",
+      "pr_auc": 0.13246930667172213,
+      "roc_auc": 0.6578907116362662,
+      "mean_probability": 0.1681886938292207,
+      "positive_prediction_rate_050": 0.0028168720201145526,
+      "pr_auc_delta_vs_clean": -0.0024030839615084565,
+      "roc_auc_delta_vs_clean": -0.008726456386062509
+    },
+    {
+      "condition": "group_scale_middle_features",
+      "pr_auc": 0.13448329519247915,
+      "roc_auc": 0.6663825590270753,
+      "mean_probability": 0.16769736584419334,
+      "positive_prediction_rate_050": 0.003150723518794796,
+      "pr_auc_delta_vs_clean": -0.0003890954407514413,
+      "roc_auc_delta_vs_clean": -0.00023460899525340473
+    },
+    {
+      "condition": "group_scale_late_features",
+      "pr_auc": 0.1313492404128416,
+      "roc_auc": 0.6632132900438182,
+      "mean_probability": 0.16779527158435656,
+      "positive_prediction_rate_050": 0.003150723518794796,
+      "pr_auc_delta_vs_clean": -0.0035231502203889875,
+      "roc_auc_delta_vs_clean": -0.0034038779785104945
+    }
+  ],
+  "origin_results": {
+    "11": {
+      "samples": 13693,
+      "positives": 245,
+      "positive_rate": 0.01789235375739429,
+      "pr_auc": 0.20017803704023213,
+      "roc_auc": 0.6679667107771128
+    },
+    "12": {
+      "samples": 13693,
+      "positives": 230,
+      "positive_rate": 0.016796903527349742,
+      "pr_auc": 0.1725093989915977,
+      "roc_auc": 0.6620042370555048
+    },
+    "13": {
+      "samples": 13693,
+      "positives": 200,
+      "positive_rate": 0.014606003067260644,
+      "pr_auc": 0.1690962598727321,
+      "roc_auc": 0.6677125176017193
+    },
+    "14": {
+      "samples": 13693,
+      "positives": 167,
+      "positive_rate": 0.012196012561162638,
+      "pr_auc": 0.15121422850352598,
+      "roc_auc": 0.6736679679233872
+    },
+    "15": {
+      "samples": 13693,
+      "positives": 132,
+      "positive_rate": 0.009639962024392025,
+      "pr_auc": 0.13906321658628606,
+      "roc_auc": 0.6730145269522897
+    },
+    "16": {
+      "samples": 13693,
+      "positives": 99,
+      "positive_rate": 0.007229971518294019,
+      "pr_auc": 0.08519393498694668,
+      "roc_auc": 0.6621351814451713
+    },
+    "17": {
+      "samples": 13693,
+      "positives": 64,
+      "positive_rate": 0.004673920981523406,
+      "pr_auc": 0.045669016084406086,
+      "roc_auc": 0.6536899717514124
+    }
+  },
+  "interpretation": {
+    "note": "Performance degradation under corruption is characterized, not treated as causal evidence.",
+    "synthetic_data_warning": "Cyber telemetry and anomaly labels are synthetic research constructs.",
+    "safety_boundary": "Model outputs are decision-support signals only and must not directly actuate safety-critical vehicle controls."
+  },
+  "gates": {
+    "data_shapes_valid": true,
+    "scenario_identifiers_valid": true,
+    "origins_valid": true,
+    "exact_472_representation": true,
+    "baseline_probabilities_finite": true,
+    "baseline_metrics_valid": true,
+    "corruption_tests_complete": true,
+    "origin_analysis_complete": true,
+    "model_unchanged": true,
+    "no_retraining": true
+  }
+}
