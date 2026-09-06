@@ -1,0 +1,446 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "phase": "4.25",
+  "status": "FAIL",
+  "evaluation_type": "comparative_evidence_evaluation",
+  "generated_at_utc": "2026-09-06T16:48:30.026312+00:00",
+  "retraining_performed": false,
+  "source_count": 17,
+  "missing_sources": {},
+  "invalid_sources": {},
+  "source_files": {
+    "phase_4_9_baseline": "experiments\\modeling\\v2\\baseline\\crss_2024_v2_strong_baseline_results.json",
+    "phase_4_10_transformer": "experiments\\modeling\\v2\\advanced\\crss_2024_v2_temporal_transformer_controlled_final.json",
+    "phase_4_11_cross_modal": "experiments\\modeling\\v2\\cross_modal\\crss_2024_v2_cross_modal_results.json",
+    "phase_4_12_modality": "experiments\\modeling\\v2\\modality_contribution\\crss_2024_v2_modality_contribution_results.json",
+    "phase_4_13_feature": "experiments\\modeling\\v2\\feature_contribution\\crss_2024_v2_feature_contribution_results.json",
+    "phase_4_14_optimized": "experiments\\modeling\\v2\\optimized_features\\crss_2024_v2_optimized_feature_results.json",
+    "phase_4_15_generalization_leakage": "experiments\\modeling\\v2\\generalization\\crss_2024_v2_generalization_leakage_stress_test.json",
+    "phase_4_16_generalization": "experiments\\modeling\\v2\\generalization\\phase4_16\\crss_2024_v2_phase4_16_generalization_results.json",
+    "phase_4_17_error_analysis": "experiments\\modeling\\v2\\error_analysis\\crss_2024_v2_phase4_17_error_analysis.json",
+    "phase_4_18_calibration": "experiments\\modeling\\v2\\calibration\\crss_2024_v2_phase4_18_calibration_thresholds.json",
+    "phase_4_19_robustness": "experiments\\modeling\\v2\\robustness\\crss_2024_v2_phase4_19_robustness_confirmation.json",
+    "phase_4_20_decision_engine": "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+    "phase_4_21_edge_iot": "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json",
+    "phase_4_22_edge_iot_scenarios": "experiments\\edge_iot\\crss_2024_phase4_22_scenario_evaluation.json",
+    "phase_4_23_end_to_end": "experiments\\edge_iot\\crss_2024_phase4_23_end_to_end_resilience.json",
+    "phase_4_24_stress": "experiments\\edge_iot\\crss_2024_phase4_24_system_stress_failure_analysis.json",
+    "phase_4_25_manifest": "experiments\\modeling\\v2\\evidence\\crss_2024_v2_phase4_25_evidence_manifest.json"
+  },
+  "phase_status": {
+    "phase_4_9_baseline": "PASS",
+    "phase_4_10_transformer": "PASS",
+    "phase_4_11_cross_modal": "PASS",
+    "phase_4_12_modality": "PASS",
+    "phase_4_13_feature": "PASS",
+    "phase_4_14_optimized": "PASS",
+    "phase_4_15_generalization_leakage": "PASS",
+    "phase_4_16_generalization": "PASS",
+    "phase_4_17_error_analysis": "PASS",
+    "phase_4_18_calibration": "PASS",
+    "phase_4_19_robustness": "PASS",
+    "phase_4_20_decision_engine": "PASS",
+    "phase_4_21_edge_iot": "PASS",
+    "phase_4_22_edge_iot_scenarios": "PASS",
+    "phase_4_23_end_to_end": "PASS",
+    "phase_4_24_stress": "PASS",
+    "phase_4_25_manifest": "PASS"
+  },
+  "baseline": {
+    "y3_test_pr_auc": null,
+    "y3_test_roc_auc": null,
+    "y6_test_pr_auc": null,
+    "y6_test_roc_auc": null,
+    "extraction_sources": {
+      "y3_test_pr_auc": null,
+      "y3_test_roc_auc": null,
+      "y6_test_pr_auc": null,
+      "y6_test_roc_auc": null
+    }
+  },
+  "transformer": {
+    "y3_test_pr_auc": 0.7783331772567231,
+    "y3_test_roc_auc": 0.9985899885181264,
+    "y6_test_pr_auc": 0.9503363484553501,
+    "y6_test_roc_auc": 0.9981664515395504,
+    "checkpoint_epoch": 4,
+    "parameter_count": null
+  },
+  "generalization": {
+    "samples": 95851,
+    "positive": 1137,
+    "positive_rate": 0.011862161062482394,
+    "y6_pr_auc": 0.1348723906332306,
+    "y6_roc_auc": 0.6666171680223287,
+    "scenario_summary": {
+      "eligible_scenarios": 181,
+      "total_test_scenarios": 13693,
+      "mean_pr_auc": 0.7058554766289573,
+      "median_pr_auc": 0.746825396825397,
+      "p10_pr_auc": 0.4,
+      "p25_pr_auc": 0.5845238095238094,
+      "p75_pr_auc": 0.8761904761904762,
+      "p90_pr_auc": 0.9285714285714286
+    },
+    "origin_metrics": {
+      "11": {
+        "samples": 13693,
+        "y6_positive": 245,
+        "y6_rate": 0.01789235375739429,
+        "y3_positive": 166,
+        "y3_rate": 0.012122982545826335,
+        "y6_pr_auc": 0.20017803704023213,
+        "y6_roc_auc": 0.6679667107771128
+      },
+      "12": {
+        "samples": 13693,
+        "y6_positive": 230,
+        "y6_rate": 0.016796903527349742,
+        "y3_positive": 190,
+        "y3_rate": 0.013875702913897612,
+        "y6_pr_auc": 0.1725093989915977,
+        "y6_roc_auc": 0.6620042370555048
+      },
+      "13": {
+        "samples": 13693,
+        "y6_positive": 200,
+        "y6_rate": 0.014606003067260644,
+        "y3_positive": 200,
+        "y3_rate": 0.014606003067260644,
+        "y6_pr_auc": 0.1690962598727321,
+        "y6_roc_auc": 0.6677125176017193
+      },
+      "14": {
+        "samples": 13693,
+        "y6_positive": 167,
+        "y6_rate": 0.012196012561162638,
+        "y3_positive": 167,
+        "y3_rate": 0.012196012561162638,
+        "y6_pr_auc": 0.15121422850352598,
+        "y6_roc_auc": 0.6736679679233872
+      },
+      "15": {
+        "samples": 13693,
+        "y6_positive": 132,
+        "y6_rate": 0.009639962024392025,
+        "y3_positive": 132,
+        "y3_rate": 0.009639962024392025,
+        "y6_pr_auc": 0.13906321658628606,
+        "y6_roc_auc": 0.6730145269522897
+      },
+      "16": {
+        "samples": 13693,
+        "y6_positive": 99,
+        "y6_rate": 0.007229971518294019,
+        "y3_positive": 99,
+        "y3_rate": 0.007229971518294019,
+        "y6_pr_auc": 0.08519393498694668,
+        "y6_roc_auc": 0.6621351814451713
+      },
+      "17": {
+        "samples": 13693,
+        "y6_positive": 64,
+        "y6_rate": 0.004673920981523406,
+        "y3_positive": 64,
+        "y3_rate": 0.004673920981523406,
+        "y6_pr_auc": 0.045669016084406086,
+        "y6_roc_auc": 0.6536899717514124
+      }
+    },
+    "shift_results": {
+      "cyber_instability": {
+        "feature": "cyber_instability_index",
+        "train_q25": 0.343280166387558,
+        "train_q75": 0.6258403658866882,
+        "low_samples": 24399,
+        "high_samples": 24201,
+        "low_positive_rate": 0.0027869994671912784,
+        "low_pr_auc": 0.33061430100807493,
+        "low_roc_auc": 0.956204503090949,
+        "high_positive_rate": 0.028221974298582704,
+        "high_pr_auc": 0.10311043118871582,
+        "high_roc_auc": 0.32512541093411274
+      },
+      "packet_loss": {
+        "feature": "packet_loss_rate",
+        "train_q25": 0.007701640482991934,
+        "train_q75": 0.025843050330877304,
+        "low_samples": 24180,
+        "high_samples": 24403,
+        "low_positive_rate": 0.00045492142266335815,
+        "low_pr_auc": 0.0004131432948051088,
+        "low_roc_auc": 0.430613595928669,
+        "high_positive_rate": 0.045281317870753596,
+        "high_pr_auc": 0.17616729259281538,
+        "high_roc_auc": 0.6682396174064229
+      },
+      "latency_jitter": {
+        "feature": "latency_jitter_ms",
+        "train_q25": 2.9340484142303467,
+        "train_q75": 8.26003360748291,
+        "low_samples": 23674,
+        "high_samples": 23293,
+        "low_positive_rate": 0.0008025682182985554,
+        "low_pr_auc": 0.0885721915092974,
+        "low_roc_auc": 0.578042919600841,
+        "high_positive_rate": 0.04636586098827974,
+        "high_pr_auc": 0.1795671079685642,
+        "high_roc_auc": 0.6732784939083053
+      },
+      "message_integrity": {
+        "feature": "message_integrity_failure_rate",
+        "train_q25": 0.001477834302932024,
+        "train_q75": 0.007115059532225132,
+        "low_samples": 24517,
+        "high_samples": 24138,
+        "low_positive_rate": 0.0005302443202675694,
+        "low_pr_auc": 0.0007547052823853857,
+        "low_roc_auc": 0.5959592154499108,
+        "high_positive_rate": 0.04561272682078051,
+        "high_pr_auc": 0.18489271619189196,
+        "high_roc_auc": 0.6793291146332261
+      },
+      "sensor_disagreement": {
+        "feature": "sensor_disagreement_rate",
+        "train_q25": 0.03139356151223183,
+        "train_q75": 0.08614065125584602,
+        "low_samples": 23517,
+        "high_samples": 24532,
+        "low_positive_rate": 0.0003401794446570566,
+        "low_pr_auc": 0.0005248910923675064,
+        "low_roc_auc": 0.613735696967119,
+        "high_positive_rate": 0.044064894831240826,
+        "high_pr_auc": 0.18649752480054513,
+        "high_roc_auc": 0.674885804167179
+      },
+      "speed_deviation_abs": {
+        "feature": "speed_limit_deviation_abs",
+        "train_q25": 25.0,
+        "train_q75": 953.0,
+        "low_samples": 25200,
+        "high_samples": 29785,
+        "low_positive_rate": 0.008928571428571428,
+        "low_pr_auc": 0.18442608274214214,
+        "low_roc_auc": 0.6949352908464019,
+        "high_positive_rate": 0.013160987074030552,
+        "high_pr_auc": 0.1270901198291306,
+        "high_roc_auc": 0.6653839384221011
+      }
+    }
+  },
+  "robustness_confirmation": {
+    "schema_resolved_as": "baseline_plus_robustness_results",
+    "clean": {
+      "pr_auc": 0.1348723906332306,
+      "roc_auc": 0.6666171680223287,
+      "source_pr_auc": "robustness_results[clean].pr_auc",
+      "source_roc_auc": "robustness_results[clean].roc_auc"
+    },
+    "all_conditions": {
+      "clean": {
+        "pr_auc": 0.1348723906332306,
+        "roc_auc": 0.6666171680223287,
+        "source_pr_auc": "robustness_results[clean].pr_auc",
+        "source_roc_auc": "robustness_results[clean].roc_auc"
+      },
+      "multiplicative_noise_5%": {
+        "pr_auc": 0.13834463829025895,
+        "roc_auc": 0.696310699494357,
+        "source_pr_auc": "robustness_results[multiplicative_noise_5%].pr_auc",
+        "source_roc_auc": "robustness_results[multiplicative_noise_5%].roc_auc"
+      },
+      "multiplicative_noise_10%": {
+        "pr_auc": 0.13720026382633377,
+        "roc_auc": 0.6886753629762845,
+        "source_pr_auc": "robustness_results[multiplicative_noise_10%].pr_auc",
+        "source_roc_auc": "robustness_results[multiplicative_noise_10%].roc_auc"
+      },
+      "multiplicative_noise_20%": {
+        "pr_auc": 0.13227364266285538,
+        "roc_auc": 0.6820769025721634,
+        "source_pr_auc": "robustness_results[multiplicative_noise_20%].pr_auc",
+        "source_roc_auc": "robustness_results[multiplicative_noise_20%].roc_auc"
+      },
+      "temporal_mask_last_1_steps": {
+        "pr_auc": 0.11951544118176463,
+        "roc_auc": 0.6541335412044248,
+        "source_pr_auc": "robustness_results[temporal_mask_last_1_steps].pr_auc",
+        "source_roc_auc": "robustness_results[temporal_mask_last_1_steps].roc_auc"
+      },
+      "temporal_mask_last_2_steps": {
+        "pr_auc": 0.11473109419970275,
+        "roc_auc": 0.6492683969435253,
+        "source_pr_auc": "robustness_results[temporal_mask_last_2_steps].pr_auc",
+        "source_roc_auc": "robustness_results[temporal_mask_last_2_steps].roc_auc"
+      },
+      "temporal_mask_last_3_steps": {
+        "pr_auc": 0.11244758972691968,
+        "roc_auc": 0.6450708924032168,
+        "source_pr_auc": "robustness_results[temporal_mask_last_3_steps].pr_auc",
+        "source_roc_auc": "robustness_results[temporal_mask_last_3_steps].roc_auc"
+      },
+      "group_scale_early_features": {
+        "pr_auc": 0.13246930667172213,
+        "roc_auc": 0.6578907116362662,
+        "source_pr_auc": "robustness_results[group_scale_early_features].pr_auc",
+        "source_roc_auc": "robustness_results[group_scale_early_features].roc_auc"
+      },
+      "group_scale_middle_features": {
+        "pr_auc": 0.13448329519247915,
+        "roc_auc": 0.6663825590270753,
+        "source_pr_auc": "robustness_results[group_scale_middle_features].pr_auc",
+        "source_roc_auc": "robustness_results[group_scale_middle_features].roc_auc"
+      },
+      "group_scale_late_features": {
+        "pr_auc": 0.1313492404128416,
+        "roc_auc": 0.6632132900438182,
+        "source_pr_auc": "robustness_results[group_scale_late_features].pr_auc",
+        "source_roc_auc": "robustness_results[group_scale_late_features].roc_auc"
+      }
+    }
+  },
+  "calibration": {
+    "baseline_test_brier": 0.05880588233055369,
+    "calibrated_test_brier": 0.010357823803709029,
+    "calibrated_test_brier_source": "isotonic_calibration.test_brier"
+  },
+  "modality_and_feature_diagnostics": {
+    "phase_4_12_all_modalities_y6_pr_auc": null,
+    "phase_4_12_source": null,
+    "phase_4_13_all_features_y6_pr_auc": null,
+    "phase_4_13_source": null,
+    "phase_4_14_optimized_y6_pr_auc": null,
+    "phase_4_14_source": null
+  },
+  "edge_iot": {
+    "phase_4_21_edge_iot": {
+      "status": "PASS",
+      "gates": {},
+      "retraining": null
+    },
+    "phase_4_22_edge_iot_scenarios": {
+      "status": "PASS",
+      "gates": {
+        "normal_operation_safe": true,
+        "connectivity_degradation_detected": true,
+        "connectivity_loss_detected": true,
+        "integrity_failure_escalates": true,
+        "sensor_disagreement_escalates": true,
+        "combined_attack_escalates": true,
+        "recovery_integrity_valid": true,
+        "forensic_tampering_detected": true,
+        "no_direct_vehicle_actuation": true
+      },
+      "retraining": null
+    },
+    "phase_4_23_end_to_end": {
+      "status": "PASS",
+      "gates": {
+        "upstream_phases_4_20_to_4_22_pass": true,
+        "six_end_to_end_cases_executed": true,
+        "risk_policy_sequence_valid": true,
+        "connectivity_reaches_edge_layer": true,
+        "sensor_disagreement_reaches_edge_layer": true,
+        "integrity_failure_reaches_high_containment": true,
+        "combined_condition_reaches_high_containment": true,
+        "forensic_record_created_for_every_case": true,
+        "forensic_integrity_valid_for_every_case": true,
+        "cortex_xdr_abstraction_complete": true,
+        "no_direct_vehicle_actuation": true,
+        "no_retraining": true
+      },
+      "retraining": null
+    },
+    "phase_4_24_stress": {
+      "status": "PASS",
+      "gates": {
+        "upstream_phase_4_23_pass": true,
+        "connectivity_loss_escalates": true,
+        "sensor_degradation_escalates": true,
+        "compound_failure_escalates": true,
+        "recovery_returns_to_normal_policy": true,
+        "buffer_remains_bounded": true,
+        "buffer_integrity_after_capacity_pressure": true,
+        "repeated_anomalies_preserve_integrity": true,
+        "recovery_preserves_forensics": true,
+        "payload_corruption_detected": true,
+        "compound_failure_has_no_direct_actuation": true,
+        "no_retraining": true
+      },
+      "retraining": null
+    }
+  },
+  "findings": [
+    "Phase 4.10 controlled Transformer Y6 test PR-AUC = 0.950336.",
+    "Phase 4.16 generalization/shift Y6 test PR-AUC = 0.134872.",
+    "Phase 4.19 clean robustness confirmation Y6 PR-AUC = 0.134872.",
+    "Phase 4.18 calibrated test Brier = 0.010358.",
+    "Phase 4.16 demonstrates substantial temporal-origin and distribution-shift degradation relative to the original in-distribution baseline.",
+    "Phase 4.19 is a test-only robustness confirmation; the model was not retrained or modified.",
+    "Phase 4.12–4.14 are diagnostic modality/feature contribution analyses and are not causal importance claims.",
+    "Cyber telemetry and anomaly labels are synthetic research constructs.",
+    "CRSS provides physical crash/safety ground truth.",
+    "The evidence does not establish real-world cyberattack detection accuracy.",
+    "Cortex XDR is represented as a research/SOC abstraction rather than a claim of a live production tenant or API integration.",
+    "ML outputs are restricted to forecasting, risk scoring, warning, and SOC decision support; there is no direct vehicle actuation."
+  ],
+  "supported_claims": [
+    "Reproducible cyber-physical forecasting pipeline.",
+    "Persisted HGB baseline evaluation.",
+    "Persisted controlled Transformer evaluation.",
+    "Temporal-origin and distribution-shift stress testing.",
+    "Validation-only isotonic calibration.",
+    "Test-only robustness confirmation.",
+    "Synthetic Edge-IoT forensic-buffer and containment evaluation."
+  ],
+  "unsupported_claims": [
+    "Real-world cyberattack detection performance.",
+    "Production Cortex XDR integration.",
+    "ASIL certification.",
+    "Safety certification.",
+    "Direct autonomous vehicle actuation by ML.",
+    "Causal feature importance from diagnostic ablations.",
+    "Fleet-level deployment validity without external validation."
+  ],
+  "limitations": [
+    "Cyber telemetry and cyber labels are synthetic.",
+    "CRSS is physical crash/safety ground truth, not a cyberattack dataset.",
+    "The very high original in-distribution baseline should not be interpreted as deployment-ready generalization.",
+    "Phase 4.16 exposes substantial temporal-origin and shift degradation.",
+    "Phase 4.12–4.14 results are diagnostic rather than causal.",
+    "The Transformer used a controlled 100k training subset.",
+    "Edge-IoT and Cortex XDR evidence is a research abstraction."
+  ],
+  "research_boundary": {
+    "cyber_labels": "synthetic",
+    "physical_ground_truth": "NHTSA CRSS 2024",
+    "live_cortex_xdr": false,
+    "direct_vehicle_actuation": false,
+    "ml_role": [
+      "forecasting",
+      "risk_scoring",
+      "warning",
+      "SOC_decision_support"
+    ]
+  },
+  "gates": {
+    "source_files_available": true,
+    "source_json_valid": true,
+    "baseline_metric_extraction": false,
+    "transformer_metric_extraction": true,
+    "generalization_metric_extraction": true,
+    "scenario_summary_available": true,
+    "origin_metrics_available": true,
+    "shift_results_available": true,
+    "phase_4_19_clean_metric_available": true,
+    "phase_4_19_schema_resolved": true,
+    "calibration_available": true,
+    "edge_iot_evidence_available": true,
+    "no_retraining": true,
+    "test_set_not_used_for_calibration": true,
+    "safety_boundary_present": true,
+    "all_extracted_numeric_metrics_finite": true
+  },
+  "checks_passed": 15,
+  "checks_total": 16
+}
