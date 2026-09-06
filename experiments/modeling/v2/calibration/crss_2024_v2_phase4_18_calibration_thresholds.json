@@ -1,0 +1,380 @@
+{
+  "phase": "4.18",
+  "status": "PASS",
+  "task": "Calibration and operational threshold analysis",
+  "model": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\baseline\\crss_2024_v2_hgb_y6.joblib",
+  "representation": {
+    "original_features": 63,
+    "final_features": 59,
+    "temporal_summary_dimensions": 472,
+    "statistics": [
+      "last",
+      "mean",
+      "std",
+      "minimum",
+      "maximum",
+      "last_minus_first",
+      "max_absolute_step_change",
+      "last_step_change"
+    ]
+  },
+  "baseline": {
+    "validation": {
+      "pr_auc": 0.17738242274397822,
+      "roc_auc": 0.6789821850987972,
+      "brier": 0.05814109174087652
+    },
+    "test": {
+      "pr_auc": 0.1348723906332306,
+      "roc_auc": 0.6666171680223287,
+      "brier": 0.05880588233055369
+    }
+  },
+  "isotonic_calibration": {
+    "validation_brier": 0.008393928776772884,
+    "test_brier": 0.010357823803709029,
+    "calibration_fit_split": "validation_only"
+  },
+  "thresholds": [
+    {
+      "threshold": 0.01,
+      "validation": {
+        "tp": 932,
+        "fp": 47458,
+        "fn": 29,
+        "tn": 46165,
+        "precision": 0.019260177722669972,
+        "recall": 0.9698231009365245,
+        "f1": 0.037770257948167206,
+        "alert_rate": 0.5116087287490485
+      },
+      "test": {
+        "tp": 1076,
+        "fp": 47094,
+        "fn": 61,
+        "precision": 0.02233755449449865,
+        "recall": 0.9463500439753738,
+        "f1": 0.04364491857139959,
+        "alert_rate": 0.5025508341071038
+      }
+    },
+    {
+      "threshold": 0.02,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.05,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.1,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.15,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.2,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.3,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.4,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.5,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.6,
+      "validation": {
+        "tp": 218,
+        "fp": 87,
+        "fn": 743,
+        "tn": 93536,
+        "precision": 0.7147540983606557,
+        "recall": 0.22684703433922998,
+        "f1": 0.344391785150079,
+        "alert_rate": 0.0032246468747356848
+      },
+      "test": {
+        "tp": 204,
+        "fp": 115,
+        "fn": 933,
+        "precision": 0.6394984326018809,
+        "recall": 0.17941952506596306,
+        "f1": 0.2802197802197802,
+        "alert_rate": 0.0033280821274686754
+      }
+    },
+    {
+      "threshold": 0.7,
+      "validation": {
+        "tp": 181,
+        "fp": 69,
+        "fn": 780,
+        "tn": 93554,
+        "precision": 0.724,
+        "recall": 0.18834547346514047,
+        "f1": 0.2989265070189926,
+        "alert_rate": 0.0026431531760128563
+      },
+      "test": {
+        "tp": 182,
+        "fp": 86,
+        "fn": 955,
+        "precision": 0.6791044776119403,
+        "recall": 0.1600703605980651,
+        "f1": 0.2590747330960854,
+        "alert_rate": 0.0027960063014470377
+      }
+    },
+    {
+      "threshold": 0.8,
+      "validation": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 957,
+        "tn": 93623,
+        "precision": 1.0,
+        "recall": 0.004162330905306972,
+        "f1": 0.008290155440414509,
+        "alert_rate": 4.22904508162057e-05
+      },
+      "test": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 1136,
+        "precision": 0.25,
+        "recall": 0.0008795074758135445,
+        "f1": 0.0017528483786152498,
+        "alert_rate": 4.173143733503041e-05
+      }
+    },
+    {
+      "threshold": 0.9,
+      "validation": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 957,
+        "tn": 93623,
+        "precision": 1.0,
+        "recall": 0.004162330905306972,
+        "f1": 0.008290155440414509,
+        "alert_rate": 4.22904508162057e-05
+      },
+      "test": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1136,
+        "precision": 0.5,
+        "recall": 0.0008795074758135445,
+        "f1": 0.001755926251097454,
+        "alert_rate": 2.0865718667515205e-05
+      }
+    }
+  ],
+  "operational_policy": {
+    "NORMAL": "<0.05",
+    "LOW": "0.05-<0.20",
+    "MEDIUM": "0.20-<0.50",
+    "HIGH": "0.50-<0.80",
+    "CRITICAL": ">=0.80",
+    "test_counts": {
+      "NORMAL": 95532,
+      "LOW": 0,
+      "MEDIUM": 0,
+      "HIGH": 315,
+      "CRITICAL": 4
+    },
+    "safety_boundary": "decision support / warning / SOC prioritization only; no direct vehicle actuation"
+  },
+  "calibration_bins": [
+    {
+      "mean_predicted_probability": 0.00023244600967377548,
+      "observed_positive_fraction": 0.0004867127421395892,
+      "absolute_calibration_error": 0.0002542667324658137
+    },
+    {
+      "mean_predicted_probability": 0.0006094588005850053,
+      "observed_positive_fraction": 0.0006865774116031583,
+      "absolute_calibration_error": 7.7118611018153e-05
+    },
+    {
+      "mean_predicted_probability": 0.0030273178977244467,
+      "observed_positive_fraction": 0.006252791424743189,
+      "absolute_calibration_error": 0.0032254735270187424
+    },
+    {
+      "mean_predicted_probability": 0.014932982135641135,
+      "observed_positive_fraction": 0.018205793525883703,
+      "absolute_calibration_error": 0.003272811390242568
+    },
+    {
+      "mean_predicted_probability": 0.7166875101135961,
+      "observed_positive_fraction": 0.6394984326018809,
+      "absolute_calibration_error": 0.07718907751171522
+    }
+  ],
+  "gates": {
+    "validation_samples_positive": true,
+    "test_samples_positive": true,
+    "finite_validation_probabilities": true,
+    "finite_test_probabilities": true,
+    "exact_472_validation_representation": true,
+    "exact_472_test_representation": true,
+    "calibration_fitted_on_validation_only": true,
+    "test_isolation_preserved": true,
+    "threshold_analysis_complete": true,
+    "operational_policy_defined": true
+  }
+}
