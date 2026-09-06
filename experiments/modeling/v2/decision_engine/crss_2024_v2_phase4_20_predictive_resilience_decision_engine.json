@@ -1,0 +1,123 @@
+{
+  "phase": "4.20",
+  "title": "Predictive Resilience Decision Engine",
+  "status": "PASS",
+  "purpose": "Convert calibrated predictive cyber-physical risk into a deterministic operational risk level, SOC priority, resilience recommendation, and occupant warning.",
+  "upstream_evidence": {
+    "phase_4_18_calibration_status": "PASS",
+    "phase_4_18_report": "experiments\\modeling\\v2\\calibration\\crss_2024_v2_phase4_18_calibration_thresholds.json",
+    "phase_4_19_robustness_status": "PASS",
+    "phase_4_19_report": "experiments\\modeling\\v2\\robustness\\crss_2024_v2_phase4_19_robustness_confirmation.json"
+  },
+  "risk_policy": {
+    "NORMAL": "< 0.05",
+    "LOW": "0.05 <= p < 0.20",
+    "MEDIUM": "0.20 <= p < 0.50",
+    "HIGH": "0.50 <= p < 0.80",
+    "CRITICAL": ">= 0.80"
+  },
+  "context_modifiers": {
+    "connectivity_degraded": "minimum MEDIUM",
+    "sensor_disagreement": "minimum MEDIUM",
+    "integrity_failure": "minimum HIGH"
+  },
+  "demonstration_scenarios": [
+    {
+      "scenario": "normal_connected",
+      "risk_probability": 0.01,
+      "base_risk_level": "NORMAL",
+      "risk_level": "NORMAL",
+      "context": {
+        "connectivity_degraded": false,
+        "integrity_failure": false,
+        "sensor_disagreement": false
+      },
+      "soc_priority": "ROUTINE",
+      "vehicle_resilience_recommendation": "CONTINUE_NORMAL_OPERATION",
+      "occupant_warning": "NONE"
+    },
+    {
+      "scenario": "early_forecast",
+      "risk_probability": 0.12,
+      "base_risk_level": "LOW",
+      "risk_level": "LOW",
+      "context": {
+        "connectivity_degraded": false,
+        "integrity_failure": false,
+        "sensor_disagreement": false
+      },
+      "soc_priority": "LOW",
+      "vehicle_resilience_recommendation": "INCREASE_LOCAL_MONITORING",
+      "occupant_warning": "NONE"
+    },
+    {
+      "scenario": "connectivity_degradation",
+      "risk_probability": 0.14,
+      "base_risk_level": "LOW",
+      "risk_level": "MEDIUM",
+      "context": {
+        "connectivity_degraded": true,
+        "integrity_failure": false,
+        "sensor_disagreement": false
+      },
+      "soc_priority": "MEDIUM",
+      "vehicle_resilience_recommendation": "PREPARE_LOCAL_RESILIENCE_MODE",
+      "occupant_warning": "ADVISORY"
+    },
+    {
+      "scenario": "sensor_inconsistency",
+      "risk_probability": 0.32,
+      "base_risk_level": "MEDIUM",
+      "risk_level": "MEDIUM",
+      "context": {
+        "connectivity_degraded": false,
+        "integrity_failure": false,
+        "sensor_disagreement": true
+      },
+      "soc_priority": "MEDIUM",
+      "vehicle_resilience_recommendation": "PREPARE_LOCAL_RESILIENCE_MODE",
+      "occupant_warning": "ADVISORY"
+    },
+    {
+      "scenario": "communication_integrity_failure",
+      "risk_probability": 0.61,
+      "base_risk_level": "HIGH",
+      "risk_level": "HIGH",
+      "context": {
+        "connectivity_degraded": false,
+        "integrity_failure": true,
+        "sensor_disagreement": false
+      },
+      "soc_priority": "HIGH",
+      "vehicle_resilience_recommendation": "PRIORITIZE_LOCAL_RESILIENCE_AND_FORENSIC_CAPTURE",
+      "occupant_warning": "CAUTION"
+    },
+    {
+      "scenario": "critical_predicted_anomaly",
+      "risk_probability": 0.91,
+      "base_risk_level": "CRITICAL",
+      "risk_level": "CRITICAL",
+      "context": {
+        "connectivity_degraded": true,
+        "integrity_failure": true,
+        "sensor_disagreement": true
+      },
+      "soc_priority": "CRITICAL",
+      "vehicle_resilience_recommendation": "ESCALATE_TO_SOC_AND_MAINTAIN_LOCAL_SAFE_STATE",
+      "occupant_warning": "URGENT"
+    }
+  ],
+  "safety_boundary": "Decision support, warning, and SOC prioritization only. The decision engine does not directly actuate vehicle safety-critical controls.",
+  "safety_checks": {
+    "probability_mapping_monotonic": true,
+    "integrity_failure_non_decreasing": true,
+    "connectivity_degradation_non_decreasing": true,
+    "sensor_disagreement_non_decreasing": true,
+    "no_direct_vehicle_actuation": true,
+    "all_policy_levels_defined": true,
+    "context_signals_supported": true,
+    "upstream_calibration_pass": true,
+    "upstream_robustness_pass": true
+  },
+  "methodological_note": "The risk thresholds and contextual minimum-risk rules are deterministic engineering policy rules. They are not learned parameters and should not be interpreted as empirically validated safety thresholds. Cyberattack labels remain synthetic research labels; CRSS remains the physical crash-ground-truth source."
+}
