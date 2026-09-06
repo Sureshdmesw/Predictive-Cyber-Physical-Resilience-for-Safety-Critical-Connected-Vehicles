@@ -1,0 +1,212 @@
+{
+  "phase": "4.21",
+  "title": "Edge-IoT Local Containment and Tamper-Evident Forensic Buffer",
+  "status": "PASS",
+  "research_simulation": true,
+  "real_vehicle_actuation": false,
+  "cortex_xdr_integration_mode": "ABSTRACTION_ONLY",
+  "architecture": [
+    "Edge-IoT / ECU / CAN event observation",
+    "Local deterministic containment recommendation",
+    "Bounded tamper-evident forensic buffer",
+    "Connectivity restoration",
+    "Integrity verification",
+    "Secure synchronization",
+    "Cortex XDR event abstraction",
+    "SOC investigation"
+  ],
+  "buffer_capacity": 256,
+  "event_count": 4,
+  "checks": {
+    "events_generated": true,
+    "forensic_buffer_nonempty": true,
+    "hash_chain_integrity_before_sync": true,
+    "connectivity_restoration_detected": true,
+    "secure_sync_requires_integrity": true,
+    "hash_chain_integrity_after_sync": true,
+    "cortex_xdr_events_generated": true,
+    "no_direct_vehicle_actuation": true,
+    "offline_first_behavior": true
+  },
+  "event_results": [
+    {
+      "event_id": "EDGE-0001",
+      "policy": {
+        "containment_level": "NORMAL",
+        "containment_recommendation": "CONTINUE_MONITORING",
+        "soc_priority": "ROUTINE",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5"
+    },
+    {
+      "event_id": "EDGE-0002",
+      "policy": {
+        "containment_level": "MEDIUM",
+        "containment_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
+        "soc_priority": "MEDIUM",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06"
+    },
+    {
+      "event_id": "EDGE-0003",
+      "policy": {
+        "containment_level": "MEDIUM",
+        "containment_recommendation": "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "soc_priority": "MEDIUM",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7"
+    },
+    {
+      "event_id": "EDGE-0004",
+      "policy": {
+        "containment_level": "HIGH",
+        "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "soc_priority": "HIGH",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "07455381261f797d80bd31e19105b66c30f526d4f74e48bd087980db8770b8e6"
+    }
+  ],
+  "cortex_xdr_events": [
+    {
+      "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+      "target_platform": "Cortex XDR",
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-GW",
+      "can_id": "0x120",
+      "event_type": "NORMAL_CAN_TRAFFIC",
+      "severity": "INFO",
+      "connectivity_state": "CONNECTED",
+      "integrity_status": "PASS",
+      "sensor_consistency_status": "CONSISTENT",
+      "containment_level": "NORMAL",
+      "containment_recommendation": "CONTINUE_MONITORING",
+      "soc_priority": "ROUTINE",
+      "forensic_record_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5",
+      "direct_vehicle_actuation": false
+    },
+    {
+      "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+      "target_platform": "Cortex XDR",
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-GW",
+      "can_id": "0x120",
+      "event_type": "CONNECTIVITY_DEGRADATION",
+      "severity": "MEDIUM",
+      "connectivity_state": "DEGRADED",
+      "integrity_status": "PASS",
+      "sensor_consistency_status": "CONSISTENT",
+      "containment_level": "MEDIUM",
+      "containment_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
+      "soc_priority": "MEDIUM",
+      "forensic_record_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06",
+      "direct_vehicle_actuation": false
+    },
+    {
+      "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+      "target_platform": "Cortex XDR",
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-ADAS",
+      "can_id": "0x245",
+      "event_type": "SENSOR_DISAGREEMENT",
+      "severity": "MEDIUM",
+      "connectivity_state": "DEGRADED",
+      "integrity_status": "PASS",
+      "sensor_consistency_status": "DISAGREEMENT",
+      "containment_level": "MEDIUM",
+      "containment_recommendation": "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+      "soc_priority": "MEDIUM",
+      "forensic_record_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7",
+      "direct_vehicle_actuation": false
+    },
+    {
+      "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+      "target_platform": "Cortex XDR",
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-GW",
+      "can_id": "0x310",
+      "event_type": "MESSAGE_INTEGRITY_FAILURE",
+      "severity": "HIGH",
+      "connectivity_state": "OFFLINE",
+      "integrity_status": "FAIL",
+      "sensor_consistency_status": "DISAGREEMENT",
+      "containment_level": "HIGH",
+      "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+      "soc_priority": "HIGH",
+      "forensic_record_hash": "07455381261f797d80bd31e19105b66c30f526d4f74e48bd087980db8770b8e6",
+      "direct_vehicle_actuation": false
+    }
+  ],
+  "synchronized_forensic_records": [
+    {
+      "event_id": "EDGE-0001",
+      "timestamp": 1788710999.4254851,
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-GW",
+      "can_id": "0x120",
+      "event_type": "NORMAL_CAN_TRAFFIC",
+      "severity": "INFO",
+      "connectivity_state": "CONNECTED",
+      "integrity_status": "PASS",
+      "sensor_consistency_status": "CONSISTENT",
+      "payload_hash": "5609f19e2e513cc30bfb20ffbb4a6bab3469b02bf011a668321456a5feffa207",
+      "previous_hash": "GENESIS",
+      "record_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5"
+    },
+    {
+      "event_id": "EDGE-0002",
+      "timestamp": 1788711004.4254851,
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-GW",
+      "can_id": "0x120",
+      "event_type": "CONNECTIVITY_DEGRADATION",
+      "severity": "MEDIUM",
+      "connectivity_state": "DEGRADED",
+      "integrity_status": "PASS",
+      "sensor_consistency_status": "CONSISTENT",
+      "payload_hash": "db6f2e872d2cee658bd88cf8b2837e4700e97961763c2aac33ea76d74616a848",
+      "previous_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5",
+      "record_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06"
+    },
+    {
+      "event_id": "EDGE-0003",
+      "timestamp": 1788711009.4254851,
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-ADAS",
+      "can_id": "0x245",
+      "event_type": "SENSOR_DISAGREEMENT",
+      "severity": "MEDIUM",
+      "connectivity_state": "DEGRADED",
+      "integrity_status": "PASS",
+      "sensor_consistency_status": "DISAGREEMENT",
+      "payload_hash": "c339c4b4d2944e9ae730353b65fcd3ef1a9e617baae9d1320e78ffdba261805d",
+      "previous_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06",
+      "record_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7"
+    },
+    {
+      "event_id": "EDGE-0004",
+      "timestamp": 1788711014.4254851,
+      "vehicle_id": "SIM-VEH-001",
+      "ecu_id": "ECU-GW",
+      "can_id": "0x310",
+      "event_type": "MESSAGE_INTEGRITY_FAILURE",
+      "severity": "HIGH",
+      "connectivity_state": "OFFLINE",
+      "integrity_status": "FAIL",
+      "sensor_consistency_status": "DISAGREEMENT",
+      "payload_hash": "8b644090773ab227d5f0f58003a711d5e7301ac7b6168ee875dae4bd9ca6cd0c",
+      "previous_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7",
+      "record_hash": "07455381261f797d80bd31e19105b66c30f526d4f74e48bd087980db8770b8e6"
+    }
+  ],
+  "safety_boundary": "ML and this research simulation provide decision support, warning, containment recommendation, and SOC prioritization. No direct safety-critical vehicle actuation is performed.",
+  "limitations": [
+    "Synthetic Edge-IoT/CAN events are used.",
+    "Cyberattack labels are simulated research labels.",
+    "Cortex XDR is represented as an ingestion/event abstraction.",
+    "Containment policy is deterministic engineering logic, not empirically validated vehicle control logic."
+  ]
+}

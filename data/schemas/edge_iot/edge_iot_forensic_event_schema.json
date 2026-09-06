@@ -1,0 +1,29 @@
+{
+  "schema_name": "edge_iot_forensic_event",
+  "schema_version": "1.0",
+  "description": "Research schema for offline-first Edge-IoT forensic events and Cortex XDR ingestion abstraction.",
+  "required_fields": [
+    "event_id",
+    "timestamp",
+    "vehicle_id",
+    "ecu_id",
+    "can_id",
+    "event_type",
+    "severity",
+    "connectivity_state",
+    "integrity_status",
+    "sensor_consistency_status",
+    "payload_hash",
+    "previous_hash",
+    "record_hash"
+  ],
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "purpose": [
+      "detection",
+      "forensics",
+      "containment_recommendation",
+      "SOC_prioritization"
+    ]
+  }
+}
