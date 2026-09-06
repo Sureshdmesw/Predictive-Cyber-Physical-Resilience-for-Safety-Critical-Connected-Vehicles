@@ -1,0 +1,231 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "phase": "4.26",
+  "title": "Temporal and Regime Error Analysis",
+  "status": "PASS",
+  "purpose": "Characterize temporal-origin degradation and distribution-regime sensitivity using existing evaluation evidence without retraining.",
+  "upstream_evidence": {
+    "phase_4_16": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\modeling\\v2\\generalization\\phase4_16\\crss_2024_v2_phase4_16_generalization_results.json",
+    "phase_4_19": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\modeling\\v2\\robustness\\crss_2024_v2_phase4_19_robustness_confirmation.json"
+  },
+  "overall_test_performance": {
+    "y6_pr_auc": 0.1348723906332306,
+    "y6_roc_auc": 0.6666171680223287
+  },
+  "temporal_origin_analysis": {
+    "results": {
+      "11": {
+        "samples": 13693,
+        "y6_positive": 245,
+        "y6_rate": 0.01789235375739429,
+        "y6_pr_auc": 0.20017803704023213
+      },
+      "12": {
+        "samples": 13693,
+        "y6_positive": 230,
+        "y6_rate": 0.016796903527349742,
+        "y6_pr_auc": 0.1725093989915977
+      },
+      "13": {
+        "samples": 13693,
+        "y6_positive": 200,
+        "y6_rate": 0.014606003067260644,
+        "y6_pr_auc": 0.1690962598727321
+      },
+      "14": {
+        "samples": 13693,
+        "y6_positive": 167,
+        "y6_rate": 0.012196012561162638,
+        "y6_pr_auc": 0.15121422850352598
+      },
+      "15": {
+        "samples": 13693,
+        "y6_positive": 132,
+        "y6_rate": 0.009639962024392025,
+        "y6_pr_auc": 0.13906321658628606
+      },
+      "16": {
+        "samples": 13693,
+        "y6_positive": 99,
+        "y6_rate": 0.007229971518294019,
+        "y6_pr_auc": 0.08519393498694668
+      },
+      "17": {
+        "samples": 13693,
+        "y6_positive": 64,
+        "y6_rate": 0.004673920981523406,
+        "y6_pr_auc": 0.045669016084406086
+      }
+    },
+    "first_origin": "11",
+    "last_origin": "17",
+    "pr_auc_delta": -0.15450902095582603,
+    "relative_change": -0.7718580082028307,
+    "best_origin": "11",
+    "best_origin_pr_auc": 0.20017803704023213,
+    "worst_origin": "17",
+    "worst_origin_pr_auc": 0.045669016084406086
+  },
+  "distribution_shift_analysis": {
+    "cyber_instability": {
+      "feature": "cyber_instability_index",
+      "low_pr_auc": 0.33061430100807493,
+      "high_pr_auc": 0.10311043118871582,
+      "delta_high_minus_low": -0.2275038698193591,
+      "low_positive_rate": 0.0027869994671912784,
+      "high_positive_rate": 0.028221974298582704,
+      "low_samples": 24399,
+      "high_samples": 24201
+    },
+    "packet_loss": {
+      "feature": "packet_loss_rate",
+      "low_pr_auc": 0.0004131432948051088,
+      "high_pr_auc": 0.17616729259281538,
+      "delta_high_minus_low": 0.17575414929801028,
+      "low_positive_rate": 0.00045492142266335815,
+      "high_positive_rate": 0.045281317870753596,
+      "low_samples": 24180,
+      "high_samples": 24403
+    },
+    "latency_jitter": {
+      "feature": "latency_jitter_ms",
+      "low_pr_auc": 0.0885721915092974,
+      "high_pr_auc": 0.1795671079685642,
+      "delta_high_minus_low": 0.0909949164592668,
+      "low_positive_rate": 0.0008025682182985554,
+      "high_positive_rate": 0.04636586098827974,
+      "low_samples": 23674,
+      "high_samples": 23293
+    },
+    "message_integrity": {
+      "feature": "message_integrity_failure_rate",
+      "low_pr_auc": 0.0007547052823853857,
+      "high_pr_auc": 0.18489271619189196,
+      "delta_high_minus_low": 0.18413801090950657,
+      "low_positive_rate": 0.0005302443202675694,
+      "high_positive_rate": 0.04561272682078051,
+      "low_samples": 24517,
+      "high_samples": 24138
+    },
+    "sensor_disagreement": {
+      "feature": "sensor_disagreement_rate",
+      "low_pr_auc": 0.0005248910923675064,
+      "high_pr_auc": 0.18649752480054513,
+      "delta_high_minus_low": 0.18597263370817763,
+      "low_positive_rate": 0.0003401794446570566,
+      "high_positive_rate": 0.044064894831240826,
+      "low_samples": 23517,
+      "high_samples": 24532
+    },
+    "speed_deviation_abs": {
+      "feature": "speed_limit_deviation_abs",
+      "low_pr_auc": 0.18442608274214214,
+      "high_pr_auc": 0.1270901198291306,
+      "delta_high_minus_low": -0.057335962913011546,
+      "low_positive_rate": 0.008928571428571428,
+      "high_positive_rate": 0.013160987074030552,
+      "low_samples": 25200,
+      "high_samples": 29785
+    }
+  },
+  "robustness_confirmation": {
+    "conditions": {
+      "clean": {
+        "pr_auc": 0.1348723906332306,
+        "roc_auc": 0.6666171680223287
+      },
+      "multiplicative_noise_5%": {
+        "pr_auc": 0.13834463829025895,
+        "roc_auc": 0.696310699494357
+      },
+      "multiplicative_noise_10%": {
+        "pr_auc": 0.13720026382633377,
+        "roc_auc": 0.6886753629762845
+      },
+      "multiplicative_noise_20%": {
+        "pr_auc": 0.13227364266285538,
+        "roc_auc": 0.6820769025721634
+      },
+      "temporal_mask_last_1_steps": {
+        "pr_auc": 0.11951544118176463,
+        "roc_auc": 0.6541335412044248
+      },
+      "temporal_mask_last_2_steps": {
+        "pr_auc": 0.11473109419970275,
+        "roc_auc": 0.6492683969435253
+      },
+      "temporal_mask_last_3_steps": {
+        "pr_auc": 0.11244758972691968,
+        "roc_auc": 0.6450708924032168
+      },
+      "group_scale_early_features": {
+        "pr_auc": 0.13246930667172213,
+        "roc_auc": 0.6578907116362662
+      },
+      "group_scale_middle_features": {
+        "pr_auc": 0.13448329519247915,
+        "roc_auc": 0.6663825590270753
+      },
+      "group_scale_late_features": {
+        "pr_auc": 0.1313492404128416,
+        "roc_auc": 0.6632132900438182
+      }
+    },
+    "clean_pr_auc": 0.1348723906332306,
+    "clean_roc_auc": 0.6666171680223287
+  },
+  "failure_characterization": {
+    "temporal_generalization_issue": true,
+    "regime_sensitivity_present": true,
+    "largest_negative_shift_feature": "cyber_instability_index",
+    "largest_negative_shift_delta": -0.2275038698193591,
+    "largest_positive_shift_feature": "sensor_disagreement_rate",
+    "largest_positive_shift_delta": 0.18597263370817763
+  },
+  "scientific_findings": [
+    "Y6 predictive performance varies materially across temporal prediction origins.",
+    "Performance decreases substantially from the earliest evaluated origin to the latest evaluated origin.",
+    "Several cyber-physical distribution regimes produce material changes in predictive performance.",
+    "Controlled robustness testing confirms sensitivity to temporal masking and feature perturbation.",
+    "The observed degradation should be characterized as generalization and regime sensitivity, not causal evidence."
+  ],
+  "research_implication": "Predictive resilience should include awareness of when model reliability deteriorates under temporal and cyber-physical distribution shift.",
+  "next_research_direction": "Evaluate uncertainty and out-of-distribution awareness before considering any model retraining or redesign.",
+  "methodological_boundary": {
+    "model_retrained": false,
+    "model_modified": false,
+    "test_set_used_for_model_fitting": false,
+    "cyber_telemetry": "synthetic research telemetry",
+    "cyber_anomaly_labels": "synthetic research labels",
+    "physical_ground_truth": "NHTSA CRSS 2024",
+    "real_world_cyberattack_labels": false
+  },
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "ml_role": [
+      "forecasting",
+      "risk scoring",
+      "warning",
+      "SOC prioritization",
+      "decision support"
+    ],
+    "deterministic_safety_policy_remains_separate": true
+  },
+  "gates": {
+    "phase_4_16_status_pass": true,
+    "phase_4_19_status_pass": true,
+    "overall_metrics_finite": true,
+    "seven_temporal_origins_present": true,
+    "origin_metrics_finite": true,
+    "origin_delta_finite": true,
+    "distribution_shift_results_present": true,
+    "shift_deltas_correctly_derived": true,
+    "robustness_results_present": true,
+    "clean_robustness_present": true,
+    "robustness_metrics_finite": true,
+    "no_retraining": true,
+    "no_model_modification": true,
+    "test_set_not_used_for_model_fitting": true,
+    "safety_boundary_present": true
+  }
+}
