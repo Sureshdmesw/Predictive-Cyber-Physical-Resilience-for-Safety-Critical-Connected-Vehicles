@@ -1,0 +1,2443 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "dataset": "NHTSA CRSS 2024",
+  "diagnostic": "Master CRSS 2024 diagnostic",
+  "verdict": "NO-GO",
+  "summary": {
+    "checks": 30,
+    "passes": 25,
+    "failures": 2,
+    "warnings": 4
+  },
+  "parsed_codebook_stats": {
+    "HARM_EV": {
+      "contexts": 3,
+      "unique_pairs": 12,
+      "codes": [
+        {
+          "code": "1",
+          "label": "Rollover/Overturn",
+          "page": 145
+        },
+        {
+          "code": "2",
+          "label": "Fire/Explosion",
+          "page": 145
+        },
+        {
+          "code": "3",
+          "label": "Immersion or Partial Immersion",
+          "page": 145
+        },
+        {
+          "code": "4",
+          "label": "Gas Inhalation",
+          "page": 145
+        },
+        {
+          "code": "5",
+          "label": "Fell/Jumped From Vehicle",
+          "page": 145
+        },
+        {
+          "code": "6",
+          "label": "Injured in Vehicle (Non-Collision)",
+          "page": 145
+        },
+        {
+          "code": "7",
+          "label": "Other Non-Collision",
+          "page": 145
+        },
+        {
+          "code": "16",
+          "label": "Thrown or Falling Object",
+          "page": 145
+        },
+        {
+          "code": "44",
+          "label": "Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.)",
+          "page": 145
+        },
+        {
+          "code": "51",
+          "label": "Jackknife (Harmful to This Vehicle)",
+          "page": 145
+        },
+        {
+          "code": "60",
+          "label": "and",
+          "page": 398
+        },
+        {
+          "code": "72",
+          "label": "Cargo/Equipment Loss, Shift, or Damage (Harmful)",
+          "page": 145
+        }
+      ]
+    },
+    "MAN_COLL": {
+      "contexts": 1,
+      "unique_pairs": 11,
+      "codes": [
+        {
+          "code": "0",
+          "label": "First Harmful Event Was Not a Collision With Motor Vehicle In-Transport",
+          "page": 68
+        },
+        {
+          "code": "1",
+          "label": "Front-to-Rear",
+          "page": 68
+        },
+        {
+          "code": "2",
+          "label": "Front-to-Front",
+          "page": 68
+        },
+        {
+          "code": "6",
+          "label": "Angle",
+          "page": 68
+        },
+        {
+          "code": "7",
+          "label": "Sideswipe – Same Direction",
+          "page": 68
+        },
+        {
+          "code": "8",
+          "label": "Sideswipe – Opposite Direction",
+          "page": 68
+        },
+        {
+          "code": "9",
+          "label": "Rear-to-Side",
+          "page": 68
+        },
+        {
+          "code": "10",
+          "label": "Rear-to-Rear",
+          "page": 68
+        },
+        {
+          "code": "11",
+          "label": "Other",
+          "page": 68
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 68
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown",
+          "page": 68
+        }
+      ]
+    },
+    "PEDS": {
+      "contexts": 0,
+      "unique_pairs": 0,
+      "codes": []
+    },
+    "AGE": {
+      "contexts": 3,
+      "unique_pairs": 5,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Less Than One Year",
+          "page": 285
+        },
+        {
+          "code": "998",
+          "label": "Not Reported",
+          "page": 285
+        },
+        {
+          "code": "998",
+          "label": "for not reported age. Additional Information See the CRSS Imputation section of this manual. SAS Name AGE_IM",
+          "page": 194
+        },
+        {
+          "code": "999",
+          "label": "Reported as Unknown",
+          "page": 285
+        },
+        {
+          "code": "999",
+          "label": "for unknown age and value",
+          "page": 194
+        }
+      ]
+    },
+    "AIR_BAG": {
+      "contexts": 1,
+      "unique_pairs": 10,
+      "codes": [
+        {
+          "code": "1",
+          "label": "Deployed – Front",
+          "page": 208
+        },
+        {
+          "code": "2",
+          "label": "Deployed – Side (Door, Seat Back)",
+          "page": 208
+        },
+        {
+          "code": "3",
+          "label": "Deployed – Curtain (Roof)",
+          "page": 208
+        },
+        {
+          "code": "7",
+          "label": "Deployed – Other (Knee, Air Belt, etc.)",
+          "page": 208
+        },
+        {
+          "code": "8",
+          "label": "Deployed – Combination",
+          "page": 208
+        },
+        {
+          "code": "9",
+          "label": "Deployment – Unknown Location",
+          "page": 208
+        },
+        {
+          "code": "20",
+          "label": "Not Deployed",
+          "page": 208
+        },
+        {
+          "code": "97",
+          "label": "Not a Motor Vehicle Occupant",
+          "page": 208
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 208
+        },
+        {
+          "code": "99",
+          "label": "Reported as Deployment Unknown",
+          "page": 208
+        }
+      ]
+    },
+    "EJECTION": {
+      "contexts": 1,
+      "unique_pairs": 8,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Not Ejected",
+          "page": 209
+        },
+        {
+          "code": "1",
+          "label": "Totally Ejected",
+          "page": 209
+        },
+        {
+          "code": "2",
+          "label": "Partially Ejected",
+          "page": 209
+        },
+        {
+          "code": "3",
+          "label": "Ejected – Unknown Degree",
+          "page": 209
+        },
+        {
+          "code": "7",
+          "label": "Not Reported",
+          "page": 209
+        },
+        {
+          "code": "8",
+          "label": "Not Applicable",
+          "page": 209
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 209
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown if Ejected",
+          "page": 209
+        }
+      ]
+    },
+    "FIRE_EXP": {
+      "contexts": 1,
+      "unique_pairs": 2,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No or Not Reported",
+          "page": 149
+        },
+        {
+          "code": "1",
+          "label": "Yes",
+          "page": 149
+        }
+      ]
+    },
+    "HELM_MIS": {
+      "contexts": 2,
+      "unique_pairs": 8,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Indication of Misuse",
+          "page": 207
+        },
+        {
+          "code": "0",
+          "label": "Other Restraint/ Safety Equipment Used",
+          "page": 416
+        },
+        {
+          "code": "1",
+          "label": "Yes",
+          "page": 207
+        },
+        {
+          "code": "1",
+          "label": "Yes, Indication of Misuse",
+          "page": 207
+        },
+        {
+          "code": "7",
+          "label": "None Used/Not Applicable",
+          "page": 207
+        },
+        {
+          "code": "8",
+          "label": "Not a Motor Vehicle Occupant",
+          "page": 207
+        },
+        {
+          "code": "20",
+          "label": "Shoulder and Lap Belt Used",
+          "page": 416
+        },
+        {
+          "code": "98",
+          "label": "Unknown",
+          "page": 416
+        }
+      ]
+    },
+    "HELM_USE": {
+      "contexts": 1,
+      "unique_pairs": 9,
+      "codes": [
+        {
+          "code": "5",
+          "label": "DOT-Compliant Motorcycle Helmet",
+          "page": 206
+        },
+        {
+          "code": "16",
+          "label": "Helmet, Other Than DOT-Compliant Motorcycle Helmet",
+          "page": 206
+        },
+        {
+          "code": "17",
+          "label": "No Helmet",
+          "page": 206
+        },
+        {
+          "code": "19",
+          "label": "Helmet, Unknown if DOT-Compliant",
+          "page": 206
+        },
+        {
+          "code": "20",
+          "label": "Not Applicable",
+          "page": 206
+        },
+        {
+          "code": "96",
+          "label": "Not a Motor Vehicle Occupant",
+          "page": 206
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 206
+        },
+        {
+          "code": "99",
+          "label": "Unknown",
+          "page": 206
+        },
+        {
+          "code": "99",
+          "label": "Unknown/Reported as Unknown",
+          "page": 206
+        }
+      ]
+    },
+    "HOSPITAL": {
+      "contexts": 1,
+      "unique_pairs": 9,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Not Transported for Treatment",
+          "page": 217
+        },
+        {
+          "code": "1",
+          "label": "EMS Air",
+          "page": 217
+        },
+        {
+          "code": "2",
+          "label": "Law Enforcement",
+          "page": 217
+        },
+        {
+          "code": "3",
+          "label": "EMS Unknown Mode",
+          "page": 217
+        },
+        {
+          "code": "4",
+          "label": "Transported Unknown Source",
+          "page": 217
+        },
+        {
+          "code": "5",
+          "label": "EMS Ground",
+          "page": 217
+        },
+        {
+          "code": "6",
+          "label": "Other",
+          "page": 217
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 217
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 217
+        }
+      ]
+    },
+    "IMPACT1": {
+      "contexts": 2,
+      "unique_pairs": 14,
+      "codes": [
+        {
+          "code": "13",
+          "label": "Top",
+          "page": 141
+        },
+        {
+          "code": "14",
+          "label": "Undercarriage",
+          "page": 141
+        },
+        {
+          "code": "18",
+          "label": "Cargo/Vehicle Parts Set-in-Motion",
+          "page": 141
+        },
+        {
+          "code": "19",
+          "label": "Other Objects or Person Set-in-Motion",
+          "page": 141
+        },
+        {
+          "code": "20",
+          "label": "Object Set in Motion, Unknown if Cargo/Vehicle Parts or Other",
+          "page": 141
+        },
+        {
+          "code": "60",
+          "label": "and",
+          "page": 398
+        },
+        {
+          "code": "61",
+          "label": "Left",
+          "page": 141
+        },
+        {
+          "code": "62",
+          "label": "Left-Front Side",
+          "page": 141
+        },
+        {
+          "code": "63",
+          "label": "Left-Back Side",
+          "page": 141
+        },
+        {
+          "code": "81",
+          "label": "Right",
+          "page": 141
+        },
+        {
+          "code": "82",
+          "label": "Right-Front Side",
+          "page": 141
+        },
+        {
+          "code": "83",
+          "label": "Right-Back Side",
+          "page": 141
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 141
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown",
+          "page": 141
+        }
+      ]
+    },
+    "INJ_SEV": {
+      "contexts": 3,
+      "unique_pairs": 29,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Apparent Injury (O)",
+          "page": 199
+        },
+        {
+          "code": "0",
+          "label": "Number of Known Injured x No Person involved in the Crash",
+          "page": 393
+        },
+        {
+          "code": "0",
+          "label": "Possible Injury",
+          "page": 392
+        },
+        {
+          "code": "1",
+          "label": "No Alcohol involved",
+          "page": 393
+        },
+        {
+          "code": "1",
+          "label": "Possible Injury (C)",
+          "page": 199
+        },
+        {
+          "code": "1",
+          "label": "Suspected Minor Injury",
+          "page": 392
+        },
+        {
+          "code": "2",
+          "label": "No applicable person",
+          "page": 393
+        },
+        {
+          "code": "2",
+          "label": "Suspected Minor Injury (B)",
+          "page": 199
+        },
+        {
+          "code": "2",
+          "label": "Suspected Serious Injury",
+          "page": 392
+        },
+        {
+          "code": "3",
+          "label": "Fatal",
+          "page": 392
+        },
+        {
+          "code": "3",
+          "label": "Suspected Serious Injury (A)",
+          "page": 199
+        },
+        {
+          "code": "4",
+          "label": "Fatal Injury (K)",
+          "page": 199
+        },
+        {
+          "code": "4",
+          "label": "Injured, Severity Unknown",
+          "page": 392
+        },
+        {
+          "code": "5",
+          "label": "Died Prior to Crash",
+          "page": 392
+        },
+        {
+          "code": "5",
+          "label": "Injured, Severity Unknown (U)",
+          "page": 199
+        },
+        {
+          "code": "6",
+          "label": "Died Prior to Crash",
+          "page": 199
+        },
+        {
+          "code": "6",
+          "label": "No person in Vehicle",
+          "page": 392
+        },
+        {
+          "code": "6",
+          "label": "No person involved in the Crash",
+          "page": 392
+        },
+        {
+          "code": "8",
+          "label": "Unknown",
+          "page": 393
+        },
+        {
+          "code": "8",
+          "label": "Unknown if Injured/Not Reported",
+          "page": 392
+        },
+        {
+          "code": "9",
+          "label": "Logic of Derivation All Person records linked to the crash are used. If there are no records then the value",
+          "page": 392
+        },
+        {
+          "code": "9",
+          "label": "Logic of Derivation All Person records linked to the vehicle are used. If there are no records then the value",
+          "page": 392
+        },
+        {
+          "code": "9",
+          "label": "Unknown",
+          "page": 199
+        },
+        {
+          "code": "9",
+          "label": "Unknown/Not Reported",
+          "page": 199
+        },
+        {
+          "code": "98",
+          "label": "All Persons in Crash Are Unknown if Injured",
+          "page": 393
+        },
+        {
+          "code": "98",
+          "label": "All Persons in Vehicle Are Unknown if Injured",
+          "page": 393
+        },
+        {
+          "code": "98",
+          "label": "is assigned. If the SAS code for Person.INJ_SEV is",
+          "page": 393
+        },
+        {
+          "code": "99",
+          "label": "Logic of Derivation All Person records linked to the crash are used. If there are no records then the value",
+          "page": 393
+        },
+        {
+          "code": "99",
+          "label": "Logic of Derivation All Person records linked to the vehicle are used. If there are no records then the value",
+          "page": 393
+        }
+      ]
+    },
+    "REST_MIS": {
+      "contexts": 2,
+      "unique_pairs": 8,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Indication of Misuse",
+          "page": 205
+        },
+        {
+          "code": "0",
+          "label": "Other Restraint/ Safety Equipment Used",
+          "page": 416
+        },
+        {
+          "code": "1",
+          "label": "Yes",
+          "page": 205
+        },
+        {
+          "code": "1",
+          "label": "Yes, Indication of Misuse",
+          "page": 205
+        },
+        {
+          "code": "7",
+          "label": "None Used/Not Applicable",
+          "page": 205
+        },
+        {
+          "code": "8",
+          "label": "Not a Motor Vehicle Occupant",
+          "page": 205
+        },
+        {
+          "code": "20",
+          "label": "Shoulder and Lap Belt Used",
+          "page": 416
+        },
+        {
+          "code": "98",
+          "label": "Unknown",
+          "page": 416
+        }
+      ]
+    },
+    "REST_USE": {
+      "contexts": 1,
+      "unique_pairs": 14,
+      "codes": [
+        {
+          "code": "1",
+          "label": "Shoulder Belt Only Used",
+          "page": 204
+        },
+        {
+          "code": "2",
+          "label": "Lap Belt Only Used",
+          "page": 204
+        },
+        {
+          "code": "3",
+          "label": "Shoulder and Lap Belt Used",
+          "page": 204
+        },
+        {
+          "code": "4",
+          "label": "Child Restraint – Type Unknown",
+          "page": 204
+        },
+        {
+          "code": "6",
+          "label": "Racing-Style Harness Used",
+          "page": 204
+        },
+        {
+          "code": "8",
+          "label": "Restraint Used – Type Unknown",
+          "page": 204
+        },
+        {
+          "code": "10",
+          "label": "Child Restraint System – Forward Facing",
+          "page": 204
+        },
+        {
+          "code": "11",
+          "label": "Child Restraint System – Rear Facing",
+          "page": 204
+        },
+        {
+          "code": "12",
+          "label": "Booster Seat",
+          "page": 204
+        },
+        {
+          "code": "20",
+          "label": "None Used/Not Applicable",
+          "page": 204
+        },
+        {
+          "code": "96",
+          "label": "Not a Motor Vehicle Occupant",
+          "page": 204
+        },
+        {
+          "code": "97",
+          "label": "Other",
+          "page": 204
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 204
+        },
+        {
+          "code": "99",
+          "label": "Unknown",
+          "page": 204
+        }
+      ]
+    },
+    "ROLLOVER": {
+      "contexts": 10,
+      "unique_pairs": 52,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Rollover",
+          "page": 140
+        },
+        {
+          "code": "1",
+          "label": "On Roadway",
+          "page": 140
+        },
+        {
+          "code": "1",
+          "label": "Rollover/Overturn",
+          "page": 277
+        },
+        {
+          "code": "2",
+          "label": "Fire/Explosion",
+          "page": 277
+        },
+        {
+          "code": "2",
+          "label": "On Shoulder",
+          "page": 140
+        },
+        {
+          "code": "3",
+          "label": "Immersion or Partial Immersion",
+          "page": 277
+        },
+        {
+          "code": "3",
+          "label": "On Median/Separator",
+          "page": 140
+        },
+        {
+          "code": "3",
+          "label": "Rollover",
+          "page": 139
+        },
+        {
+          "code": "4",
+          "label": "Gas Inhalation",
+          "page": 277
+        },
+        {
+          "code": "4",
+          "label": "In Gore",
+          "page": 140
+        },
+        {
+          "code": "5",
+          "label": "Fell/Jumped From Vehicle",
+          "page": 277
+        },
+        {
+          "code": "5",
+          "label": "On Roadside",
+          "page": 140
+        },
+        {
+          "code": "6",
+          "label": "Injured in Vehicle (Non-Collision)",
+          "page": 277
+        },
+        {
+          "code": "6",
+          "label": "Outside of Trafficway",
+          "page": 140
+        },
+        {
+          "code": "7",
+          "label": "In Parking Lane/Zone",
+          "page": 140
+        },
+        {
+          "code": "7",
+          "label": "Other Non-Collision",
+          "page": 277
+        },
+        {
+          "code": "8",
+          "label": "Not Applicable",
+          "page": 140
+        },
+        {
+          "code": "9",
+          "label": "Unknown",
+          "page": 140
+        },
+        {
+          "code": "12",
+          "label": "Motor Vehicle In-Transport",
+          "page": 277
+        },
+        {
+          "code": "16",
+          "label": "Thrown or Falling Object",
+          "page": 277
+        },
+        {
+          "code": "44",
+          "label": "Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.)",
+          "page": 277
+        },
+        {
+          "code": "51",
+          "label": "Jackknife (Harmful to This Vehicle)",
+          "page": 277
+        },
+        {
+          "code": "55",
+          "label": "Motor Vehicle in Motion Outside the Trafficway",
+          "page": 277
+        },
+        {
+          "code": "60",
+          "label": "Cargo/Equipment Loss or Shift (Non-Harmful)",
+          "page": 329
+        },
+        {
+          "code": "60",
+          "label": "and",
+          "page": 64
+        },
+        {
+          "code": "61",
+          "label": "Equipment Failure (Blown Tire, Brake Failure, etc.)",
+          "page": 329
+        },
+        {
+          "code": "62",
+          "label": "Separation of Units",
+          "page": 329
+        },
+        {
+          "code": "63",
+          "label": "Ran off Roadway-Right",
+          "page": 329
+        },
+        {
+          "code": "64",
+          "label": "Ran off Roadway-Left",
+          "page": 329
+        },
+        {
+          "code": "65",
+          "label": "Cross Median",
+          "page": 329
+        },
+        {
+          "code": "66",
+          "label": "Downhill Runaway",
+          "page": 329
+        },
+        {
+          "code": "67",
+          "label": "Vehicle Went Airborne",
+          "page": 329
+        },
+        {
+          "code": "68",
+          "label": "Cross Centerline",
+          "page": 329
+        },
+        {
+          "code": "69",
+          "label": "Re-entering Roadway",
+          "page": 329
+        },
+        {
+          "code": "70",
+          "label": "Non-harmful, Swaying Trailer/Jackknife",
+          "page": 329
+        },
+        {
+          "code": "71",
+          "label": "End Departure",
+          "page": 329
+        },
+        {
+          "code": "72",
+          "label": "Cargo/Equipment Loss, Shift, or Damage (Harmful)",
+          "page": 145
+        },
+        {
+          "code": "72",
+          "label": "Cargo/Equipment Loss, Shift, or Damage (Harmful) Collision with Motor Vehicle In-Transport",
+          "page": 277
+        },
+        {
+          "code": "79",
+          "label": "Ran off Roadway - Direction Unknown Non-Collision Harmful Events",
+          "page": 329
+        },
+        {
+          "code": "86",
+          "label": "Striking from the Right",
+          "page": 184
+        },
+        {
+          "code": "87",
+          "label": "Struck on the Right",
+          "page": 184
+        },
+        {
+          "code": "88",
+          "label": "Motor Vehicle in Motion Outside the Trafficway",
+          "page": 229
+        },
+        {
+          "code": "88",
+          "label": "Striking from the Left",
+          "page": 184
+        },
+        {
+          "code": "89",
+          "label": "Struck on the Left",
+          "page": 184
+        },
+        {
+          "code": "90",
+          "label": "Specifics Other",
+          "page": 184
+        },
+        {
+          "code": "92",
+          "label": "Backing Vehicle",
+          "page": 184
+        },
+        {
+          "code": "93",
+          "label": "Other Vehicle",
+          "page": 184
+        },
+        {
+          "code": "93",
+          "label": "Other Vehicle or Object",
+          "page": 184
+        },
+        {
+          "code": "97",
+          "label": "Untripped Rollover",
+          "page": 184
+        },
+        {
+          "code": "98",
+          "label": "Other Crash Type",
+          "page": 184
+        },
+        {
+          "code": "99",
+          "label": "Unknown",
+          "page": 184
+        },
+        {
+          "code": "99",
+          "label": "Unknown Crash Type",
+          "page": 184
+        }
+      ]
+    },
+    "SEAT_POS": {
+      "contexts": 1,
+      "unique_pairs": 24,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Not a Motor Vehicle Occupant",
+          "page": 201
+        },
+        {
+          "code": "11",
+          "label": "Front Seat, Left Side (Driver’s Side)",
+          "page": 201
+        },
+        {
+          "code": "12",
+          "label": "Front Seat, Middle",
+          "page": 201
+        },
+        {
+          "code": "13",
+          "label": "Front Seat, Right Side",
+          "page": 201
+        },
+        {
+          "code": "18",
+          "label": "Front Seat, Other",
+          "page": 201
+        },
+        {
+          "code": "19",
+          "label": "Front Seat, Unknown",
+          "page": 201
+        },
+        {
+          "code": "21",
+          "label": "Second Seat, Left Side",
+          "page": 201
+        },
+        {
+          "code": "22",
+          "label": "Second Seat, Middle",
+          "page": 201
+        },
+        {
+          "code": "23",
+          "label": "Second Seat, Right Side",
+          "page": 201
+        },
+        {
+          "code": "28",
+          "label": "Second Seat, Other",
+          "page": 201
+        },
+        {
+          "code": "29",
+          "label": "Second Seat, Unknown",
+          "page": 201
+        },
+        {
+          "code": "31",
+          "label": "Third Seat, Left Side",
+          "page": 201
+        },
+        {
+          "code": "32",
+          "label": "Third Seat, Middle",
+          "page": 201
+        },
+        {
+          "code": "33",
+          "label": "Third Seat, Right Side",
+          "page": 201
+        },
+        {
+          "code": "38",
+          "label": "Third Seat, Other",
+          "page": 201
+        },
+        {
+          "code": "39",
+          "label": "Third Seat, Unknown",
+          "page": 201
+        },
+        {
+          "code": "41",
+          "label": "Fourth Seat, Left Side",
+          "page": 201
+        },
+        {
+          "code": "42",
+          "label": "Fourth Seat, Middle",
+          "page": 201
+        },
+        {
+          "code": "43",
+          "label": "Fourth Seat, Right Side",
+          "page": 201
+        },
+        {
+          "code": "48",
+          "label": "Fourth Seat, Other",
+          "page": 201
+        },
+        {
+          "code": "49",
+          "label": "Fourth Seat, Unknown",
+          "page": 201
+        },
+        {
+          "code": "50",
+          "label": "Sleeper Section of Cab (Truck)",
+          "page": 201
+        },
+        {
+          "code": "51",
+          "label": "Other Passenger in Enclosed Passenger or Cargo Area",
+          "page": 201
+        },
+        {
+          "code": "52",
+          "label": "Other Passenger in Unenclosed Passenger or Cargo Area",
+          "page": 201
+        }
+      ]
+    },
+    "SEX": {
+      "contexts": 3,
+      "unique_pairs": 6,
+      "codes": [
+        {
+          "code": "1",
+          "label": "Male",
+          "page": 286
+        },
+        {
+          "code": "2",
+          "label": "Female",
+          "page": 286
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 286
+        },
+        {
+          "code": "8",
+          "label": "for not reported sex. Additional Information See the CRSS Imputation section of this manual. SAS Name SEX_IM",
+          "page": 196
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 286
+        },
+        {
+          "code": "9",
+          "label": "for unknown sex and value",
+          "page": 196
+        }
+      ]
+    },
+    "ACC_TYPE": {
+      "contexts": 1,
+      "unique_pairs": 10,
+      "codes": [
+        {
+          "code": "1",
+          "label": "Drive off Road",
+          "page": 180
+        },
+        {
+          "code": "2",
+          "label": "Control/Traction Loss",
+          "page": 180
+        },
+        {
+          "code": "3",
+          "label": "Avoid Collision with Vehicle, Pedestrian, Animal",
+          "page": 180
+        },
+        {
+          "code": "4",
+          "label": "Specifics Other",
+          "page": 180
+        },
+        {
+          "code": "6",
+          "label": "Drive off Road",
+          "page": 180
+        },
+        {
+          "code": "7",
+          "label": "Control/Traction Loss",
+          "page": 180
+        },
+        {
+          "code": "8",
+          "label": "Avoid Collision With Vehicle, Pedestrian, Animal",
+          "page": 180
+        },
+        {
+          "code": "9",
+          "label": "Specifics Other",
+          "page": 180
+        },
+        {
+          "code": "11",
+          "label": "Parked Vehicle",
+          "page": 180
+        },
+        {
+          "code": "12",
+          "label": "Stationary Object",
+          "page": 180
+        }
+      ]
+    },
+    "DEFORMED": {
+      "contexts": 1,
+      "unique_pairs": 7,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Damage",
+          "page": 143
+        },
+        {
+          "code": "2",
+          "label": "Minor Damage",
+          "page": 143
+        },
+        {
+          "code": "4",
+          "label": "Functional Damage",
+          "page": 143
+        },
+        {
+          "code": "6",
+          "label": "Disabling Damage",
+          "page": 143
+        },
+        {
+          "code": "7",
+          "label": "Damage Reported, Extent Unknown",
+          "page": 143
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 143
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 143
+        }
+      ]
+    },
+    "SPEEDREL": {
+      "contexts": 1,
+      "unique_pairs": 10,
+      "codes": [
+        {
+          "code": "2",
+          "label": "Yes",
+          "page": 162
+        },
+        {
+          "code": "2",
+          "label": "Yes, Racing",
+          "page": 162
+        },
+        {
+          "code": "3",
+          "label": "Yes",
+          "page": 162
+        },
+        {
+          "code": "3",
+          "label": "Yes, Exceeded Speed Limit",
+          "page": 162
+        },
+        {
+          "code": "4",
+          "label": "Yes",
+          "page": 162
+        },
+        {
+          "code": "4",
+          "label": "Yes, Too Fast for Conditions",
+          "page": 162
+        },
+        {
+          "code": "5",
+          "label": "Yes",
+          "page": 162
+        },
+        {
+          "code": "5",
+          "label": "Yes, Specifics Unknown",
+          "page": 162
+        },
+        {
+          "code": "8",
+          "label": "No Driver Present/Unknown if Driver Present",
+          "page": 162
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 162
+        }
+      ]
+    },
+    "TRAV_SP": {
+      "contexts": 1,
+      "unique_pairs": 4,
+      "codes": [
+        {
+          "code": "151",
+          "label": "mph",
+          "page": 137
+        },
+        {
+          "code": "997",
+          "label": "Speed Greater Than",
+          "page": 137
+        },
+        {
+          "code": "998",
+          "label": "Not Reported",
+          "page": 137
+        },
+        {
+          "code": "999",
+          "label": "Reported as Unknown",
+          "page": 137
+        }
+      ]
+    },
+    "VALIGN": {
+      "contexts": 1,
+      "unique_pairs": 7,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Non-Trafficway or Driveway Access",
+          "page": 166
+        },
+        {
+          "code": "1",
+          "label": "Straight",
+          "page": 166
+        },
+        {
+          "code": "2",
+          "label": "Curve Right",
+          "page": 166
+        },
+        {
+          "code": "3",
+          "label": "Curve Left",
+          "page": 166
+        },
+        {
+          "code": "4",
+          "label": "Curve – Unknown Direction",
+          "page": 166
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 166
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 166
+        }
+      ]
+    },
+    "VNUM_LAN": {
+      "contexts": 1,
+      "unique_pairs": 10,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Non-Trafficway or Driveway Access",
+          "page": 164
+        },
+        {
+          "code": "1",
+          "label": "One Lane",
+          "page": 164
+        },
+        {
+          "code": "2",
+          "label": "Two Lanes",
+          "page": 164
+        },
+        {
+          "code": "3",
+          "label": "Three Lanes",
+          "page": 164
+        },
+        {
+          "code": "4",
+          "label": "Four Lanes",
+          "page": 164
+        },
+        {
+          "code": "5",
+          "label": "Five Lanes",
+          "page": 164
+        },
+        {
+          "code": "6",
+          "label": "Six Lanes",
+          "page": 164
+        },
+        {
+          "code": "7",
+          "label": "Seven or More Lanes",
+          "page": 164
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 164
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 164
+        }
+      ]
+    },
+    "VPROFILE": {
+      "contexts": 1,
+      "unique_pairs": 9,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Non-Trafficway or Driveway Access",
+          "page": 167
+        },
+        {
+          "code": "1",
+          "label": "Level",
+          "page": 167
+        },
+        {
+          "code": "2",
+          "label": "Grade, Unknown Slope",
+          "page": 167
+        },
+        {
+          "code": "3",
+          "label": "Hillcrest",
+          "page": 167
+        },
+        {
+          "code": "4",
+          "label": "Sag (Bottom)",
+          "page": 167
+        },
+        {
+          "code": "5",
+          "label": "Uphill",
+          "page": 167
+        },
+        {
+          "code": "6",
+          "label": "Downhill",
+          "page": 167
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 167
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 167
+        }
+      ]
+    },
+    "VSPD_LIM": {
+      "contexts": 1,
+      "unique_pairs": 3,
+      "codes": [
+        {
+          "code": "5",
+          "label": "mph Increments)",
+          "page": 165
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 165
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown",
+          "page": 165
+        }
+      ]
+    },
+    "VSURCOND": {
+      "contexts": 1,
+      "unique_pairs": 13,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Non-Trafficway or Driveway Access",
+          "page": 168
+        },
+        {
+          "code": "1",
+          "label": "Dry",
+          "page": 168
+        },
+        {
+          "code": "2",
+          "label": "Wet",
+          "page": 168
+        },
+        {
+          "code": "3",
+          "label": "Snow",
+          "page": 168
+        },
+        {
+          "code": "4",
+          "label": "Ice/Frost",
+          "page": 168
+        },
+        {
+          "code": "5",
+          "label": "Sand",
+          "page": 168
+        },
+        {
+          "code": "6",
+          "label": "Water (Standing or Moving)",
+          "page": 168
+        },
+        {
+          "code": "7",
+          "label": "Oil",
+          "page": 168
+        },
+        {
+          "code": "8",
+          "label": "Other",
+          "page": 168
+        },
+        {
+          "code": "10",
+          "label": "Slush",
+          "page": 168
+        },
+        {
+          "code": "11",
+          "label": "Mud, Dirt, Gravel",
+          "page": 168
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 168
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown",
+          "page": 168
+        }
+      ]
+    },
+    "VTRAFCON": {
+      "contexts": 1,
+      "unique_pairs": 13,
+      "codes": [
+        {
+          "code": "1",
+          "label": "Traffic Control Signal (on Colors) Without Pedestrian Signal",
+          "page": 169
+        },
+        {
+          "code": "2",
+          "label": "Traffic Control Signal (on Colors) With Pedestrian Signal",
+          "page": 169
+        },
+        {
+          "code": "3",
+          "label": "Traffic Control Signal (on Colors) Not Known if Pedestrian Signal",
+          "page": 169
+        },
+        {
+          "code": "4",
+          "label": "Flashing Traffic Control Signal",
+          "page": 169
+        },
+        {
+          "code": "7",
+          "label": "Lane Use Control Signal",
+          "page": 169
+        },
+        {
+          "code": "8",
+          "label": "Other Highway Traffic Signal",
+          "page": 169
+        },
+        {
+          "code": "9",
+          "label": "Unknown",
+          "page": 169
+        },
+        {
+          "code": "20",
+          "label": "Stop Sign",
+          "page": 169
+        },
+        {
+          "code": "21",
+          "label": "Yield Sign",
+          "page": 169
+        },
+        {
+          "code": "23",
+          "label": "School Zone Sign/Device",
+          "page": 169
+        },
+        {
+          "code": "28",
+          "label": "Other Regulatory Sign",
+          "page": 169
+        },
+        {
+          "code": "29",
+          "label": "Unknown",
+          "page": 169
+        },
+        {
+          "code": "29",
+          "label": "Unknown Regulatory Sign",
+          "page": 169
+        }
+      ]
+    },
+    "VTRAFWAY": {
+      "contexts": 2,
+      "unique_pairs": 17,
+      "codes": [
+        {
+          "code": "0",
+          "label": "Non-Trafficway or Driveway Access",
+          "page": 164
+        },
+        {
+          "code": "1",
+          "label": "One Lane",
+          "page": 164
+        },
+        {
+          "code": "1",
+          "label": "Two-Way, Not Divided",
+          "page": 163
+        },
+        {
+          "code": "2",
+          "label": "Two Lanes",
+          "page": 164
+        },
+        {
+          "code": "2",
+          "label": "Two-Way, Divided, Unprotected Median",
+          "page": 163
+        },
+        {
+          "code": "3",
+          "label": "Three Lanes",
+          "page": 164
+        },
+        {
+          "code": "3",
+          "label": "Two-Way, Divided, Positive Median Barrier",
+          "page": 163
+        },
+        {
+          "code": "4",
+          "label": "Four Lanes",
+          "page": 164
+        },
+        {
+          "code": "4",
+          "label": "One-Way Trafficway",
+          "page": 163
+        },
+        {
+          "code": "5",
+          "label": "Five Lanes",
+          "page": 164
+        },
+        {
+          "code": "5",
+          "label": "Two-Way, Not Divided With a Continuous Left- Turn Lane",
+          "page": 163
+        },
+        {
+          "code": "6",
+          "label": "Entrance/Exit Ramp",
+          "page": 163
+        },
+        {
+          "code": "6",
+          "label": "Six Lanes",
+          "page": 164
+        },
+        {
+          "code": "7",
+          "label": "Seven or More Lanes",
+          "page": 164
+        },
+        {
+          "code": "7",
+          "label": "Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier",
+          "page": 163
+        },
+        {
+          "code": "8",
+          "label": "Not Reported",
+          "page": 164
+        },
+        {
+          "code": "9",
+          "label": "Reported as Unknown",
+          "page": 164
+        }
+      ]
+    },
+    "VISION": {
+      "contexts": 3,
+      "unique_pairs": 34,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Obstruction Noted",
+          "page": 361
+        },
+        {
+          "code": "0",
+          "label": "None/Apparently Normal",
+          "page": 372
+        },
+        {
+          "code": "1",
+          "label": "Ill, Blackout",
+          "page": 372
+        },
+        {
+          "code": "1",
+          "label": "Rain, Snow, Fog, Smoke, Sand, Dust",
+          "page": 361
+        },
+        {
+          "code": "2",
+          "label": "Asleep or Fatigued",
+          "page": 372
+        },
+        {
+          "code": "2",
+          "label": "Reflected Glare, Bright Sunlight, Headlights",
+          "page": 361
+        },
+        {
+          "code": "3",
+          "label": "Curve, Hill, or Other Roadway Design Features",
+          "page": 361
+        },
+        {
+          "code": "3",
+          "label": "Walking With a Cane or Crutches, etc.",
+          "page": 372
+        },
+        {
+          "code": "4",
+          "label": "Building, Billboard, or Other Structure",
+          "page": 361
+        },
+        {
+          "code": "4",
+          "label": "Paraplegic or in a Wheelchair",
+          "page": 372
+        },
+        {
+          "code": "5",
+          "label": "Impaired Due to Previous Injury",
+          "page": 372
+        },
+        {
+          "code": "5",
+          "label": "Trees, Crops, Vegetation",
+          "page": 361
+        },
+        {
+          "code": "6",
+          "label": "Deaf/Hard of Hearing",
+          "page": 372
+        },
+        {
+          "code": "6",
+          "label": "In-Transport Motor Vehicle (Including Load)",
+          "page": 361
+        },
+        {
+          "code": "7",
+          "label": "Blind/Low Vision",
+          "page": 372
+        },
+        {
+          "code": "7",
+          "label": "Not In-Transport Motor Vehicle (Parked, Working)",
+          "page": 361
+        },
+        {
+          "code": "8",
+          "label": "Emotional (Depressed, Angry, Disturbed, etc.)",
+          "page": 372
+        },
+        {
+          "code": "8",
+          "label": "Splash or Spray of Passing Vehicle",
+          "page": 361
+        },
+        {
+          "code": "9",
+          "label": "Inadequate Defrost or Defog System",
+          "page": 361
+        },
+        {
+          "code": "9",
+          "label": "Under the Influence of Alcohol, Drugs or Medication",
+          "page": 372
+        },
+        {
+          "code": "9",
+          "label": "Under the Influence of Alcohol, Drugs, or Medication",
+          "page": 350
+        },
+        {
+          "code": "10",
+          "label": "Inadequate Vehicle Lighting System",
+          "page": 361
+        },
+        {
+          "code": "10",
+          "label": "Physical Impairment – No Details",
+          "page": 372
+        },
+        {
+          "code": "11",
+          "label": "Obstructing Interior to the Vehicle",
+          "page": 361
+        },
+        {
+          "code": "12",
+          "label": "External Mirrors",
+          "page": 361
+        },
+        {
+          "code": "13",
+          "label": "Broken or Improperly Cleaned Windshield",
+          "page": 361
+        },
+        {
+          "code": "14",
+          "label": "Obstructing Angles on Vehicle",
+          "page": 361
+        },
+        {
+          "code": "95",
+          "label": "No Driver Present/Unknown if Driver Present",
+          "page": 361
+        },
+        {
+          "code": "96",
+          "label": "Other Physical Impairment",
+          "page": 372
+        },
+        {
+          "code": "97",
+          "label": "Vision Obscured – No Details",
+          "page": 361
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 372
+        },
+        {
+          "code": "98",
+          "label": "Other Visual Obstruction",
+          "page": 361
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown",
+          "page": 361
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown if Impaired",
+          "page": 372
+        }
+      ]
+    },
+    "WEATHER": {
+      "contexts": 7,
+      "unique_pairs": 28,
+      "codes": [
+        {
+          "code": "0",
+          "label": "No Additional Atmospheric Conditions",
+          "page": 89
+        },
+        {
+          "code": "1",
+          "label": "Clear",
+          "page": 336
+        },
+        {
+          "code": "1",
+          "label": "Rain",
+          "page": 396
+        },
+        {
+          "code": "2",
+          "label": "Rain",
+          "page": 336
+        },
+        {
+          "code": "2",
+          "label": "Sleet or Hail",
+          "page": 396
+        },
+        {
+          "code": "3",
+          "label": "Sleet or Hail",
+          "page": 336
+        },
+        {
+          "code": "3",
+          "label": "Snow",
+          "page": 396
+        },
+        {
+          "code": "4",
+          "label": "Fog, Smog, Smoke",
+          "page": 396
+        },
+        {
+          "code": "4",
+          "label": "Snow",
+          "page": 336
+        },
+        {
+          "code": "5",
+          "label": "Fog, Smog, Smoke",
+          "page": 336
+        },
+        {
+          "code": "5",
+          "label": "Severe Crosswinds",
+          "page": 396
+        },
+        {
+          "code": "6",
+          "label": "Blowing Sand, Soil, Dirt",
+          "page": 396
+        },
+        {
+          "code": "6",
+          "label": "Severe Crosswinds",
+          "page": 336
+        },
+        {
+          "code": "7",
+          "label": "Blowing Sand, Soil, Dirt",
+          "page": 336
+        },
+        {
+          "code": "7",
+          "label": "Other",
+          "page": 396
+        },
+        {
+          "code": "8",
+          "label": "Cloudy",
+          "page": 396
+        },
+        {
+          "code": "8",
+          "label": "Other",
+          "page": 336
+        },
+        {
+          "code": "10",
+          "label": "Blowing Snow",
+          "page": 396
+        },
+        {
+          "code": "10",
+          "label": "Cloudy",
+          "page": 336
+        },
+        {
+          "code": "11",
+          "label": "Blowing Snow",
+          "page": 336
+        },
+        {
+          "code": "11",
+          "label": "Freezing Rain or Drizzle",
+          "page": 396
+        },
+        {
+          "code": "12",
+          "label": "Freezing Rain or Drizzle",
+          "page": 336
+        },
+        {
+          "code": "12",
+          "label": "Not Reported",
+          "page": 396
+        },
+        {
+          "code": "98",
+          "label": "Not Reported",
+          "page": 336
+        },
+        {
+          "code": "98",
+          "label": "Unknown",
+          "page": 396
+        },
+        {
+          "code": "98",
+          "label": "Unknown/Reported as Unknown",
+          "page": 396
+        },
+        {
+          "code": "99",
+          "label": "Logic of Derivation Prior to",
+          "page": 396
+        },
+        {
+          "code": "99",
+          "label": "Reported as Unknown",
+          "page": 336
+        }
+      ]
+    }
+  },
+  "artifact_pairs": [
+    {
+      "variable": "HARM_EV",
+      "code": "60",
+      "label": "and",
+      "page": 398
+    },
+    {
+      "variable": "IMPACT1",
+      "code": "60",
+      "label": "and",
+      "page": 398
+    },
+    {
+      "variable": "ROLLOVER",
+      "code": "60",
+      "label": "and",
+      "page": 64
+    }
+  ],
+  "csv_inventory": {
+    "accident.csv": {
+      "columns": 80,
+      "rows": 51658
+    },
+    "cevent.csv": {
+      "columns": 22,
+      "rows": 84081
+    },
+    "crashrf.csv": {
+      "columns": 14,
+      "rows": 51817
+    },
+    "damage.csv": {
+      "columns": 15,
+      "rows": 191085
+    },
+    "distract.csv": {
+      "columns": 15,
+      "rows": 90696
+    },
+    "drimpair.csv": {
+      "columns": 15,
+      "rows": 90761
+    },
+    "driverrf.csv": {
+      "columns": 15,
+      "rows": 92041
+    },
+    "factor.csv": {
+      "columns": 15,
+      "rows": 90708
+    },
+    "maneuver.csv": {
+      "columns": 15,
+      "rows": 90643
+    },
+    "nmcrash.csv": {
+      "columns": 16,
+      "rows": 7469
+    },
+    "nmdistract.csv": {
+      "columns": 16,
+      "rows": 5250
+    },
+    "nmimpair.csv": {
+      "columns": 16,
+      "rows": 5256
+    },
+    "nmprior.csv": {
+      "columns": 16,
+      "rows": 5355
+    },
+    "parkwork.csv": {
+      "columns": 105,
+      "rows": 2554
+    },
+    "pbtype.csv": {
+      "columns": 54,
+      "rows": 5211
+    },
+    "person.csv": {
+      "columns": 112,
+      "rows": 126159
+    },
+    "personrf.csv": {
+      "columns": 16,
+      "rows": 126167
+    },
+    "pvehiclesf.csv": {
+      "columns": 15,
+      "rows": 2554
+    },
+    "safetyeq.csv": {
+      "columns": 26,
+      "rows": 5249
+    },
+    "vehicle.csv": {
+      "columns": 167,
+      "rows": 90641
+    },
+    "vehiclesf.csv": {
+      "columns": 15,
+      "rows": 90641
+    },
+    "vevent.csv": {
+      "columns": 24,
+      "rows": 125797
+    },
+    "violatn.csv": {
+      "columns": 15,
+      "rows": 97551
+    },
+    "vision.csv": {
+      "columns": 15,
+      "rows": 90668
+    },
+    "vpicdecode.csv": {
+      "columns": 202,
+      "rows": 77959
+    },
+    "vpictrailerdecode.csv": {
+      "columns": 40,
+      "rows": 628
+    },
+    "vsoe.csv": {
+      "columns": 18,
+      "rows": 125797
+    },
+    "weather.csv": {
+      "columns": 14,
+      "rows": 52032
+    }
+  },
+  "checks": [
+    {
+      "check": "required:data/schemas/nhtsa/crss_2024_canonical_schema.json",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\crss_2024_canonical_schema.json exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/crss_2024_feature_map.csv",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\crss_2024_feature_map.csv exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/verification/crss_2024_final_feature_dictionary_v2.csv",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\verification\\crss_2024_final_feature_dictionary_v2.csv exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/verification/crss_2024_semantic_verified_candidates.csv",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\verification\\crss_2024_semantic_verified_candidates.csv exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/verification/crss_2024_coded_missingness.csv",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\verification\\crss_2024_coded_missingness.csv exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/verification/crss_2024_relationship_integrity.csv",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\verification\\crss_2024_relationship_integrity.csv exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/codebook/crss_2024_codebook_context_full.json",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\codebook\\crss_2024_codebook_context_full.json exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/codebook/crss_2024_codebook_candidates.json",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\codebook\\crss_2024_codebook_candidates.json exists=True"
+    },
+    {
+      "check": "required:data/schemas/nhtsa/codebook/crss_2024_codebook_parsed_candidates.json",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\codebook\\crss_2024_codebook_parsed_candidates.json exists=True"
+    },
+    {
+      "check": "required:data/raw/nhtsa/CRSS/documentation/CRSS_Analytical_Users_Manual_2016_2024.pdf",
+      "status": "PASS",
+      "detail": "data\\raw\\nhtsa\\CRSS\\documentation\\CRSS_Analytical_Users_Manual_2016_2024.pdf exists=True"
+    },
+    {
+      "check": "required:data/raw/nhtsa/CRSS/documentation/FARS_CRSS_2024_Coding_Validation_Manual.pdf",
+      "status": "PASS",
+      "detail": "data\\raw\\nhtsa\\CRSS\\documentation\\FARS_CRSS_2024_Coding_Validation_Manual.pdf exists=True"
+    },
+    {
+      "check": "canonical_schema_is_dictionary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "codebook_context_variables",
+      "status": "PASS",
+      "detail": "Found 30 variables; expected 30"
+    },
+    {
+      "check": "codebook_candidate_variables",
+      "status": "PASS",
+      "detail": "Found 30 variables; expected 30"
+    },
+    {
+      "check": "parsed_candidate_variables",
+      "status": "PASS",
+      "detail": "Found 30 variables; expected 30"
+    },
+    {
+      "check": "feature_dictionary_37_rows",
+      "status": "PASS",
+      "detail": "Rows=37"
+    },
+    {
+      "check": "feature_dictionary_unique_pairs",
+      "status": "PASS",
+      "detail": "Unique pairs=37"
+    },
+    {
+      "check": "expected_variable_coverage",
+      "status": "PASS",
+      "detail": "Missing=[]"
+    },
+    {
+      "check": "no_obvious_codebook_artifacts",
+      "status": "FAIL",
+      "detail": "Artifacts=[{'variable': 'HARM_EV', 'code': '60', 'label': 'and', 'page': 398}, {'variable': 'IMPACT1', 'code': '60', 'label': 'and', 'page': 398}, {'variable': 'ROLLOVER', 'code': '60', 'label': 'and', 'page': 64}]"
+    },
+    {
+      "check": "codebook_depth:PEDS",
+      "status": "WARNING",
+      "detail": "Only 0 extracted candidates; expected at least 1"
+    },
+    {
+      "check": "derived_variable_documentation:HARM_EV",
+      "status": "WARNING",
+      "detail": "No explicit 'derived' wording found in extracted context"
+    },
+    {
+      "check": "derived_variable_documentation:IMPACT1",
+      "status": "WARNING",
+      "detail": "No explicit 'derived' wording found in extracted context"
+    },
+    {
+      "check": "derived_variable_documentation:ROLLOVER",
+      "status": "WARNING",
+      "detail": "No explicit 'derived' wording found in extracted context"
+    },
+    {
+      "check": "canonical_entity_coverage",
+      "status": "PASS",
+      "detail": "Entities=['crash', 'environment', 'event', 'occupant_outcome', 'occupant_protection', 'person', 'vehicle', 'vehicle_safety']"
+    },
+    {
+      "check": "CRSS_2024_csv_inventory",
+      "status": "PASS",
+      "detail": "CSV files=28"
+    },
+    {
+      "check": "table_variables:accident",
+      "status": "PASS",
+      "detail": "Missing=[]"
+    },
+    {
+      "check": "table_variables:person",
+      "status": "PASS",
+      "detail": "Missing=[]"
+    },
+    {
+      "check": "table_variables:vehicle",
+      "status": "PASS",
+      "detail": "Missing=[]"
+    },
+    {
+      "check": "table_variables:vision",
+      "status": "PASS",
+      "detail": "Missing=[]"
+    },
+    {
+      "check": "table_variables:weather",
+      "status": "PASS",
+      "detail": "Missing=[]"
+    }
+  ],
+  "errors": [
+    {
+      "check": "PEDS_codebook_extraction",
+      "status": "FAIL",
+      "detail": "Generic parser extracted zero PEDS contexts. This must be resolved from the authoritative manual."
+    },
+    {
+      "check": "no_obvious_codebook_artifacts",
+      "status": "FAIL",
+      "detail": "Artifacts=[{'variable': 'HARM_EV', 'code': '60', 'label': 'and', 'page': 398}, {'variable': 'IMPACT1', 'code': '60', 'label': 'and', 'page': 398}, {'variable': 'ROLLOVER', 'code': '60', 'label': 'and', 'page': 64}]"
+    }
+  ],
+  "warnings": [
+    {
+      "check": "codebook_depth:PEDS",
+      "status": "WARNING",
+      "detail": "Only 0 extracted candidates; expected at least 1"
+    },
+    {
+      "check": "derived_variable_documentation:HARM_EV",
+      "status": "WARNING",
+      "detail": "No explicit 'derived' wording found in extracted context"
+    },
+    {
+      "check": "derived_variable_documentation:IMPACT1",
+      "status": "WARNING",
+      "detail": "No explicit 'derived' wording found in extracted context"
+    },
+    {
+      "check": "derived_variable_documentation:ROLLOVER",
+      "status": "WARNING",
+      "detail": "No explicit 'derived' wording found in extracted context"
+    }
+  ]
+}

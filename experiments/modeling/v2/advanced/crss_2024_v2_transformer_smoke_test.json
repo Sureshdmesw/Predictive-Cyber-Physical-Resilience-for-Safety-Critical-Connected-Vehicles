@@ -1,0 +1,111 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "phase": "4.10A",
+  "name": "temporal_transformer_cpu_smoke_test",
+  "status": "PASS",
+  "device": "cpu",
+  "seed": 42,
+  "sample_count": 2048,
+  "input_shape": [
+    2048,
+    12,
+    59
+  ],
+  "architecture": {
+    "embedding_dim": 128,
+    "attention_heads": 8,
+    "transformer_layers": 3,
+    "feedforward_dim": 256,
+    "dropout": 0.1,
+    "attention_pooling": true,
+    "dual_horizon_heads": true
+  },
+  "parameters": {
+    "total": 407555,
+    "trainable": 407555
+  },
+  "loss": {
+    "type": "weighted_binary_cross_entropy_with_logits",
+    "y3_positive_weight": 116.69,
+    "y6_positive_weight": 105.28,
+    "combined_loss": 3.2705626487731934
+  },
+  "forward_seconds": 1.239427089691162,
+  "checks": [
+    {
+      "name": "architecture_spec",
+      "status": "PASS",
+      "detail": "DESIGN_READY"
+    },
+    {
+      "name": "final_feature_count",
+      "status": "PASS",
+      "detail": "count=59"
+    },
+    {
+      "name": "smoke_input_shape",
+      "status": "PASS",
+      "detail": "(2048, 12, 59)"
+    },
+    {
+      "name": "smoke_input_finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "train_only_normalization",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "model_parameter_count",
+      "status": "PASS",
+      "detail": "parameters=407,555"
+    },
+    {
+      "name": "y3_output_shape",
+      "status": "PASS",
+      "detail": "(2048,)"
+    },
+    {
+      "name": "y6_output_shape",
+      "status": "PASS",
+      "detail": "(2048,)"
+    },
+    {
+      "name": "temporal_representation_shape",
+      "status": "PASS",
+      "detail": "(2048, 128)"
+    },
+    {
+      "name": "forward_outputs_finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "weighted_multi_horizon_loss",
+      "status": "PASS",
+      "detail": "loss=3.270563"
+    },
+    {
+      "name": "gradient_backpropagation",
+      "status": "PASS",
+      "detail": "gradient_norm=11.366692"
+    },
+    {
+      "name": "adamw_optimizer_step",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "probability_outputs_finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "probability_range",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

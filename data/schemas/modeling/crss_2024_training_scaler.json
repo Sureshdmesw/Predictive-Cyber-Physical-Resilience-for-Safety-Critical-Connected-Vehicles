@@ -1,0 +1,291 @@
+{
+  "method": "standardization",
+  "fit_scope": "train scenarios only",
+  "sequence_length": 24,
+  "features": {
+    "VISION": {
+      "mean": 2.6134056371776277,
+      "std": 15.411018211346613
+    },
+    "WEATHER": {
+      "mean": 5.137587489753452,
+      "std": 16.532028015892802
+    },
+    "authentication_failure_rate": {
+      "mean": 0.0361893314297409,
+      "std": 0.08791818989413598
+    },
+    "can_bus_count": {
+      "mean": 2.004524244908254,
+      "std": 0.8190318231139349
+    },
+    "can_bus_load_pct": {
+      "mean": 42.00660933332743,
+      "std": 10.009904340361569
+    },
+    "can_interarrival_jitter_ms": {
+      "mean": 1.6454249041031348,
+      "std": 1.5615913294660702
+    },
+    "can_interarrival_mean_ms": {
+      "mean": 1.2014748777039637,
+      "std": 0.1812710718374177
+    },
+    "can_message_rate": {
+      "mean": 851.3260029652903,
+      "std": 127.3644508983122
+    },
+    "can_message_rate_deviation": {
+      "mean": 1.0575021009332255,
+      "std": 38.003210574222955
+    },
+    "collision_event_flag": {
+      "mean": 0.7999085692666624,
+      "std": 0.4000685567254986
+    },
+    "connectivity_degradation_rate": {
+      "mean": 9.75264388982163e-05,
+      "std": 0.0066848461020958426
+    },
+    "connectivity_drop_rate": {
+      "mean": 0.012732145552043257,
+      "std": 0.03716769720785349
+    },
+    "cyber_instability_index": {
+      "mean": 0.038933596280194514,
+      "std": 0.02178170093249232
+    },
+    "d1_authentication_failure_rate": {
+      "mean": 0.000322498419984448,
+      "std": 0.02248653470042161
+    },
+    "d1_can_bus_load_pct": {
+      "mean": 0.00015454570774788167,
+      "std": 0.6057197719467439
+    },
+    "d1_can_interarrival_jitter_ms": {
+      "mean": 0.0017117130145868809,
+      "std": 0.24093157330683312
+    },
+    "d1_can_message_rate": {
+      "mean": -0.0073772728257911185,
+      "std": 13.742287431182257
+    },
+    "d1_connectivity_drop_rate": {
+      "mean": 0.00016139461110951294,
+      "std": 0.011152302433387442
+    },
+    "d1_connectivity_resilience_score": {
+      "mean": -9.75264388982163e-05,
+      "std": 0.0066848461020958426
+    },
+    "d1_cyber_anomaly_severity": {
+      "mean": 8.119835893020587e-05,
+      "std": 0.005563277719884245
+    },
+    "d1_cyber_physical_resilience_score": {
+      "mean": -0.00011045472335130856,
+      "std": 0.007726545206020051
+    },
+    "d1_latency_jitter_ms": {
+      "mean": 0.005654704817980532,
+      "std": 0.48890326250040567
+    },
+    "d1_latency_ms": {
+      "mean": 0.10565544338410866,
+      "std": 13.313642154911312
+    },
+    "d1_message_integrity_failure_rate": {
+      "mean": 7.93718252506536e-05,
+      "std": 0.005572588292391403
+    },
+    "d1_packet_loss_rate": {
+      "mean": 4.79972628582338e-05,
+      "std": 0.0033841858054945817
+    },
+    "d1_physical_cyber_interaction_score": {
+      "mean": 6.139435522723387e-05,
+      "std": 0.004484365922900829
+    },
+    "d1_replay_indicator_rate": {
+      "mean": 4.758298863339768e-05,
+      "std": 0.003351664327288739
+    },
+    "d1_sensor_disagreement_rate": {
+      "mean": 6.257813039699169e-05,
+      "std": 0.004537786545366447
+    },
+    "d1_sequence_counter_anomaly_rate": {
+      "mean": 6.39042300705061e-05,
+      "std": 0.004451283077216462
+    },
+    "d1_telemetry_gap_duration_ms": {
+      "mean": 0.24319080017075193,
+      "std": 23.52676452049545
+    },
+    "diagnostic_event_rate": {
+      "mean": 0.22594921030186135,
+      "std": 0.1838852944334875
+    },
+    "ecu_count": {
+      "mean": 11.50249069928747,
+      "std": 3.4504605874873464
+    },
+    "ecu_state_transition_rate": {
+      "mean": 0.69710431772859,
+      "std": 0.4955572504114167
+    },
+    "fire_explosion_flag": {
+      "mean": 0.0029163251150766127,
+      "std": 0.05392420757785677
+    },
+    "gateway_present": {
+      "mean": 1.0,
+      "std": 1.0
+    },
+    "latency_jitter_ms": {
+      "mean": 6.0666466868334625,
+      "std": 4.328593807056245
+    },
+    "latency_ms": {
+      "mean": 51.639486894234714,
+      "std": 44.59793733276516
+    },
+    "message_integrity_failure_rate": {
+      "mean": 0.006491021248074471,
+      "std": 0.021140624782582038
+    },
+    "packet_loss_rate": {
+      "mean": 0.01990096516131492,
+      "std": 0.0271172721160685
+    },
+    "physical_state_completeness": {
+      "mean": 1.0,
+      "std": 1.0
+    },
+    "redundant_sensor_divergence": {
+      "mean": 0.020012043235319948,
+      "std": 0.009774551603493173
+    },
+    "replay_indicator_rate": {
+      "mean": 0.0029428385458013136,
+      "std": 0.012787042286759523
+    },
+    "resilience_degradation_rate": {
+      "mean": 0.00011045472335130856,
+      "std": 0.007726545206020051
+    },
+    "roadway_complexity_index": {
+      "mean": 5.0,
+      "std": 1.0
+    },
+    "rolling_mean_3_cyber_anomaly_severity": {
+      "mean": 0.02535220466109764,
+      "std": 0.018624296813923514
+    },
+    "rolling_mean_3_cyber_physical_resilience_score": {
+      "mean": 0.9703366478692571,
+      "std": 0.0195936548342373
+    },
+    "rolling_mean_3_latency_ms": {
+      "mean": 51.53638779315975,
+      "std": 42.467933612475896
+    },
+    "rolling_mean_3_message_integrity_failure_rate": {
+      "mean": 0.006413495202697587,
+      "std": 0.020409758455988115
+    },
+    "rolling_mean_3_packet_loss_rate": {
+      "mean": 0.019854796230264735,
+      "std": 0.026855760914259875
+    },
+    "rolling_mean_3_sensor_disagreement_rate": {
+      "mean": 0.06395555563314906,
+      "std": 0.04680602462139542
+    },
+    "rolling_std_3_cyber_anomaly_severity": {
+      "mean": 0.0003123321242275208,
+      "std": 0.003775588104413354
+    },
+    "rolling_std_3_cyber_physical_resilience_score": {
+      "mean": 0.0004341824038744212,
+      "std": 0.005233465623478454
+    },
+    "rolling_std_3_latency_ms": {
+      "mean": 0.4321199471226451,
+      "std": 9.13059754214649
+    },
+    "rolling_std_3_message_integrity_failure_rate": {
+      "mean": 0.0003109258519471519,
+      "std": 0.003746650792920854
+    },
+    "rolling_std_3_packet_loss_rate": {
+      "mean": 0.00018790767621804295,
+      "std": 0.0022764719336484532
+    },
+    "rolling_std_3_sensor_disagreement_rate": {
+      "mean": 0.00025233206405421204,
+      "std": 0.003059577139837125
+    },
+    "rollover_flag": {
+      "mean": 0.025663661012674192,
+      "std": 0.15812981223065037
+    },
+    "rssi_dbm": {
+      "mean": -72.02591423537811,
+      "std": 11.996658264701436
+    },
+    "safety_critical_ecu_ratio": {
+      "mean": 0.42507887724932003,
+      "std": 0.10099212865058244
+    },
+    "sensor_disagreement_rate": {
+      "mean": 0.06401640623892076,
+      "std": 0.047041533109306914
+    },
+    "sensor_plausibility_score": {
+      "mean": 0.8562270890587229,
+      "std": 0.09353610882673478
+    },
+    "sequence_counter_anomaly_rate": {
+      "mean": 0.005073530554476771,
+      "std": 0.014399912144632139
+    },
+    "speed_limit_deviation": {
+      "mean": 505.50398827164383,
+      "std": 482.17678080491936
+    },
+    "speed_limit_deviation_abs": {
+      "mean": 528.0316381865186,
+      "std": 457.39623870337516
+    },
+    "speed_over_limit_flag": {
+      "mean": 0.5842423860268617,
+      "std": 0.4928521283270483
+    },
+    "state_transition_magnitude": {
+      "mean": 0.01144108213809327,
+      "std": 0.1029612807762522
+    },
+    "telemetry_gap_duration_ms": {
+      "mean": 150.99279767639263,
+      "std": 154.22163139174828
+    },
+    "uds_request_rate": {
+      "mean": 0.11969594874444556,
+      "std": 0.09772667071022609
+    },
+    "unexpected_source_id_rate": {
+      "mean": 0.0019869727967509136,
+      "std": 0.0019781622429126556
+    },
+    "vehicle_damage_flag": {
+      "mean": 0.9691815372974336,
+      "std": 0.172825591447612
+    },
+    "vehicle_state_observation_count": {
+      "mean": 7.0,
+      "std": 1.0
+    }
+  }
+}

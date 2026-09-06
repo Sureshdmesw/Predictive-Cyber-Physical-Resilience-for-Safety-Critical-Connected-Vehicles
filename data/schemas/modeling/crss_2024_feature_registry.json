@@ -1,0 +1,720 @@
+{
+  "dataset": "CRSS 2024 Temporal Cyber-Physical State Dataset",
+  "version": "phase4_v1",
+  "prediction_problem": {
+    "task": "predict future cyber anomaly from information available at time t",
+    "targets": [
+      "future_anomaly_3step",
+      "future_anomaly_6step"
+    ]
+  },
+  "policy": {
+    "prediction_time": "t",
+    "prediction_horizons": {
+      "short": "t+1 through t+3",
+      "long": "t+1 through t+6"
+    },
+    "split_unit": "telemetry_scenario_id",
+    "row_level_random_split_forbidden": true,
+    "future_information_forbidden": true,
+    "synthetic_target_as_predictor_forbidden": true,
+    "target_derived_features_forbidden": true,
+    "high_risk_features_require_review": true
+  },
+  "summary": {
+    "total_columns": 86,
+    "candidate_predictors": 71,
+    "forbidden_features": 4,
+    "review_required_features": 5
+  },
+  "features": [
+    {
+      "feature": "CASENUM",
+      "role": "identifier_or_temporal_index",
+      "leakage_status": "NOT_A_PREDICTOR",
+      "dtype": "str",
+      "null_count": 0,
+      "unique_values": 51658
+    },
+    {
+      "feature": "VEH_NO",
+      "role": "identifier_or_temporal_index",
+      "leakage_status": "NOT_A_PREDICTOR",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 10
+    },
+    {
+      "feature": "speed_limit_deviation",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 190
+    },
+    {
+      "feature": "speed_limit_deviation_abs",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 132
+    },
+    {
+      "feature": "speed_over_limit_flag",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "rollover_flag",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "fire_explosion_flag",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "vehicle_damage_flag",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "collision_event_flag",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "roadway_complexity_index",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 1
+    },
+    {
+      "feature": "vehicle_state_observation_count",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 1
+    },
+    {
+      "feature": "VISION",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 18
+    },
+    {
+      "feature": "WEATHER",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 13
+    },
+    {
+      "feature": "physical_state_completeness",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 1
+    },
+    {
+      "feature": "ecu_count",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 12
+    },
+    {
+      "feature": "can_bus_count",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 3
+    },
+    {
+      "feature": "gateway_present",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 1
+    },
+    {
+      "feature": "safety_critical_ecu_ratio",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "can_message_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "can_message_rate_deviation",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "can_interarrival_mean_ms",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "can_interarrival_jitter_ms",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "can_bus_load_pct",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123537
+    },
+    {
+      "feature": "ecu_state_transition_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "diagnostic_event_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "uds_request_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "authentication_failure_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "sensor_plausibility_score",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "sensor_disagreement_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "redundant_sensor_divergence",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 88535
+    },
+    {
+      "feature": "rssi_dbm",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90553
+    },
+    {
+      "feature": "packet_loss_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "latency_ms",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "latency_jitter_ms",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "connectivity_drop_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "telemetry_gap_duration_ms",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "message_integrity_failure_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "replay_indicator_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "sequence_counter_anomaly_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "unexpected_source_id_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "synthetic_cyber_anomaly",
+      "role": "target_derived",
+      "leakage_status": "FORBIDDEN",
+      "dtype": "int8",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "cyber_anomaly_severity",
+      "role": "target_derived",
+      "leakage_status": "FORBIDDEN",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "physical_cyber_interaction_score",
+      "role": "high_risk_derived",
+      "leakage_status": "REVIEW_REQUIRED",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "connectivity_resilience_score",
+      "role": "high_risk_derived",
+      "leakage_status": "REVIEW_REQUIRED",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "cyber_physical_resilience_score",
+      "role": "high_risk_derived",
+      "leakage_status": "REVIEW_REQUIRED",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "telemetry_scenario_id",
+      "role": "identifier_or_temporal_index",
+      "leakage_status": "NOT_A_PREDICTOR",
+      "dtype": "str",
+      "null_count": 0,
+      "unique_values": 90641
+    },
+    {
+      "feature": "time_step",
+      "role": "identifier_or_temporal_index",
+      "leakage_status": "NOT_A_PREDICTOR",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 24
+    },
+    {
+      "feature": "relative_time_sec",
+      "role": "identifier_or_temporal_index",
+      "leakage_status": "NOT_A_PREDICTOR",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 24
+    },
+    {
+      "feature": "sequence_length",
+      "role": "identifier_or_temporal_index",
+      "leakage_status": "NOT_A_PREDICTOR",
+      "dtype": "int64",
+      "null_count": 0,
+      "unique_values": 1
+    },
+    {
+      "feature": "future_anomaly_3step",
+      "role": "target",
+      "leakage_status": "FORBIDDEN",
+      "dtype": "int8",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "future_anomaly_6step",
+      "role": "target",
+      "leakage_status": "FORBIDDEN",
+      "dtype": "int8",
+      "null_count": 0,
+      "unique_values": 2
+    },
+    {
+      "feature": "d1_can_message_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_can_interarrival_jitter_ms",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_can_bus_load_pct",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_sensor_disagreement_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_packet_loss_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_latency_ms",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_latency_jitter_ms",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_connectivity_drop_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_telemetry_gap_duration_ms",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_message_integrity_failure_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_replay_indicator_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_sequence_counter_anomaly_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_authentication_failure_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_cyber_anomaly_severity",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_physical_cyber_interaction_score",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_connectivity_resilience_score",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "d1_cyber_physical_resilience_score",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "rolling_mean_3_packet_loss_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "rolling_std_3_packet_loss_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "rolling_mean_3_latency_ms",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "rolling_std_3_latency_ms",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "rolling_mean_3_sensor_disagreement_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "rolling_std_3_sensor_disagreement_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "rolling_mean_3_message_integrity_failure_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "rolling_std_3_message_integrity_failure_rate",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "rolling_mean_3_cyber_anomaly_severity",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "rolling_std_3_cyber_anomaly_severity",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "rolling_mean_3_cyber_physical_resilience_score",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "rolling_std_3_cyber_physical_resilience_score",
+      "role": "temporal_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "cyber_instability_index",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 123554
+    },
+    {
+      "feature": "resilience_degradation_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "connectivity_degradation_rate",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 32914
+    },
+    {
+      "feature": "state_transition_magnitude",
+      "role": "raw_predictor_candidate",
+      "leakage_status": "CANDIDATE",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 11161
+    },
+    {
+      "feature": "predictive_warning_score",
+      "role": "high_risk_derived",
+      "leakage_status": "REVIEW_REQUIRED",
+      "dtype": "float64",
+      "null_count": 0,
+      "unique_values": 122124
+    },
+    {
+      "feature": "predictive_warning_state",
+      "role": "high_risk_derived",
+      "leakage_status": "REVIEW_REQUIRED",
+      "dtype": "str",
+      "null_count": 0,
+      "unique_values": 2
+    }
+  ]
+}

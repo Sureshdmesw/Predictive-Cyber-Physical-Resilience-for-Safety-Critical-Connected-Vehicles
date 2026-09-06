@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "checks": {
+    "predictor_registry_loaded": true,
+    "no_forbidden_predictors": true,
+    "all_sequences_length_24": true,
+    "train_validation_overlap": true,
+    "train_test_overlap": true,
+    "validation_test_overlap": true,
+    "all_tensors_finite": true,
+    "normalization_train_only": true,
+    "train_sequence_count": 63436,
+    "validation_sequence_count": 13512,
+    "test_sequence_count": 13693
+  },
+  "predictor_count": 71,
+  "sequence_length": 24,
+  "target_statistics": {
+    "train": {
+      "3step": {
+        "negative": 62468,
+        "positive": 968,
+        "positive_rate": 0.015259474115644114
+      },
+      "6step": {
+        "negative": 62468,
+        "positive": 968,
+        "positive_rate": 0.015259474115644114
+      }
+    },
+    "validation": {
+      "3step": {
+        "negative": 13301,
+        "positive": 211,
+        "positive_rate": 0.015615748963883956
+      },
+      "6step": {
+        "negative": 13301,
+        "positive": 211,
+        "positive_rate": 0.015615748963883956
+      }
+    },
+    "test": {
+      "3step": {
+        "negative": 13441,
+        "positive": 252,
+        "positive_rate": 0.018403563864748413
+      },
+      "6step": {
+        "negative": 13441,
+        "positive": 252,
+        "positive_rate": 0.018403563864748413
+      }
+    }
+  },
+  "artifacts": [
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\X_train.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\X_validation.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\X_test.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\y_3step_train.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\y_3step_validation.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\y_3step_test.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\y_6step_train.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\y_6step_validation.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\y_6step_test.npy",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\schemas\\modeling\\crss_2024_training_scaler.json",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\modeling\\sequences\\crss_2024_sequence_metadata.json"
+  ]
+}

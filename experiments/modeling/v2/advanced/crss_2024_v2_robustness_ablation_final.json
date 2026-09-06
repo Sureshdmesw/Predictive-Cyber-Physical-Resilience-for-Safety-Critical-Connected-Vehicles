@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "dataset": "CRSS 2024 Temporal Cyber-Physical States V2",
+  "task": "rolling multi-horizon forecasting",
+  "feature_treatment": {
+    "original_features": 63,
+    "removed_constant_features": {
+      "gateway_present": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 1.0,
+        "original_index": 30
+      },
+      "physical_state_completeness": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 1.0,
+        "original_index": 35
+      },
+      "roadway_complexity_index": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 5.0,
+        "original_index": 39
+      },
+      "vehicle_state_observation_count": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 7.0,
+        "original_index": 62
+      }
+    },
+    "final_features": 59,
+    "summary_dimensions": 472,
+    "normalization": "train_only_z_score"
+  },
+  "training_strategy": {
+    "method": "memory_safe_stratified_subset",
+    "maximum_training_samples_per_target": 60000,
+    "test_set_unchanged": true,
+    "validation_set_unchanged": true
+  },
+  "baseline": {
+    "y3": {
+      "validation_pr_auc": 0.9939946492237745,
+      "validation_roc_auc": 0.9999438056928528,
+      "test_pr_auc": 0.9939100133693997,
+      "test_roc_auc": 0.9999326496747037
+    },
+    "y6": {
+      "validation_pr_auc": 0.9905474175775811,
+      "validation_roc_auc": 0.9996213364995435,
+      "test_pr_auc": 0.9864197367795152,
+      "test_roc_auc": 0.9991511082319777
+    }
+  },
+  "group_ablation": {
+    "cyber_ecu_can": {
+      "removed_feature_count": 18,
+      "removed_features": [
+        "can_bus_count",
+        "can_bus_load_pct",
+        "can_interarrival_jitter_ms",
+        "can_interarrival_mean_ms",
+        "can_message_rate",
+        "can_message_rate_deviation",
+        "connectivity_degradation_rate",
+        "connectivity_drop_rate",
+        "ecu_count",
+        "ecu_state_transition_rate",
+        "latency_jitter_ms",
+        "latency_ms",
+        "message_integrity_failure_rate",
+        "packet_loss_rate",
+        "replay_indicator_rate",
+        "sequence_counter_anomaly_rate",
+        "uds_request_rate",
+        "unexpected_source_id_rate"
+      ],
+      "y3": {
+        "validation_pr_auc": 0.9934943241664068,
+        "validation_roc_auc": 0.9999398600281738,
+        "test_pr_auc": 0.9928974488183777,
+        "test_roc_auc": 0.9999221773309827
+      },
+      "y6": {
+        "validation_pr_auc": 0.9792813639176132,
+        "validation_roc_auc": 0.9959484705985836,
+        "test_pr_auc": 0.9736914108600445,
+        "test_roc_auc": 0.9922516351545881
+      }
+    },
+    "sensor_consistency": {
+      "removed_feature_count": 3,
+      "removed_features": [
+        "redundant_sensor_divergence",
+        "sensor_disagreement_rate",
+        "sensor_plausibility_score"
+      ],
+      "y3": {
+        "validation_pr_auc": 0.9930531804232199,
+        "validation_roc_auc": 0.9999366306147264,
+        "test_pr_auc": 0.9931684866769547,
+        "test_roc_auc": 0.9999264864259263
+      },
+      "y6": {
+        "validation_pr_auc": 0.9892277404468208,
+        "validation_roc_auc": 0.9993763817052569,
+        "test_pr_auc": 0.9853006451169645,
+        "test_roc_auc": 0.9978968020913546
+      }
+    },
+    "physical_vehicle": {
+      "removed_feature_count": 7,
+      "removed_features": [
+        "collision_event_flag",
+        "fire_explosion_flag",
+        "rollover_flag",
+        "speed_limit_deviation",
+        "speed_limit_deviation_abs",
+        "speed_over_limit_flag",
+        "vehicle_damage_flag"
+      ],
+      "y3": {
+        "validation_pr_auc": 0.9941000788217655,
+        "validation_roc_auc": 0.9999448486551724,
+        "test_pr_auc": 0.9937219422147694,
+        "test_roc_auc": 0.9999308265960738
+      },
+      "y6": {
+        "validation_pr_auc": 0.9905046203096001,
+        "validation_roc_auc": 0.9995172926758983,
+        "test_pr_auc": 0.9865796522441751,
+        "test_roc_auc": 0.9987586755880672
+      }
+    },
+    "temporal": {
+      "removed_feature_count": 10,
+      "removed_features": [
+        "rolling_mean_3_latency_ms",
+        "rolling_mean_3_message_integrity_failure_rate",
+        "rolling_mean_3_packet_loss_rate",
+        "rolling_mean_3_sensor_disagreement_rate",
+        "rolling_std_3_latency_ms",
+        "rolling_std_3_message_integrity_failure_rate",
+        "rolling_std_3_packet_loss_rate",
+        "rolling_std_3_sensor_disagreement_rate",
+        "state_transition_magnitude",
+        "telemetry_gap_duration_ms"
+      ],
+      "y3": {
+        "validation_pr_auc": 0.9937521091726548,
+        "validation_roc_auc": 0.9999419585186241,
+        "test_pr_auc": 0.9937770183467639,
+        "test_roc_auc": 0.9999298736231536
+      },
+      "y6": {
+        "validation_pr_auc": 0.9902217485483211,
+        "validation_roc_auc": 0.9993568533431004,
+        "test_pr_auc": 0.9860319465474567,
+        "test_roc_auc": 0.999128673427603
+      }
+    }
+  },
+  "fingerprint_ablation": {
+    "removed_features": [
+      "unexpected_source_id_rate",
+      "redundant_sensor_divergence",
+      "latency_jitter_ms",
+      "replay_indicator_rate",
+      "sequence_counter_anomaly_rate",
+      "packet_loss_rate",
+      "message_integrity_failure_rate"
+    ],
+    "removed_feature_count": 7,
+    "y3": {
+      "validation_pr_auc": 0.9929503934425032,
+      "validation_roc_auc": 0.9999351101515856,
+      "test_pr_auc": 0.9936137209083481,
+      "test_roc_auc": 0.9999301118663836
+    },
+    "y6": {
+      "validation_pr_auc": 0.9889091354166635,
+      "validation_roc_auc": 0.9994085362594505,
+      "test_pr_auc": 0.9862468445276756,
+      "test_roc_auc": 0.99823671352105
+    }
+  },
+  "corruption": {
+    "0.05": {
+      "y3": {
+        "test_pr_auc": 0.9416020833513159,
+        "test_roc_auc": 0.9972367721506177
+      },
+      "y6": {
+        "test_pr_auc": 0.9507577224084421,
+        "test_roc_auc": 0.9966538897855692
+      }
+    },
+    "0.1": {
+      "y3": {
+        "test_pr_auc": 0.8837445086342627,
+        "test_roc_auc": 0.9904742173487187
+      },
+      "y6": {
+        "test_pr_auc": 0.9071868223278569,
+        "test_roc_auc": 0.9933186905376701
+      }
+    },
+    "0.2": {
+      "y3": {
+        "test_pr_auc": 0.7755276494088553,
+        "test_roc_auc": 0.9678663849927317
+      },
+      "y6": {
+        "test_pr_auc": 0.7560480619068107,
+        "test_roc_auc": 0.974728028605267
+      }
+    }
+  },
+  "checks": {
+    "original_feature_count_63": true,
+    "final_feature_count_59": true,
+    "summary_dimensions_472": true,
+    "train_only_normalization": true,
+    "baseline_y3_present": true,
+    "baseline_y6_present": true,
+    "group_ablation_completed": true,
+    "fingerprint_ablation_completed": true,
+    "corruption_completed": true
+  },
+  "checks_passed": 9,
+  "checks_total": 9,
+  "release_status": "PASS"
+}

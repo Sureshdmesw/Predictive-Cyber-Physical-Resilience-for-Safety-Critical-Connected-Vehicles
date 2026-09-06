@@ -1,0 +1,33 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw/downloaded datasets
+data/raw/
+*.zip
+*.7z
+*.rar
+
+# Generated processed datasets
+data/processed/
+
+# Large/generated model artifacts
+models/
+
+# Personal/private note
+Cortex_XDR_Occupant.docx
+
+# Runtime/temp
+*.log
+*.tmp
+*.bak
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "split_unit": "telemetry_scenario_id",
+  "method": "deterministic SHA256 hash",
+  "scenario_count": 90641,
+  "scenario_counts": {
+    "test": 13693,
+    "train": 63436,
+    "validation": 13512
+  },
+  "row_counts": {
+    "test": 328632,
+    "train": 1522464,
+    "validation": 324288
+  },
+  "ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "scenario_overlap": false
+}

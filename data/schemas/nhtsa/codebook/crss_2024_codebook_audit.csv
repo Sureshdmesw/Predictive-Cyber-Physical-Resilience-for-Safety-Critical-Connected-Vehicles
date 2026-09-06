@@ -1,0 +1,245 @@
+variable,code,label,page,derived_variable
+HARM_EV,1,Rollover/Overturn,64,True
+HARM_EV,2,Fire/Explosion,64,True
+HARM_EV,3,Immersion or Partial Immersion,64,True
+HARM_EV,4,Gas Inhalation,64,True
+HARM_EV,5,Fell/Jumped From Vehicle,64,True
+HARM_EV,6,Injured in Vehicle (Non-Collision),64,True
+HARM_EV,7,Other Non-Collision,64,True
+HARM_EV,16,Thrown or Falling Object,64,True
+HARM_EV,44,"Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.)",64,True
+HARM_EV,51,Jackknife (Harmful to This Vehicle),64,True
+HARM_EV,72,"Cargo/Equipment Loss, Shift, or Damage (Harmful)",64,True
+MAN_COLL,0,First Harmful Event Was Not a Collision With Motor Vehicle In-Transport,68,False
+MAN_COLL,1,Front-to-Rear,68,False
+MAN_COLL,2,Front-to-Front,68,False
+MAN_COLL,6,Angle,68,False
+MAN_COLL,9,Rear-to-Side,68,False
+MAN_COLL,10,Rear-to-Rear,68,False
+MAN_COLL,11,Other,68,False
+MAN_COLL,98,Not Reported,68,False
+MAN_COLL,99,Reported as Unknown,68,False
+PEDS,0-99,Number of Persons Not in Motor Vehicles,24,False
+AGE,0,Less Than One Year 1-120 1-120 Age in Years,193,False
+AGE,998,Not Reported,193,False
+AGE,999,Reported as Unknown,193,False
+AGE,0,Less Than One Year,193,False
+AGE,1-120,Age in Years,193,False
+AIR_BAG,20,Not Deployed,208,False
+AIR_BAG,97,Not a Motor Vehicle Occupant,208,False
+AIR_BAG,98,Not Reported,208,False
+AIR_BAG,99,Reported as Deployment Unknown,208,False
+EJECTION,0,Not Ejected,209,False
+EJECTION,1,Totally Ejected,209,False
+EJECTION,2,Partially Ejected,209,False
+EJECTION,7,Not Reported,209,False
+EJECTION,8,Not Applicable,209,False
+EJECTION,9,Reported as Unknown if Ejected,209,False
+EJECTION,9,Reported as Unknown,209,False
+FIRE_EXP,0,No or Not Reported,149,False
+FIRE_EXP,1,Yes,149,False
+HELM_MIS,0,No Indication of Misuse,207,False
+HELM_MIS,1,"Yes, Indication of Misuse",207,False
+HELM_MIS,7,None Used/Not Applicable,207,False
+HELM_MIS,8,Not a Motor Vehicle Occupant,207,False
+HELM_MIS,1,Yes,207,False
+HELM_USE,5,DOT-Compliant Motorcycle Helmet,206,False
+HELM_USE,16,"Helmet, Other Than DOT-Compliant Motorcycle Helmet",206,False
+HELM_USE,17,No Helmet,206,False
+HELM_USE,19,"Helmet, Unknown if DOT-Compliant",206,False
+HELM_USE,20,Not Applicable,206,False
+HELM_USE,96,Not a Motor Vehicle Occupant,206,False
+HELM_USE,98,Not Reported,206,False
+HELM_USE,99,Unknown/Reported as Unknown,206,False
+HELM_USE,99,Unknown,206,False
+HOSPITAL,0,Not Transported for Treatment,217,False
+HOSPITAL,1,EMS Air,217,False
+HOSPITAL,2,Law Enforcement,217,False
+HOSPITAL,3,EMS Unknown Mode,217,False
+HOSPITAL,4,Transported Unknown Source,217,False
+HOSPITAL,5,EMS Ground,217,False
+HOSPITAL,6,Other,217,False
+HOSPITAL,8,Not Reported,217,False
+HOSPITAL,9,Reported as Unknown,217,False
+IMPACT1,0,Non-Collision 1-12 1-12 1-12 1-12 Clock Points,141,True
+IMPACT1,13,Top,141,True
+IMPACT1,14,Undercarriage,141,True
+IMPACT1,18,Cargo/Vehicle Parts Set-in-Motion,141,True
+IMPACT1,19,Other Objects or Person Set-in-Motion,141,True
+IMPACT1,20,"Object Set in Motion, Unknown if Cargo/Vehicle Parts or Other",141,True
+IMPACT1,61,Left,141,True
+IMPACT1,62,Left-Front Side,141,True
+IMPACT1,63,Left-Back Side,141,True
+IMPACT1,81,Right,141,True
+IMPACT1,82,Right-Front Side,141,True
+IMPACT1,83,Right-Back Side,141,True
+IMPACT1,98,Not Reported,141,True
+IMPACT1,99,Reported as Unknown,141,True
+INJ_SEV,0,No Apparent Injury (O),199,False
+INJ_SEV,1,Possible Injury (C),199,False
+INJ_SEV,2,Suspected Minor Injury (B),199,False
+INJ_SEV,3,Suspected Serious Injury (A),199,False
+INJ_SEV,4,Fatal Injury (K),199,False
+INJ_SEV,5,"Injured, Severity Unknown (U)",199,False
+INJ_SEV,6,Died Prior to Crash,199,False
+INJ_SEV,9,Unknown/Not Reported,199,False
+INJ_SEV,9,Unknown,199,False
+REST_MIS,0,No Indication of Misuse,205,False
+REST_MIS,1,"Yes, Indication of Misuse",205,False
+REST_MIS,7,None Used/Not Applicable,205,False
+REST_MIS,8,Not a Motor Vehicle Occupant,205,False
+REST_MIS,1,Yes,205,False
+REST_USE,1,Shoulder Belt Only Used,204,False
+REST_USE,2,Lap Belt Only Used,204,False
+REST_USE,3,Shoulder and Lap Belt Used,204,False
+REST_USE,6,Racing-Style Harness Used,204,False
+REST_USE,12,Booster Seat,204,False
+REST_USE,20,None Used/Not Applicable,204,False
+REST_USE,96,Not a Motor Vehicle Occupant,204,False
+REST_USE,97,Other,204,False
+REST_USE,98,Not Reported,204,False
+REST_USE,99,Unknown/Reported as Unknown (Since 2018),204,False
+REST_USE,99,Unknown,204,False
+ROLLOVER,0,No Rollover,139,True
+ROLLOVER,3,Rollover,139,True
+ROLLOVER,8,Not Applicable,139,True
+SEAT_POS,0,Not a Motor Vehicle Occupant,201,False
+SEAT_POS,12,"Front Seat, Middle",201,False
+SEAT_POS,13,"Front Seat, Right Side",201,False
+SEAT_POS,18,"Front Seat, Other",201,False
+SEAT_POS,19,"Front Seat, Unknown",201,False
+SEAT_POS,21,"Second Seat, Left Side",201,False
+SEAT_POS,22,"Second Seat, Middle",201,False
+SEAT_POS,23,"Second Seat, Right Side",201,False
+SEAT_POS,28,"Second Seat, Other",201,False
+SEAT_POS,29,"Second Seat, Unknown",201,False
+SEAT_POS,31,"Third Seat, Left Side",201,False
+SEAT_POS,32,"Third Seat, Middle",201,False
+SEAT_POS,33,"Third Seat, Right Side",201,False
+SEAT_POS,38,"Third Seat, Other",201,False
+SEAT_POS,39,"Third Seat, Unknown",201,False
+SEAT_POS,41,"Fourth Seat, Left Side",201,False
+SEAT_POS,42,"Fourth Seat, Middle",201,False
+SEAT_POS,43,"Fourth Seat, Right Side",201,False
+SEAT_POS,48,"Fourth Seat, Other",201,False
+SEAT_POS,49,"Fourth Seat, Unknown",201,False
+SEAT_POS,50,Sleeper Section of Cab (Truck),201,False
+SEAT_POS,51,Other Passenger in Enclosed Passenger or Cargo Area,201,False
+SEAT_POS,52,Other Passenger in Unenclosed Passenger or Cargo Area,201,False
+SEX,1,Male,195,False
+SEX,2,Female,195,False
+SEX,8,Not Reported,195,False
+SEX,9,Reported as Unknown,195,False
+ACC_TYPE,1,Drive off Road,180,False
+ACC_TYPE,2,Control/Traction Loss,180,False
+ACC_TYPE,3,"Avoid Collision with Vehicle, Pedestrian, Animal",180,False
+ACC_TYPE,4,Specifics Other,180,False
+ACC_TYPE,6,Drive off Road,180,False
+ACC_TYPE,7,Control/Traction Loss,180,False
+ACC_TYPE,8,"Avoid Collision With Vehicle, Pedestrian, Animal",180,False
+ACC_TYPE,9,Specifics Other,180,False
+ACC_TYPE,11,Parked Vehicle,180,False
+ACC_TYPE,12,Stationary Object,180,False
+DEFORMED,0,No Damage,143,False
+DEFORMED,2,Minor Damage,143,False
+DEFORMED,4,Functional Damage,143,False
+DEFORMED,6,Disabling Damage,143,False
+DEFORMED,7,"Damage Reported, Extent Unknown",143,False
+DEFORMED,8,Not Reported,143,False
+DEFORMED,9,Reported as Unknown,143,False
+SPEEDREL,0,No 2,162,False
+SPEEDREL,2,"Yes, Racing",162,False
+SPEEDREL,3,"Yes, Exceeded Speed Limit",162,False
+SPEEDREL,4,"Yes, Too Fast for Conditions",162,False
+SPEEDREL,5,"Yes, Specifics Unknown",162,False
+SPEEDREL,8,No Driver Present/Unknown if Driver Present,162,False
+SPEEDREL,9,Reported as Unknown,162,False
+SPEEDREL,2,Yes,162,False
+SPEEDREL,3,Yes,162,False
+SPEEDREL,4,Yes,162,False
+SPEEDREL,5,Yes,162,False
+TRAV_SP,0,Stopped Motor Vehicle In-Transport 1-151 1-151 Reported Speed up to,137,False
+TRAV_SP,151,mph,137,False
+TRAV_SP,997,Speed Greater Than,137,False
+TRAV_SP,998,Not Reported,137,False
+TRAV_SP,999,Reported as Unknown,137,False
+VALIGN,0,Non-Trafficway or Driveway Access,166,False
+VALIGN,1,Straight,166,False
+VALIGN,2,Curve Right,166,False
+VALIGN,3,Curve Left,166,False
+VALIGN,8,Not Reported,166,False
+VALIGN,9,Reported as Unknown,166,False
+VNUM_LAN,0,Non-Trafficway or Driveway Access,164,False
+VNUM_LAN,1,One Lane,164,False
+VNUM_LAN,2,Two Lanes,164,False
+VNUM_LAN,3,Three Lanes,164,False
+VNUM_LAN,4,Four Lanes,164,False
+VNUM_LAN,5,Five Lanes,164,False
+VNUM_LAN,6,Six Lanes,164,False
+VNUM_LAN,7,Seven or More Lanes,164,False
+VNUM_LAN,8,Not Reported,164,False
+VNUM_LAN,9,Reported as Unknown,164,False
+VPROFILE,0,Non-Trafficway or Driveway Access,167,False
+VPROFILE,1,Level,167,False
+VPROFILE,2,"Grade, Unknown Slope",167,False
+VPROFILE,3,Hillcrest,167,False
+VPROFILE,4,Sag (Bottom),167,False
+VPROFILE,5,Uphill,167,False
+VPROFILE,6,Downhill,167,False
+VPROFILE,8,Not Reported,167,False
+VPROFILE,9,Reported as Unknown,167,False
+VSPD_LIM,0,No Statutory Limit/Non-Trafficway or Driveway Access 5-95 5-95 Speed Limit (in,165,False
+VSPD_LIM,5,mph Increments),165,False
+VSPD_LIM,98,Not Reported,165,False
+VSPD_LIM,99,Reported as Unknown,165,False
+VSURCOND,0,Non-Trafficway or Driveway Access,168,False
+VSURCOND,1,Dry,168,False
+VSURCOND,2,Wet,168,False
+VSURCOND,3,Snow,168,False
+VSURCOND,4,Ice/Frost,168,False
+VSURCOND,5,Sand,168,False
+VSURCOND,6,Water (Standing or Moving),168,False
+VSURCOND,7,Oil,168,False
+VSURCOND,8,Other,168,False
+VSURCOND,10,Slush,168,False
+VSURCOND,11,"Mud, Dirt, Gravel",168,False
+VSURCOND,98,Not Reported,168,False
+VSURCOND,99,Reported as Unknown,168,False
+VTRAFCON,0,No Controls Traffic Signals 2016-2017 2018-Later,169,False
+VTRAFCON,1,Traffic Control Signal (on Colors) Without Pedestrian Signal,169,False
+VTRAFCON,2,Traffic Control Signal (on Colors) With Pedestrian Signal,169,False
+VTRAFCON,3,Traffic Control Signal (on Colors) Not Known if Pedestrian Signal,169,False
+VTRAFCON,4,Flashing Traffic Control Signal,169,False
+VTRAFCON,7,Lane Use Control Signal,169,False
+VTRAFCON,8,Other Highway Traffic Signal,169,False
+VTRAFCON,9,Unknown Highway Traffic Signal Regulatory Signs 2016-2017 2018-Later,169,False
+VTRAFCON,20,Stop Sign,169,False
+VTRAFCON,21,Yield Sign,169,False
+VTRAFCON,23,School Zone Sign/Device,169,False
+VTRAFCON,28,Other Regulatory Sign,169,False
+VTRAFCON,29,Unknown Regulatory Sign,169,False
+VTRAFCON,9,Unknown,169,False
+VTRAFCON,29,Unknown,169,False
+VTRAFWAY,0,Non-Trafficway or Driveway Access,163,False
+VTRAFWAY,1,"Two-Way, Not Divided",163,False
+VTRAFWAY,2,"Two-Way, Divided, Unprotected Median",163,False
+VTRAFWAY,3,"Two-Way, Divided, Positive Median Barrier",163,False
+VTRAFWAY,4,One-Way Trafficway,163,False
+VTRAFWAY,5,"Two-Way, Not Divided With a Continuous Left- Turn Lane",163,False
+VTRAFWAY,6,Entrance/Exit Ramp,163,False
+VTRAFWAY,7,"Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier",163,False
+VTRAFWAY,8,Not Reported,163,False
+VTRAFWAY,9,Reported as Unknown,163,False
+WEATHER,1,Clear,79,False
+WEATHER,2,Rain,79,False
+WEATHER,3,Sleet or Hail,79,False
+WEATHER,4,Snow,79,False
+WEATHER,5,"Fog, Smog, Smoke",79,False
+WEATHER,6,Severe Crosswinds,79,False
+WEATHER,7,"Blowing Sand, Soil, Dirt",79,False
+WEATHER,8,Other,79,False
+WEATHER,10,Cloudy,79,False
+WEATHER,11,Blowing Snow,79,False
+WEATHER,12,Freezing Rain or Drizzle,79,False
+WEATHER,98,Not Reported,79,False
+WEATHER,99,Reported as Unknown,79,False

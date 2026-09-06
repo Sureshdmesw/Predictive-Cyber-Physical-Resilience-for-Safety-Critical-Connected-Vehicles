@@ -1,0 +1,5482 @@
+{
+  "phase": "4.11",
+  "purpose": "Trace every final model feature to its actual project definition before assigning cyber/physical modality.",
+  "feature_count": 59,
+  "features": [
+    {
+      "feature": "VISION",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_candidate_classifier.py",
+          "line": 217,
+          "context": [
+            "        \"ROLL\",",
+            "        \"IMPACT\",",
+            "        \"VISION\",",
+            "        \"ADAS\",",
+            "        \"WARNING\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_coded_missingness.py",
+          "line": 23,
+          "context": [
+            "        \"VPROFILE\", \"VSURCOND\", \"VTRAFCON\", \"ACC_TYPE\"",
+            "    ],",
+            "    \"vision.csv\": [\"VISION\"],",
+            "    \"weather.csv\": [\"WEATHER\"],",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 68,
+          "context": [
+            "    \"roadway_complexity_index\",",
+            "    \"vehicle_state_observation_count\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "    \"physical_state_completeness\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 102,
+          "context": [
+            "        \"roadway_complexity_index\",",
+            "        \"vehicle_state_observation_count\",",
+            "        \"VISION\",",
+            "        \"WEATHER\",",
+            "        \"physical_state_completeness\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_final_feature_dictionary.py",
+          "line": 50,
+          "context": [
+            "    \"VTRAFCON\":  (\"vehicle\", \"roadway_context\", \"predictor\"),",
+            "    \"ACC_TYPE\":  (\"vehicle\", \"crash_context\", \"predictor\"),",
+            "    \"VISION\":    (\"vision\", \"environmental_context\", \"predictor\"),",
+            "    \"WEATHER\":   (\"weather\", \"environmental_context\", \"predictor\"),",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_final_feature_dictionary.py",
+          "line": 83,
+          "context": [
+            "    \"VTRAFCON\": \"medium\",",
+            "    \"ACC_TYPE\": \"high\",",
+            "    \"VISION\": \"medium\",",
+            "    \"WEATHER\": \"medium\",",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_final_predictor_registry.py",
+          "line": 253,
+          "context": [
+            "",
+            "    elif col in {",
+            "        \"VISION\",",
+            "        \"WEATHER\"",
+            "    }:"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_master_diagnostic.py",
+          "line": 200,
+          "context": [
+            "    \"VTRAFCON\",",
+            "    \"VTRAFWAY\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_master_diagnostic.py",
+          "line": 338,
+          "context": [
+            "    \"VTRAFCON\": 3,",
+            "    \"VTRAFWAY\": 3,",
+            "    \"VISION\": 3,",
+            "    \"WEATHER\": 3,",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_master_diagnostic.py",
+          "line": 523,
+          "context": [
+            "    \"vision\": {",
+            "        \"CASENUM\",",
+            "        \"VISION\",",
+            "    },",
+            "    \"weather\": {"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_missingness.py",
+          "line": 28,
+          "context": [
+            "        \"VTRAFCON\", \"ACC_TYPE\"",
+            "    ],",
+            "    \"vision.csv\": [\"VISION\"],",
+            "    \"weather.csv\": [\"WEATHER\"],",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_one_shot_diagnostic.py",
+          "line": 49,
+          "context": [
+            "    \"VTRAFCON\",",
+            "    \"VTRAFWAY\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_one_shot_diagnostic.py",
+          "line": 740,
+          "context": [
+            "    \"vision\": {",
+            "        \"CASENUM\",",
+            "        \"VISION\",",
+            "    },",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 259,
+          "context": [
+            "        df[\"CASENUM\"] = df[\"CASENUM\"].astype(str).str.strip()",
+            "",
+            "vision_keep = [c for c in [\"CASENUM\", \"VISION\"] if c in vision_features.columns]",
+            "weather_keep = [c for c in [\"CASENUM\", \"WEATHER\"] if c in weather_features.columns]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 60,
+          "context": [
+            "# These are intentionally separated from cyber-network telemetry.",
+            "physical = {",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "    \"collision_event_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 75,
+          "context": [
+            "    \"VTRAFCON\",",
+            "    \"VTRAFWAY\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 170,
+          "context": [
+            "",
+            "# ================================================================",
+            "# 3. EXPLICIT VISION AUTHORITY",
+            "# ================================================================",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 174,
+          "context": [
+            "",
+            "vision_ok = (",
+            "    \"VISION\" in codebook",
+            "    and bool(codebook.get(\"VISION\"))",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 175,
+          "context": [
+            "vision_ok = (",
+            "    \"VISION\" in codebook",
+            "    and bool(codebook.get(\"VISION\"))",
+            ")",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 179,
+          "context": [
+            "",
+            "check(",
+            "    \"codebook:VISION_authority\",",
+            "    vision_ok,",
+            "    \"VISION exists in previously validated codebook context.\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 181,
+          "context": [
+            "    \"codebook:VISION_authority\",",
+            "    vision_ok,",
+            "    \"VISION exists in previously validated codebook context.\"",
+            "    if vision_ok",
+            "    else \"VISION missing from validated codebook context.\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 183,
+          "context": [
+            "    \"VISION exists in previously validated codebook context.\"",
+            "    if vision_ok",
+            "    else \"VISION missing from validated codebook context.\"",
+            ")",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 380,
+          "context": [
+            "    \"vision\": {",
+            "        \"CASENUM\",",
+            "        \"VISION\",",
+            "    },",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_schema_validation.py",
+          "line": 27,
+          "context": [
+            "        \"VTRAFCON\", \"ACC_TYPE\"",
+            "    ],",
+            "    \"vision.csv\": [\"VISION\"],",
+            "    \"weather.csv\": [\"WEATHER\"],",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_tier1_candidates.py",
+          "line": 68,
+          "context": [
+            "",
+            "    # Environment",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "WEATHER",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_coded_missingness.py",
+          "line": 24,
+          "context": [
+            "    ],",
+            "    \"vision.csv\": [\"VISION\"],",
+            "    \"weather.csv\": [\"WEATHER\"],",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 69,
+          "context": [
+            "    \"vehicle_state_observation_count\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "    \"physical_state_completeness\"",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 103,
+          "context": [
+            "        \"vehicle_state_observation_count\",",
+            "        \"VISION\",",
+            "        \"WEATHER\",",
+            "        \"physical_state_completeness\"",
+            "    ]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_final_feature_dictionary.py",
+          "line": 51,
+          "context": [
+            "    \"ACC_TYPE\":  (\"vehicle\", \"crash_context\", \"predictor\"),",
+            "    \"VISION\":    (\"vision\", \"environmental_context\", \"predictor\"),",
+            "    \"WEATHER\":   (\"weather\", \"environmental_context\", \"predictor\"),",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_final_feature_dictionary.py",
+          "line": 84,
+          "context": [
+            "    \"ACC_TYPE\": \"high\",",
+            "    \"VISION\": \"medium\",",
+            "    \"WEATHER\": \"medium\",",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_final_predictor_registry.py",
+          "line": 254,
+          "context": [
+            "    elif col in {",
+            "        \"VISION\",",
+            "        \"WEATHER\"",
+            "    }:",
+            "        groups[\"environment\"].append(col)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_master_diagnostic.py",
+          "line": 201,
+          "context": [
+            "    \"VTRAFWAY\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_master_diagnostic.py",
+          "line": 339,
+          "context": [
+            "    \"VTRAFWAY\": 3,",
+            "    \"VISION\": 3,",
+            "    \"WEATHER\": 3,",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_master_diagnostic.py",
+          "line": 527,
+          "context": [
+            "    \"weather\": {",
+            "        \"CASENUM\",",
+            "        \"WEATHER\",",
+            "    },",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_missingness.py",
+          "line": 29,
+          "context": [
+            "    ],",
+            "    \"vision.csv\": [\"VISION\"],",
+            "    \"weather.csv\": [\"WEATHER\"],",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_one_shot_diagnostic.py",
+          "line": 50,
+          "context": [
+            "    \"VTRAFWAY\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_one_shot_diagnostic.py",
+          "line": 745,
+          "context": [
+            "    \"weather\": {",
+            "        \"CASENUM\",",
+            "        \"WEATHER\",",
+            "    },",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 260,
+          "context": [
+            "",
+            "vision_keep = [c for c in [\"CASENUM\", \"VISION\"] if c in vision_features.columns]",
+            "weather_keep = [c for c in [\"CASENUM\", \"WEATHER\"] if c in weather_features.columns]",
+            "",
+            "vision_features = vision_features[vision_keep].drop_duplicates(\"CASENUM\")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 61,
+          "context": [
+            "physical = {",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "    \"collision_event_flag\",",
+            "    \"fire_explosion_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 76,
+          "context": [
+            "    \"VTRAFWAY\",",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_release_gate.py",
+          "line": 385,
+          "context": [
+            "    \"weather\": {",
+            "        \"CASENUM\",",
+            "        \"WEATHER\",",
+            "    },",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_schema_validation.py",
+          "line": 28,
+          "context": [
+            "    ],",
+            "    \"vision.csv\": [\"VISION\"],",
+            "    \"weather.csv\": [\"WEATHER\"],",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_tier1_candidates.py",
+          "line": 69,
+          "context": [
+            "    # Environment",
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "",
+            "    # Event sequence"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "authentication_failure_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 177,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"authentication_failure_rate\"] = (",
+            "    rng.exponential(scale=0.03, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 338,
+          "context": [
+            "    # Integrity/authentication anomaly",
+            "    m = idx[modes == 4]",
+            "    telemetry.loc[m, \"authentication_failure_rate\"] += rng.uniform(",
+            "        0.2, 2.0, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 362,
+          "context": [
+            "    + 0.10 * telemetry[\"sequence_counter_anomaly_rate\"].clip(0, 1)",
+            "    + 0.10 * (",
+            "        telemetry[\"authentication_failure_rate\"] /",
+            "        (1 + telemetry[\"authentication_failure_rate\"])",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 363,
+          "context": [
+            "    + 0.10 * (",
+            "        telemetry[\"authentication_failure_rate\"] /",
+            "        (1 + telemetry[\"authentication_failure_rate\"])",
+            "    )",
+            ").clip(0, 1)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 473,
+          "context": [
+            "            \"diagnostic_event_rate\",",
+            "            \"uds_request_rate\",",
+            "            \"authentication_failure_rate\"",
+            "        ],",
+            "        \"sensor_consistency\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 15,
+          "context": [
+            "# Authoritative cyber modality.",
+            "cyber = {",
+            "    \"authentication_failure_rate\",",
+            "    \"can_bus_count\",",
+            "    \"can_bus_load_pct\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 24,
+          "context": [
+            "    \"connectivity_degradation_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 48,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"authentication_failure_rate\"",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 209,
+          "context": [
+            ")",
+            "",
+            "expanded[\"authentication_failure_rate\"] = (",
+            "    expanded[\"authentication_failure_rate\"]",
+            "    + precursor * noise[\"authentication\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 210,
+          "context": [
+            "",
+            "expanded[\"authentication_failure_rate\"] = (",
+            "    expanded[\"authentication_failure_rate\"]",
+            "    + precursor * noise[\"authentication\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 304,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"cyber_anomaly_severity\",",
+            "    \"physical_cyber_interaction_score\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 375,
+          "context": [
+            "    0.10 *",
+            "    (",
+            "        expanded[\"authentication_failure_rate\"]",
+            "        /",
+            "        (1 + expanded[\"authentication_failure_rate\"])"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 377,
+          "context": [
+            "        expanded[\"authentication_failure_rate\"]",
+            "        /",
+            "        (1 + expanded[\"authentication_failure_rate\"])",
+            "    )",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 412,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"authentication_failure_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 530,
+          "context": [
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"authentication_failure_rate\",",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 560,
+          "context": [
+            "    \"diagnostic_event_rate\",",
+            "    \"uds_request_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 600,
+          "context": [
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 652,
+          "context": [
+            "    0.10 * safe_col(\"can_interarrival_jitter_ms\") +",
+            "    0.10 * safe_col(\"ecu_state_transition_rate\") +",
+            "    0.10 * safe_col(\"authentication_failure_rate\") +",
+            "    0.10 * safe_col(\"sensor_disagreement_rate\") +",
+            "    0.10 * safe_col(\"packet_loss_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "can_bus_count",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 125,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"can_bus_count\"] = rng.integers(",
+            "    1, 4, size=N",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 458,
+          "context": [
+            "        \"vehicle_ecu_topology\": [",
+            "            \"ecu_count\",",
+            "            \"can_bus_count\",",
+            "            \"gateway_present\",",
+            "            \"safety_critical_ecu_ratio\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 16,
+          "context": [
+            "cyber = {",
+            "    \"authentication_failure_rate\",",
+            "    \"can_bus_count\",",
+            "    \"can_bus_load_pct\",",
+            "    \"can_interarrival_jitter_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "can_bus_load_pct",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 156,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"can_bus_load_pct\"] = (",
+            "    rng.normal(42, 10, size=N)",
+            "    .clip(5, 85)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 467,
+          "context": [
+            "            \"can_interarrival_mean_ms\",",
+            "            \"can_interarrival_jitter_ms\",",
+            "            \"can_bus_load_pct\"",
+            "        ],",
+            "        \"ecu_diagnostics\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 17,
+          "context": [
+            "    \"authentication_failure_rate\",",
+            "    \"can_bus_count\",",
+            "    \"can_bus_load_pct\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_interarrival_mean_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 25,
+          "context": [
+            "    \"connectivity_drop_rate\",",
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 37,
+          "context": [
+            "    \"can_message_rate\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 142,
+          "context": [
+            ")",
+            "",
+            "expanded[\"can_bus_load_pct\"] = (",
+            "    expanded[\"can_bus_load_pct\"]",
+            "    + precursor * noise[\"bus\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 143,
+          "context": [
+            "",
+            "expanded[\"can_bus_load_pct\"] = (",
+            "    expanded[\"can_bus_load_pct\"]",
+            "    + precursor * noise[\"bus\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 294,
+          "context": [
+            "    \"can_message_rate\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 384,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"can_bus_load_pct\",",
+            "    direction=1,",
+            "    magnitude=10,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 541,
+          "context": [
+            "        )",
+            "",
+            "if \"can_bus_load_pct\" in out.columns:",
+            "    out[\"can_bus_load_pct\"] = np.clip(",
+            "        out[\"can_bus_load_pct\"],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 542,
+          "context": [
+            "",
+            "if \"can_bus_load_pct\" in out.columns:",
+            "    out[\"can_bus_load_pct\"] = np.clip(",
+            "        out[\"can_bus_load_pct\"],",
+            "        0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 543,
+          "context": [
+            "if \"can_bus_load_pct\" in out.columns:",
+            "    out[\"can_bus_load_pct\"] = np.clip(",
+            "        out[\"can_bus_load_pct\"],",
+            "        0,",
+            "        100"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 556,
+          "context": [
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"diagnostic_event_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "can_interarrival_jitter_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 152,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"can_interarrival_jitter_ms\"] = (",
+            "    rng.gamma(shape=2.0, scale=0.8, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 311,
+          "context": [
+            "    # Timing anomaly",
+            "    m = idx[modes == 1]",
+            "    telemetry.loc[m, \"can_interarrival_jitter_ms\"] *= rng.uniform(",
+            "        4, 12, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 466,
+          "context": [
+            "            \"can_message_rate_deviation\",",
+            "            \"can_interarrival_mean_ms\",",
+            "            \"can_interarrival_jitter_ms\",",
+            "            \"can_bus_load_pct\"",
+            "        ],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 18,
+          "context": [
+            "    \"can_bus_count\",",
+            "    \"can_bus_load_pct\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_interarrival_mean_ms\",",
+            "    \"can_message_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 26,
+          "context": [
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 36,
+          "context": [
+            "    \"cyber_physical_resilience_score\",",
+            "    \"can_message_rate\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_plausibility_score\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 135,
+          "context": [
+            ")",
+            "",
+            "expanded[\"can_interarrival_jitter_ms\"] = (",
+            "    expanded[\"can_interarrival_jitter_ms\"]",
+            "    * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 136,
+          "context": [
+            "",
+            "expanded[\"can_interarrival_jitter_ms\"] = (",
+            "    expanded[\"can_interarrival_jitter_ms\"]",
+            "    * (",
+            "        1 + precursor * noise[\"jitter\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 293,
+          "context": [
+            "derivative_features = [",
+            "    \"can_message_rate\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 377,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"can_interarrival_jitter_ms\",",
+            "    direction=1,",
+            "    magnitude=4,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 555,
+          "context": [
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"ecu_state_transition_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 598,
+          "context": [
+            "rolling_sources = [",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"authentication_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 650,
+          "context": [
+            "cyber_instability = (",
+            "    0.15 * safe_col(\"can_message_rate_deviation\") +",
+            "    0.10 * safe_col(\"can_interarrival_jitter_ms\") +",
+            "    0.10 * safe_col(\"ecu_state_transition_rate\") +",
+            "    0.10 * safe_col(\"authentication_failure_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "can_interarrival_mean_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 148,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"can_interarrival_mean_ms\"] = (",
+            "    1000.0 / telemetry[\"can_message_rate\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 465,
+          "context": [
+            "            \"can_message_rate\",",
+            "            \"can_message_rate_deviation\",",
+            "            \"can_interarrival_mean_ms\",",
+            "            \"can_interarrival_jitter_ms\",",
+            "            \"can_bus_load_pct\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 19,
+          "context": [
+            "    \"can_bus_load_pct\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_interarrival_mean_ms\",",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "can_message_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 139,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "telemetry[\"can_message_rate\"] = (",
+            "    rng.normal(850, 120, size=N)",
+            "    .clip(300, 1400)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 144,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"can_message_rate_deviation\"] = (",
+            "    rng.normal(0, 35, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 149,
+          "context": [
+            "",
+            "telemetry[\"can_interarrival_mean_ms\"] = (",
+            "    1000.0 / telemetry[\"can_message_rate\"]",
+            ")",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 302,
+          "context": [
+            "    # Message-rate manipulation",
+            "    m = idx[modes == 0]",
+            "    telemetry.loc[m, \"can_message_rate\"] *= rng.uniform(",
+            "        0.25, 2.5, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 305,
+          "context": [
+            "        0.25, 2.5, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"can_message_rate_deviation\"] += rng.normal(",
+            "        250, 80, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 463,
+          "context": [
+            "        ],",
+            "        \"can_behavior\": [",
+            "            \"can_message_rate\",",
+            "            \"can_message_rate_deviation\",",
+            "            \"can_interarrival_mean_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 464,
+          "context": [
+            "        \"can_behavior\": [",
+            "            \"can_message_rate\",",
+            "            \"can_message_rate_deviation\",",
+            "            \"can_interarrival_mean_ms\",",
+            "            \"can_interarrival_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 20,
+          "context": [
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_interarrival_mean_ms\",",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"connectivity_degradation_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 21,
+          "context": [
+            "    \"can_interarrival_mean_ms\",",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"connectivity_degradation_rate\",",
+            "    \"connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 27,
+          "context": [
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 35,
+          "context": [
+            "    \"connectivity_resilience_score\",",
+            "    \"cyber_physical_resilience_score\",",
+            "    \"can_message_rate\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 128,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "expanded[\"can_message_rate\"] = (",
+            "    expanded[\"can_message_rate\"]",
+            "    * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 129,
+          "context": [
+            "",
+            "expanded[\"can_message_rate\"] = (",
+            "    expanded[\"can_message_rate\"]",
+            "    * (",
+            "        1 + precursor * noise[\"message\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 292,
+          "context": [
+            "",
+            "derivative_features = [",
+            "    \"can_message_rate\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 363,
+          "context": [
+            "# Message / ECU behavior",
+            "perturb_column(",
+            "    \"can_message_rate\",",
+            "    direction=1,",
+            "    magnitude=20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 370,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"can_message_rate_deviation\",",
+            "    direction=1,",
+            "    magnitude=8,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 553,
+          "context": [
+            "",
+            "temporal_signal_columns = [",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 554,
+          "context": [
+            "temporal_signal_columns = [",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 597,
+          "context": [
+            "",
+            "rolling_sources = [",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"ecu_state_transition_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 649,
+          "context": [
+            "",
+            "cyber_instability = (",
+            "    0.15 * safe_col(\"can_message_rate_deviation\") +",
+            "    0.10 * safe_col(\"can_interarrival_jitter_ms\") +",
+            "    0.10 * safe_col(\"ecu_state_transition_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "can_message_rate_deviation",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 144,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"can_message_rate_deviation\"] = (",
+            "    rng.normal(0, 35, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 305,
+          "context": [
+            "        0.25, 2.5, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"can_message_rate_deviation\"] += rng.normal(",
+            "        250, 80, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 464,
+          "context": [
+            "        \"can_behavior\": [",
+            "            \"can_message_rate\",",
+            "            \"can_message_rate_deviation\",",
+            "            \"can_interarrival_mean_ms\",",
+            "            \"can_interarrival_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 21,
+          "context": [
+            "    \"can_interarrival_mean_ms\",",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"connectivity_degradation_rate\",",
+            "    \"connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 370,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"can_message_rate_deviation\",",
+            "    direction=1,",
+            "    magnitude=8,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 554,
+          "context": [
+            "temporal_signal_columns = [",
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 597,
+          "context": [
+            "",
+            "rolling_sources = [",
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"ecu_state_transition_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 649,
+          "context": [
+            "",
+            "cyber_instability = (",
+            "    0.15 * safe_col(\"can_message_rate_deviation\") +",
+            "    0.10 * safe_col(\"can_interarrival_jitter_ms\") +",
+            "    0.10 * safe_col(\"ecu_state_transition_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "collision_event_flag",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 65,
+          "context": [
+            "    \"fire_explosion_flag\",",
+            "    \"vehicle_damage_flag\",",
+            "    \"collision_event_flag\",",
+            "    \"roadway_complexity_index\",",
+            "    \"vehicle_state_observation_count\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 99,
+          "context": [
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\",",
+            "        \"collision_event_flag\",",
+            "        \"roadway_complexity_index\",",
+            "        \"vehicle_state_observation_count\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 267,
+          "context": [
+            "    0.10 * telemetry[\"speed_limit_deviation_abs\"].fillna(0).clip(0, 40)",
+            "    + 0.20 * telemetry[\"rollover_flag\"].fillna(0)",
+            "    + 0.15 * telemetry[\"collision_event_flag\"].fillna(0)",
+            ")",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 375,
+          "context": [
+            "    * (",
+            "        0.4 * telemetry[\"physical_state_completeness\"]",
+            "        + 0.2 * telemetry[\"collision_event_flag\"].fillna(0)",
+            "        + 0.2 * telemetry[\"rollover_flag\"].fillna(0)",
+            "        + 0.2 * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 127,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"collision_event_flag\"] = np.where(",
+            "    vehicle_features[\"MAN_COLL\"].notna(),",
+            "    (~vehicle_features[\"MAN_COLL\"].isin([0, 98, 99])).astype(\"int8\"),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 343,
+          "context": [
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\",",
+            "        \"collision_event_flag\",",
+            "        \"roadway_complexity_index\",",
+            "        \"vehicle_state_observation_count\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 362,
+          "context": [
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\",",
+            "            \"collision_event_flag\"",
+            "        ]",
+            "    ].notna().sum(axis=1) / 5.0"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 376,
+          "context": [
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\",",
+            "            \"collision_event_flag\",",
+            "            \"roadway_complexity_index\",",
+            "            \"vehicle_state_observation_count\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 425,
+          "context": [
+            "        \"fire_explosion_flag\": \"FIRE_EXP == 1\",",
+            "        \"vehicle_damage_flag\": \"DEFORMED observed and positive\",",
+            "        \"collision_event_flag\": \"MAN_COLL indicates collision\",",
+            "        \"roadway_complexity_index\": \"count of observed roadway-context variables\",",
+            "        \"vehicle_state_observation_count\": \"count of observed vehicle-state variables\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 62,
+          "context": [
+            "    \"VISION\",",
+            "    \"WEATHER\",",
+            "    \"collision_event_flag\",",
+            "    \"fire_explosion_flag\",",
+            "    \"redundant_sensor_divergence\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "connectivity_degradation_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 22,
+          "context": [
+            "    \"can_message_rate\",",
+            "    \"can_message_rate_deviation\",",
+            "    \"connectivity_degradation_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"d1_authentication_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_repair_release.py",
+          "line": 114,
+          "context": [
+            "for c in [",
+            "    \"resilience_degradation_rate\",",
+            "    \"connectivity_degradation_rate\",",
+            "    \"predictive_warning_score\",",
+            "]:"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 387,
+          "context": [
+            ")",
+            "",
+            "expanded[\"connectivity_degradation_rate\"] = (",
+            "    -expanded[",
+            "        \"d1_connectivity_resilience_score\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 436,
+          "context": [
+            "    0.15 *",
+            "    expanded[",
+            "        \"connectivity_degradation_rate\"",
+            "    ].clip(lower=0).clip(upper=1)",
+            "    +"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 568,
+          "context": [
+            "            \"cyber_instability_index\",",
+            "            \"resilience_degradation_rate\",",
+            "            \"connectivity_degradation_rate\",",
+            "            \"predictive_warning_score\",",
+            "            \"predictive_warning_state\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 696,
+          "context": [
+            ")",
+            "",
+            "out[\"connectivity_degradation_rate\"] = np.clip(",
+            "    connectivity_risk,",
+            "    0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 704,
+          "context": [
+            "out[\"resilience_degradation_rate\"] = np.clip(",
+            "    0.6 * out[\"cyber_instability_index\"].to_numpy() +",
+            "    0.4 * out[\"connectivity_degradation_rate\"].to_numpy(),",
+            "    0,",
+            "    1"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 722,
+          "context": [
+            "warning_score = (",
+            "    0.35 * out[\"cyber_instability_index\"].to_numpy() +",
+            "    0.25 * out[\"connectivity_degradation_rate\"].to_numpy() +",
+            "    0.20 * np.clip(",
+            "        out[\"state_transition_magnitude\"].to_numpy() * 5,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 835,
+          "context": [
+            "           ),",
+            "           max_connectivity_degradation=(",
+            "               \"connectivity_degradation_rate\",",
+            "               \"max\"",
+            "           ),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 950,
+          "context": [
+            "    \"connectivity_degradation_valid\",",
+            "    (",
+            "        out[\"connectivity_degradation_rate\"]",
+            "        .between(0,1)",
+            "        .all()"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "connectivity_drop_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 221,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"connectivity_drop_rate\"] = (",
+            "    rng.exponential(scale=0.01, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 332,
+          "context": [
+            "        3, 12, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"connectivity_drop_rate\"] += rng.uniform(",
+            "        0.1, 0.8, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 397,
+          "context": [
+            "        ).clip(0, 1)",
+            "        + 0.20 * (",
+            "            telemetry[\"connectivity_drop_rate\"] / 1",
+            "        ).clip(0, 1)",
+            "        + 0.20 * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 485,
+          "context": [
+            "            \"latency_ms\",",
+            "            \"latency_jitter_ms\",",
+            "            \"connectivity_drop_rate\",",
+            "            \"telemetry_gap_duration_ms\"",
+            "        ],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 23,
+          "context": [
+            "    \"can_message_rate_deviation\",",
+            "    \"connectivity_degradation_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 28,
+          "context": [
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 43,
+          "context": [
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 182,
+          "context": [
+            ")",
+            "",
+            "expanded[\"connectivity_drop_rate\"] = (",
+            "    expanded[\"connectivity_drop_rate\"]",
+            "    + precursor * noise[\"drop\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 183,
+          "context": [
+            "",
+            "expanded[\"connectivity_drop_rate\"] = (",
+            "    expanded[\"connectivity_drop_rate\"]",
+            "    + precursor * noise[\"drop\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 299,
+          "context": [
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 463,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"connectivity_drop_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 523,
+          "context": [
+            "bounded_rate = [",
+            "    \"packet_loss_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 567,
+          "context": [
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 683,
+          "context": [
+            "connectivity_risk = (",
+            "    0.35 * safe_col(\"packet_loss_rate\") +",
+            "    0.25 * safe_col(\"connectivity_drop_rate\") +",
+            "    0.20 * np.clip(",
+            "        safe_col(\"latency_ms\") / 500,"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "cyber_instability_index",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_temporal_repair_release.py",
+          "line": 32,
+          "context": [
+            "    \"future_anomaly_6step\",",
+            "    \"cyber_physical_resilience_score\",",
+            "    \"cyber_instability_index\",",
+            "    \"state_transition_magnitude\",",
+            "    \"predictive_warning_score\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 350,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "expanded[\"cyber_instability_index\"] = (",
+            "    0.20 *",
+            "    expanded[\"packet_loss_rate\"].clip(0, 1)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 427,
+          "context": [
+            "expanded[\"predictive_warning_score\"] = (",
+            "    0.30 *",
+            "    expanded[\"cyber_instability_index\"].clip(0, 1)",
+            "    +",
+            "    0.20 *"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 510,
+          "context": [
+            "        ),",
+            "        max_cyber_instability=(",
+            "            \"cyber_instability_index\",",
+            "            \"max\"",
+            "        ),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 566,
+          "context": [
+            "        ],",
+            "        \"predictive\": [",
+            "            \"cyber_instability_index\",",
+            "            \"resilience_degradation_rate\",",
+            "            \"connectivity_degradation_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 671,
+          "context": [
+            ")",
+            "",
+            "out[\"cyber_instability_index\"] = np.clip(",
+            "    cyber_instability,",
+            "    0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 703,
+          "context": [
+            "",
+            "out[\"resilience_degradation_rate\"] = np.clip(",
+            "    0.6 * out[\"cyber_instability_index\"].to_numpy() +",
+            "    0.4 * out[\"connectivity_degradation_rate\"].to_numpy(),",
+            "    0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 721,
+          "context": [
+            "",
+            "warning_score = (",
+            "    0.35 * out[\"cyber_instability_index\"].to_numpy() +",
+            "    0.25 * out[\"connectivity_degradation_rate\"].to_numpy() +",
+            "    0.20 * np.clip("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 831,
+          "context": [
+            "           ),",
+            "           max_cyber_instability=(",
+            "               \"cyber_instability_index\",",
+            "               \"max\"",
+            "           ),"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_authentication_failure_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 24,
+          "context": [
+            "    \"connectivity_degradation_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_can_bus_load_pct",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 25,
+          "context": [
+            "    \"connectivity_drop_rate\",",
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_can_interarrival_jitter_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 26,
+          "context": [
+            "    \"d1_authentication_failure_rate\",",
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_can_message_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 27,
+          "context": [
+            "    \"d1_can_bus_load_pct\",",
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_connectivity_drop_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 28,
+          "context": [
+            "    \"d1_can_interarrival_jitter_ms\",",
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_latency_jitter_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 29,
+          "context": [
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_latency_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 30,
+          "context": [
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_message_integrity_failure_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 31,
+          "context": [
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_packet_loss_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 32,
+          "context": [
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_replay_indicator_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 33,
+          "context": [
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_sensor_disagreement_rate",
+      "matches": []
+    },
+    {
+      "feature": "d1_sequence_counter_anomaly_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 34,
+          "context": [
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\",",
+            "    \"diagnostic_event_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "d1_telemetry_gap_duration_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 35,
+          "context": [
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"ecu_count\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "diagnostic_event_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 169,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"diagnostic_event_rate\"] = (",
+            "    rng.gamma(shape=1.5, scale=0.15, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 471,
+          "context": [
+            "        \"ecu_diagnostics\": [",
+            "            \"ecu_state_transition_rate\",",
+            "            \"diagnostic_event_rate\",",
+            "            \"uds_request_rate\",",
+            "            \"authentication_failure_rate\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 36,
+          "context": [
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"ecu_count\",",
+            "    \"ecu_state_transition_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 398,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"diagnostic_event_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 558,
+          "context": [
+            "    \"can_bus_load_pct\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"uds_request_rate\",",
+            "    \"authentication_failure_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "ecu_count",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 121,
+          "context": [
+            "])",
+            "",
+            "telemetry[\"ecu_count\"] = rng.integers(",
+            "    6, 18, size=N",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 457,
+          "context": [
+            "    \"feature_groups\": {",
+            "        \"vehicle_ecu_topology\": [",
+            "            \"ecu_count\",",
+            "            \"can_bus_count\",",
+            "            \"gateway_present\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 37,
+          "context": [
+            "    \"d1_telemetry_gap_duration_ms\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"ecu_count\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"latency_jitter_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "ecu_state_transition_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 165,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "telemetry[\"ecu_state_transition_rate\"] = (",
+            "    rng.gamma(shape=2.0, scale=0.35, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 470,
+          "context": [
+            "        ],",
+            "        \"ecu_diagnostics\": [",
+            "            \"ecu_state_transition_rate\",",
+            "            \"diagnostic_event_rate\",",
+            "            \"uds_request_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 38,
+          "context": [
+            "    \"diagnostic_event_rate\",",
+            "    \"ecu_count\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"latency_jitter_ms\",",
+            "    \"latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 391,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"ecu_state_transition_rate\",",
+            "    direction=1,",
+            "    magnitude=0.15,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 557,
+          "context": [
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"uds_request_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 599,
+          "context": [
+            "    \"can_message_rate_deviation\",",
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 651,
+          "context": [
+            "    0.15 * safe_col(\"can_message_rate_deviation\") +",
+            "    0.10 * safe_col(\"can_interarrival_jitter_ms\") +",
+            "    0.10 * safe_col(\"ecu_state_transition_rate\") +",
+            "    0.10 * safe_col(\"authentication_failure_rate\") +",
+            "    0.10 * safe_col(\"sensor_disagreement_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "fire_explosion_flag",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 63,
+          "context": [
+            "    \"speed_over_limit_flag\",",
+            "    \"rollover_flag\",",
+            "    \"fire_explosion_flag\",",
+            "    \"vehicle_damage_flag\",",
+            "    \"collision_event_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 97,
+          "context": [
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\",",
+            "        \"collision_event_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 115,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"fire_explosion_flag\"] = np.where(",
+            "    vehicle_features[\"FIRE_EXP\"].eq(1),",
+            "    1,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 341,
+          "context": [
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\",",
+            "        \"collision_event_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 360,
+          "context": [
+            "            \"speed_limit_deviation\",",
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\",",
+            "            \"collision_event_flag\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 374,
+          "context": [
+            "            \"speed_over_limit_flag\",",
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\",",
+            "            \"collision_event_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 423,
+          "context": [
+            "        \"speed_over_limit_flag\": \"TRAV_SP greater than VSPD_LIM\",",
+            "        \"rollover_flag\": \"derived from CRSS ROLLOVER coding\",",
+            "        \"fire_explosion_flag\": \"FIRE_EXP == 1\",",
+            "        \"vehicle_damage_flag\": \"DEFORMED observed and positive\",",
+            "        \"collision_event_flag\": \"MAN_COLL indicates collision\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 63,
+          "context": [
+            "    \"WEATHER\",",
+            "    \"collision_event_flag\",",
+            "    \"fire_explosion_flag\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"rolling_mean_3_sensor_disagreement_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "latency_jitter_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 217,
+          "context": [
+            ").clip(5, 500)",
+            "",
+            "telemetry[\"latency_jitter_ms\"] = (",
+            "    rng.gamma(shape=2.0, scale=3.0, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 484,
+          "context": [
+            "            \"packet_loss_rate\",",
+            "            \"latency_ms\",",
+            "            \"latency_jitter_ms\",",
+            "            \"connectivity_drop_rate\",",
+            "            \"telemetry_gap_duration_ms\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 191,
+          "context": [
+            "    \"unexpected_source_id_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 652,
+          "context": [
+            "    \"redundant_sensor_divergence\",",
+            "",
+            "    \"latency_jitter_ms\",",
+            "",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 154,
+          "context": [
+            "    \"unexpected_source_id_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 29,
+          "context": [
+            "    \"d1_can_message_rate\",",
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 39,
+          "context": [
+            "    \"ecu_count\",",
+            "    \"ecu_state_transition_rate\",",
+            "    \"latency_jitter_ms\",",
+            "    \"latency_ms\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 42,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 175,
+          "context": [
+            ")",
+            "",
+            "expanded[\"latency_jitter_ms\"] = (",
+            "    expanded[\"latency_jitter_ms\"]",
+            "    * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 176,
+          "context": [
+            "",
+            "expanded[\"latency_jitter_ms\"] = (",
+            "    expanded[\"latency_jitter_ms\"]",
+            "    * (",
+            "        1 + precursor * noise[\"latency_jitter\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 298,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 456,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"latency_jitter_ms\",",
+            "    direction=1,",
+            "    magnitude=30,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 566,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 604,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 655,
+          "context": [
+            "    0.10 * safe_col(\"sensor_disagreement_rate\") +",
+            "    0.10 * safe_col(\"packet_loss_rate\") +",
+            "    0.10 * safe_col(\"latency_jitter_ms\") +",
+            "    0.10 * safe_col(\"message_integrity_failure_rate\") +",
+            "    0.075 * safe_col(\"replay_indicator_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "latency_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 209,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"latency_ms\"] = (",
+            "    rng.lognormal(",
+            "        mean=np.log(45),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 329,
+          "context": [
+            "        0.10, 0.65, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"latency_ms\"] *= rng.uniform(",
+            "        3, 12, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 394,
+          "context": [
+            "        0.35 * telemetry[\"packet_loss_rate\"].clip(0, 1)",
+            "        + 0.25 * (",
+            "            telemetry[\"latency_ms\"] / 500",
+            "        ).clip(0, 1)",
+            "        + 0.20 * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 483,
+          "context": [
+            "            \"rssi_dbm\",",
+            "            \"packet_loss_rate\",",
+            "            \"latency_ms\",",
+            "            \"latency_jitter_ms\",",
+            "            \"connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 30,
+          "context": [
+            "    \"d1_connectivity_drop_rate\",",
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 40,
+          "context": [
+            "    \"ecu_state_transition_rate\",",
+            "    \"latency_jitter_ms\",",
+            "    \"latency_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 44,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 47,
+          "context": [
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 41,
+          "context": [
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 168,
+          "context": [
+            ")",
+            "",
+            "expanded[\"latency_ms\"] = (",
+            "    expanded[\"latency_ms\"]",
+            "    * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 169,
+          "context": [
+            "",
+            "expanded[\"latency_ms\"] = (",
+            "    expanded[\"latency_ms\"]",
+            "    * (",
+            "        1 + precursor * noise[\"latency\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 297,
+          "context": [
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 322,
+          "context": [
+            "rolling_features = [",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 355,
+          "context": [
+            "    +",
+            "    0.20 *",
+            "    (expanded[\"latency_ms\"] / 500).clip(0, 1)",
+            "    +",
+            "    0.15 *"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 449,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"latency_ms\",",
+            "    direction=1,",
+            "    magnitude=80,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 565,
+          "context": [
+            "    \"redundant_sensor_divergence\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 603,
+          "context": [
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"telemetry_gap_duration_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 685,
+          "context": [
+            "    0.25 * safe_col(\"connectivity_drop_rate\") +",
+            "    0.20 * np.clip(",
+            "        safe_col(\"latency_ms\") / 500,",
+            "        0,",
+            "        1"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "message_integrity_failure_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 233,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "telemetry[\"message_integrity_failure_rate\"] = (",
+            "    rng.exponential(scale=0.005, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 261,
+          "context": [
+            "    + 0.025 * telemetry[\"packet_loss_rate\"]",
+            "    + 0.020 * telemetry[\"sensor_disagreement_rate\"]",
+            "    + 0.010 * telemetry[\"message_integrity_failure_rate\"]",
+            ")",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 341,
+          "context": [
+            "        0.2, 2.0, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"message_integrity_failure_rate\"] += rng.uniform(",
+            "        0.05, 0.50, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 358,
+          "context": [
+            "    0.25 * telemetry[\"sensor_disagreement_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"packet_loss_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"message_integrity_failure_rate\"].clip(0, 1)",
+            "    + 0.15 * telemetry[\"replay_indicator_rate\"].clip(0, 1)",
+            "    + 0.10 * telemetry[\"sequence_counter_anomaly_rate\"].clip(0, 1)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 489,
+          "context": [
+            "        ],",
+            "        \"communication_integrity\": [",
+            "            \"message_integrity_failure_rate\",",
+            "            \"replay_indicator_rate\",",
+            "            \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 195,
+          "context": [
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"message_integrity_failure_rate\"",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 660,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "",
+            "    \"message_integrity_failure_rate\"",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 158,
+          "context": [
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"message_integrity_failure_rate\"",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 31,
+          "context": [
+            "    \"d1_latency_jitter_ms\",",
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 41,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"latency_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 45,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 48,
+          "context": [
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\",",
+            "    \"safety_critical_ecu_ratio\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 45,
+          "context": [
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 194,
+          "context": [
+            ")",
+            "",
+            "expanded[\"message_integrity_failure_rate\"] = (",
+            "    expanded[\"message_integrity_failure_rate\"]",
+            "    + precursor * noise[\"integrity\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 195,
+          "context": [
+            "",
+            "expanded[\"message_integrity_failure_rate\"] = (",
+            "    expanded[\"message_integrity_failure_rate\"]",
+            "    + precursor * noise[\"integrity\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 301,
+          "context": [
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 324,
+          "context": [
+            "    \"latency_ms\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"cyber_anomaly_severity\",",
+            "    \"cyber_physical_resilience_score\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 362,
+          "context": [
+            "    0.15 *",
+            "    expanded[",
+            "        \"message_integrity_failure_rate\"",
+            "    ].clip(0, 1)",
+            "    +"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 478,
+          "context": [
+            "# Communication integrity",
+            "perturb_column(",
+            "    \"message_integrity_failure_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 524,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 569,
+          "context": [
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 606,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 656,
+          "context": [
+            "    0.10 * safe_col(\"packet_loss_rate\") +",
+            "    0.10 * safe_col(\"latency_jitter_ms\") +",
+            "    0.10 * safe_col(\"message_integrity_failure_rate\") +",
+            "    0.075 * safe_col(\"replay_indicator_rate\") +",
+            "    0.075 * safe_col(\"sequence_counter_anomaly_rate\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "packet_loss_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 205,
+          "context": [
+            ").clip(-115, -35)",
+            "",
+            "telemetry[\"packet_loss_rate\"] = (",
+            "    rng.beta(1.5, 80, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 259,
+          "context": [
+            "base_anomaly_probability = (",
+            "    0.005",
+            "    + 0.025 * telemetry[\"packet_loss_rate\"]",
+            "    + 0.020 * telemetry[\"sensor_disagreement_rate\"]",
+            "    + 0.010 * telemetry[\"message_integrity_failure_rate\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 326,
+          "context": [
+            "    # Connectivity degradation",
+            "    m = idx[modes == 3]",
+            "    telemetry.loc[m, \"packet_loss_rate\"] = rng.uniform(",
+            "        0.10, 0.65, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 357,
+          "context": [
+            "telemetry[\"cyber_anomaly_severity\"] = (",
+            "    0.25 * telemetry[\"sensor_disagreement_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"packet_loss_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"message_integrity_failure_rate\"].clip(0, 1)",
+            "    + 0.15 * telemetry[\"replay_indicator_rate\"].clip(0, 1)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 392,
+          "context": [
+            "    1",
+            "    - (",
+            "        0.35 * telemetry[\"packet_loss_rate\"].clip(0, 1)",
+            "        + 0.25 * (",
+            "            telemetry[\"latency_ms\"] / 500"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 482,
+          "context": [
+            "        \"connectivity\": [",
+            "            \"rssi_dbm\",",
+            "            \"packet_loss_rate\",",
+            "            \"latency_ms\",",
+            "            \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 194,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"message_integrity_failure_rate\"",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 658,
+          "context": [
+            "    \"sequence_counter_anomaly_rate\",",
+            "",
+            "    \"packet_loss_rate\",",
+            "",
+            "    \"message_integrity_failure_rate\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 157,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"message_integrity_failure_rate\"",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 32,
+          "context": [
+            "    \"d1_latency_ms\",",
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 42,
+          "context": [
+            "    \"latency_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"rolling_mean_3_latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 46,
+          "context": [
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 49,
+          "context": [
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\",",
+            "    \"safety_critical_ecu_ratio\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 40,
+          "context": [
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 161,
+          "context": [
+            ")",
+            "",
+            "expanded[\"packet_loss_rate\"] = np.clip(",
+            "    expanded[\"packet_loss_rate\"]",
+            "    + precursor * noise[\"packet\"],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 162,
+          "context": [
+            "",
+            "expanded[\"packet_loss_rate\"] = np.clip(",
+            "    expanded[\"packet_loss_rate\"]",
+            "    + precursor * noise[\"packet\"],",
+            "    0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 296,
+          "context": [
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 321,
+          "context": [
+            "",
+            "rolling_features = [",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 352,
+          "context": [
+            "expanded[\"cyber_instability_index\"] = (",
+            "    0.20 *",
+            "    expanded[\"packet_loss_rate\"].clip(0, 1)",
+            "    +",
+            "    0.20 *"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 442,
+          "context": [
+            "# Connectivity",
+            "perturb_column(",
+            "    \"packet_loss_rate\",",
+            "    direction=1,",
+            "    magnitude=0.25,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 522,
+          "context": [
+            "",
+            "bounded_rate = [",
+            "    \"packet_loss_rate\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 564,
+          "context": [
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 602,
+          "context": [
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 654,
+          "context": [
+            "    0.10 * safe_col(\"authentication_failure_rate\") +",
+            "    0.10 * safe_col(\"sensor_disagreement_rate\") +",
+            "    0.10 * safe_col(\"packet_loss_rate\") +",
+            "    0.10 * safe_col(\"latency_jitter_ms\") +",
+            "    0.10 * safe_col(\"message_integrity_failure_rate\") +"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 682,
+          "context": [
+            "",
+            "connectivity_risk = (",
+            "    0.35 * safe_col(\"packet_loss_rate\") +",
+            "    0.25 * safe_col(\"connectivity_drop_rate\") +",
+            "    0.20 * np.clip("
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "redundant_sensor_divergence",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 193,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"redundant_sensor_divergence\"] = (",
+            "    rng.normal(0.02, 0.01, size=N)",
+            ").clip(0, None)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 478,
+          "context": [
+            "            \"sensor_plausibility_score\",",
+            "            \"sensor_disagreement_rate\",",
+            "            \"redundant_sensor_divergence\"",
+            "        ],",
+            "        \"connectivity\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 190,
+          "context": [
+            "fingerprints = [",
+            "    \"unexpected_source_id_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 650,
+          "context": [
+            "    \"unexpected_source_id_rate\",",
+            "",
+            "    \"redundant_sensor_divergence\",",
+            "",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 153,
+          "context": [
+            "strongest_names = [",
+            "    \"unexpected_source_id_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 64,
+          "context": [
+            "    \"collision_event_flag\",",
+            "    \"fire_explosion_flag\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"rolling_mean_3_sensor_disagreement_rate\",",
+            "    \"rolling_std_3_sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 434,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"redundant_sensor_divergence\",",
+            "    direction=1,",
+            "    magnitude=0.15,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 529,
+          "context": [
+            "    \"unexpected_source_id_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"authentication_failure_rate\",",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 563,
+          "context": [
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "replay_indicator_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 237,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"replay_indicator_rate\"] = (",
+            "    rng.exponential(scale=0.002, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 344,
+          "context": [
+            "        0.05, 0.50, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"replay_indicator_rate\"] += rng.uniform(",
+            "        0.05, 0.30, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 359,
+          "context": [
+            "    + 0.20 * telemetry[\"packet_loss_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"message_integrity_failure_rate\"].clip(0, 1)",
+            "    + 0.15 * telemetry[\"replay_indicator_rate\"].clip(0, 1)",
+            "    + 0.10 * telemetry[\"sequence_counter_anomaly_rate\"].clip(0, 1)",
+            "    + 0.10 * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 490,
+          "context": [
+            "        \"communication_integrity\": [",
+            "            \"message_integrity_failure_rate\",",
+            "            \"replay_indicator_rate\",",
+            "            \"sequence_counter_anomaly_rate\",",
+            "            \"unexpected_source_id_rate\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 192,
+          "context": [
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 654,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "",
+            "    \"replay_indicator_rate\",",
+            "",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 155,
+          "context": [
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 33,
+          "context": [
+            "    \"d1_message_integrity_failure_rate\",",
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 43,
+          "context": [
+            "    \"message_integrity_failure_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 46,
+          "context": [
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"authentication_failure_rate\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 199,
+          "context": [
+            ")",
+            "",
+            "expanded[\"replay_indicator_rate\"] = (",
+            "    expanded[\"replay_indicator_rate\"]",
+            "    + precursor * noise[\"replay\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 200,
+          "context": [
+            "",
+            "expanded[\"replay_indicator_rate\"] = (",
+            "    expanded[\"replay_indicator_rate\"]",
+            "    + precursor * noise[\"replay\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 302,
+          "context": [
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"authentication_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 366,
+          "context": [
+            "    +",
+            "    0.10 *",
+            "    expanded[\"replay_indicator_rate\"].clip(0, 1)",
+            "    +",
+            "    0.10 *"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 485,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"replay_indicator_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 525,
+          "context": [
+            "    \"connectivity_drop_rate\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 570,
+          "context": [
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 607,
+          "context": [
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 657,
+          "context": [
+            "    0.10 * safe_col(\"latency_jitter_ms\") +",
+            "    0.10 * safe_col(\"message_integrity_failure_rate\") +",
+            "    0.075 * safe_col(\"replay_indicator_rate\") +",
+            "    0.075 * safe_col(\"sequence_counter_anomaly_rate\") +",
+            "    0.05 * safe_col(\"unexpected_source_id_rate\")"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "resilience_degradation_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 69,
+          "context": [
+            "    \"rollover_flag\",",
+            "    \"rssi_dbm\",",
+            "    \"resilience_degradation_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"sensor_plausibility_score\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_repair_release.py",
+          "line": 113,
+          "context": [
+            "",
+            "for c in [",
+            "    \"resilience_degradation_rate\",",
+            "    \"connectivity_degradation_rate\",",
+            "    \"predictive_warning_score\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 381,
+          "context": [
+            ")",
+            "",
+            "expanded[\"resilience_degradation_rate\"] = (",
+            "    -expanded[",
+            "        \"d1_cyber_physical_resilience_score\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 431,
+          "context": [
+            "    0.20 *",
+            "    expanded[",
+            "        \"resilience_degradation_rate\"",
+            "    ].clip(lower=0).clip(upper=1)",
+            "    +"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 567,
+          "context": [
+            "        \"predictive\": [",
+            "            \"cyber_instability_index\",",
+            "            \"resilience_degradation_rate\",",
+            "            \"connectivity_degradation_rate\",",
+            "            \"predictive_warning_score\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 702,
+          "context": [
+            ")",
+            "",
+            "out[\"resilience_degradation_rate\"] = np.clip(",
+            "    0.6 * out[\"cyber_instability_index\"].to_numpy() +",
+            "    0.4 * out[\"connectivity_degradation_rate\"].to_numpy(),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 710,
+          "context": [
+            "",
+            "out[\"state_transition_magnitude\"] = np.abs(",
+            "    out[\"resilience_degradation_rate\"]",
+            "    .groupby(out[\"telemetry_scenario_id\"])",
+            "    .diff()"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 940,
+          "context": [
+            "    \"resilience_degradation_valid\",",
+            "    (",
+            "        out[\"resilience_degradation_rate\"]",
+            "        .between(0,1)",
+            "        .all()"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_mean_3_latency_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 44,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_mean_3_message_integrity_failure_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 45,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_mean_3_packet_loss_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 46,
+          "context": [
+            "    \"rolling_mean_3_latency_ms\",",
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_mean_3_sensor_disagreement_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 65,
+          "context": [
+            "    \"fire_explosion_flag\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"rolling_mean_3_sensor_disagreement_rate\",",
+            "    \"rolling_std_3_sensor_disagreement_rate\",",
+            "    \"rollover_flag\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_std_3_latency_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 47,
+          "context": [
+            "    \"rolling_mean_3_message_integrity_failure_rate\",",
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_std_3_message_integrity_failure_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 48,
+          "context": [
+            "    \"rolling_mean_3_packet_loss_rate\",",
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\",",
+            "    \"safety_critical_ecu_ratio\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_std_3_packet_loss_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 49,
+          "context": [
+            "    \"rolling_std_3_latency_ms\",",
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\",",
+            "    \"safety_critical_ecu_ratio\",",
+            "    \"sequence_counter_anomaly_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rolling_std_3_sensor_disagreement_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 66,
+          "context": [
+            "    \"redundant_sensor_divergence\",",
+            "    \"rolling_mean_3_sensor_disagreement_rate\",",
+            "    \"rolling_std_3_sensor_disagreement_rate\",",
+            "    \"rollover_flag\",",
+            "    \"rssi_dbm\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rollover_flag",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 62,
+          "context": [
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"rollover_flag\",",
+            "    \"fire_explosion_flag\",",
+            "    \"vehicle_damage_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 96,
+          "context": [
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 266,
+          "context": [
+            "physical_stress = (",
+            "    0.10 * telemetry[\"speed_limit_deviation_abs\"].fillna(0).clip(0, 40)",
+            "    + 0.20 * telemetry[\"rollover_flag\"].fillna(0)",
+            "    + 0.15 * telemetry[\"collision_event_flag\"].fillna(0)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 376,
+          "context": [
+            "        0.4 * telemetry[\"physical_state_completeness\"]",
+            "        + 0.2 * telemetry[\"collision_event_flag\"].fillna(0)",
+            "        + 0.2 * telemetry[\"rollover_flag\"].fillna(0)",
+            "        + 0.2 * (",
+            "            telemetry[\"speed_limit_deviation_abs\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 109,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"rollover_flag\"] = np.where(",
+            "    vehicle_features[\"ROLLOVER\"].isin([1, 2, 3]),",
+            "    1,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 340,
+          "context": [
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 359,
+          "context": [
+            "        [",
+            "            \"speed_limit_deviation\",",
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 373,
+          "context": [
+            "            \"speed_limit_deviation_abs\",",
+            "            \"speed_over_limit_flag\",",
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 422,
+          "context": [
+            "        \"speed_limit_deviation_abs\": \"absolute speed-limit deviation\",",
+            "        \"speed_over_limit_flag\": \"TRAV_SP greater than VSPD_LIM\",",
+            "        \"rollover_flag\": \"derived from CRSS ROLLOVER coding\",",
+            "        \"fire_explosion_flag\": \"FIRE_EXP == 1\",",
+            "        \"vehicle_damage_flag\": \"DEFORMED observed and positive\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 67,
+          "context": [
+            "    \"rolling_mean_3_sensor_disagreement_rate\",",
+            "    \"rolling_std_3_sensor_disagreement_rate\",",
+            "    \"rollover_flag\",",
+            "    \"rssi_dbm\",",
+            "    \"resilience_degradation_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "rssi_dbm",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 201,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "telemetry[\"rssi_dbm\"] = (",
+            "    rng.normal(-72, 12, size=N)",
+            ").clip(-115, -35)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 481,
+          "context": [
+            "        ],",
+            "        \"connectivity\": [",
+            "            \"rssi_dbm\",",
+            "            \"packet_loss_rate\",",
+            "            \"latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 68,
+          "context": [
+            "    \"rolling_std_3_sensor_disagreement_rate\",",
+            "    \"rollover_flag\",",
+            "    \"rssi_dbm\",",
+            "    \"resilience_degradation_rate\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "safety_critical_ecu_ratio",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 131,
+          "context": [
+            "telemetry[\"gateway_present\"] = 1",
+            "",
+            "telemetry[\"safety_critical_ecu_ratio\"] = (",
+            "    rng.uniform(0.25, 0.60, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 460,
+          "context": [
+            "            \"can_bus_count\",",
+            "            \"gateway_present\",",
+            "            \"safety_critical_ecu_ratio\"",
+            "        ],",
+            "        \"can_behavior\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 50,
+          "context": [
+            "    \"rolling_std_3_message_integrity_failure_rate\",",
+            "    \"rolling_std_3_packet_loss_rate\",",
+            "    \"safety_critical_ecu_ratio\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"telemetry_gap_duration_ms\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "sensor_disagreement_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 189,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"sensor_disagreement_rate\"] = (",
+            "    rng.beta(2, 30, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 260,
+          "context": [
+            "    0.005",
+            "    + 0.025 * telemetry[\"packet_loss_rate\"]",
+            "    + 0.020 * telemetry[\"sensor_disagreement_rate\"]",
+            "    + 0.010 * telemetry[\"message_integrity_failure_rate\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 317,
+          "context": [
+            "    # Sensor disagreement",
+            "    m = idx[modes == 2]",
+            "    telemetry.loc[m, \"sensor_disagreement_rate\"] = rng.uniform(",
+            "        0.15, 0.60, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 356,
+          "context": [
+            "",
+            "telemetry[\"cyber_anomaly_severity\"] = (",
+            "    0.25 * telemetry[\"sensor_disagreement_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"packet_loss_rate\"].clip(0, 1)",
+            "    + 0.20 * telemetry[\"message_integrity_failure_rate\"].clip(0, 1)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 477,
+          "context": [
+            "        \"sensor_consistency\": [",
+            "            \"sensor_plausibility_score\",",
+            "            \"sensor_disagreement_rate\",",
+            "            \"redundant_sensor_divergence\"",
+            "        ],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 65,
+          "context": [
+            "    \"fire_explosion_flag\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"rolling_mean_3_sensor_disagreement_rate\",",
+            "    \"rolling_std_3_sensor_disagreement_rate\",",
+            "    \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 66,
+          "context": [
+            "    \"redundant_sensor_divergence\",",
+            "    \"rolling_mean_3_sensor_disagreement_rate\",",
+            "    \"rolling_std_3_sensor_disagreement_rate\",",
+            "    \"rollover_flag\",",
+            "    \"rssi_dbm\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 70,
+          "context": [
+            "    \"rssi_dbm\",",
+            "    \"resilience_degradation_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"speed_limit_deviation\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 39,
+          "context": [
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 154,
+          "context": [
+            ")",
+            "",
+            "expanded[\"sensor_disagreement_rate\"] = np.clip(",
+            "    expanded[\"sensor_disagreement_rate\"]",
+            "    + precursor * noise[\"disagreement\"],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 155,
+          "context": [
+            "",
+            "expanded[\"sensor_disagreement_rate\"] = np.clip(",
+            "    expanded[\"sensor_disagreement_rate\"]",
+            "    + precursor * noise[\"disagreement\"],",
+            "    0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 295,
+          "context": [
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 323,
+          "context": [
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"cyber_anomaly_severity\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 358,
+          "context": [
+            "    +",
+            "    0.15 *",
+            "    expanded[\"sensor_disagreement_rate\"].clip(0, 1)",
+            "    +",
+            "    0.15 *"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 427,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"sensor_disagreement_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 528,
+          "context": [
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"authentication_failure_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 562,
+          "context": [
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 601,
+          "context": [
+            "    \"ecu_state_transition_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"latency_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 653,
+          "context": [
+            "    0.10 * safe_col(\"ecu_state_transition_rate\") +",
+            "    0.10 * safe_col(\"authentication_failure_rate\") +",
+            "    0.10 * safe_col(\"sensor_disagreement_rate\") +",
+            "    0.10 * safe_col(\"packet_loss_rate\") +",
+            "    0.10 * safe_col(\"latency_jitter_ms\") +"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "sensor_plausibility_score",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 185,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "telemetry[\"sensor_plausibility_score\"] = (",
+            "    rng.beta(12, 2, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 320,
+          "context": [
+            "        0.15, 0.60, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"sensor_plausibility_score\"] = rng.uniform(",
+            "        0.25, 0.70, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 476,
+          "context": [
+            "        ],",
+            "        \"sensor_consistency\": [",
+            "            \"sensor_plausibility_score\",",
+            "            \"sensor_disagreement_rate\",",
+            "            \"redundant_sensor_divergence\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 71,
+          "context": [
+            "    \"resilience_degradation_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 38,
+          "context": [
+            "    \"can_interarrival_jitter_ms\",",
+            "    \"can_bus_load_pct\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 147,
+          "context": [
+            ")",
+            "",
+            "expanded[\"sensor_plausibility_score\"] = np.clip(",
+            "    expanded[\"sensor_plausibility_score\"]",
+            "    - precursor * noise[\"plausibility\"],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 148,
+          "context": [
+            "",
+            "expanded[\"sensor_plausibility_score\"] = np.clip(",
+            "    expanded[\"sensor_plausibility_score\"]",
+            "    - precursor * noise[\"plausibility\"],",
+            "    0,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 420,
+          "context": [
+            "# Sensor consistency",
+            "perturb_column(",
+            "    \"sensor_plausibility_score\",",
+            "    direction=-1,",
+            "    magnitude=0.25,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 510,
+          "context": [
+            "",
+            "bounded_zero_one = [",
+            "    \"sensor_plausibility_score\",",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 561,
+          "context": [
+            "    \"uds_request_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "sequence_counter_anomaly_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 241,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"sequence_counter_anomaly_rate\"] = (",
+            "    rng.exponential(scale=0.004, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 347,
+          "context": [
+            "        0.05, 0.30, size=len(m)",
+            "    )",
+            "    telemetry.loc[m, \"sequence_counter_anomaly_rate\"] += rng.uniform(",
+            "        0.05, 0.30, size=len(m)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 360,
+          "context": [
+            "    + 0.20 * telemetry[\"message_integrity_failure_rate\"].clip(0, 1)",
+            "    + 0.15 * telemetry[\"replay_indicator_rate\"].clip(0, 1)",
+            "    + 0.10 * telemetry[\"sequence_counter_anomaly_rate\"].clip(0, 1)",
+            "    + 0.10 * (",
+            "        telemetry[\"authentication_failure_rate\"] /"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 491,
+          "context": [
+            "            \"message_integrity_failure_rate\",",
+            "            \"replay_indicator_rate\",",
+            "            \"sequence_counter_anomaly_rate\",",
+            "            \"unexpected_source_id_rate\"",
+            "        ],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 193,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"message_integrity_failure_rate\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 656,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "",
+            "    \"sequence_counter_anomaly_rate\",",
+            "",
+            "    \"packet_loss_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 156,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"packet_loss_rate\",",
+            "    \"message_integrity_failure_rate\""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 34,
+          "context": [
+            "    \"d1_packet_loss_rate\",",
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\",",
+            "    \"diagnostic_event_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 51,
+          "context": [
+            "    \"rolling_std_3_packet_loss_rate\",",
+            "    \"safety_critical_ecu_ratio\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"uds_request_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 47,
+          "context": [
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"authentication_failure_rate\"",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 204,
+          "context": [
+            ")",
+            "",
+            "expanded[\"sequence_counter_anomaly_rate\"] = (",
+            "    expanded[\"sequence_counter_anomaly_rate\"]",
+            "    + precursor * noise[\"sequence\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 205,
+          "context": [
+            "",
+            "expanded[\"sequence_counter_anomaly_rate\"] = (",
+            "    expanded[\"sequence_counter_anomaly_rate\"]",
+            "    + precursor * noise[\"sequence\"]",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 303,
+          "context": [
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"cyber_anomaly_severity\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 370,
+          "context": [
+            "    0.10 *",
+            "    expanded[",
+            "        \"sequence_counter_anomaly_rate\"",
+            "    ].clip(0, 1)",
+            "    +"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 492,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 526,
+          "context": [
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "    \"sensor_disagreement_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 571,
+          "context": [
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 608,
+          "context": [
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 658,
+          "context": [
+            "    0.10 * safe_col(\"message_integrity_failure_rate\") +",
+            "    0.075 * safe_col(\"replay_indicator_rate\") +",
+            "    0.075 * safe_col(\"sequence_counter_anomaly_rate\") +",
+            "    0.05 * safe_col(\"unexpected_source_id_rate\")",
+            ")"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "speed_limit_deviation",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 59,
+          "context": [
+            "    \"CASENUM\",",
+            "    \"VEH_NO\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 60,
+          "context": [
+            "    \"VEH_NO\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 93,
+          "context": [
+            "        \"CASENUM\",",
+            "        \"VEH_NO\",",
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 94,
+          "context": [
+            "        \"VEH_NO\",",
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 265,
+          "context": [
+            "",
+            "physical_stress = (",
+            "    0.10 * telemetry[\"speed_limit_deviation_abs\"].fillna(0).clip(0, 40)",
+            "    + 0.20 * telemetry[\"rollover_flag\"].fillna(0)",
+            "    + 0.15 * telemetry[\"collision_event_flag\"].fillna(0)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 378,
+          "context": [
+            "        + 0.2 * telemetry[\"rollover_flag\"].fillna(0)",
+            "        + 0.2 * (",
+            "            telemetry[\"speed_limit_deviation_abs\"]",
+            "            .fillna(0)",
+            "            .clip(0, 40) / 40"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 92,
+          "context": [
+            "# ------------------------------------------------------------------",
+            "",
+            "vehicle_features[\"speed_limit_deviation\"] = np.where(",
+            "    vehicle_features[\"TRAV_SP\"].notna() &",
+            "    vehicle_features[\"VSPD_LIM\"].notna(),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 99,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"speed_limit_deviation_abs\"] = (",
+            "    vehicle_features[\"speed_limit_deviation\"].abs()",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 100,
+          "context": [
+            "",
+            "vehicle_features[\"speed_limit_deviation_abs\"] = (",
+            "    vehicle_features[\"speed_limit_deviation\"].abs()",
+            ")",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 104,
+          "context": [
+            "",
+            "vehicle_features[\"speed_over_limit_flag\"] = np.where(",
+            "    vehicle_features[\"speed_limit_deviation\"].notna(),",
+            "    (vehicle_features[\"speed_limit_deviation\"] > 0).astype(\"int8\"),",
+            "    np.nan"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 105,
+          "context": [
+            "vehicle_features[\"speed_over_limit_flag\"] = np.where(",
+            "    vehicle_features[\"speed_limit_deviation\"].notna(),",
+            "    (vehicle_features[\"speed_limit_deviation\"] > 0).astype(\"int8\"),",
+            "    np.nan",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 337,
+          "context": [
+            "    [",
+            "        \"CASENUM\", \"VEH_NO\",",
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 338,
+          "context": [
+            "        \"CASENUM\", \"VEH_NO\",",
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 358,
+          "context": [
+            "    cp[",
+            "        [",
+            "            \"speed_limit_deviation\",",
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 370,
+          "context": [
+            "    cp[",
+            "        [",
+            "            \"speed_limit_deviation\",",
+            "            \"speed_limit_deviation_abs\",",
+            "            \"speed_over_limit_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 371,
+          "context": [
+            "        [",
+            "            \"speed_limit_deviation\",",
+            "            \"speed_limit_deviation_abs\",",
+            "            \"speed_over_limit_flag\",",
+            "            \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 419,
+          "context": [
+            "    ],",
+            "    \"derived_features\": {",
+            "        \"speed_limit_deviation\": \"TRAV_SP - VSPD_LIM\",",
+            "        \"speed_limit_deviation_abs\": \"absolute speed-limit deviation\",",
+            "        \"speed_over_limit_flag\": \"TRAV_SP greater than VSPD_LIM\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 420,
+          "context": [
+            "    \"derived_features\": {",
+            "        \"speed_limit_deviation\": \"TRAV_SP - VSPD_LIM\",",
+            "        \"speed_limit_deviation_abs\": \"absolute speed-limit deviation\",",
+            "        \"speed_over_limit_flag\": \"TRAV_SP greater than VSPD_LIM\",",
+            "        \"rollover_flag\": \"derived from CRSS ROLLOVER coding\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 72,
+          "context": [
+            "    \"sensor_disagreement_rate\",",
+            "    \"sensor_plausibility_score\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 73,
+          "context": [
+            "    \"sensor_plausibility_score\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"state_transition_magnitude\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "speed_limit_deviation_abs",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 60,
+          "context": [
+            "    \"VEH_NO\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 94,
+          "context": [
+            "        \"VEH_NO\",",
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 265,
+          "context": [
+            "",
+            "physical_stress = (",
+            "    0.10 * telemetry[\"speed_limit_deviation_abs\"].fillna(0).clip(0, 40)",
+            "    + 0.20 * telemetry[\"rollover_flag\"].fillna(0)",
+            "    + 0.15 * telemetry[\"collision_event_flag\"].fillna(0)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 378,
+          "context": [
+            "        + 0.2 * telemetry[\"rollover_flag\"].fillna(0)",
+            "        + 0.2 * (",
+            "            telemetry[\"speed_limit_deviation_abs\"]",
+            "            .fillna(0)",
+            "            .clip(0, 40) / 40"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 99,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"speed_limit_deviation_abs\"] = (",
+            "    vehicle_features[\"speed_limit_deviation\"].abs()",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 338,
+          "context": [
+            "        \"CASENUM\", \"VEH_NO\",",
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 371,
+          "context": [
+            "        [",
+            "            \"speed_limit_deviation\",",
+            "            \"speed_limit_deviation_abs\",",
+            "            \"speed_over_limit_flag\",",
+            "            \"rollover_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 420,
+          "context": [
+            "    \"derived_features\": {",
+            "        \"speed_limit_deviation\": \"TRAV_SP - VSPD_LIM\",",
+            "        \"speed_limit_deviation_abs\": \"absolute speed-limit deviation\",",
+            "        \"speed_over_limit_flag\": \"TRAV_SP greater than VSPD_LIM\",",
+            "        \"rollover_flag\": \"derived from CRSS ROLLOVER coding\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 73,
+          "context": [
+            "    \"sensor_plausibility_score\",",
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"state_transition_magnitude\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "speed_over_limit_flag",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 61,
+          "context": [
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"rollover_flag\",",
+            "    \"fire_explosion_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 95,
+          "context": [
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 103,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"speed_over_limit_flag\"] = np.where(",
+            "    vehicle_features[\"speed_limit_deviation\"].notna(),",
+            "    (vehicle_features[\"speed_limit_deviation\"] > 0).astype(\"int8\"),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 339,
+          "context": [
+            "        \"speed_limit_deviation\",",
+            "        \"speed_limit_deviation_abs\",",
+            "        \"speed_over_limit_flag\",",
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 372,
+          "context": [
+            "            \"speed_limit_deviation\",",
+            "            \"speed_limit_deviation_abs\",",
+            "            \"speed_over_limit_flag\",",
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 421,
+          "context": [
+            "        \"speed_limit_deviation\": \"TRAV_SP - VSPD_LIM\",",
+            "        \"speed_limit_deviation_abs\": \"absolute speed-limit deviation\",",
+            "        \"speed_over_limit_flag\": \"TRAV_SP greater than VSPD_LIM\",",
+            "        \"rollover_flag\": \"derived from CRSS ROLLOVER coding\",",
+            "        \"fire_explosion_flag\": \"FIRE_EXP == 1\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 74,
+          "context": [
+            "    \"speed_limit_deviation\",",
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"state_transition_magnitude\",",
+            "    \"vehicle_damage_flag\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "state_transition_magnitude",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 75,
+          "context": [
+            "    \"speed_limit_deviation_abs\",",
+            "    \"speed_over_limit_flag\",",
+            "    \"state_transition_magnitude\",",
+            "    \"vehicle_damage_flag\",",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_repair_release.py",
+          "line": 33,
+          "context": [
+            "    \"cyber_physical_resilience_score\",",
+            "    \"cyber_instability_index\",",
+            "    \"state_transition_magnitude\",",
+            "    \"predictive_warning_score\",",
+            "    \"predictive_warning_state\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 401,
+          "context": [
+            "]",
+            "",
+            "expanded[\"state_transition_magnitude\"] = np.sqrt(",
+            "    expanded[state_delta_columns]",
+            "    .fillna(0)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 410,
+          "context": [
+            "# Normalize magnitude for numerical stability.",
+            "q99 = expanded[",
+            "    \"state_transition_magnitude\"",
+            "].quantile(0.99)",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 415,
+          "context": [
+            "if q99 > 0:",
+            "    expanded[",
+            "        \"state_transition_magnitude\"",
+            "    ] = (",
+            "        expanded[\"state_transition_magnitude\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 417,
+          "context": [
+            "        \"state_transition_magnitude\"",
+            "    ] = (",
+            "        expanded[\"state_transition_magnitude\"]",
+            "        / q99",
+            "    ).clip(0, 1)"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 446,
+          "context": [
+            "    0.15 *",
+            "    expanded[",
+            "        \"state_transition_magnitude\"",
+            "    ].clip(0, 1)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 563,
+          "context": [
+            "        ],",
+            "        \"state_transition\": [",
+            "            \"state_transition_magnitude\"",
+            "        ],",
+            "        \"predictive\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 709,
+          "context": [
+            ")",
+            "",
+            "out[\"state_transition_magnitude\"] = np.abs(",
+            "    out[\"resilience_degradation_rate\"]",
+            "    .groupby(out[\"telemetry_scenario_id\"])"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 724,
+          "context": [
+            "    0.25 * out[\"connectivity_degradation_rate\"].to_numpy() +",
+            "    0.20 * np.clip(",
+            "        out[\"state_transition_magnitude\"].to_numpy() * 5,",
+            "        0,",
+            "        1"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "telemetry_gap_duration_ms",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 225,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"telemetry_gap_duration_ms\"] = (",
+            "    rng.exponential(scale=150, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 400,
+          "context": [
+            "        ).clip(0, 1)",
+            "        + 0.20 * (",
+            "            telemetry[\"telemetry_gap_duration_ms\"] / 5000",
+            "        ).clip(0, 1)",
+            "    )"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 486,
+          "context": [
+            "            \"latency_jitter_ms\",",
+            "            \"connectivity_drop_rate\",",
+            "            \"telemetry_gap_duration_ms\"",
+            "        ],",
+            "        \"communication_integrity\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 35,
+          "context": [
+            "    \"d1_replay_indicator_rate\",",
+            "    \"d1_sequence_counter_anomaly_rate\",",
+            "    \"d1_telemetry_gap_duration_ms\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"ecu_count\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 52,
+          "context": [
+            "    \"safety_critical_ecu_ratio\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"uds_request_rate\",",
+            "    \"unexpected_source_id_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 44,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 187,
+          "context": [
+            ")",
+            "",
+            "expanded[\"telemetry_gap_duration_ms\"] = (",
+            "    expanded[\"telemetry_gap_duration_ms\"]",
+            "    * ("
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 188,
+          "context": [
+            "",
+            "expanded[\"telemetry_gap_duration_ms\"] = (",
+            "    expanded[\"telemetry_gap_duration_ms\"]",
+            "    * (",
+            "        1 + precursor * noise[\"gap\"]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_state_builder.py",
+          "line": 300,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 470,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"telemetry_gap_duration_ms\",",
+            "    direction=1,",
+            "    magnitude=500,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 568,
+          "context": [
+            "    \"latency_jitter_ms\",",
+            "    \"connectivity_drop_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 605,
+          "context": [
+            "    \"latency_ms\",",
+            "    \"latency_jitter_ms\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"message_integrity_failure_rate\",",
+            "    \"replay_indicator_rate\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 690,
+          "context": [
+            "    ) +",
+            "    0.20 * np.clip(",
+            "        safe_col(\"telemetry_gap_duration_ms\") / 3000,",
+            "        0,",
+            "        1"
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "uds_request_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 173,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"uds_request_rate\"] = (",
+            "    rng.gamma(shape=1.5, scale=0.08, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 472,
+          "context": [
+            "            \"ecu_state_transition_rate\",",
+            "            \"diagnostic_event_rate\",",
+            "            \"uds_request_rate\",",
+            "            \"authentication_failure_rate\"",
+            "        ],"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 53,
+          "context": [
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"uds_request_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "}"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 405,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"uds_request_rate\",",
+            "    direction=1,",
+            "    magnitude=0.25,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 559,
+          "context": [
+            "    \"ecu_state_transition_rate\",",
+            "    \"diagnostic_event_rate\",",
+            "    \"uds_request_rate\",",
+            "    \"authentication_failure_rate\",",
+            "    \"sensor_plausibility_score\","
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "unexpected_source_id_rate",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 245,
+          "context": [
+            ")",
+            "",
+            "telemetry[\"unexpected_source_id_rate\"] = (",
+            "    rng.exponential(scale=0.002, size=N)",
+            ")"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 492,
+          "context": [
+            "            \"replay_indicator_rate\",",
+            "            \"sequence_counter_anomaly_rate\",",
+            "            \"unexpected_source_id_rate\"",
+            "        ],",
+            "        \"research_labels\": ["
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_final.py",
+          "line": 189,
+          "context": [
+            "# Strong synthetic fingerprint features",
+            "fingerprints = [",
+            "    \"unexpected_source_id_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_memory_safe.py",
+          "line": 648,
+          "context": [
+            "fingerprints = [",
+            "",
+            "    \"unexpected_source_id_rate\",",
+            "",
+            "    \"redundant_sensor_divergence\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_10c_robustness_ablation.py",
+          "line": 152,
+          "context": [
+            "# ---------------------------------------------------------------------",
+            "strongest_names = [",
+            "    \"unexpected_source_id_rate\",",
+            "    \"redundant_sensor_divergence\",",
+            "    \"latency_jitter_ms\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 54,
+          "context": [
+            "    \"telemetry_gap_duration_ms\",",
+            "    \"uds_request_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "}",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 499,
+          "context": [
+            "",
+            "perturb_column(",
+            "    \"unexpected_source_id_rate\",",
+            "    direction=1,",
+            "    magnitude=0.20,"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 527,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "    \"sensor_disagreement_rate\",",
+            "    \"redundant_sensor_divergence\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 572,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 609,
+          "context": [
+            "    \"replay_indicator_rate\",",
+            "    \"sequence_counter_anomaly_rate\",",
+            "    \"unexpected_source_id_rate\",",
+            "]",
+            ""
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_temporal_v2_generator.py",
+          "line": 659,
+          "context": [
+            "    0.075 * safe_col(\"replay_indicator_rate\") +",
+            "    0.075 * safe_col(\"sequence_counter_anomaly_rate\") +",
+            "    0.05 * safe_col(\"unexpected_source_id_rate\")",
+            ")",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "vehicle_damage_flag",
+      "matches": [
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 64,
+          "context": [
+            "    \"rollover_flag\",",
+            "    \"fire_explosion_flag\",",
+            "    \"vehicle_damage_flag\",",
+            "    \"collision_event_flag\",",
+            "    \"roadway_complexity_index\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_cyber_telemetry_generator.py",
+          "line": 98,
+          "context": [
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\",",
+            "        \"collision_event_flag\",",
+            "        \"roadway_complexity_index\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 121,
+          "context": [
+            ")",
+            "",
+            "vehicle_features[\"vehicle_damage_flag\"] = np.where(",
+            "    vehicle_features[\"DEFORMED\"].notna(),",
+            "    (vehicle_features[\"DEFORMED\"] > 0).astype(\"int8\"),"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 342,
+          "context": [
+            "        \"rollover_flag\",",
+            "        \"fire_explosion_flag\",",
+            "        \"vehicle_damage_flag\",",
+            "        \"collision_event_flag\",",
+            "        \"roadway_complexity_index\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 361,
+          "context": [
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\",",
+            "            \"collision_event_flag\"",
+            "        ]"
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 375,
+          "context": [
+            "            \"rollover_flag\",",
+            "            \"fire_explosion_flag\",",
+            "            \"vehicle_damage_flag\",",
+            "            \"collision_event_flag\",",
+            "            \"roadway_complexity_index\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase1_feature_engineering.py",
+          "line": 424,
+          "context": [
+            "        \"rollover_flag\": \"derived from CRSS ROLLOVER coding\",",
+            "        \"fire_explosion_flag\": \"FIRE_EXP == 1\",",
+            "        \"vehicle_damage_flag\": \"DEFORMED observed and positive\",",
+            "        \"collision_event_flag\": \"MAN_COLL indicates collision\",",
+            "        \"roadway_complexity_index\": \"count of observed roadway-context variables\","
+          ]
+        },
+        {
+          "script": "scripts\\crss_2024_phase4_11_modality_map.py",
+          "line": 76,
+          "context": [
+            "    \"speed_over_limit_flag\",",
+            "    \"state_transition_magnitude\",",
+            "    \"vehicle_damage_flag\",",
+            "}",
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}

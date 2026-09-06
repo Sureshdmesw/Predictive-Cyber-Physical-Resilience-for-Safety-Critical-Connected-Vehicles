@@ -1,0 +1,41 @@
+{
+  "phase": "4.11",
+  "status": "PASS",
+  "checks": {
+    "four_experiments_present": true,
+    "cyber_feature_count": true,
+    "physical_feature_count": true,
+    "joint_feature_count": true,
+    "temporal_feature_count": true,
+    "test_size_consistent": true,
+    "all_y3_metrics_present": true,
+    "all_y6_metrics_present": true,
+    "all_pr_auc_valid": true
+  },
+  "test_y6_pr_auc": {
+    "A_cyber_only": 0.8999015181885702,
+    "B_physical_only": 0.17066721833377554,
+    "C_cyber_physical": 0.8735610725996178,
+    "D_cyber_physical_temporal": 0.8939080402284753
+  },
+  "test_y3_pr_auc": {
+    "A_cyber_only": 0.8861866469957822,
+    "B_physical_only": 0.1756884290274077,
+    "C_cyber_physical": 0.8615362681559502,
+    "D_cyber_physical_temporal": 0.8659898882103612
+  },
+  "best_y6_model": "A_cyber_only",
+  "best_y3_model": "A_cyber_only",
+  "primary_comparison": {
+    "cyber_plus_physical_vs_cyber_only": -0.026340445588952432,
+    "cyber_plus_physical_temporal_vs_cyber_only": -0.005993477960094973,
+    "temporal_addition_vs_joint": 0.02034696762885746
+  },
+  "interpretation": {
+    "primary_result": "Cyber-only produced the highest Y6 PR-AUC in this controlled GRU experiment.",
+    "physical_only": "Physical-only performance was substantially lower than cyber-only.",
+    "joint_result": "Adding physical features reduced Y6 PR-AUC by approximately 0.02634 relative to cyber-only.",
+    "temporal_result": "Adding the non-composite temporal-derived features recovered approximately 0.02035 PR-AUC relative to the joint model, but remained below cyber-only.",
+    "scientific_caution": "This experiment does not establish that physical information is intrinsically harmful or useless. The result is specific to this controlled GRU configuration and synthetic cyber-label setting."
+  }
+}

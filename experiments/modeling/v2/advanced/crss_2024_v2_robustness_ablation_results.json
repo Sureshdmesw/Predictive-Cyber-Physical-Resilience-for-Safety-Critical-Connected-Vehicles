@@ -1,0 +1,488 @@
+{
+  "status": "PASS",
+  "phase": "4.10C",
+  "dataset": "CRSS 2024 Temporal Cyber-Physical States V2",
+  "task": "robustness_and_feature_ablation",
+  "seed": 42,
+  "sample_count": 634487,
+  "feature_count": 59,
+  "baseline_test_pr_auc": {
+    "y3": 0.9967846885338995,
+    "y6": 0.9905661330775651
+  },
+  "group_definitions": {
+    "cyber_ecu_can": [
+      "can_bus_count",
+      "can_bus_load_pct",
+      "can_interarrival_jitter_ms",
+      "can_interarrival_mean_ms",
+      "can_message_rate",
+      "can_message_rate_deviation",
+      "d1_can_bus_load_pct",
+      "d1_can_interarrival_jitter_ms",
+      "d1_can_message_rate",
+      "d1_replay_indicator_rate",
+      "d1_sequence_counter_anomaly_rate",
+      "diagnostic_event_rate",
+      "ecu_count",
+      "ecu_state_transition_rate",
+      "replay_indicator_rate",
+      "safety_critical_ecu_ratio",
+      "sequence_counter_anomaly_rate",
+      "uds_request_rate",
+      "unexpected_source_id_rate"
+    ],
+    "sensor_consistency": [
+      "d1_sensor_disagreement_rate",
+      "redundant_sensor_divergence",
+      "rolling_mean_3_sensor_disagreement_rate",
+      "rolling_std_3_sensor_disagreement_rate",
+      "sensor_disagreement_rate",
+      "sensor_plausibility_score",
+      "state_transition_magnitude"
+    ],
+    "connectivity": [
+      "connectivity_degradation_rate",
+      "connectivity_drop_rate",
+      "d1_connectivity_drop_rate",
+      "d1_latency_jitter_ms",
+      "d1_latency_ms",
+      "d1_packet_loss_rate",
+      "d1_telemetry_gap_duration_ms",
+      "latency_jitter_ms",
+      "latency_ms",
+      "packet_loss_rate",
+      "rolling_mean_3_latency_ms",
+      "rolling_mean_3_packet_loss_rate",
+      "rolling_std_3_latency_ms",
+      "rolling_std_3_packet_loss_rate",
+      "telemetry_gap_duration_ms"
+    ],
+    "communication_integrity": [
+      "authentication_failure_rate",
+      "d1_authentication_failure_rate",
+      "d1_message_integrity_failure_rate",
+      "message_integrity_failure_rate",
+      "rolling_mean_3_message_integrity_failure_rate",
+      "rolling_std_3_message_integrity_failure_rate"
+    ],
+    "physical_vehicle": [
+      "collision_event_flag",
+      "fire_explosion_flag",
+      "rollover_flag",
+      "speed_limit_deviation",
+      "speed_limit_deviation_abs",
+      "speed_over_limit_flag",
+      "vehicle_damage_flag"
+    ],
+    "environment": [
+      "VISION",
+      "WEATHER"
+    ],
+    "temporal_derivatives": [
+      "resilience_degradation_rate"
+    ],
+    "temporal_rolling": [],
+    "other": [
+      "cyber_instability_index",
+      "rssi_dbm"
+    ]
+  },
+  "strongest_fingerprint_features": [
+    "unexpected_source_id_rate",
+    "redundant_sensor_divergence",
+    "latency_jitter_ms",
+    "replay_indicator_rate",
+    "sequence_counter_anomaly_rate",
+    "packet_loss_rate",
+    "message_integrity_failure_rate"
+  ],
+  "ablation_results": [
+    {
+      "label": "Y3 baseline",
+      "feature_set": "all_59",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9998827087580385,
+      "validation_pr_auc": 0.9970281876944662,
+      "test_pr_auc": 0.9967846885338995,
+      "train_roc_auc": 0.9999989681987705,
+      "validation_roc_auc": 0.9999721038994036,
+      "test_roc_auc": 0.9999646985683467
+    },
+    {
+      "label": "Y6 baseline",
+      "feature_set": "all_59",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9997558178471664,
+      "validation_pr_auc": 0.9938767112057534,
+      "test_pr_auc": 0.9905661330775651,
+      "train_roc_auc": 0.9999976439138399,
+      "validation_roc_auc": 0.9994976420530798,
+      "test_roc_auc": 0.9996065923335483
+    },
+    {
+      "label": "Y3 minus cyber_ecu_can",
+      "feature_set": "all_59_minus_cyber_ecu_can",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9997931751570721,
+      "validation_pr_auc": 0.9971035174203692,
+      "test_pr_auc": 0.9961361757102438,
+      "train_roc_auc": 0.9999981031472149,
+      "validation_roc_auc": 0.999972782453202,
+      "test_roc_auc": 0.999957209444202
+    },
+    {
+      "label": "Y6 minus cyber_ecu_can",
+      "feature_set": "all_59_minus_cyber_ecu_can",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.999764647150688,
+      "validation_pr_auc": 0.9935081176545536,
+      "test_pr_auc": 0.990104733289904,
+      "train_roc_auc": 0.9999977467545522,
+      "validation_roc_auc": 0.999455028654954,
+      "test_roc_auc": 0.9993598930587848
+    },
+    {
+      "label": "Y3 minus sensor_consistency",
+      "feature_set": "all_59_minus_sensor_consistency",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9998548756649324,
+      "validation_pr_auc": 0.9968397115305001,
+      "test_pr_auc": 0.9966032016605627,
+      "train_roc_auc": 0.9999986690125332,
+      "validation_roc_auc": 0.9999699928431424,
+      "test_roc_auc": 0.9999625543792763
+    },
+    {
+      "label": "Y6 minus sensor_consistency",
+      "feature_set": "all_59_minus_sensor_consistency",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.999533684911053,
+      "validation_pr_auc": 0.9931185518266811,
+      "test_pr_auc": 0.9903150397571996,
+      "train_roc_auc": 0.9999955789376326,
+      "validation_roc_auc": 0.9993125394103075,
+      "test_roc_auc": 0.9996861541729043
+    },
+    {
+      "label": "Y3 minus connectivity",
+      "feature_set": "all_59_minus_connectivity",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9999140256544653,
+      "validation_pr_auc": 0.9974208656526581,
+      "test_pr_auc": 0.9965696476822261,
+      "train_roc_auc": 0.9999992445096016,
+      "validation_roc_auc": 0.9999754087077175,
+      "test_roc_auc": 0.9999619743088028
+    },
+    {
+      "label": "Y6 minus connectivity",
+      "feature_set": "all_59_minus_connectivity",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9994950854260116,
+      "validation_pr_auc": 0.9929993424247864,
+      "test_pr_auc": 0.9894203116718207,
+      "train_roc_auc": 0.9999951659423911,
+      "validation_roc_auc": 0.9991442753951205,
+      "test_roc_auc": 0.9994632825918603
+    },
+    {
+      "label": "Y3 minus communication_integrity",
+      "feature_set": "all_59_minus_communication_integrity",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9999081255993383,
+      "validation_pr_auc": 0.996692378927844,
+      "test_pr_auc": 0.9960236569314231,
+      "train_roc_auc": 0.999999212002445,
+      "validation_roc_auc": 0.9999691634996111,
+      "test_roc_auc": 0.9999566086569261
+    },
+    {
+      "label": "Y6 minus communication_integrity",
+      "feature_set": "all_59_minus_communication_integrity",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9998463607614062,
+      "validation_pr_auc": 0.9941404396680603,
+      "test_pr_auc": 0.9903614939931834,
+      "train_roc_auc": 0.9999985101699985,
+      "validation_roc_auc": 0.9994503716351795,
+      "test_roc_auc": 0.999604893008548
+    },
+    {
+      "label": "Y3 minus physical_vehicle",
+      "feature_set": "all_59_minus_physical_vehicle",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9998335624539861,
+      "validation_pr_auc": 0.9970406862534542,
+      "test_pr_auc": 0.9963708212752282,
+      "train_roc_auc": 0.9999985179144536,
+      "validation_roc_auc": 0.9999718651489932,
+      "test_roc_auc": 0.9999597058189169
+    },
+    {
+      "label": "Y6 minus physical_vehicle",
+      "feature_set": "all_59_minus_physical_vehicle",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.999623873736404,
+      "validation_pr_auc": 0.9932809354366341,
+      "test_pr_auc": 0.9899913788443548,
+      "train_roc_auc": 0.9999965001509974,
+      "validation_roc_auc": 0.9990468225326355,
+      "test_roc_auc": 0.9994889767573012
+    },
+    {
+      "label": "Y3 minus environment",
+      "feature_set": "all_59_minus_environment",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9999329773775265,
+      "validation_pr_auc": 0.9975779441423883,
+      "test_pr_auc": 0.9962583666552475,
+      "train_roc_auc": 0.9999994166771347,
+      "validation_roc_auc": 0.9999769794341025,
+      "test_roc_auc": 0.9999588564300097
+    },
+    {
+      "label": "Y6 minus environment",
+      "feature_set": "all_59_minus_environment",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9995657695769066,
+      "validation_pr_auc": 0.9931229130959712,
+      "test_pr_auc": 0.9895722833872828,
+      "train_roc_auc": 0.9999958330466943,
+      "validation_roc_auc": 0.9989685979379541,
+      "test_roc_auc": 0.9995296212683727
+    },
+    {
+      "label": "Y3 minus temporal_derivatives",
+      "feature_set": "all_59_minus_temporal_derivatives",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.999938740151943,
+      "validation_pr_auc": 0.9972552393204073,
+      "test_pr_auc": 0.9967248645126713,
+      "train_roc_auc": 0.9999994606219945,
+      "validation_roc_auc": 0.9999742526530983,
+      "test_roc_auc": 0.9999639631218539
+    },
+    {
+      "label": "Y6 minus temporal_derivatives",
+      "feature_set": "all_59_minus_temporal_derivatives",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9995829095314831,
+      "validation_pr_auc": 0.9933404171029342,
+      "test_pr_auc": 0.9897984427273964,
+      "train_roc_auc": 0.9999960169628888,
+      "validation_roc_auc": 0.9991873444920788,
+      "test_roc_auc": 0.9993394918728529
+    },
+    {
+      "label": "Y3 minus other",
+      "feature_set": "all_59_minus_other",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9998628221353643,
+      "validation_pr_auc": 0.997101186345206,
+      "test_pr_auc": 0.9966610346660686,
+      "train_roc_auc": 0.9999987876034562,
+      "validation_roc_auc": 0.9999726065318468,
+      "test_roc_auc": 0.9999631344497494
+    },
+    {
+      "label": "Y6 minus other",
+      "feature_set": "all_59_minus_other",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9997070100747193,
+      "validation_pr_auc": 0.9935998253060544,
+      "test_pr_auc": 0.9901876473771046,
+      "train_roc_auc": 0.999997132975063,
+      "validation_roc_auc": 0.9991777525873884,
+      "test_roc_auc": 0.9995759859116857
+    },
+    {
+      "label": "Y3 strongest-fingerprint ablation",
+      "feature_set": "all_59_minus_strongest_fingerprints",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9998809580900351,
+      "validation_pr_auc": 0.9969528408555915,
+      "test_pr_auc": 0.9964735684693136,
+      "train_roc_auc": 0.9999989477313017,
+      "validation_roc_auc": 0.9999711112003283,
+      "test_roc_auc": 0.9999608970350671
+    },
+    {
+      "label": "Y6 strongest-fingerprint ablation",
+      "feature_set": "all_59_minus_strongest_fingerprints",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9994858950614814,
+      "validation_pr_auc": 0.9928340054128487,
+      "test_pr_auc": 0.9897475062404808,
+      "train_roc_auc": 0.9999951392799843,
+      "validation_roc_auc": 0.9992146975366243,
+      "test_roc_auc": 0.9996636915107424
+    },
+    {
+      "label": "Y3 cyber_only",
+      "feature_set": "cyber_only",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.999921146992752,
+      "validation_pr_auc": 0.9973041241642047,
+      "test_pr_auc": 0.9968341594343092,
+      "train_roc_auc": 0.999999313135821,
+      "validation_roc_auc": 0.9999743657453979,
+      "test_roc_auc": 0.999965320072425
+    },
+    {
+      "label": "Y6 cyber_only",
+      "feature_set": "cyber_only",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9997622534902582,
+      "validation_pr_auc": 0.9938509741321794,
+      "test_pr_auc": 0.9900679841560948,
+      "train_roc_auc": 0.9999976406490554,
+      "validation_roc_auc": 0.9993571534374536,
+      "test_roc_auc": 0.9996255634864198
+    },
+    {
+      "label": "Y3 physical_only",
+      "feature_set": "physical_only",
+      "train_positive": 3773,
+      "validation_positive": 849,
+      "test_positive": 1018,
+      "train_pr_auc": 0.9995904019640629,
+      "validation_pr_auc": 0.9940486883583414,
+      "test_pr_auc": 0.9929952026638508,
+      "train_roc_auc": 0.99999641518301,
+      "validation_roc_auc": 0.9999430014809436,
+      "test_roc_auc": 0.999922322348601
+    },
+    {
+      "label": "Y6 physical_only",
+      "feature_set": "physical_only",
+      "train_positive": 4178,
+      "validation_positive": 961,
+      "test_positive": 1137,
+      "train_pr_auc": 0.9967915589757758,
+      "validation_pr_auc": 0.9775971541191961,
+      "test_pr_auc": 0.9719866880993038,
+      "train_roc_auc": 0.9997712920502041,
+      "validation_roc_auc": 0.9923817269525286,
+      "test_roc_auc": 0.9902717822403599
+    }
+  ],
+  "temporal_corruption_results": [
+    {
+      "corruption_rate": 0.05,
+      "horizon": "3step",
+      "validation_pr_auc": 0.9960654733041665,
+      "test_pr_auc": 0.997472029985463,
+      "validation_roc_auc": 0.9999637045474015,
+      "test_roc_auc": 0.9999710745005165
+    },
+    {
+      "corruption_rate": 0.05,
+      "horizon": "6step",
+      "validation_pr_auc": 0.9926345135700996,
+      "test_pr_auc": 0.9872737375568027,
+      "validation_roc_auc": 0.9992366629406659,
+      "test_roc_auc": 0.999102000908091
+    },
+    {
+      "corruption_rate": 0.1,
+      "horizon": "3step",
+      "validation_pr_auc": 0.994399237354414,
+      "test_pr_auc": 0.9969860248268287,
+      "validation_roc_auc": 0.9999472066144021,
+      "test_roc_auc": 0.9999658878592298
+    },
+    {
+      "corruption_rate": 0.1,
+      "horizon": "6step",
+      "validation_pr_auc": 0.9904725242145753,
+      "test_pr_auc": 0.9866294558369434,
+      "validation_roc_auc": 0.9992137650959992,
+      "test_roc_auc": 0.9990928021108293
+    },
+    {
+      "corruption_rate": 0.2,
+      "horizon": "3step",
+      "validation_pr_auc": 0.9886649817500784,
+      "test_pr_auc": 0.989208023172671,
+      "validation_roc_auc": 0.9998942863216272,
+      "test_roc_auc": 0.9998717303712558
+    },
+    {
+      "corruption_rate": 0.2,
+      "horizon": "6step",
+      "validation_pr_auc": 0.9880867033020038,
+      "test_pr_auc": 0.9828041633219801,
+      "validation_roc_auc": 0.9991880333596659,
+      "test_roc_auc": 0.9990380558708153
+    }
+  ],
+  "label_verification": {
+    "expected": {
+      "y3_train": 3773,
+      "y3_val": 849,
+      "y3_test": 1018,
+      "y6_train": 4178,
+      "y6_val": 961,
+      "y6_test": 1137
+    },
+    "actual": {
+      "y3_train": 3773,
+      "y3_val": 849,
+      "y3_test": 1018,
+      "y6_train": 4178,
+      "y6_val": 961,
+      "y6_test": 1137
+    },
+    "status": "PASS"
+  },
+  "interpretation": {
+    "synthetic_separability_warning": true,
+    "purpose": "Determine whether forecasting performance survives removal of synthetic fingerprints, modality ablation, and telemetry corruption.",
+    "real_world_claim_boundary": "Cyber labels are synthetic research telemetry; CRSS provides physical crash ground truth."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "CRSS 2024 Temporal Cyber-Physical States V2",
+  "sequence_length": 24,
+  "step_seconds": 5,
+  "scenario_count": 90641,
+  "row_count": 2175384,
+  "seed": 20260903,
+  "targets": [
+    "future_anomaly_3step",
+    "future_anomaly_6step"
+  ],
+  "temporal_phases": [
+    "NORMAL",
+    "BENIGN_TRANSIENT",
+    "PRECURSOR",
+    "ONSET",
+    "ACTIVE_ANOMALY",
+    "RECOVERY"
+  ],
+  "note": "Cyber telemetry is synthetic research telemetry. NHTSA CRSS data provide physical safety context and are not cyberattack ground truth."
+}

@@ -1,0 +1,41 @@
+{
+  "phase": "4.11",
+  "status": "PASS",
+  "checks": {
+    "total_count": true,
+    "cyber_count": true,
+    "physical_count": true,
+    "derived_count": true,
+    "no_overlap": true,
+    "no_unmapped": true
+  },
+  "total_features": 59,
+  "cyber_count": 34,
+  "physical_count": 12,
+  "derived_count": 13,
+  "composite_derived_features": [
+    "cyber_instability_index",
+    "resilience_degradation_rate",
+    "state_transition_magnitude"
+  ],
+  "rolling_derived_features": [
+    "rolling_mean_3_latency_ms",
+    "rolling_mean_3_message_integrity_failure_rate",
+    "rolling_mean_3_packet_loss_rate",
+    "rolling_mean_3_sensor_disagreement_rate",
+    "rolling_std_3_latency_ms",
+    "rolling_std_3_message_integrity_failure_rate",
+    "rolling_std_3_packet_loss_rate",
+    "rolling_std_3_sensor_disagreement_rate"
+  ],
+  "delta_derived_features": [
+    "d1_sensor_disagreement_rate"
+  ],
+  "scientific_notes": [
+    "Cyber/Edge represents ECU, CAN, diagnostic, connectivity, and communication-integrity telemetry.",
+    "Physical/Safety represents CRSS-derived physical and safety observations.",
+    "Derived/Temporal/Resilience represents downstream temporal transforms and resilience-state constructs.",
+    "Derived features should be evaluated separately from raw modality features.",
+    "Synthetic cyber telemetry is research-generated and is not observed cyberattack ground truth."
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "phase": "4.13",
+  "status": "PASS",
+  "task": "Rigorous Feature Contribution Analysis",
+  "target": "Y6",
+  "controlled_train_samples": 100000,
+  "test_samples": 95851,
+  "seed": 42,
+  "feature_count": 59,
+  "groups": {
+    "cyber_only": {
+      "feature_count": 34,
+      "test_y6_pr_auc": 0.9830718494657287
+    },
+    "cyber_plus_physical": {
+      "feature_count": 46,
+      "test_y6_pr_auc": 0.9873092335550008
+    },
+    "cyber_plus_derived": {
+      "feature_count": 47,
+      "test_y6_pr_auc": 0.9870432450396998
+    },
+    "all_59": {
+      "feature_count": 59,
+      "test_y6_pr_auc": 0.9882367925685684
+    }
+  },
+  "modality_summary": {
+    "cyber": {
+      "feature_count": 34,
+      "mean_leave_one_out_delta": 0.0004867644452378652,
+      "max_positive_delta": 0.0071866205116321025,
+      "max_negative_delta": -0.0005246861007217607
+    },
+    "physical": {
+      "feature_count": 12,
+      "mean_leave_one_out_delta": 0.0001237279298450522,
+      "max_positive_delta": 0.0012358670978035446,
+      "max_negative_delta": -0.0001420233137211513
+    },
+    "derived_temporal_resilience": {
+      "feature_count": 13,
+      "mean_leave_one_out_delta": 0.00017499411055331107,
+      "max_positive_delta": 0.0005611340846356505,
+      "max_negative_delta": -0.00021619431983255222
+    }
+  },
+  "feature_contributions": [
+    {
+      "feature": "can_interarrival_jitter_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9810501720569363,
+      "contribution_delta": 0.0071866205116321025
+    },
+    {
+      "feature": "can_message_rate_deviation",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.983413893375195,
+      "contribution_delta": 0.00482289919337342
+    },
+    {
+      "feature": "sensor_plausibility_score",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9870009254707649,
+      "contribution_delta": 0.0012358670978035446
+    },
+    {
+      "feature": "packet_loss_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.987343177298602,
+      "contribution_delta": 0.0008936152699664524
+    },
+    {
+      "feature": "d1_packet_loss_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9874931630274215,
+      "contribution_delta": 0.0007436295411469285
+    },
+    {
+      "feature": "ecu_state_transition_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9876184097362001,
+      "contribution_delta": 0.0006183828323683693
+    },
+    {
+      "feature": "rolling_std_3_sensor_disagreement_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9876756584839328,
+      "contribution_delta": 0.0005611340846356505
+    },
+    {
+      "feature": "cyber_instability_index",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9877026840482508,
+      "contribution_delta": 0.0005341085203176554
+    },
+    {
+      "feature": "unexpected_source_id_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9877125015682329,
+      "contribution_delta": 0.000524291000335575
+    },
+    {
+      "feature": "d1_can_message_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9877283916023658,
+      "contribution_delta": 0.0005084009662026379
+    },
+    {
+      "feature": "d1_latency_jitter_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9877396994158025,
+      "contribution_delta": 0.000497093152765915
+    },
+    {
+      "feature": "rolling_std_3_latency_ms",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9878037623938904,
+      "contribution_delta": 0.0004330301746779952
+    },
+    {
+      "feature": "connectivity_degradation_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9878208567782684,
+      "contribution_delta": 0.00041593579030008154
+    },
+    {
+      "feature": "d1_latency_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9878527687069502,
+      "contribution_delta": 0.00038402386161828783
+    },
+    {
+      "feature": "redundant_sensor_divergence",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9878944403016623,
+      "contribution_delta": 0.00034235226690615406
+    },
+    {
+      "feature": "authentication_failure_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9879055904768097,
+      "contribution_delta": 0.00033120209175874216
+    },
+    {
+      "feature": "can_message_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9879351783351233,
+      "contribution_delta": 0.0003016142334451022
+    },
+    {
+      "feature": "d1_sensor_disagreement_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.98799131308401,
+      "contribution_delta": 0.0002454794845584418
+    },
+    {
+      "feature": "telemetry_gap_duration_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9879982125138975,
+      "contribution_delta": 0.0002385800546709227
+    },
+    {
+      "feature": "rolling_mean_3_sensor_disagreement_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9880119945696412,
+      "contribution_delta": 0.00022479799892727304
+    },
+    {
+      "feature": "rolling_std_3_message_integrity_failure_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9880162617138347,
+      "contribution_delta": 0.0002205308547337248
+    },
+    {
+      "feature": "d1_connectivity_drop_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9880639429780486,
+      "contribution_delta": 0.0001728495905198857
+    },
+    {
+      "feature": "resilience_degradation_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9880652103926066,
+      "contribution_delta": 0.00017158217596180414
+    },
+    {
+      "feature": "diagnostic_event_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9880813112730641,
+      "contribution_delta": 0.00015548129550435608
+    },
+    {
+      "feature": "safety_critical_ecu_ratio",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9880816356422198,
+      "contribution_delta": 0.00015515692634859857
+    },
+    {
+      "feature": "d1_telemetry_gap_duration_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9880821222259334,
+      "contribution_delta": 0.00015467034263505486
+    },
+    {
+      "feature": "d1_sequence_counter_anomaly_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9881226695041574,
+      "contribution_delta": 0.00011412306441105358
+    },
+    {
+      "feature": "state_transition_magnitude",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.988124255760361,
+      "contribution_delta": 0.00011253680820744183
+    },
+    {
+      "feature": "WEATHER",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9881431665774877,
+      "contribution_delta": 9.362599108075909e-05
+    },
+    {
+      "feature": "message_integrity_failure_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.988162324155182,
+      "contribution_delta": 7.44684133864304e-05
+    },
+    {
+      "feature": "rssi_dbm",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9881655422747089,
+      "contribution_delta": 7.125029385957049e-05
+    },
+    {
+      "feature": "latency_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9881946200293131,
+      "contribution_delta": 4.2172539255314057e-05
+    },
+    {
+      "feature": "uds_request_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882090933200207,
+      "contribution_delta": 2.7699248547730093e-05
+    },
+    {
+      "feature": "rolling_mean_3_message_integrity_failure_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9882205906232604,
+      "contribution_delta": 1.6201945308047527e-05
+    },
+    {
+      "feature": "d1_authentication_failure_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882303390423401,
+      "contribution_delta": 6.453526228300532e-06
+    },
+    {
+      "feature": "VISION",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "can_bus_count",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "collision_event_flag",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "fire_explosion_flag",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "speed_limit_deviation",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "speed_limit_deviation_abs",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "speed_over_limit_flag",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "vehicle_damage_flag",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882367925685684,
+      "contribution_delta": 0.0
+    },
+    {
+      "feature": "rolling_std_3_packet_loss_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9882386555437335,
+      "contribution_delta": -1.8629751650234283e-06
+    },
+    {
+      "feature": "d1_message_integrity_failure_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882399222263656,
+      "contribution_delta": -3.1296577971406947e-06
+    },
+    {
+      "feature": "ecu_count",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.988243907930255,
+      "contribution_delta": -7.115361686516053e-06
+    },
+    {
+      "feature": "latency_jitter_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882508629604022,
+      "contribution_delta": -1.4070391833764795e-05
+    },
+    {
+      "feature": "d1_can_interarrival_jitter_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882680513309386,
+      "contribution_delta": -3.1258762370200976e-05
+    },
+    {
+      "feature": "d1_can_bus_load_pct",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9882692175892505,
+      "contribution_delta": -3.242502068201425e-05
+    },
+    {
+      "feature": "rollover_flag",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9882818794524971,
+      "contribution_delta": -4.508688392867999e-05
+    },
+    {
+      "feature": "d1_replay_indicator_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9883005667236319,
+      "contribution_delta": -6.377415506342299e-05
+    },
+    {
+      "feature": "rolling_mean_3_latency_ms",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.9883344641775654,
+      "contribution_delta": -9.767160899698535e-05
+    },
+    {
+      "feature": "sensor_disagreement_rate",
+      "modality": "physical",
+      "without_feature_pr_auc": 0.9883788158822896,
+      "contribution_delta": -0.0001420233137211513
+    },
+    {
+      "feature": "can_interarrival_mean_ms",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9884493229263873,
+      "contribution_delta": -0.0002125303578188742
+    },
+    {
+      "feature": "rolling_mean_3_packet_loss_rate",
+      "modality": "derived_temporal_resilience",
+      "without_feature_pr_auc": 0.988452986888401,
+      "contribution_delta": -0.00021619431983255222
+    },
+    {
+      "feature": "replay_indicator_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9884533082866144,
+      "contribution_delta": -0.00021651571804592873
+    },
+    {
+      "feature": "sequence_counter_anomaly_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9884631172395674,
+      "contribution_delta": -0.00022632467099892306
+    },
+    {
+      "feature": "can_bus_load_pct",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9887243346798837,
+      "contribution_delta": -0.0004875421113152978
+    },
+    {
+      "feature": "connectivity_drop_rate",
+      "modality": "cyber",
+      "without_feature_pr_auc": 0.9887614786692902,
+      "contribution_delta": -0.0005246861007217607
+    }
+  ],
+  "methodological_note": "Temporal summary representation with six statistics per feature (mean, std, minimum, maximum, first/last relationship, and delta). Leave-one-feature-out analysis uses a controlled 100k training subset and the untouched test set. Results are diagnostic and should not be interpreted as causal effects."
+}

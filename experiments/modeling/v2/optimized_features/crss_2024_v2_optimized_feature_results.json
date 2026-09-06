@@ -1,0 +1,189 @@
+{
+  "phase": "4.14",
+  "status": "PASS",
+  "task": "Targeted Optimized Feature-Set Analysis",
+  "target": "Y6",
+  "controlled_train_samples": 100000,
+  "test_samples": 95851,
+  "seed": 42,
+  "feature_sets": {
+    "cyber_core": {
+      "feature_count": 10,
+      "test_y6_pr_auc": 0.9743599637769061,
+      "features": [
+        "can_interarrival_jitter_ms",
+        "can_message_rate_deviation",
+        "packet_loss_rate",
+        "d1_packet_loss_rate",
+        "ecu_state_transition_rate",
+        "unexpected_source_id_rate",
+        "d1_can_message_rate",
+        "d1_latency_jitter_ms",
+        "connectivity_degradation_rate",
+        "d1_latency_ms"
+      ]
+    },
+    "cyber_core_plus_physical_core": {
+      "feature_count": 13,
+      "test_y6_pr_auc": 0.9783466532891665,
+      "features": [
+        "can_interarrival_jitter_ms",
+        "can_message_rate_deviation",
+        "packet_loss_rate",
+        "d1_packet_loss_rate",
+        "ecu_state_transition_rate",
+        "unexpected_source_id_rate",
+        "d1_can_message_rate",
+        "d1_latency_jitter_ms",
+        "connectivity_degradation_rate",
+        "d1_latency_ms",
+        "sensor_plausibility_score",
+        "redundant_sensor_divergence",
+        "WEATHER"
+      ]
+    },
+    "cyber_core_plus_derived_core": {
+      "feature_count": 15,
+      "test_y6_pr_auc": 0.9791711902435883,
+      "features": [
+        "can_interarrival_jitter_ms",
+        "can_message_rate_deviation",
+        "packet_loss_rate",
+        "d1_packet_loss_rate",
+        "ecu_state_transition_rate",
+        "unexpected_source_id_rate",
+        "d1_can_message_rate",
+        "d1_latency_jitter_ms",
+        "connectivity_degradation_rate",
+        "d1_latency_ms",
+        "rolling_std_3_sensor_disagreement_rate",
+        "cyber_instability_index",
+        "rolling_std_3_latency_ms",
+        "d1_sensor_disagreement_rate",
+        "rolling_mean_3_sensor_disagreement_rate"
+      ]
+    },
+    "optimized_cyber_physical": {
+      "feature_count": 18,
+      "test_y6_pr_auc": 0.9807113672223176,
+      "features": [
+        "can_interarrival_jitter_ms",
+        "can_message_rate_deviation",
+        "packet_loss_rate",
+        "d1_packet_loss_rate",
+        "ecu_state_transition_rate",
+        "unexpected_source_id_rate",
+        "d1_can_message_rate",
+        "d1_latency_jitter_ms",
+        "connectivity_degradation_rate",
+        "d1_latency_ms",
+        "sensor_plausibility_score",
+        "redundant_sensor_divergence",
+        "WEATHER",
+        "rolling_std_3_sensor_disagreement_rate",
+        "cyber_instability_index",
+        "rolling_std_3_latency_ms",
+        "d1_sensor_disagreement_rate",
+        "rolling_mean_3_sensor_disagreement_rate"
+      ]
+    },
+    "all_59": {
+      "feature_count": 59,
+      "test_y6_pr_auc": 0.9882367925685684,
+      "features": [
+        "authentication_failure_rate",
+        "can_bus_count",
+        "can_bus_load_pct",
+        "can_interarrival_jitter_ms",
+        "can_interarrival_mean_ms",
+        "can_message_rate",
+        "can_message_rate_deviation",
+        "connectivity_degradation_rate",
+        "connectivity_drop_rate",
+        "d1_authentication_failure_rate",
+        "d1_can_bus_load_pct",
+        "d1_can_interarrival_jitter_ms",
+        "d1_can_message_rate",
+        "d1_connectivity_drop_rate",
+        "d1_latency_jitter_ms",
+        "d1_latency_ms",
+        "d1_message_integrity_failure_rate",
+        "d1_packet_loss_rate",
+        "d1_replay_indicator_rate",
+        "d1_sequence_counter_anomaly_rate",
+        "d1_telemetry_gap_duration_ms",
+        "diagnostic_event_rate",
+        "ecu_count",
+        "ecu_state_transition_rate",
+        "latency_jitter_ms",
+        "latency_ms",
+        "message_integrity_failure_rate",
+        "packet_loss_rate",
+        "replay_indicator_rate",
+        "safety_critical_ecu_ratio",
+        "sequence_counter_anomaly_rate",
+        "telemetry_gap_duration_ms",
+        "uds_request_rate",
+        "unexpected_source_id_rate",
+        "VISION",
+        "WEATHER",
+        "collision_event_flag",
+        "fire_explosion_flag",
+        "redundant_sensor_divergence",
+        "rollover_flag",
+        "sensor_disagreement_rate",
+        "sensor_plausibility_score",
+        "speed_limit_deviation",
+        "speed_limit_deviation_abs",
+        "speed_over_limit_flag",
+        "vehicle_damage_flag",
+        "cyber_instability_index",
+        "d1_sensor_disagreement_rate",
+        "resilience_degradation_rate",
+        "rolling_mean_3_latency_ms",
+        "rolling_mean_3_message_integrity_failure_rate",
+        "rolling_mean_3_packet_loss_rate",
+        "rolling_mean_3_sensor_disagreement_rate",
+        "rolling_std_3_latency_ms",
+        "rolling_std_3_message_integrity_failure_rate",
+        "rolling_std_3_packet_loss_rate",
+        "rolling_std_3_sensor_disagreement_rate",
+        "rssi_dbm",
+        "state_transition_magnitude"
+      ]
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "name": "all_59",
+      "feature_count": 59,
+      "test_y6_pr_auc": 0.9882367925685684
+    },
+    {
+      "rank": 2,
+      "name": "optimized_cyber_physical",
+      "feature_count": 18,
+      "test_y6_pr_auc": 0.9807113672223176
+    },
+    {
+      "rank": 3,
+      "name": "cyber_core_plus_derived_core",
+      "feature_count": 15,
+      "test_y6_pr_auc": 0.9791711902435883
+    },
+    {
+      "rank": 4,
+      "name": "cyber_core_plus_physical_core",
+      "feature_count": 13,
+      "test_y6_pr_auc": 0.9783466532891665
+    },
+    {
+      "rank": 5,
+      "name": "cyber_core",
+      "feature_count": 10,
+      "test_y6_pr_auc": 0.9743599637769061
+    }
+  ],
+  "methodological_note": "Feature sets are constructed from positive leave-one-feature-out contributions identified in Phase 4.13. This is a diagnostic optimization experiment using a controlled 100k training subset and the untouched test set. Results are not causal evidence."
+}

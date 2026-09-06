@@ -1,0 +1,14 @@
+test,status,value,details
+accident CASENUM uniqueness,PASS,0,Expected 0 duplicate crash identifiers
+vehicle CASENUM+VEH_NO uniqueness,PASS,0,Expected 0 duplicate vehicle identifiers
+person CASENUM+VEH_NO+PER_NO uniqueness,PASS,0,Expected 0 duplicate person identifiers
+vehicle -> accident referential integrity,PASS,0,Vehicles whose CASENUM does not exist in accident
+person -> vehicle referential integrity,FAIL,5667,Persons whose CASENUM+VEH_NO does not exist in vehicle
+accident.VE_TOTAL vs vehicle row count,REVIEW,2111,Crashes where VE_TOTAL differs from vehicle-table row count
+vehicle.NUMOCCS vs person row count,REVIEW,6375,Vehicles where NUMOCCS differs from person-table row count
+person.ROLLOVER NaN structural linkage,REVIEW,5249,0 of 5249 NaN person records have vehicle-level ROLLOVER available
+person.IMPACT1 NaN structural linkage,REVIEW,5249,0 of 5249 NaN person records have vehicle-level IMPACT1 available
+person.FIRE_EXP NaN structural linkage,REVIEW,5249,0 of 5249 NaN person records have vehicle-level FIRE_EXP available
+person.ROLLOVER vs vehicle.ROLLOVER consistency,PASS,0,Compared 120492 person-vehicle records
+person.IMPACT1 vs vehicle.IMPACT1 consistency,PASS,0,Compared 120492 person-vehicle records
+person.FIRE_EXP vs vehicle.FIRE_EXP consistency,PASS,0,Compared 120492 person-vehicle records

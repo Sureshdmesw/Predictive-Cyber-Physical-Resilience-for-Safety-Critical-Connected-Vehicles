@@ -1,0 +1,117 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "phase": "4.10",
+  "name": "cyber_physical_temporal_transformer",
+  "status": "DESIGN_READY",
+
+  "input": {
+    "observation_window_steps": 12,
+    "observation_window_seconds": 60,
+    "feature_count": 59,
+    "shape": [12, 59]
+  },
+
+  "architecture": {
+    "input_projection": {
+      "type": "linear",
+      "input_dim": 59,
+      "embedding_dim": 128
+    },
+
+    "positional_encoding": {
+      "type": "learned",
+      "maximum_sequence_length": 12
+    },
+
+    "temporal_encoder": {
+      "type": "TransformerEncoder",
+      "layers": 3,
+      "attention_heads": 8,
+      "embedding_dimension": 128,
+      "feedforward_dimension": 256,
+      "dropout": 0.10,
+      "activation": "gelu",
+      "norm_first": true
+    },
+
+    "representation": {
+      "type": "attention_pooling",
+      "output_dimension": 128
+    },
+
+    "forecast_heads": {
+      "y3": {
+        "horizon_steps": 3,
+        "horizon_seconds": 15,
+        "output_dimension": 1
+      },
+      "y6": {
+        "horizon_steps": 6,
+        "horizon_seconds": 30,
+        "output_dimension": 1
+      }
+    }
+  },
+
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "loss": "weighted_binary_cross_entropy_with_logits",
+    "early_stopping": true,
+    "primary_validation_metric": "y6_pr_auc",
+    "seed": 42
+  },
+
+  "cpu_profile": {
+    "enabled": true,
+    "batch_size": 256,
+    "gradient_accumulation_steps": 1,
+    "mixed_precision": false,
+    "reason": "CUDA unavailable"
+  },
+
+  "evaluation": {
+    "primary": [
+      "y3_pr_auc",
+      "y6_pr_auc"
+    ],
+    "secondary": [
+      "y3_roc_auc",
+      "y6_roc_auc",
+      "y3_precision",
+      "y6_precision",
+      "y3_recall",
+      "y6_recall",
+      "y3_f1",
+      "y6_f1",
+      "y3_brier",
+      "y6_brier"
+    ]
+  },
+
+  "comparison": {
+    "baseline_algorithm": "HistGradientBoostingClassifier",
+    "baseline_y3_validation_pr_auc": 0.9971657720182402,
+    "baseline_y6_validation_pr_auc": 0.9930415674159837,
+    "advanced_model_must_be_compared_against_baseline": true
+  },
+
+  "safety_boundary": {
+    "ml_direct_actuation_authority": false,
+    "ml_role": [
+      "forecasting",
+      "risk_scoring",
+      "warning",
+      "decision_support"
+    ],
+    "deterministic_safety_policy_remains_separate": true
+  },
+
+  "methodological_boundary": {
+    "cyber_labels": "synthetic research telemetry",
+    "physical_ground_truth": "CRSS 2024",
+    "real_world_cyberattack_labels": false
+  }
+}

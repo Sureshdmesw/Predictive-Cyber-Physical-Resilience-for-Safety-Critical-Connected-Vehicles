@@ -1,0 +1,37 @@
+{
+  "dataset": "CRSS 2024 Temporal Cyber-Physical State Dataset",
+  "version": "2.0",
+  "sequence_length": 24,
+  "temporal_resolution_seconds": 5,
+  "time_semantics": "Synthetic relative simulation time. Not observed NHTSA timestamps.",
+  "sequence_key": [
+    "telemetry_scenario_id"
+  ],
+  "forecast_targets": [
+    "future_anomaly_3step",
+    "future_anomaly_6step"
+  ],
+  "temporal_features": {
+    "first_order_derivatives": "d1_*",
+    "rolling_statistics": [
+      "rolling_mean_3_*",
+      "rolling_std_3_*"
+    ],
+    "state_transition": [
+      "state_transition_magnitude"
+    ],
+    "predictive": [
+      "cyber_instability_index",
+      "resilience_degradation_rate",
+      "connectivity_degradation_rate",
+      "predictive_warning_score",
+      "predictive_warning_state"
+    ]
+  },
+  "warning_states": [
+    "NORMAL",
+    "WATCH",
+    "WARNING",
+    "CRITICAL"
+  ]
+}

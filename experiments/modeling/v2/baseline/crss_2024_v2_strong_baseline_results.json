@@ -1,0 +1,255 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "dataset": "CRSS 2024 + synthetic cyber telemetry",
+  "phase": "4.9",
+  "name": "strong_classical_baseline",
+  "status": "PASS",
+  "seed": 42,
+  "input": {
+    "original_tensor_features": 63,
+    "final_features": 59,
+    "observation_window_steps": 12,
+    "observation_window_seconds": 60
+  },
+  "representation": {
+    "method": "deterministic_temporal_summary",
+    "statistics": [
+      "last",
+      "mean",
+      "std",
+      "minimum",
+      "maximum",
+      "last_minus_first",
+      "max_absolute_step_change",
+      "last_step_change"
+    ],
+    "dimensions": 472
+  },
+  "models": {
+    "algorithm": "HistGradientBoostingClassifier",
+    "hyperparameters": {
+      "learning_rate": 0.05,
+      "max_iter": 350,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 30,
+      "l2_regularization": 1.0
+    },
+    "class_weighting": {
+      "method": "sample_weight",
+      "y3_positive_weight": 116.69,
+      "y6_positive_weight": 105.28
+    }
+  },
+  "normalization": {
+    "method": "z_score",
+    "fit_split": "train_only"
+  },
+  "model_selection": {
+    "primary_metric": "validation_y6_pr_auc",
+    "test_used_for_selection": false
+  },
+  "results": {
+    "y3": {
+      "train": {
+        "split": "train",
+        "samples": 444052,
+        "positives": 3773,
+        "positive_rate": 0.008496752632574564,
+        "pr_auc": 0.9998411282239645,
+        "roc_auc": 0.9999985967744074,
+        "brier": 0.00032527286695824894,
+        "threshold_metrics": {
+          "threshold": 0.9706372595352089,
+          "precision": 0.9949762030671603,
+          "recall": 0.9973495891863239,
+          "f1": 0.9961614824619457,
+          "positive_predictions": 3782
+        },
+        "fixed_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.9537060460409815,
+          "recall": 0.9992048767558972,
+          "f1": 0.9759254465441367,
+          "positive_predictions": 3953
+        }
+      },
+      "validation": {
+        "split": "validation",
+        "samples": 94584,
+        "positives": 849,
+        "positive_rate": 0.00897614818573966,
+        "pr_auc": 0.9971657720182402,
+        "roc_auc": 0.9999734861386224,
+        "brier": 0.0007560259826537041,
+        "threshold_metrics": {
+          "threshold": 0.9387090714251332,
+          "precision": 0.967479674796748,
+          "recall": 0.9811542991755006,
+          "f1": 0.9742690058479532,
+          "positive_predictions": 861
+        },
+        "fixed_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.9047109207708779,
+          "recall": 0.9952885747938751,
+          "f1": 0.9478407178911946,
+          "positive_predictions": 934
+        }
+      },
+      "test": {
+        "split": "test",
+        "samples": 95851,
+        "positives": 1018,
+        "positive_rate": 0.01062065080176524,
+        "pr_auc": 0.9967279465714489,
+        "roc_auc": 0.9999640252722618,
+        "brier": 0.0008616343262986694,
+        "threshold_metrics": {
+          "threshold": 0.9252607615022326,
+          "precision": 0.9615384615384616,
+          "recall": 0.9823182711198428,
+          "f1": 0.9718172983479106,
+          "positive_predictions": 1040
+        },
+        "fixed_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.9094170403587444,
+          "recall": 0.9960707269155207,
+          "f1": 0.9507735583684951,
+          "positive_predictions": 1115
+        }
+      }
+    },
+    "y6": {
+      "train": {
+        "split": "train",
+        "samples": 444052,
+        "positives": 4178,
+        "positive_rate": 0.009408807977444084,
+        "pr_auc": 0.9994791041402326,
+        "roc_auc": 0.999995038615795,
+        "brier": 0.0006377336604830147,
+        "threshold_metrics": {
+          "threshold": 0.966447448961564,
+          "precision": 0.9902241297091082,
+          "recall": 0.9940162757300144,
+          "f1": 0.9921165790731008,
+          "positive_predictions": 4194
+        },
+        "fixed_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.9167764602547211,
+          "recall": 0.9992819530876017,
+          "f1": 0.9562528630325241,
+          "positive_predictions": 4554
+        }
+      },
+      "validation": {
+        "split": "validation",
+        "samples": 94584,
+        "positives": 961,
+        "positive_rate": 0.01016028080859342,
+        "pr_auc": 0.9930415674159837,
+        "roc_auc": 0.9992504643376596,
+        "brier": 0.001063145761732266,
+        "threshold_metrics": {
+          "threshold": 0.9592767721910267,
+          "precision": 0.9668737060041408,
+          "recall": 0.9719042663891779,
+          "f1": 0.9693824597820446,
+          "positive_predictions": 966
+        },
+        "fixed_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.8873370577281192,
+          "recall": 0.991675338189386,
+          "f1": 0.9366093366093367,
+          "positive_predictions": 1074
+        }
+      },
+      "test": {
+        "split": "test",
+        "samples": 95851,
+        "positives": 1137,
+        "positive_rate": 0.011862161062482394,
+        "pr_auc": 0.9895443619331914,
+        "roc_auc": 0.9981588835074453,
+        "brier": 0.001328862607037362,
+        "threshold_metrics": {
+          "threshold": 0.9486396986729206,
+          "precision": 0.9580786026200874,
+          "recall": 0.9648197009674582,
+          "f1": 0.9614373356704645,
+          "positive_predictions": 1145
+        },
+        "fixed_threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.8853754940711462,
+          "recall": 0.9850483729111698,
+          "f1": 0.93255620316403,
+          "positive_predictions": 1265
+        }
+      }
+    }
+  },
+  "training_time_seconds": {
+    "representation": 25.899390697479248,
+    "y3": 81.91878342628479,
+    "y6": 89.66587471961975
+  },
+  "safety_boundary": {
+    "ml_direct_actuation_authority": false,
+    "role": [
+      "forecasting",
+      "risk_scoring",
+      "decision_support"
+    ]
+  },
+  "checks": [
+    {
+      "name": "feature_treatment_status",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "name": "training_infrastructure_status",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "name": "final_feature_count",
+      "status": "PASS",
+      "detail": "count=59"
+    },
+    {
+      "name": "train_tensor_shape",
+      "status": "PASS",
+      "detail": "(444052, 12, 63)"
+    },
+    {
+      "name": "validation_tensor_shape",
+      "status": "PASS",
+      "detail": "(94584, 12, 63)"
+    },
+    {
+      "name": "test_tensor_shape",
+      "status": "PASS",
+      "detail": "(95851, 12, 63)"
+    },
+    {
+      "name": "baseline_representation_shape",
+      "status": "PASS",
+      "detail": "shape=(444052, 472)"
+    },
+    {
+      "name": "baseline_representation_finite",
+      "status": "PASS",
+      "detail": "all representation values finite"
+    },
+    {
+      "name": "train_only_normalization",
+      "status": "PASS",
+      "detail": "validation/test use training statistics only"
+    }
+  ]
+}

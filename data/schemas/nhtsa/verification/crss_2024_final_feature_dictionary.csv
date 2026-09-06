@@ -1,0 +1,38 @@
+table,variable,manual_page,verification_status,source_verification_status,feature_level,domain,semantic_category,feature_role,data_type,format,values_length,definition_length,cyber_physical_relevance,predictive_use,target_candidate,duplicate_documentation,review_required
+accident.csv,HARM_EV,103,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,relational_event,event,event_sequence,review_required,numeric,2 numeric,,,high,quarantined_pending_semantic_review,no,no,yes
+accident.csv,MAN_COLL,117,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,relational_event,event,event_sequence,predictor,numeric,2 numeric,,,high,historical_safety_context,no,no,no
+accident.csv,PEDS,67,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,accident,accident,crash_context,predictor,numeric,2 numeric,,,indirect,historical_safety_context,no,no,no
+person.csv,AGE,617,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_state,predictor,numeric,3 numeric,,,low,historical_safety_context,no,yes,no
+person.csv,AIR_BAG,536,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_protection,predictor,numeric,2 numeric,,,high,historical_safety_context,no,no,no
+person.csv,EJECTION,539,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_outcome,target_candidate,numeric,1 numeric,,,high,historical_safety_context,yes,no,no
+person.csv,FIRE_EXP,318,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,vehicle,vehicle_safety_state,target_candidate,numeric,1 numeric,,,high,historical_safety_context,yes,no,no
+person.csv,HARM_EV,103,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,relational_event,event,event_sequence,review_required,numeric,2 numeric,,,high,quarantined_pending_semantic_review,no,no,yes
+person.csv,HELM_MIS,533,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_protection,predictor,numeric,Subfield 1: 2 numeric; Subfield 2: 1 numeric,,,high,historical_safety_context,no,no,no
+person.csv,HELM_USE,533,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_protection,predictor,numeric,Subfield 1: 2 numeric; Subfield 2: 1 numeric,,,high,historical_safety_context,no,no,no
+person.csv,HOSPITAL,660,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_outcome,target_candidate,numeric,1 numeric,,,high,historical_safety_context,yes,yes,no
+person.csv,IMPACT1,272,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,relational_event,event,event_sequence,review_required,numeric,"2 subfields: Subfield 1, 2 numeric; Subfield 2, Select All That Apply",,,high,quarantined_pending_semantic_review,no,no,yes
+person.csv,INJ_SEV,627,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_outcome,target_candidate,numeric,1 numeric,,,high,historical_safety_context,yes,yes,no
+person.csv,MAN_COLL,117,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,relational_event,event,event_sequence,predictor,numeric,2 numeric,,,high,historical_safety_context,no,no,no
+person.csv,REST_MIS,528,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_protection,predictor,numeric,Subfield 1: 2 numeric; Subfield 2: 1 numeric,,,high,historical_safety_context,no,no,no
+person.csv,REST_USE,528,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_protection,predictor,numeric,Subfield 1: 2 numeric; Subfield 2: 1 numeric,,,high,historical_safety_context,no,no,no
+person.csv,ROLLOVER,269,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,vehicle,vehicle_dynamics,predictor,numeric,1 numeric,,,high,historical_safety_context,no,no,no
+person.csv,SEAT_POS,523,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,person,person,occupant_state,review_required,numeric,2 numeric,,,high,quarantined_pending_semantic_review,no,no,yes
+person.csv,SEX,618,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,person,person,occupant_state,predictor,numeric,1 numeric,,,low,historical_safety_context,no,yes,no
+vehicle.csv,ACC_TYPE,483,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,crash_context,predictor,numeric,2 numeric,,,high,historical_safety_context,no,no,no
+vehicle.csv,DEFORMED,281,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,vehicle_safety_state,target_candidate,numeric,1 numeric,,,high,historical_safety_context,yes,no,no
+vehicle.csv,FIRE_EXP,318,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,vehicle_safety_state,target_candidate,numeric,1 numeric,,,high,historical_safety_context,yes,no,no
+vehicle.csv,HARM_EV,103,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,relational_event,event,event_sequence,review_required,numeric,2 numeric,,,high,quarantined_pending_semantic_review,no,no,yes
+vehicle.csv,IMPACT1,272,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,relational_event,event,event_sequence,review_required,numeric,"2 subfields: Subfield 1, 2 numeric; Subfield 2, Select All That Apply",,,high,quarantined_pending_semantic_review,no,no,yes
+vehicle.csv,MAN_COLL,117,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,relational_event,event,event_sequence,predictor,numeric,2 numeric,,,high,historical_safety_context,no,no,no
+vehicle.csv,ROLLOVER,269,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,vehicle_dynamics,predictor,numeric,1 numeric,,,high,historical_safety_context,no,no,no
+vehicle.csv,SPEEDREL,366,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,vehicle_dynamics,predictor,numeric,1 numeric,,,high,historical_safety_context,no,no,no
+vehicle.csv,TRAV_SP,264,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,vehicle_dynamics,predictor,numeric,3 numeric,,,high,historical_safety_context,no,no,no
+vehicle.csv,VALIGN,431,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,roadway_context,predictor,numeric,1 numeric,,,medium,historical_safety_context,no,no,no
+vehicle.csv,VNUM_LAN,426,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,roadway_context,predictor,numeric,1 numeric,,,medium,historical_safety_context,no,no,no
+vehicle.csv,VPROFILE,433,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,roadway_context,predictor,numeric,1 numeric,,,medium,historical_safety_context,no,no,no
+vehicle.csv,VSPD_LIM,429,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,roadway_context,predictor,numeric,2 numeric,,,medium,historical_safety_context,no,no,no
+vehicle.csv,VSURCOND,437,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,roadway_context,predictor,numeric,2 numeric,,,medium,historical_safety_context,no,no,no
+vehicle.csv,VTRAFCON,440,REVIEW_REQUIRED,SAS_NAME_MATCH_REQUIRES_REVIEW,vehicle,vehicle,roadway_context,review_required,numeric,2 numeric,,,medium,quarantined_pending_semantic_review,no,no,yes
+vehicle.csv,VTRAFWAY,423,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,vehicle,vehicle,roadway_context,predictor,numeric,1 numeric,,,medium,historical_safety_context,no,no,no
+vision.csv,VISION,448,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,environment,vision,environmental_context,predictor,numeric,2 numeric. Select All That Apply.,,,medium,historical_safety_context,no,no,no
+weather.csv,WEATHER,142,VERIFIED,VERIFIED_SAS_NAME_AND_DEFINITION,environment,weather,environmental_context,predictor,numeric,2 numeric. Select All That Apply.,,,medium,historical_safety_context,no,no,no

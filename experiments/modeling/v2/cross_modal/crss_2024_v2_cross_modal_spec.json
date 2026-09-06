@@ -1,0 +1,87 @@
+﻿{
+  "phase": "4.11",
+  "name": "cross_modal_cyber_physical_forecasting",
+  "dataset": "CRSS 2024 Temporal Cyber-Physical States V2",
+  "task": "rolling multi-horizon forecasting",
+
+  "input": {
+    "total_features": 59,
+    "cyber_features": 27,
+    "physical_features": 32,
+    "observation_window_steps": 12,
+    "observation_window_seconds": 60
+  },
+
+  "targets": {
+    "y3": {
+      "horizon_steps": 3,
+      "horizon_seconds": 15
+    },
+    "y6": {
+      "horizon_steps": 6,
+      "horizon_seconds": 30
+    }
+  },
+
+  "architectures": {
+    "cyber_only": true,
+    "physical_only": true,
+    "joint_fusion": true,
+    "cross_modal_attention": true
+  },
+
+  "architecture": {
+    "cyber_embedding": 64,
+    "physical_embedding": 64,
+    "temporal_hidden": 64,
+    "cross_modal_attention_heads": 4,
+    "fusion_dimension": 128,
+    "dropout": 0.10,
+    "output_heads": [
+      "y3_15_second_forecast",
+      "y6_30_second_forecast"
+    ]
+  },
+
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "weighted_bce_with_logits",
+    "early_stopping": true,
+    "selection_metric": "y6_pr_auc",
+    "cpu_controlled_subset": true
+  },
+
+  "evaluation": {
+    "primary_metric": "PR-AUC",
+    "secondary_metrics": [
+      "ROC-AUC",
+      "F1",
+      "precision",
+      "recall",
+      "Brier"
+    ],
+    "test_isolation": true
+  },
+
+  "methodological_boundary": {
+    "physical_ground_truth": "CRSS 2024",
+    "cyber_labels": "synthetic research telemetry",
+    "real_world_cyberattack_labels": false,
+    "direct_actuation": false
+  },
+
+  "safety_boundary": {
+    "direct_actuation": false,
+    "ml_role": [
+      "forecasting",
+      "risk scoring",
+      "warning",
+      "decision support"
+    ]
+  },
+
+  "status": "DESIGN_READY"
+}

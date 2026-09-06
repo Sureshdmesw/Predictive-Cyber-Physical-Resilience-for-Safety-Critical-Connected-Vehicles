@@ -1,0 +1,124 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "all_rows_have_split",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "all_scenarios_have_24_steps",
+      "passed": true,
+      "detail": "24 timesteps required"
+    },
+    {
+      "name": "no_scenario_overlap",
+      "passed": true,
+      "detail": "scenario split manifest has unique scenario IDs"
+    },
+    {
+      "name": "future_horizons_not_identical",
+      "passed": false,
+      "detail": "3step_vs_6step different=False"
+    }
+  ],
+  "target_distribution": {
+    "synthetic_cyber_anomaly": {
+      "total_rows": 2175384,
+      "negative_rows": 2141040,
+      "positive_rows": 34344,
+      "positive_rate": 0.015787557507088403
+    },
+    "future_anomaly_3step": {
+      "total_rows": 2175384,
+      "negative_rows": 2142471,
+      "positive_rows": 32913,
+      "positive_rate": 0.01512974261095972
+    },
+    "future_anomaly_6step": {
+      "total_rows": 2175384,
+      "negative_rows": 2142471,
+      "positive_rows": 32913,
+      "positive_rate": 0.01512974261095972
+    }
+  },
+  "scenario_distribution": {
+    "train": {
+      "scenarios": 63436,
+      "anomaly_positive": 968,
+      "future3_positive": 968,
+      "future6_positive": 968,
+      "anomaly_rate": 0.015259474115644114,
+      "future3_rate": 0.015259474115644114,
+      "future6_rate": 0.015259474115644114
+    },
+    "validation": {
+      "scenarios": 13512,
+      "anomaly_positive": 211,
+      "future3_positive": 211,
+      "future6_positive": 211,
+      "anomaly_rate": 0.015615748963883956,
+      "future3_rate": 0.015615748963883956,
+      "future6_rate": 0.015615748963883956
+    },
+    "test": {
+      "scenarios": 13693,
+      "anomaly_positive": 252,
+      "future3_positive": 252,
+      "future6_positive": 252,
+      "anomaly_rate": 0.018403563864748413,
+      "future3_rate": 0.018403563864748413,
+      "future6_rate": 0.018403563864748413
+    }
+  },
+  "split_distribution": {
+    "train": {
+      "rows": 1522464,
+      "scenarios": 63436,
+      "future3_positive_rows": 22264,
+      "future6_positive_rows": 22264,
+      "future3_positive_rate": 0.014623662694158943,
+      "future6_positive_rate": 0.014623662694158943
+    },
+    "validation": {
+      "rows": 324288,
+      "scenarios": 13512,
+      "future3_positive_rows": 4853,
+      "future6_positive_rows": 4853,
+      "future3_positive_rate": 0.014965092757055458,
+      "future6_positive_rate": 0.014965092757055458
+    },
+    "test": {
+      "rows": 328632,
+      "scenarios": 13693,
+      "future3_positive_rows": 5796,
+      "future6_positive_rows": 5796,
+      "future3_positive_rate": 0.017636748703717228,
+      "future6_positive_rate": 0.017636748703717228
+    }
+  },
+  "horizon_overlap": {
+    "both_positive": 32913,
+    "three_only": 0,
+    "six_only": 0,
+    "overlap_rate_among_6step_positive": 1.0
+  },
+  "class_imbalance": {
+    "future_anomaly_3step": {
+      "positive": 32913,
+      "negative": 2142471,
+      "negative_to_positive_ratio": 65.0949776683985
+    },
+    "future_anomaly_6step": {
+      "positive": 32913,
+      "negative": 2142471,
+      "negative_to_positive_ratio": 65.0949776683985
+    }
+  },
+  "methodological_notes": [
+    "Scenario-level split is preserved.",
+    "Future targets are evaluated separately for 3-step and 6-step horizons.",
+    "Class imbalance must be handled during model training.",
+    "Test scenarios remain untouched during model development."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "row_level": {
+    "rows": 2175384,
+    "identical": true,
+    "different_rows": 0,
+    "future3_positive": 32913,
+    "future6_positive": 32913
+  },
+  "reconstructed": {
+    "future3_positive": 32913,
+    "future6_positive": 32913,
+    "different_rows": 0,
+    "future6_only_rows": 0,
+    "future3_only_rows": 0
+  },
+  "individual_future_steps": {
+    "t_plus_1": {
+      "positive_rows": 32913,
+      "positive_rate": 0.01512974261095972
+    },
+    "t_plus_2": {
+      "positive_rows": 31482,
+      "positive_rate": 0.014471927714831037
+    },
+    "t_plus_3": {
+      "positive_rows": 30051,
+      "positive_rate": 0.013814112818702354
+    },
+    "t_plus_4": {
+      "positive_rows": 28620,
+      "positive_rate": 0.01315629792257367
+    },
+    "t_plus_5": {
+      "positive_rows": 27189,
+      "positive_rate": 0.012498483026444986
+    },
+    "t_plus_6": {
+      "positive_rows": 25758,
+      "positive_rate": 0.011840668130316303
+    }
+  },
+  "anomaly_episode_structure": {
+    "anomalous_scenarios": 1431,
+    "mean_duration_steps": 24.0,
+    "median_duration_steps": 24.0,
+    "max_duration_steps": 24,
+    "duration_distribution": {
+      "24": 1431
+    }
+  },
+  "diagnosis": "HORIZON_COLLAPSE: the synthetic anomaly episodes do not create additional 6-step-only future positives."
+}

@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "nonempty",
+      "passed": true,
+      "detail": "samples=634,487"
+    },
+    {
+      "name": "observation_window",
+      "passed": true,
+      "detail": "(634487, 12, 63)"
+    },
+    {
+      "name": "feature_count",
+      "passed": true,
+      "detail": "expected=63, actual=63"
+    },
+    {
+      "name": "binary_y3",
+      "passed": true,
+      "detail": "[0, 1]"
+    },
+    {
+      "name": "binary_y6",
+      "passed": true,
+      "detail": "[0, 1]"
+    },
+    {
+      "name": "horizon_distinct",
+      "passed": true,
+      "detail": "Y3=5,640, Y6=6,276"
+    },
+    {
+      "name": "no_nan",
+      "passed": true,
+      "detail": "NaNs=0"
+    },
+    {
+      "name": "no_inf",
+      "passed": true,
+      "detail": "Infs=0"
+    },
+    {
+      "name": "train_present",
+      "passed": true,
+      "detail": "train samples exist"
+    },
+    {
+      "name": "validation_present",
+      "passed": true,
+      "detail": "validation samples exist"
+    },
+    {
+      "name": "test_present",
+      "passed": true,
+      "detail": "test samples exist"
+    },
+    {
+      "name": "no_scenario_split_overlap",
+      "passed": true,
+      "detail": "overlap=0"
+    }
+  ],
+  "shape": [
+    634487,
+    12,
+    63
+  ],
+  "statistics": {
+    "train": {
+      "samples": 444052,
+      "y3_positive": 3773,
+      "y3_rate": 0.008496752632574564,
+      "y6_positive": 4178,
+      "y6_rate": 0.009408807977444084,
+      "y6_only": 405,
+      "y3_only": 0
+    },
+    "validation": {
+      "samples": 94584,
+      "y3_positive": 849,
+      "y3_rate": 0.00897614818573966,
+      "y6_positive": 961,
+      "y6_rate": 0.01016028080859342,
+      "y6_only": 112,
+      "y3_only": 0
+    },
+    "test": {
+      "samples": 95851,
+      "y3_positive": 1018,
+      "y3_rate": 0.01062065080176524,
+      "y6_positive": 1137,
+      "y6_rate": 0.011862161062482394,
+      "y6_only": 119,
+      "y3_only": 0
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "rows": 2175384,
+  "columns": 103,
+  "scenarios": 90641,
+  "future3_positive": 7875,
+  "future6_positive": 12168,
+  "future3_rate": 0.0036200505290100507,
+  "future6_rate": 0.0055934952173961015,
+  "checks": [
+    {
+      "name": "dataset_nonempty",
+      "passed": true,
+      "detail": "rows=2,175,384"
+    },
+    {
+      "name": "expected_row_count",
+      "passed": true,
+      "detail": "expected=2,175,384, actual=2,175,384"
+    },
+    {
+      "name": "scenario_count",
+      "passed": true,
+      "detail": "expected=90,641"
+    },
+    {
+      "name": "sequence_length",
+      "passed": true,
+      "detail": "all sequences contain 24 steps"
+    },
+    {
+      "name": "unique_scenario_timestep",
+      "passed": true,
+      "detail": "no duplicate scenario/timestep"
+    },
+    {
+      "name": "future3_binary",
+      "passed": true,
+      "detail": "3-step labels are binary"
+    },
+    {
+      "name": "future6_binary",
+      "passed": true,
+      "detail": "6-step labels are binary"
+    },
+    {
+      "name": "horizon_separation",
+      "passed": true,
+      "detail": "future3=7,875, future6=12,168"
+    },
+    {
+      "name": "anomaly_not_full_sequence",
+      "passed": true,
+      "detail": "anomalies do not occupy all 24 steps"
+    },
+    {
+      "name": "predictive_warning_valid",
+      "passed": true,
+      "detail": "warning score in [0,1]"
+    },
+    {
+      "name": "resilience_degradation_valid",
+      "passed": true,
+      "detail": "degradation rate in [0,1]"
+    },
+    {
+      "name": "connectivity_degradation_valid",
+      "passed": true,
+      "detail": "connectivity degradation in [0,1]"
+    }
+  ],
+  "seed": 20260903
+}

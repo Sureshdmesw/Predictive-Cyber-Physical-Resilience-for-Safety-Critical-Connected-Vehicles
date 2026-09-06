@@ -1,0 +1,371 @@
+{
+  "phase": "4.11",
+  "status": "PASS",
+  "total_features": 59,
+  "cyber_feature_count": 34,
+  "physical_feature_count": 12,
+  "derived_temporal_resilience_feature_count": 13,
+  "cyber_features": [
+    "authentication_failure_rate",
+    "can_bus_count",
+    "can_bus_load_pct",
+    "can_interarrival_jitter_ms",
+    "can_interarrival_mean_ms",
+    "can_message_rate",
+    "can_message_rate_deviation",
+    "connectivity_degradation_rate",
+    "connectivity_drop_rate",
+    "d1_authentication_failure_rate",
+    "d1_can_bus_load_pct",
+    "d1_can_interarrival_jitter_ms",
+    "d1_can_message_rate",
+    "d1_connectivity_drop_rate",
+    "d1_latency_jitter_ms",
+    "d1_latency_ms",
+    "d1_message_integrity_failure_rate",
+    "d1_packet_loss_rate",
+    "d1_replay_indicator_rate",
+    "d1_sequence_counter_anomaly_rate",
+    "d1_telemetry_gap_duration_ms",
+    "diagnostic_event_rate",
+    "ecu_count",
+    "ecu_state_transition_rate",
+    "latency_jitter_ms",
+    "latency_ms",
+    "message_integrity_failure_rate",
+    "packet_loss_rate",
+    "replay_indicator_rate",
+    "safety_critical_ecu_ratio",
+    "sequence_counter_anomaly_rate",
+    "telemetry_gap_duration_ms",
+    "uds_request_rate",
+    "unexpected_source_id_rate"
+  ],
+  "physical_features": [
+    "VISION",
+    "WEATHER",
+    "collision_event_flag",
+    "fire_explosion_flag",
+    "redundant_sensor_divergence",
+    "rollover_flag",
+    "sensor_disagreement_rate",
+    "sensor_plausibility_score",
+    "speed_limit_deviation",
+    "speed_limit_deviation_abs",
+    "speed_over_limit_flag",
+    "vehicle_damage_flag"
+  ],
+  "derived_temporal_resilience_features": [
+    "cyber_instability_index",
+    "d1_sensor_disagreement_rate",
+    "resilience_degradation_rate",
+    "rolling_mean_3_latency_ms",
+    "rolling_mean_3_message_integrity_failure_rate",
+    "rolling_mean_3_packet_loss_rate",
+    "rolling_mean_3_sensor_disagreement_rate",
+    "rolling_std_3_latency_ms",
+    "rolling_std_3_message_integrity_failure_rate",
+    "rolling_std_3_packet_loss_rate",
+    "rolling_std_3_sensor_disagreement_rate",
+    "rssi_dbm",
+    "state_transition_magnitude"
+  ],
+  "ordered_feature_map": [
+    {
+      "feature": "VISION",
+      "original_index": 0,
+      "modality": "physical"
+    },
+    {
+      "feature": "WEATHER",
+      "original_index": 1,
+      "modality": "physical"
+    },
+    {
+      "feature": "authentication_failure_rate",
+      "original_index": 2,
+      "modality": "cyber"
+    },
+    {
+      "feature": "can_bus_count",
+      "original_index": 3,
+      "modality": "cyber"
+    },
+    {
+      "feature": "can_bus_load_pct",
+      "original_index": 4,
+      "modality": "cyber"
+    },
+    {
+      "feature": "can_interarrival_jitter_ms",
+      "original_index": 5,
+      "modality": "cyber"
+    },
+    {
+      "feature": "can_interarrival_mean_ms",
+      "original_index": 6,
+      "modality": "cyber"
+    },
+    {
+      "feature": "can_message_rate",
+      "original_index": 7,
+      "modality": "cyber"
+    },
+    {
+      "feature": "can_message_rate_deviation",
+      "original_index": 8,
+      "modality": "cyber"
+    },
+    {
+      "feature": "collision_event_flag",
+      "original_index": 9,
+      "modality": "physical"
+    },
+    {
+      "feature": "connectivity_degradation_rate",
+      "original_index": 10,
+      "modality": "cyber"
+    },
+    {
+      "feature": "connectivity_drop_rate",
+      "original_index": 11,
+      "modality": "cyber"
+    },
+    {
+      "feature": "cyber_instability_index",
+      "original_index": 12,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "d1_authentication_failure_rate",
+      "original_index": 13,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_can_bus_load_pct",
+      "original_index": 14,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_can_interarrival_jitter_ms",
+      "original_index": 15,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_can_message_rate",
+      "original_index": 16,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_connectivity_drop_rate",
+      "original_index": 17,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_latency_jitter_ms",
+      "original_index": 18,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_latency_ms",
+      "original_index": 19,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_message_integrity_failure_rate",
+      "original_index": 20,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_packet_loss_rate",
+      "original_index": 21,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_replay_indicator_rate",
+      "original_index": 22,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_sensor_disagreement_rate",
+      "original_index": 23,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "d1_sequence_counter_anomaly_rate",
+      "original_index": 24,
+      "modality": "cyber"
+    },
+    {
+      "feature": "d1_telemetry_gap_duration_ms",
+      "original_index": 25,
+      "modality": "cyber"
+    },
+    {
+      "feature": "diagnostic_event_rate",
+      "original_index": 26,
+      "modality": "cyber"
+    },
+    {
+      "feature": "ecu_count",
+      "original_index": 27,
+      "modality": "cyber"
+    },
+    {
+      "feature": "ecu_state_transition_rate",
+      "original_index": 28,
+      "modality": "cyber"
+    },
+    {
+      "feature": "fire_explosion_flag",
+      "original_index": 29,
+      "modality": "physical"
+    },
+    {
+      "feature": "latency_jitter_ms",
+      "original_index": 30,
+      "modality": "cyber"
+    },
+    {
+      "feature": "latency_ms",
+      "original_index": 31,
+      "modality": "cyber"
+    },
+    {
+      "feature": "message_integrity_failure_rate",
+      "original_index": 32,
+      "modality": "cyber"
+    },
+    {
+      "feature": "packet_loss_rate",
+      "original_index": 33,
+      "modality": "cyber"
+    },
+    {
+      "feature": "redundant_sensor_divergence",
+      "original_index": 34,
+      "modality": "physical"
+    },
+    {
+      "feature": "replay_indicator_rate",
+      "original_index": 35,
+      "modality": "cyber"
+    },
+    {
+      "feature": "resilience_degradation_rate",
+      "original_index": 36,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_mean_3_latency_ms",
+      "original_index": 37,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_mean_3_message_integrity_failure_rate",
+      "original_index": 38,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_mean_3_packet_loss_rate",
+      "original_index": 39,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_mean_3_sensor_disagreement_rate",
+      "original_index": 40,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_std_3_latency_ms",
+      "original_index": 41,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_std_3_message_integrity_failure_rate",
+      "original_index": 42,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_std_3_packet_loss_rate",
+      "original_index": 43,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rolling_std_3_sensor_disagreement_rate",
+      "original_index": 44,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "rollover_flag",
+      "original_index": 45,
+      "modality": "physical"
+    },
+    {
+      "feature": "rssi_dbm",
+      "original_index": 46,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "safety_critical_ecu_ratio",
+      "original_index": 47,
+      "modality": "cyber"
+    },
+    {
+      "feature": "sensor_disagreement_rate",
+      "original_index": 48,
+      "modality": "physical"
+    },
+    {
+      "feature": "sensor_plausibility_score",
+      "original_index": 49,
+      "modality": "physical"
+    },
+    {
+      "feature": "sequence_counter_anomaly_rate",
+      "original_index": 50,
+      "modality": "cyber"
+    },
+    {
+      "feature": "speed_limit_deviation",
+      "original_index": 51,
+      "modality": "physical"
+    },
+    {
+      "feature": "speed_limit_deviation_abs",
+      "original_index": 52,
+      "modality": "physical"
+    },
+    {
+      "feature": "speed_over_limit_flag",
+      "original_index": 53,
+      "modality": "physical"
+    },
+    {
+      "feature": "state_transition_magnitude",
+      "original_index": 54,
+      "modality": "derived_temporal_resilience"
+    },
+    {
+      "feature": "telemetry_gap_duration_ms",
+      "original_index": 55,
+      "modality": "cyber"
+    },
+    {
+      "feature": "uds_request_rate",
+      "original_index": 56,
+      "modality": "cyber"
+    },
+    {
+      "feature": "unexpected_source_id_rate",
+      "original_index": 57,
+      "modality": "cyber"
+    },
+    {
+      "feature": "vehicle_damage_flag",
+      "original_index": 58,
+      "modality": "physical"
+    }
+  ],
+  "methodological_note": "Features are explicitly separated into cyber/edge telemetry, physical/safety signals, and derived temporal/resilience signals. This avoids conflating binary/continuous treatment with modality and avoids forcing downstream derived features into a raw modality."
+}

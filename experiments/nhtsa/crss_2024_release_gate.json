@@ -1,0 +1,136 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "dataset": "NHTSA CRSS 2024",
+  "status": "RELEASED",
+  "purpose": "Freeze validated CRSS ingestion and schema artifacts and proceed to modeling.",
+  "authority": {
+    "codebook": "data\\schemas\\nhtsa\\codebook\\crss_2024_codebook_context_full.json",
+    "semantic_feature_dictionary": "data\\schemas\\nhtsa\\verification\\crss_2024_final_feature_dictionary_v2.csv",
+    "canonical_schema": "data\\schemas\\nhtsa\\crss_2024_canonical_schema.json",
+    "relationship_integrity": "data\\schemas\\nhtsa\\verification\\crss_2024_relationship_integrity.csv"
+  },
+  "summary": {
+    "checks": 21,
+    "pass": 21,
+    "fail": 0
+  },
+  "failures": [],
+  "checks": [
+    {
+      "name": "artifact:codebook_context",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\codebook\\crss_2024_codebook_context_full.json"
+    },
+    {
+      "name": "artifact:feature_dictionary",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\verification\\crss_2024_final_feature_dictionary_v2.csv"
+    },
+    {
+      "name": "artifact:canonical_schema",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\crss_2024_canonical_schema.json"
+    },
+    {
+      "name": "artifact:relationship_integrity",
+      "status": "PASS",
+      "detail": "data\\schemas\\nhtsa\\verification\\crss_2024_relationship_integrity.csv"
+    },
+    {
+      "name": "codebook:30_variable_coverage",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "codebook:VISION_authority",
+      "status": "PASS",
+      "detail": "VISION exists in previously validated codebook context."
+    },
+    {
+      "name": "features:37_rows",
+      "status": "PASS",
+      "detail": "rows=37"
+    },
+    {
+      "name": "features:unique_table_variable_pairs",
+      "status": "PASS",
+      "detail": "unique_pairs=37"
+    },
+    {
+      "name": "features:30_target_variables_present",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "schema:valid_json",
+      "status": "PASS",
+      "detail": "Canonical schema parsed successfully."
+    },
+    {
+      "name": "schema:logical_entities_present",
+      "status": "PASS",
+      "detail": "entities=['crash', 'vehicle', 'person', 'environment', 'event', 'vehicle_safety', 'occupant_protection', 'occupant_outcome']"
+    },
+    {
+      "name": "dataset:28_csv_tables",
+      "status": "PASS",
+      "detail": "csv_files=28"
+    },
+    {
+      "name": "dataset:accident_required_columns",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "dataset:person_required_columns",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "dataset:vehicle_required_columns",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "dataset:vision_required_columns",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "dataset:weather_required_columns",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "relationships:report_present",
+      "status": "PASS",
+      "detail": "rows=13"
+    },
+    {
+      "name": "relationships:PER_TYP3_special_population",
+      "status": "PASS",
+      "detail": "PER_TYP=3 non-transport occupants are retained as a documented special population; no forced vehicle join."
+    },
+    {
+      "name": "data_quality:NHTSA_missingness_policy",
+      "status": "PASS",
+      "detail": "NHTSA coded missing/unknown values are not globally equated with pandas NaN."
+    },
+    {
+      "name": "codebook:derived_variable_policy",
+      "status": "PASS",
+      "detail": "Derived-variable handling remains documented separately from raw measurements."
+    }
+  ],
+  "frozen_decisions": [
+    "CRSS 2024 CSV distribution is the dataset source.",
+    "final_feature_dictionary_v2.csv is the semantic feature authority.",
+    "crss_2024_canonical_schema.json is the structural authority.",
+    "crss_2024_codebook_context_full.json is the manual/codebook authority.",
+    "PER_TYP=3 is retained as a documented special population.",
+    "VEH_NO=0 special population is retained.",
+    "NHTSA coded missing values are not globally treated as NaN.",
+    "The experimental PDF regex parser is not used as a release gate."
+  ],
+  "next_stage": "Predictive cyber-physical feature engineering and modeling."
+}

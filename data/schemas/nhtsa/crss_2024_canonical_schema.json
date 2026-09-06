@@ -1,0 +1,362 @@
+{
+  "dataset": "NHTSA CRSS 2024",
+  "version": "2024",
+  "analytical_grain": {
+    "recommended": "vehicle",
+    "definition": "One row per in-transport vehicle involved in a CRSS crash."
+  },
+  "entities": {
+    "crash": {
+      "source_table": "accident.csv",
+      "primary_key": [
+        "CASENUM"
+      ]
+    },
+    "vehicle": {
+      "source_table": "vehicle.csv",
+      "primary_key": [
+        "CASENUM",
+        "VEH_NO"
+      ],
+      "filter": "UNITTYPE = 1"
+    },
+    "person": {
+      "source_table": "person.csv",
+      "primary_key": [
+        "CASENUM",
+        "VEH_NO",
+        "PER_NO"
+      ]
+    },
+    "environment": {
+      "source_tables": [
+        "vision.csv",
+        "weather.csv"
+      ],
+      "grain": "crash"
+    },
+    "event": {
+      "source_tables": [
+        "accident.csv",
+        "vehicle.csv",
+        "person.csv"
+      ]
+    },
+    "vehicle_safety": {
+      "source_table": "vehicle.csv"
+    },
+    "occupant_protection": {
+      "source_table": "person.csv"
+    },
+    "occupant_outcome": {
+      "source_table": "person.csv"
+    }
+  },
+  "relationships": [
+    {
+      "parent": "crash",
+      "child": "vehicle",
+      "type": "1:N",
+      "key": [
+        "CASENUM"
+      ]
+    },
+    {
+      "parent": "vehicle",
+      "child": "person",
+      "type": "1:N",
+      "key": [
+        "CASENUM",
+        "VEH_NO"
+      ]
+    }
+  ],
+  "special_populations": {
+    "non_motorists": {
+      "condition": "VEH_NO = 0",
+      "handling": "retain"
+    },
+    "non_transport_occupants": {
+      "condition": "PER_TYP = 3",
+      "handling": "retain without requiring vehicle-table join"
+    }
+  },
+  "vehicle_count_semantics": {
+    "VE_FORMS": "Exact count of vehicle.csv records where UNITTYPE = 1.",
+    "VE_TOTAL": "Crash-level total involved entities; not equivalent to vehicle.csv row count."
+  },
+  "feature_statistics": {
+    "verified_features": 37,
+    "logical_entity_counts": {
+      "crash": 3,
+      "environment": 2,
+      "event": 6,
+      "occupant_outcome": 2,
+      "occupant_protection": 6,
+      "person": 3,
+      "vehicle": 10,
+      "vehicle_safety": 5
+    }
+  },
+  "feature_map": [
+    {
+      "table": "accident.csv",
+      "variable": "HARM_EV",
+      "logical_entity": "crash",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "accident.csv",
+      "variable": "MAN_COLL",
+      "logical_entity": "crash",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "accident.csv",
+      "variable": "PEDS",
+      "logical_entity": "crash",
+      "semantic_category": "crash_context",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "AGE",
+      "logical_entity": "person",
+      "semantic_category": "occupant_state",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "AIR_BAG",
+      "logical_entity": "occupant_protection",
+      "semantic_category": "occupant_protection",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "EJECTION",
+      "logical_entity": "occupant_protection",
+      "semantic_category": "occupant_outcome",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "FIRE_EXP",
+      "logical_entity": "vehicle_safety",
+      "semantic_category": "vehicle_safety_state",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "HARM_EV",
+      "logical_entity": "event",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "HELM_MIS",
+      "logical_entity": "occupant_protection",
+      "semantic_category": "occupant_protection",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "HELM_USE",
+      "logical_entity": "occupant_protection",
+      "semantic_category": "occupant_protection",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "HOSPITAL",
+      "logical_entity": "occupant_outcome",
+      "semantic_category": "occupant_outcome",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "IMPACT1",
+      "logical_entity": "event",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "INJ_SEV",
+      "logical_entity": "occupant_outcome",
+      "semantic_category": "occupant_outcome",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "MAN_COLL",
+      "logical_entity": "event",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "REST_MIS",
+      "logical_entity": "occupant_protection",
+      "semantic_category": "occupant_protection",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "REST_USE",
+      "logical_entity": "occupant_protection",
+      "semantic_category": "occupant_protection",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "ROLLOVER",
+      "logical_entity": "vehicle_safety",
+      "semantic_category": "vehicle_dynamics",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "SEAT_POS",
+      "logical_entity": "person",
+      "semantic_category": "occupant_state",
+      "verified": true
+    },
+    {
+      "table": "person.csv",
+      "variable": "SEX",
+      "logical_entity": "person",
+      "semantic_category": "occupant_state",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "ACC_TYPE",
+      "logical_entity": "vehicle",
+      "semantic_category": "crash_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "DEFORMED",
+      "logical_entity": "vehicle_safety",
+      "semantic_category": "vehicle_safety_state",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "FIRE_EXP",
+      "logical_entity": "vehicle_safety",
+      "semantic_category": "vehicle_safety_state",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "HARM_EV",
+      "logical_entity": "event",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "IMPACT1",
+      "logical_entity": "event",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "MAN_COLL",
+      "logical_entity": "event",
+      "semantic_category": "event_sequence",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "ROLLOVER",
+      "logical_entity": "vehicle_safety",
+      "semantic_category": "vehicle_dynamics",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "SPEEDREL",
+      "logical_entity": "vehicle",
+      "semantic_category": "vehicle_dynamics",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "TRAV_SP",
+      "logical_entity": "vehicle",
+      "semantic_category": "vehicle_dynamics",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VALIGN",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VNUM_LAN",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VPROFILE",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VSPD_LIM",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VSURCOND",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VTRAFCON",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vehicle.csv",
+      "variable": "VTRAFWAY",
+      "logical_entity": "vehicle",
+      "semantic_category": "roadway_context",
+      "verified": true
+    },
+    {
+      "table": "vision.csv",
+      "variable": "VISION",
+      "logical_entity": "environment",
+      "semantic_category": "environmental_context",
+      "verified": true
+    },
+    {
+      "table": "weather.csv",
+      "variable": "WEATHER",
+      "logical_entity": "environment",
+      "semantic_category": "environmental_context",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "dataset": "NHTSA CRSS 2024",
+  "diagnostic": "One-shot authoritative codebook + pipeline diagnostic",
+  "verdict": "NO-GO",
+  "summary": {
+    "checks": 77,
+    "pass": 74,
+    "fail": 3,
+    "warnings": 0
+  },
+  "manual": {
+    "pages": 455,
+    "variable_pages": {
+      "PEDS": [
+        24,
+        50
+      ],
+      "HARM_EV": [
+        64
+      ],
+      "MAN_COLL": [
+        68
+      ],
+      "WEATHER": [
+        79,
+        336
+      ],
+      "TRAV_SP": [
+        137
+      ],
+      "ROLLOVER": [
+        139
+      ],
+      "IMPACT1": [
+        141
+      ],
+      "DEFORMED": [
+        143
+      ],
+      "FIRE_EXP": [
+        149
+      ],
+      "SPEEDREL": [
+        162
+      ],
+      "VTRAFWAY": [
+        163
+      ],
+      "VNUM_LAN": [
+        164
+      ],
+      "VSPD_LIM": [
+        165
+      ],
+      "VALIGN": [
+        166
+      ],
+      "VPROFILE": [
+        167
+      ],
+      "VSURCOND": [
+        168
+      ],
+      "VTRAFCON": [
+        169
+      ],
+      "ACC_TYPE": [
+        180
+      ],
+      "AGE": [
+        193
+      ],
+      "SEX": [
+        195
+      ],
+      "INJ_SEV": [
+        199
+      ],
+      "SEAT_POS": [
+        201
+      ],
+      "REST_USE": [
+        204,
+        453
+      ],
+      "REST_MIS": [
+        205,
+        453
+      ],
+      "HELM_USE": [
+        206
+      ],
+      "HELM_MIS": [
+        207
+      ],
+      "AIR_BAG": [
+        208
+      ],
+      "EJECTION": [
+        209
+      ],
+      "HOSPITAL": [
+        217
+      ],
+      "VISION": []
+    }
+  },
+  "authoritative_codebook": {
+    "variables": 30,
+    "variables_with_context": 29,
+    "audit_rows": 244
+  },
+  "artifacts": [],
+  "errors": [
+    {
+      "name": "manual_variable:VISION",
+      "status": "FAIL",
+      "detail": "pages=[]"
+    },
+    {
+      "name": "authoritative_context:VISION",
+      "status": "FAIL",
+      "detail": "No authoritative code-table context found."
+    },
+    {
+      "name": "semantic_dictionary_no_review_rows",
+      "status": "FAIL",
+      "detail": "review_rows=7"
+    }
+  ],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "analytical_manual_exists",
+      "status": "PASS",
+      "detail": "data\\raw\\nhtsa\\CRSS\\documentation\\CRSS_Analytical_Users_Manual_2016_2024.pdf"
+    },
+    {
+      "name": "manual_page_count",
+      "status": "PASS",
+      "detail": "pages=455"
+    },
+    {
+      "name": "manual_variable:HARM_EV",
+      "status": "PASS",
+      "detail": "pages=[64]"
+    },
+    {
+      "name": "manual_variable:MAN_COLL",
+      "status": "PASS",
+      "detail": "pages=[68]"
+    },
+    {
+      "name": "manual_variable:PEDS",
+      "status": "PASS",
+      "detail": "pages=[24, 50]"
+    },
+    {
+      "name": "manual_variable:AGE",
+      "status": "PASS",
+      "detail": "pages=[193]"
+    },
+    {
+      "name": "manual_variable:AIR_BAG",
+      "status": "PASS",
+      "detail": "pages=[208]"
+    },
+    {
+      "name": "manual_variable:EJECTION",
+      "status": "PASS",
+      "detail": "pages=[209]"
+    },
+    {
+      "name": "manual_variable:FIRE_EXP",
+      "status": "PASS",
+      "detail": "pages=[149]"
+    },
+    {
+      "name": "manual_variable:HELM_MIS",
+      "status": "PASS",
+      "detail": "pages=[207]"
+    },
+    {
+      "name": "manual_variable:HELM_USE",
+      "status": "PASS",
+      "detail": "pages=[206]"
+    },
+    {
+      "name": "manual_variable:HOSPITAL",
+      "status": "PASS",
+      "detail": "pages=[217]"
+    },
+    {
+      "name": "manual_variable:IMPACT1",
+      "status": "PASS",
+      "detail": "pages=[141]"
+    },
+    {
+      "name": "manual_variable:INJ_SEV",
+      "status": "PASS",
+      "detail": "pages=[199]"
+    },
+    {
+      "name": "manual_variable:REST_MIS",
+      "status": "PASS",
+      "detail": "pages=[205, 453]"
+    },
+    {
+      "name": "manual_variable:REST_USE",
+      "status": "PASS",
+      "detail": "pages=[204, 453]"
+    },
+    {
+      "name": "manual_variable:ROLLOVER",
+      "status": "PASS",
+      "detail": "pages=[139]"
+    },
+    {
+      "name": "manual_variable:SEAT_POS",
+      "status": "PASS",
+      "detail": "pages=[201]"
+    },
+    {
+      "name": "manual_variable:SEX",
+      "status": "PASS",
+      "detail": "pages=[195]"
+    },
+    {
+      "name": "manual_variable:ACC_TYPE",
+      "status": "PASS",
+      "detail": "pages=[180]"
+    },
+    {
+      "name": "manual_variable:DEFORMED",
+      "status": "PASS",
+      "detail": "pages=[143]"
+    },
+    {
+      "name": "manual_variable:SPEEDREL",
+      "status": "PASS",
+      "detail": "pages=[162]"
+    },
+    {
+      "name": "manual_variable:TRAV_SP",
+      "status": "PASS",
+      "detail": "pages=[137]"
+    },
+    {
+      "name": "manual_variable:VALIGN",
+      "status": "PASS",
+      "detail": "pages=[166]"
+    },
+    {
+      "name": "manual_variable:VNUM_LAN",
+      "status": "PASS",
+      "detail": "pages=[164]"
+    },
+    {
+      "name": "manual_variable:VPROFILE",
+      "status": "PASS",
+      "detail": "pages=[167]"
+    },
+    {
+      "name": "manual_variable:VSPD_LIM",
+      "status": "PASS",
+      "detail": "pages=[165]"
+    },
+    {
+      "name": "manual_variable:VSURCOND",
+      "status": "PASS",
+      "detail": "pages=[168]"
+    },
+    {
+      "name": "manual_variable:VTRAFCON",
+      "status": "PASS",
+      "detail": "pages=[169]"
+    },
+    {
+      "name": "manual_variable:VTRAFWAY",
+      "status": "PASS",
+      "detail": "pages=[163]"
+    },
+    {
+      "name": "manual_variable:VISION",
+      "status": "FAIL",
+      "detail": "pages=[]"
+    },
+    {
+      "name": "manual_variable:WEATHER",
+      "status": "PASS",
+      "detail": "pages=[79, 336]"
+    },
+    {
+      "name": "authoritative_codes:HARM_EV",
+      "status": "PASS",
+      "detail": "unique_codes=11"
+    },
+    {
+      "name": "authoritative_codes:MAN_COLL",
+      "status": "PASS",
+      "detail": "unique_codes=9"
+    },
+    {
+      "name": "authoritative_codes:PEDS",
+      "status": "PASS",
+      "detail": "unique_codes=1"
+    },
+    {
+      "name": "authoritative_codes:AGE",
+      "status": "PASS",
+      "detail": "unique_codes=5"
+    },
+    {
+      "name": "authoritative_codes:AIR_BAG",
+      "status": "PASS",
+      "detail": "unique_codes=4"
+    },
+    {
+      "name": "authoritative_codes:EJECTION",
+      "status": "PASS",
+      "detail": "unique_codes=7"
+    },
+    {
+      "name": "authoritative_codes:FIRE_EXP",
+      "status": "PASS",
+      "detail": "unique_codes=2"
+    },
+    {
+      "name": "authoritative_codes:HELM_MIS",
+      "status": "PASS",
+      "detail": "unique_codes=5"
+    },
+    {
+      "name": "authoritative_codes:HELM_USE",
+      "status": "PASS",
+      "detail": "unique_codes=9"
+    },
+    {
+      "name": "authoritative_codes:HOSPITAL",
+      "status": "PASS",
+      "detail": "unique_codes=9"
+    },
+    {
+      "name": "authoritative_codes:IMPACT1",
+      "status": "PASS",
+      "detail": "unique_codes=14"
+    },
+    {
+      "name": "authoritative_codes:INJ_SEV",
+      "status": "PASS",
+      "detail": "unique_codes=9"
+    },
+    {
+      "name": "authoritative_codes:REST_MIS",
+      "status": "PASS",
+      "detail": "unique_codes=5"
+    },
+    {
+      "name": "authoritative_codes:REST_USE",
+      "status": "PASS",
+      "detail": "unique_codes=11"
+    },
+    {
+      "name": "authoritative_codes:ROLLOVER",
+      "status": "PASS",
+      "detail": "unique_codes=3"
+    },
+    {
+      "name": "authoritative_codes:SEAT_POS",
+      "status": "PASS",
+      "detail": "unique_codes=23"
+    },
+    {
+      "name": "authoritative_codes:SEX",
+      "status": "PASS",
+      "detail": "unique_codes=4"
+    },
+    {
+      "name": "authoritative_codes:ACC_TYPE",
+      "status": "PASS",
+      "detail": "unique_codes=10"
+    },
+    {
+      "name": "authoritative_codes:DEFORMED",
+      "status": "PASS",
+      "detail": "unique_codes=7"
+    },
+    {
+      "name": "authoritative_codes:SPEEDREL",
+      "status": "PASS",
+      "detail": "unique_codes=11"
+    },
+    {
+      "name": "authoritative_codes:TRAV_SP",
+      "status": "PASS",
+      "detail": "unique_codes=5"
+    },
+    {
+      "name": "authoritative_codes:VALIGN",
+      "status": "PASS",
+      "detail": "unique_codes=6"
+    },
+    {
+      "name": "authoritative_codes:VNUM_LAN",
+      "status": "PASS",
+      "detail": "unique_codes=10"
+    },
+    {
+      "name": "authoritative_codes:VPROFILE",
+      "status": "PASS",
+      "detail": "unique_codes=9"
+    },
+    {
+      "name": "authoritative_codes:VSPD_LIM",
+      "status": "PASS",
+      "detail": "unique_codes=4"
+    },
+    {
+      "name": "authoritative_codes:VSURCOND",
+      "status": "PASS",
+      "detail": "unique_codes=13"
+    },
+    {
+      "name": "authoritative_codes:VTRAFCON",
+      "status": "PASS",
+      "detail": "unique_codes=15"
+    },
+    {
+      "name": "authoritative_codes:VTRAFWAY",
+      "status": "PASS",
+      "detail": "unique_codes=10"
+    },
+    {
+      "name": "authoritative_context:VISION",
+      "status": "FAIL",
+      "detail": "No authoritative code-table context found."
+    },
+    {
+      "name": "authoritative_codes:WEATHER",
+      "status": "PASS",
+      "detail": "unique_codes=13"
+    },
+    {
+      "name": "derived_documentation:ROLLOVER",
+      "status": "PASS",
+      "detail": "Derived-variable evidence found."
+    },
+    {
+      "name": "derived_documentation:HARM_EV",
+      "status": "PASS",
+      "detail": "Derived-variable evidence found."
+    },
+    {
+      "name": "derived_documentation:IMPACT1",
+      "status": "PASS",
+      "detail": "Derived-variable evidence found."
+    },
+    {
+      "name": "authoritative_no_obvious_artifacts",
+      "status": "PASS",
+      "detail": "artifacts=[]"
+    },
+    {
+      "name": "CRSS_2024_28_csv_files",
+      "status": "PASS",
+      "detail": "csv_files=28"
+    },
+    {
+      "name": "headers:accident",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "headers:person",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "headers:vehicle",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "headers:vision",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "headers:weather",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "feature_dictionary_37_rows",
+      "status": "PASS",
+      "detail": "rows=37"
+    },
+    {
+      "name": "feature_dictionary_unique_pairs",
+      "status": "PASS",
+      "detail": "unique_pairs=37"
+    },
+    {
+      "name": "relationship_integrity_report_exists",
+      "status": "PASS",
+      "detail": "rows=13"
+    },
+    {
+      "name": "semantic_dictionary_no_review_rows",
+      "status": "FAIL",
+      "detail": "review_rows=7"
+    },
+    {
+      "name": "canonical_schema_valid_json",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

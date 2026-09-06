@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "high_risk_features": [
+    {
+      "feature": "physical_cyber_interaction_score",
+      "dtype": "float64",
+      "non_null": 2175384,
+      "unique_values": 123554,
+      "normal_mean": 0.017238487100727572,
+      "anomaly_mean": 0.0944480435161737,
+      "target_correlation": 0.6432327693477937,
+      "status": "TARGET_DERIVED_RISK",
+      "decision": "EXCLUDE",
+      "reason": "Feature is a synthesized resilience/interaction/warning quantity and its construction may encode synthetic anomaly information."
+    },
+    {
+      "feature": "connectivity_resilience_score",
+      "dtype": "float64",
+      "non_null": 2175384,
+      "unique_values": 123554,
+      "normal_mean": 0.9606855684720126,
+      "anomaly_mean": 0.8364396889432733,
+      "target_correlation": -0.5281870265904277,
+      "status": "TARGET_DERIVED_RISK",
+      "decision": "EXCLUDE",
+      "reason": "Feature is a synthesized resilience/interaction/warning quantity and its construction may encode synthetic anomaly information."
+    },
+    {
+      "feature": "cyber_physical_resilience_score",
+      "dtype": "float64",
+      "non_null": 2175384,
+      "unique_values": 123554,
+      "normal_mean": 0.9720447355772827,
+      "anomaly_mean": 0.851719174441525,
+      "target_correlation": -0.7041116587363424,
+      "status": "TARGET_DERIVED_RISK",
+      "decision": "EXCLUDE",
+      "reason": "Feature is a synthesized resilience/interaction/warning quantity and its construction may encode synthetic anomaly information."
+    },
+    {
+      "feature": "predictive_warning_score",
+      "dtype": "float64",
+      "non_null": 2175384,
+      "unique_values": 122124,
+      "normal_mean": 0.013993506512831055,
+      "anomaly_mean": 0.1829166842792562,
+      "target_correlation": 0.8661215616049774,
+      "status": "TARGET_DERIVED_RISK",
+      "decision": "EXCLUDE",
+      "reason": "Feature is a synthesized resilience/interaction/warning quantity and its construction may encode synthetic anomaly information."
+    },
+    {
+      "feature": "predictive_warning_state",
+      "dtype": "str",
+      "non_null": 2175384,
+      "unique_values": 2,
+      "status": "DERIVED_CATEGORICAL",
+      "decision": "EXCLUDE",
+      "reason": "Predictive warning state is generated from a derived warning score and therefore cannot be used as an independent predictor."
+    }
+  ],
+  "excluded_count": 15,
+  "final_predictor_count": 71,
+  "predictor_groups": {
+    "physical_vehicle": 9,
+    "cyber_ecu_can": 12,
+    "sensor_consistency": 3,
+    "connectivity": 7,
+    "communication_integrity": 4,
+    "environment": 2,
+    "temporal_derivatives": 17,
+    "temporal_rolling": 12,
+    "other": 5
+  }
+}

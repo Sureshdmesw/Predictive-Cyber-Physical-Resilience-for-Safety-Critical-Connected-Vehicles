@@ -1,0 +1,372 @@
+{
+  "phase": "4.12",
+  "status": "PASS",
+  "task": "Modality Contribution Analysis",
+  "target": "Y6",
+  "controlled_train_samples": 100000,
+  "test_samples": 95851,
+  "seed": 42,
+  "groups": {
+    "cyber_only": {
+      "name": "cyber_only",
+      "feature_count": 34,
+      "test_y6_pr_auc": 0.7630619457874325
+    },
+    "physical_only": {
+      "name": "physical_only",
+      "feature_count": 12,
+      "test_y6_pr_auc": 0.6260456699223832
+    },
+    "derived_temporal_resilience": {
+      "name": "derived_temporal_resilience",
+      "feature_count": 13,
+      "test_y6_pr_auc": 0.6088879264287519
+    },
+    "cyber_plus_physical": {
+      "name": "cyber_plus_physical",
+      "feature_count": 46,
+      "test_y6_pr_auc": 0.7669641410344017
+    },
+    "cyber_plus_derived": {
+      "name": "cyber_plus_derived",
+      "feature_count": 47,
+      "test_y6_pr_auc": 0.7848366616926945
+    },
+    "physical_plus_derived": {
+      "name": "physical_plus_derived",
+      "feature_count": 25,
+      "test_y6_pr_auc": 0.6613028256085629
+    },
+    "cyber_plus_physical_plus_derived": {
+      "name": "cyber_plus_physical_plus_derived",
+      "feature_count": 59,
+      "test_y6_pr_auc": 0.7860682827894875
+    }
+  },
+  "individual_physical_features": [
+    {
+      "feature": "sensor_disagreement_rate",
+      "physical_only_pr_auc": 0.40522478135854306,
+      "physical_only_delta_vs_cyber": -0.3578371644288894,
+      "cyber_plus_feature_pr_auc": 0.7666428457358943,
+      "cyber_plus_feature_delta_vs_cyber": 0.00358089994846178
+    },
+    {
+      "feature": "sensor_plausibility_score",
+      "physical_only_pr_auc": 0.22545308434770214,
+      "physical_only_delta_vs_cyber": -0.5376088614397303,
+      "cyber_plus_feature_pr_auc": 0.7662703501174458,
+      "cyber_plus_feature_delta_vs_cyber": 0.003208404330013348
+    },
+    {
+      "feature": "collision_event_flag",
+      "physical_only_pr_auc": 0.012076644043480012,
+      "physical_only_delta_vs_cyber": -0.7509853017439525,
+      "cyber_plus_feature_pr_auc": 0.7638899172887664,
+      "cyber_plus_feature_delta_vs_cyber": 0.0008279715013339572
+    },
+    {
+      "feature": "vehicle_damage_flag",
+      "physical_only_pr_auc": 0.011853892655648084,
+      "physical_only_delta_vs_cyber": -0.7512080531317844,
+      "cyber_plus_feature_pr_auc": 0.7634543272684271,
+      "cyber_plus_feature_delta_vs_cyber": 0.0003923814809946302
+    },
+    {
+      "feature": "speed_limit_deviation_abs",
+      "physical_only_pr_auc": 0.012531711094919115,
+      "physical_only_delta_vs_cyber": -0.7505302346925133,
+      "cyber_plus_feature_pr_auc": 0.7634300549917638,
+      "cyber_plus_feature_delta_vs_cyber": 0.00036810920433127947
+    },
+    {
+      "feature": "speed_over_limit_flag",
+      "physical_only_pr_auc": 0.012025098187756687,
+      "physical_only_delta_vs_cyber": -0.7510368475996758,
+      "cyber_plus_feature_pr_auc": 0.7633169743686347,
+      "cyber_plus_feature_delta_vs_cyber": 0.00025502858120218797
+    },
+    {
+      "feature": "WEATHER",
+      "physical_only_pr_auc": 0.011301685664685868,
+      "physical_only_delta_vs_cyber": -0.7517602601227467,
+      "cyber_plus_feature_pr_auc": 0.7633071481470995,
+      "cyber_plus_feature_delta_vs_cyber": 0.0002452023596670738
+    },
+    {
+      "feature": "fire_explosion_flag",
+      "physical_only_pr_auc": 0.012037041191625308,
+      "physical_only_delta_vs_cyber": -0.7510249045958072,
+      "cyber_plus_feature_pr_auc": 0.7632971094613359,
+      "cyber_plus_feature_delta_vs_cyber": 0.00023516367390341575
+    },
+    {
+      "feature": "VISION",
+      "physical_only_pr_auc": 0.011791538584359568,
+      "physical_only_delta_vs_cyber": -0.7512704072030729,
+      "cyber_plus_feature_pr_auc": 0.7630501334508453,
+      "cyber_plus_feature_delta_vs_cyber": -1.1812336587202488e-05
+    },
+    {
+      "feature": "redundant_sensor_divergence",
+      "physical_only_pr_auc": 0.6186086106409799,
+      "physical_only_delta_vs_cyber": -0.14445333514645253,
+      "cyber_plus_feature_pr_auc": 0.7629653779510014,
+      "cyber_plus_feature_delta_vs_cyber": -9.656783643108291e-05
+    },
+    {
+      "feature": "rollover_flag",
+      "physical_only_pr_auc": 0.011790224722315461,
+      "physical_only_delta_vs_cyber": -0.751271721065117,
+      "cyber_plus_feature_pr_auc": 0.7628843495902924,
+      "cyber_plus_feature_delta_vs_cyber": -0.00017759619714008412
+    },
+    {
+      "feature": "speed_limit_deviation",
+      "physical_only_pr_auc": 0.01223862661378978,
+      "physical_only_delta_vs_cyber": -0.7508233191736426,
+      "cyber_plus_feature_pr_auc": 0.7628674060163266,
+      "cyber_plus_feature_delta_vs_cyber": -0.00019453977110583942
+    }
+  ],
+  "individual_cyber_features": [
+    {
+      "name": "cyber_single::replay_indicator_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6595786459947159,
+      "feature": "replay_indicator_rate",
+      "delta_vs_cyber_group": -0.10348329979271653
+    },
+    {
+      "name": "cyber_single::message_integrity_failure_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6562568580050779,
+      "feature": "message_integrity_failure_rate",
+      "delta_vs_cyber_group": -0.10680508778235454
+    },
+    {
+      "name": "cyber_single::sequence_counter_anomaly_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6541727816586042,
+      "feature": "sequence_counter_anomaly_rate",
+      "delta_vs_cyber_group": -0.10888916412882832
+    },
+    {
+      "name": "cyber_single::packet_loss_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6411787331588872,
+      "feature": "packet_loss_rate",
+      "delta_vs_cyber_group": -0.12188321262854529
+    },
+    {
+      "name": "cyber_single::connectivity_drop_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6373926319776165,
+      "feature": "connectivity_drop_rate",
+      "delta_vs_cyber_group": -0.12566931380981594
+    },
+    {
+      "name": "cyber_single::connectivity_degradation_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6308819184752807,
+      "feature": "connectivity_degradation_rate",
+      "delta_vs_cyber_group": -0.13218002731215173
+    },
+    {
+      "name": "cyber_single::d1_connectivity_drop_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6275084155874601,
+      "feature": "d1_connectivity_drop_rate",
+      "delta_vs_cyber_group": -0.1355535301999724
+    },
+    {
+      "name": "cyber_single::d1_sequence_counter_anomaly_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6205833167352672,
+      "feature": "d1_sequence_counter_anomaly_rate",
+      "delta_vs_cyber_group": -0.14247862905216524
+    },
+    {
+      "name": "cyber_single::unexpected_source_id_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6198112321649597,
+      "feature": "unexpected_source_id_rate",
+      "delta_vs_cyber_group": -0.14325071362247277
+    },
+    {
+      "name": "cyber_single::d1_packet_loss_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6174147439869851,
+      "feature": "d1_packet_loss_rate",
+      "delta_vs_cyber_group": -0.14564720180044732
+    },
+    {
+      "name": "cyber_single::d1_message_integrity_failure_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.606207021505461,
+      "feature": "d1_message_integrity_failure_rate",
+      "delta_vs_cyber_group": -0.15685492428197145
+    },
+    {
+      "name": "cyber_single::d1_replay_indicator_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.6035592743312822,
+      "feature": "d1_replay_indicator_rate",
+      "delta_vs_cyber_group": -0.15950267145615027
+    },
+    {
+      "name": "cyber_single::d1_can_bus_load_pct",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5859233898343572,
+      "feature": "d1_can_bus_load_pct",
+      "delta_vs_cyber_group": -0.17713855595307526
+    },
+    {
+      "name": "cyber_single::d1_latency_jitter_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5826063093238261,
+      "feature": "d1_latency_jitter_ms",
+      "delta_vs_cyber_group": -0.1804556364636064
+    },
+    {
+      "name": "cyber_single::d1_telemetry_gap_duration_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5817289133033152,
+      "feature": "d1_telemetry_gap_duration_ms",
+      "delta_vs_cyber_group": -0.18133303248411725
+    },
+    {
+      "name": "cyber_single::d1_can_message_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5786204085240514,
+      "feature": "d1_can_message_rate",
+      "delta_vs_cyber_group": -0.18444153726338108
+    },
+    {
+      "name": "cyber_single::d1_latency_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5669331440557139,
+      "feature": "d1_latency_ms",
+      "delta_vs_cyber_group": -0.19612880173171854
+    },
+    {
+      "name": "cyber_single::d1_can_interarrival_jitter_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5615783257354523,
+      "feature": "d1_can_interarrival_jitter_ms",
+      "delta_vs_cyber_group": -0.20148362005198017
+    },
+    {
+      "name": "cyber_single::latency_jitter_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5029829962111003,
+      "feature": "latency_jitter_ms",
+      "delta_vs_cyber_group": -0.26007894957633215
+    },
+    {
+      "name": "cyber_single::d1_authentication_failure_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.5023145553262143,
+      "feature": "d1_authentication_failure_rate",
+      "delta_vs_cyber_group": -0.2607473904612182
+    },
+    {
+      "name": "cyber_single::authentication_failure_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.49460035834633487,
+      "feature": "authentication_failure_rate",
+      "delta_vs_cyber_group": -0.2684615874410976
+    },
+    {
+      "name": "cyber_single::latency_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.2602470239540529,
+      "feature": "latency_ms",
+      "delta_vs_cyber_group": -0.5028149218333795
+    },
+    {
+      "name": "cyber_single::can_interarrival_jitter_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.2576749704782984,
+      "feature": "can_interarrival_jitter_ms",
+      "delta_vs_cyber_group": -0.505386975309134
+    },
+    {
+      "name": "cyber_single::can_message_rate_deviation",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.1893509329411291,
+      "feature": "can_message_rate_deviation",
+      "delta_vs_cyber_group": -0.5737110128463034
+    },
+    {
+      "name": "cyber_single::telemetry_gap_duration_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.114497548183882,
+      "feature": "telemetry_gap_duration_ms",
+      "delta_vs_cyber_group": -0.6485643976035504
+    },
+    {
+      "name": "cyber_single::can_message_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.099761921981184,
+      "feature": "can_message_rate",
+      "delta_vs_cyber_group": -0.6633000238062485
+    },
+    {
+      "name": "cyber_single::uds_request_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.07216554221748461,
+      "feature": "uds_request_rate",
+      "delta_vs_cyber_group": -0.6908964035699479
+    },
+    {
+      "name": "cyber_single::can_bus_load_pct",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.02477091177113297,
+      "feature": "can_bus_load_pct",
+      "delta_vs_cyber_group": -0.7382910340162995
+    },
+    {
+      "name": "cyber_single::diagnostic_event_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.024363006559826948,
+      "feature": "diagnostic_event_rate",
+      "delta_vs_cyber_group": -0.7386989392276055
+    },
+    {
+      "name": "cyber_single::ecu_state_transition_rate",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.012651365227049812,
+      "feature": "ecu_state_transition_rate",
+      "delta_vs_cyber_group": -0.7504105805603827
+    },
+    {
+      "name": "cyber_single::safety_critical_ecu_ratio",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.01258125678182841,
+      "feature": "safety_critical_ecu_ratio",
+      "delta_vs_cyber_group": -0.750480689005604
+    },
+    {
+      "name": "cyber_single::can_interarrival_mean_ms",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.012442257192826354,
+      "feature": "can_interarrival_mean_ms",
+      "delta_vs_cyber_group": -0.7506196885946061
+    },
+    {
+      "name": "cyber_single::ecu_count",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.012127836488257687,
+      "feature": "ecu_count",
+      "delta_vs_cyber_group": -0.7509341092991748
+    },
+    {
+      "name": "cyber_single::can_bus_count",
+      "feature_count": 1,
+      "test_y6_pr_auc": 0.01181963238632806,
+      "feature": "can_bus_count",
+      "delta_vs_cyber_group": -0.7512423134011044
+    }
+  ]
+}

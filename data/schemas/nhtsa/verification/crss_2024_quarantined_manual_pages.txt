@@ -1,0 +1,269 @@
+CRSS 2024 QUARANTINED FIELD SEMANTIC REVIEW
+================================================================================
+
+
+================================================================================
+VARIABLE: HARM_EV
+MANUAL PAGE: 103
+================================================================================
+
+First Harmful Event 
+C19 
+93 
+2024 FARS/CRSS Coding and Validation Manual 
+C19. First Harmful Event 
+Format 
+2 numeric 
+SAS Name 
+Accident.HARM_EV, Vehicle.HARM_EV, Person.HARM_EV, Parkwork.PHARM_EV 
+Element Values 
+Non-Collision Harmful Events: 
+Codes 
+Attributes 
+01 
+Rollover/Overturn 
+02 
+Fire/Explosion 
+03 
+Immersion or Partial Immersion 
+04 
+Gas Inhalation 
+51 
+Jackknife (harmful to this vehicle) 
+06 
+Injured in Vehicle (Non-Collision) 
+44 
+Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.) 
+07 
+Other Non-Collision 
+16 
+Thrown or Falling Object 
+72 
+Cargo/Equipment Loss, Shift, or Damage (harmful) 
+05 
+Fell/Jumped from Vehicle  
+Collision With Motor Vehicle In-Transport: 
+Codes 
+Attributes 
+12 
+Motor Vehicle In-Transport  
+54 
+Motor Vehicle In-Transport Strikes or is Struck by Cargo, Persons, or Objects 
+Set in Motion from/by Another Motor Vehicle In-Transport 
+55 
+Motor Vehicle in Motion Outside the Trafficway 
+Collision With Object Not Fixed: 
+Codes 
+Attributes 
+08 
+Pedestrian 
+09 
+Pedalcyclist 
+10 
+Railway Vehicle 
+74 
+Road Vehicle on Rails 
+11 
+Live Animal 
+
+
+================================================================================
+VARIABLE: IMPACT1
+MANUAL PAGE: 272
+================================================================================
+
+Areas of Impact - Initial Contact Point / Damaged Areas 
+V34 
+262 
+2024 FARS/CRSS Coding and Validation Manual 
+V34. Areas of Impact—Initial Contact Point / Damaged Areas 
+Format 
+2 subfields: Subfield 1, 2 numeric; Subfield 2, Select All That Apply 
+SAS Name 
+Vehicle.IMPACT1, Person.IMPACT1, Parkwork.PIMPACT1, Damage.DAMAGE 
+Element Values 
+Subfield 1: Areas of Impact—Initial Contact Point 
+Codes 
+Attributes 
+00 
+Non-Collision 
+01-12 
+Clock Points 
+13 
+Top 
+14 
+Undercarriage 
+61 
+Left 
+62 
+Left - Front Side 
+63 
+Left - Back Side 
+81 
+Right 
+82 
+Right - Front Side 
+83 
+Right - Back Side 
+18 
+Cargo/Vehicle Parts Set in Motion  
+19 
+Other Objects or Person Set in Motion 
+20 
+Object Set in Motion, Unknown if Cargo/Vehicle Parts or Other 
+98 
+Not Reported 
+99 
+Reported as Unknown 
+ 
+Subfield 2: Damaged Areas 
+Codes 
+Attributes 
+01-12 
+Clock Values 
+13 
+Top 
+14 
+Undercarriage 
+15 
+No Damage 
+99 
+Damage Areas Unknown 
+
+
+================================================================================
+VARIABLE: VTRAFCON
+MANUAL PAGE: 440
+================================================================================
+
+Traffic Control Device 
+PC12 
+430 
+2024 FARS/CRSS Coding and Validation Manual 
+PC12. Traffic Control Device 
+Format 
+2 numeric 
+SAS Name 
+Vehicle.VTRAFCON 
+Element Values 
+Codes 
+Attributes 
+00 
+No Controls 
+Traffic Signals 
+Codes 
+Attributes 
+01 
+Traffic Control Signal (on colors) without Pedestrian Signal 
+02 
+Traffic Control Signal (on colors) with Pedestrian Signal 
+03 
+Traffic Control Signal (on colors) not known whether or not Pedestrian Signal 
+07 
+Lane Use Control Signal 
+08 
+Other Highway Traffic Signal 
+09 
+Unknown Highway Traffic Signal 
+04 
+Flashing Traffic Control Signal 
+Regulatory Signs 
+Codes 
+Attributes 
+20 
+Stop Sign 
+21 
+Yield Sign 
+28 
+Other Regulatory Sign 
+29 
+Unknown Regulatory Sign 
+23 
+School Zone Sign/Device 
+Other Signs and Signals 
+Codes 
+Attributes 
+40 
+Warning Sign  
+65 
+Railway Crossing Device 
+50 
+Person  
+98 
+Other 
+
+
+================================================================================
+VARIABLE: SEAT_POS
+MANUAL PAGE: 523
+================================================================================
+
+Seating Position 
+P9 
+513 
+2024 FARS/CRSS Coding and Validation Manual 
+P9. Seating Position 
+Format 
+2 numeric 
+SAS Name 
+Person.SEAT_POS 
+Element Values 
+Codes 
+Attributes 
+11 
+Front Seat, Left Side 
+12 
+Front Seat, Middle 
+13 
+Front Seat, Right Side 
+18 
+Front Seat, Other 
+19 
+Front Seat, Unknown 
+21 
+Second Seat, Left Side 
+22 
+Second Seat, Middle 
+23 
+Second Seat, Right Side 
+28 
+Second Seat, Other 
+29 
+Second Seat, Unknown 
+31 
+Third Seat, Left Side 
+32 
+Third Seat, Middle 
+33 
+Third Seat, Right Side 
+38 
+Third Seat, Other 
+39 
+Third Seat, Unknown 
+41 
+Fourth Seat, Left Side 
+42 
+Fourth Seat, Middle 
+43 
+Fourth Seat, Right Side 
+48 
+Fourth Seat, Other 
+49 
+Fourth Seat, Unknown 
+50 
+Sleeper Section of Cab (Truck) 
+51 
+Other Passenger in enclosed passenger or cargo area 
+52 
+Other Passenger in unenclosed passenger or cargo area 
+53 
+Other Passenger in passenger or cargo area, unknown whether or not enclosed 
+54 
+Trailing Unit 
+55 
+Riding on Exterior of Vehicle 
+56 
+Appended to a Motor Vehicle for Motion 
+98 
+Not Reported 
+

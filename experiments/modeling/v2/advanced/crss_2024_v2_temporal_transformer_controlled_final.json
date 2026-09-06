@@ -1,0 +1,65 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "phase": "4.10D",
+  "status": "PASS",
+  "experiment_type": "controlled_cpu_temporal_transformer",
+  "checkpoint_epoch": 4,
+  "checkpoint": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\advanced\\crss_2024_v2_temporal_transformer_controlled_best.pt",
+  "test_evaluation_seconds": 8.102142572402954,
+  "architecture": {
+    "input_shape": [
+      12,
+      59
+    ],
+    "embedding_dim": 128,
+    "transformer_layers": 3,
+    "attention_heads": 8,
+    "feedforward_dimension": 256,
+    "dropout": 0.1,
+    "parameters": 407811
+  },
+  "feature_treatment": {
+    "original": 63,
+    "final": 59,
+    "binary": 27,
+    "continuous": 32,
+    "normalization": "train_only_z_score_continuous_features"
+  },
+  "test": {
+    "y3": {
+      "pr_auc": 0.7783331772567231,
+      "roc_auc": 0.9985899885181264,
+      "precision": 0.783679753656659,
+      "recall": 1.0,
+      "f1": 0.8787224859732412,
+      "brier": 0.0028656732756644487,
+      "positive_count": 1018,
+      "sample_count": 95851
+    },
+    "y6": {
+      "pr_auc": 0.9503363484553501,
+      "roc_auc": 0.9981664515395504,
+      "precision": 0.793661971830986,
+      "recall": 0.9912049252418645,
+      "f1": 0.8815017598748534,
+      "brier": 0.0030420715920627117,
+      "positive_count": 1137,
+      "sample_count": 95851
+    }
+  },
+  "methodological_boundary": {
+    "cyber_labels": "synthetic research telemetry",
+    "physical_ground_truth": "CRSS 2024",
+    "real_world_cyberattack_labels": false,
+    "controlled_training_subset": 100000
+  },
+  "safety_boundary": {
+    "direct_actuation": false,
+    "ml_role": [
+      "forecasting",
+      "risk scoring",
+      "warning",
+      "decision support"
+    ]
+  }
+}

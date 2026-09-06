@@ -1,0 +1,1390 @@
+{
+  "HARM_EV": {
+    "variable": "HARM_EV",
+    "derived": true,
+    "contexts": [
+      {
+        "page": 64,
+        "codes": [
+          {
+            "code": "1",
+            "label": "Rollover/Overturn"
+          },
+          {
+            "code": "2",
+            "label": "Fire/Explosion"
+          },
+          {
+            "code": "3",
+            "label": "Immersion or Partial Immersion"
+          },
+          {
+            "code": "4",
+            "label": "Gas Inhalation"
+          },
+          {
+            "code": "5",
+            "label": "Fell/Jumped From Vehicle"
+          },
+          {
+            "code": "6",
+            "label": "Injured in Vehicle (Non-Collision)"
+          },
+          {
+            "code": "7",
+            "label": "Other Non-Collision"
+          },
+          {
+            "code": "16",
+            "label": "Thrown or Falling Object"
+          },
+          {
+            "code": "44",
+            "label": "Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.)"
+          },
+          {
+            "code": "51",
+            "label": "Jackknife (Harmful to This Vehicle)"
+          },
+          {
+            "code": "72",
+            "label": "Cargo/Equipment Loss, Shift, or Damage (Harmful)"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The ACCIDENT Data File 59 Crash Report Sampling System Analytical User’s Manual, 2016-2024 C19. First Harmful Event Definition This data element describes the first injury- or damage-producing event of the crash. Additional Information “First Harmful Event” applies to the crash. “Most Harmful Event” (M_HARM) applies to the vehicle. “First Harmful Event,” “Most Harmful Event,” and the “Sequence of Events” data elements have the same harmful event attributes. “Sequence of Events” also has non-harmful event attributes. This data element is derived from the “Sequence of Events” data element as the first value that is not between codes 60 and 79 (non-harmful events). See Appendix B: Rules for Derived Data Elements for an explanation of this data element and how it is derived. This data element also appears in the Vehicle and Person data files and in the Parkwork data file as PHARM_EV. SAS Name HARM_EV Attribute Codes Non-Collision Harmful Events 2016 2017 2018-Later 1 1 1 Rollover/Overturn 2 2 2 Fire/Explosion 3 3 3 Immersion or Partial Immersion 4 4 4 Gas Inhalation 5 5 5 Fell/Jumped From Vehicle 6 6 6 Injured in Vehicle (Non-Collision) 7 7 7 Other Non-Collision 16 16 16 Thrown or Falling Object 44 44 44 Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.) 51 51 51 Jackknife (Harmful to This Vehicle) 72 72 -- Cargo/Equipment Loss or Shift (Harmful to This Vehicle) -- -- 72 Cargo/Equipment Loss, Shift, or Damage (Harmful)"
+      }
+    ]
+  },
+  "MAN_COLL": {
+    "variable": "MAN_COLL",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 68,
+        "codes": [
+          {
+            "code": "0",
+            "label": "First Harmful Event Was Not a Collision With Motor Vehicle In-Transport"
+          },
+          {
+            "code": "1",
+            "label": "Front-to-Rear"
+          },
+          {
+            "code": "2",
+            "label": "Front-to-Front"
+          },
+          {
+            "code": "6",
+            "label": "Angle"
+          },
+          {
+            "code": "9",
+            "label": "Rear-to-Side"
+          },
+          {
+            "code": "10",
+            "label": "Rear-to-Rear"
+          },
+          {
+            "code": "11",
+            "label": "Other"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The ACCIDENT Data File 63 Crash Report Sampling System Analytical User’s Manual, 2016-2024 C20. Manner of Collision of the First Harmful Event Definition This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport, it is classified as such. Additional Information Prior to 2019 this data element’s name was “Manner of Collision.” This data element also appears in the Vehicle and Person data files and in the Parkwork data file as PMAN_COLL. SAS Name MAN_COLL Attribute Codes 2016-2017 2018 2019-Later 0 0 -- Not Collision With Motor Vehicle In-Transport -- -- 0 First Harmful Event Was Not a Collision With Motor Vehicle In-Transport 1 1 1 Front-to-Rear 2 2 2 Front-to-Front 6 6 6 Angle 7 7 7 Sideswipe – Same Direction 8 8 8 Sideswipe – Opposite Direction 9 9 9 Rear-to-Side 10 10 10 Rear-to-Rear 11 11 11 Other 98 98 98 Not Reported 99 -- -- Unknown -- 99 99 Reported as Unknown"
+      }
+    ]
+  },
+  "PEDS": {
+    "variable": "PEDS",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 24,
+        "codes": [
+          {
+            "code": "0-99",
+            "label": "Number of Persons Not in Motor Vehicles"
+          }
+        ],
+        "context": "CRSS Data Element List 19 Crash Report Sampling System Analytical User’s Manual, 2016-2024 CRSS Data Element List The following lists all SAS data elements with their SAS data file locations. Data elements that do not have a Data Element ID at the left side of the list have been discontinued (with the exception of some key data elements). Data Element List Key Data Elements Data Element ID Data Element Name SAS Name Case Number CASENUM Primary Sampling Unit (PSU) PSU Primary Sampling Unit for Variance Estimation PSU_VAR Primary Sampling Unit Stratum PSUSTRAT Region of the Country REGION Urbanicity URBANICITY C34 Stratum STRATUM C35 Police Jurisdiction (PJ) PJ Case Weight WEIGHT V3/D3/PC3/P3/NM4 Vehicle Number VEH_NO P4/NM3 Person Number PER_NO C18 Event Number EVENTNUM C18 Vehicle Event Number VEVENTNUM The ACCIDENT Data File Data Element ID Data Element Name SAS Name C3 Number of Forms Submitted for Persons Not in MV PEDS C3A Number of Persons Not in Motor Vehicles In- Transport (MVIT) PERNOTMVIT C4 Number of Vehicle Forms Submitted VE_TOTAL C4A Number of Motor Vehicles In-Transport (MVIT) VE_FORMS C4B Number of Parked/Working Vehicles PVH_INVL C5A Number of Persons in Motor Vehicles In- Transport (MVIT) PERMVIT C8A Month of Crash MONTH C8C Day of Week DAY_WEEK C8CI Imputed Day of Week WKDY_IM C8D Year of Crash YEAR C9A Hour of Crash HOUR",
+        "extraction_method": "PEDS_range_definition"
+      }
+    ]
+  },
+  "AGE": {
+    "variable": "AGE",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 193,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Less Than One Year 1-120 1-120 Age in Years"
+          },
+          {
+            "code": "998",
+            "label": "Not Reported"
+          },
+          {
+            "code": "999",
+            "label": "Reported as Unknown"
+          },
+          {
+            "code": "0",
+            "label": "Less Than One Year"
+          },
+          {
+            "code": "1-120",
+            "label": "Age in Years"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 188 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P5/NM5. Age Definition This data element identifies the person’s age in years on the date of the crash. Additional Information SAS Name AGE Attribute Codes 2016-2017 2018-Later 0 0 Less Than One Year 1-120 1-120 Age in Years 998 998 Not Reported 999 -- Unknown -- 999 Reported as Unknown"
+      }
+    ]
+  },
+  "AIR_BAG": {
+    "variable": "AIR_BAG",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 208,
+        "codes": [
+          {
+            "code": "20",
+            "label": "Not Deployed"
+          },
+          {
+            "code": "97",
+            "label": "Not a Motor Vehicle Occupant"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Deployment Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 203 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P12. Air Bag Deployed Definition This data element records air bag availability and deployment for this person as reported in the police crash report. Additional Information This data element is designed to collect both air bag availability and deployment for each occupied seat position. Variation in the presentation of the source data on the State crash report forms and the selections coded on the police report may produce unlikely combinations or missing data. For example: • If the seat position does not have an air bag at the time of manufacture, but the information on the police report indicates an air bag was available or deployed, the information on the police report takes precedence. • If the seat position has an air bag installed at the time of manufacture and the police report indicates there is no air bag available, then the police report information takes precedence. SAS Name AIR_BAG Attribute Codes 2016 2017 2018-Later 0 -- -- Not Applicable 1 1 1 Deployed – Front 2 2 2 Deployed – Side (Door, Seat Back) 3 3 3 Deployed – Curtain (Roof) 7 7 7 Deployed – Other (Knee, Air Belt, etc.) 8 8 8 Deployed – Combination 9 9 9 Deployment – Unknown Location 20 20 20 Not Deployed 28 -- -- Switched off 97 97 97 Not a Motor Vehicle Occupant 98 98 98 Not Reported 99 99 -- Deployment Unknown -- -- 99 Reported as Deployment Unknown"
+      }
+    ]
+  },
+  "EJECTION": {
+    "variable": "EJECTION",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 209,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Not Ejected"
+          },
+          {
+            "code": "1",
+            "label": "Totally Ejected"
+          },
+          {
+            "code": "2",
+            "label": "Partially Ejected"
+          },
+          {
+            "code": "7",
+            "label": "Not Reported"
+          },
+          {
+            "code": "8",
+            "label": "Not Applicable"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown if Ejected"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 204 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P13. Ejection Definition This data element describes the ejection status and the degree of ejection for this person, excluding motorcycle occupants. Additional Information SAS Name EJECTION Attribute Codes 2016-2017 2018-Later 0 0 Not Ejected 1 1 Totally Ejected 2 2 Partially Ejected 3 3 Ejected – Unknown Degree 7 7 Not Reported 8 8 Not Applicable 9 -- Unknown -- 9 Reported as Unknown if Ejected"
+      }
+    ]
+  },
+  "FIRE_EXP": {
+    "variable": "FIRE_EXP",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 149,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No or Not Reported"
+          },
+          {
+            "code": "1",
+            "label": "Yes"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 144 Crash Report Sampling System Analytical User’s Manual, 2016-2024 V39. Fire Occurrence Definition This data element identifies whether a fire in any way related to the crash occurred in this vehicle. Additional Information Prior to 2020 the Data Element ID was V34. This data element also appears in the Person data file and in the Parkwork data file as PFIRE. SAS Name FIRE_EXP Attribute Codes 2016-Later 0 No or Not Reported 1 Yes"
+      }
+    ]
+  },
+  "HELM_MIS": {
+    "variable": "HELM_MIS",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 207,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Indication of Misuse"
+          },
+          {
+            "code": "1",
+            "label": "Yes, Indication of Misuse"
+          },
+          {
+            "code": "7",
+            "label": "None Used/Not Applicable"
+          },
+          {
+            "code": "8",
+            "label": "Not a Motor Vehicle Occupant"
+          },
+          {
+            "code": "1",
+            "label": "Yes"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 202 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P11B. Indication of Helmet Misuse Definition This data element identifies any misuse of the helmet used by this person. Additional Information This data element is applicable to occupants of body types 80-91, 96, and 97. Prior to 2019 this data was collected as part of the data element “Indication of Misuse of Restraint System/Helmet,” and the Data Element ID was P11. SAS Name HELM_MIS Attribute Codes 2019-Later 0 No Indication of Misuse 1 Yes, Indication of Misuse 7 None Used/Not Applicable 8 Not a Motor Vehicle Occupant"
+      }
+    ]
+  },
+  "HELM_USE": {
+    "variable": "HELM_USE",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 206,
+        "codes": [
+          {
+            "code": "5",
+            "label": "DOT-Compliant Motorcycle Helmet"
+          },
+          {
+            "code": "16",
+            "label": "Helmet, Other Than DOT-Compliant Motorcycle Helmet"
+          },
+          {
+            "code": "17",
+            "label": "No Helmet"
+          },
+          {
+            "code": "19",
+            "label": "Helmet, Unknown if DOT-Compliant"
+          },
+          {
+            "code": "20",
+            "label": "Not Applicable"
+          },
+          {
+            "code": "96",
+            "label": "Not a Motor Vehicle Occupant"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Unknown/Reported as Unknown"
+          },
+          {
+            "code": "99",
+            "label": "Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 201 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P11A. Helmet Use Definition This data element records the helmet use by this occupant at the time of the crash. Additional Information This data element is applicable to occupants of body types 80-91, 96, and 97. (See NCSA Body Type) See Appendix C: Analytical Classification of Select CRSS Data Elements for the standard NCSA classifications for this data element. Prior to 2019 this data was collected as part of the data element “Restraint System/Helmet Use,” and the Data Element ID was P10. SAS Name HELM_USE Attribute Codes 2019-Later 5 DOT-Compliant Motorcycle Helmet 16 Helmet, Other Than DOT-Compliant Motorcycle Helmet 17 No Helmet 19 Helmet, Unknown if DOT-Compliant 20 Not Applicable 96 Not a Motor Vehicle Occupant 98 Not Reported 99 Unknown/Reported as Unknown"
+      }
+    ]
+  },
+  "HOSPITAL": {
+    "variable": "HOSPITAL",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 217,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Not Transported for Treatment"
+          },
+          {
+            "code": "1",
+            "label": "EMS Air"
+          },
+          {
+            "code": "2",
+            "label": "Law Enforcement"
+          },
+          {
+            "code": "3",
+            "label": "EMS Unknown Mode"
+          },
+          {
+            "code": "4",
+            "label": "Transported Unknown Source"
+          },
+          {
+            "code": "5",
+            "label": "EMS Ground"
+          },
+          {
+            "code": "6",
+            "label": "Other"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 212 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P20/NM22. Transported to First Medical Facility By Definition This data element identifies the mode of transportation to a hospital or medical facility provided for this person. Additional Information Prior to 2019 the Data Element ID was P22/NM21. From 2019-2021 the Data Element ID was P22/NM22. SAS Name HOSPITAL Attribute Codes 2016-2017 2018-2019 2020-2021 0 0 -- Not Transported -- -- 0 Not Transported for Treatment 1 1 1 EMS Air 2 2 2 Law Enforcement 3 3 3 EMS Unknown Mode 4 4 4 Transported Unknown Source 5 5 5 EMS Ground 6 6 6 Other 8 8 8 Not Reported 9 -- -- Unknown -- 9 9 Reported as Unknown"
+      }
+    ]
+  },
+  "IMPACT1": {
+    "variable": "IMPACT1",
+    "derived": true,
+    "contexts": [
+      {
+        "page": 141,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Non-Collision 1-12 1-12 1-12 1-12 Clock Points"
+          },
+          {
+            "code": "13",
+            "label": "Top"
+          },
+          {
+            "code": "14",
+            "label": "Undercarriage"
+          },
+          {
+            "code": "18",
+            "label": "Cargo/Vehicle Parts Set-in-Motion"
+          },
+          {
+            "code": "19",
+            "label": "Other Objects or Person Set-in-Motion"
+          },
+          {
+            "code": "20",
+            "label": "Object Set in Motion, Unknown if Cargo/Vehicle Parts or Other"
+          },
+          {
+            "code": "61",
+            "label": "Left"
+          },
+          {
+            "code": "62",
+            "label": "Left-Front Side"
+          },
+          {
+            "code": "63",
+            "label": "Left-Back Side"
+          },
+          {
+            "code": "81",
+            "label": "Right"
+          },
+          {
+            "code": "82",
+            "label": "Right-Front Side"
+          },
+          {
+            "code": "83",
+            "label": "Right-Back Side"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 136 Crash Report Sampling System Analytical User’s Manual, 2016-2024 V34A. Areas of Impact—Initial Contact Point Definition This data element identifies the area on this vehicle that produced the first instance of injury to non-motorists or occupants of this vehicle, or that resulted in the first instance of damage to other property or to this vehicle. Additional Information This data element is derived from the crash events for the vehicle. It is the first recorded “Area of Impact (This Vehicle)” value for this vehicle. See Appendix B: Rules for Derived Data Elements for an explanation of this data element and how it is derived. Prior to 2020 the Data Element ID was V29A. This data element also appears in the Person data file and in the Parkwork data file as PIMPACT1. SAS Name IMPACT1 Attribute Codes 2016 2017 2018 2019- Later 0 0 0 0 Non-Collision 1-12 1-12 1-12 1-12 Clock Points 13 13 13 13 Top 14 14 14 14 Undercarriage 18 18 18 18 Cargo/Vehicle Parts Set-in-Motion 19 19 19 -- Other Objects Set-in-Motion -- -- -- 19 Other Objects or Person Set-in-Motion -- 20 20 20 Object Set in Motion, Unknown if Cargo/Vehicle Parts or Other 61 61 61 61 Left 62 62 62 62 Left-Front Side 63 63 63 63 Left-Back Side 81 81 81 81 Right 82 82 82 82 Right-Front Side 83 83 83 83 Right-Back Side 98 98 98 98 Not Reported 99 99 -- -- Unknown -- -- 99 99 Reported as Unknown"
+      }
+    ]
+  },
+  "INJ_SEV": {
+    "variable": "INJ_SEV",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 199,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Apparent Injury (O)"
+          },
+          {
+            "code": "1",
+            "label": "Possible Injury (C)"
+          },
+          {
+            "code": "2",
+            "label": "Suspected Minor Injury (B)"
+          },
+          {
+            "code": "3",
+            "label": "Suspected Serious Injury (A)"
+          },
+          {
+            "code": "4",
+            "label": "Fatal Injury (K)"
+          },
+          {
+            "code": "5",
+            "label": "Injured, Severity Unknown (U)"
+          },
+          {
+            "code": "6",
+            "label": "Died Prior to Crash"
+          },
+          {
+            "code": "9",
+            "label": "Unknown/Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 194 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P8/NM10. Injury Severity Definition This data element describes the severity of the injury to this person in the crash using the KABCO scale. Additional Information See the Accident data file for C90 Maximum Injury Severity in Crash and the Vehicle data file for V90 Maximum Injury Severity in Vehicle, both of which are derived from this data element. See Appendix C: Analytical Classification of Select CRSS Data Elements for the standard NCSA classifications for this data element. Prior to 2022 the Data Element ID was P8/NM8. SAS Name INJ_SEV Attribute Codes 2016-Later 0 No Apparent Injury (O) 1 Possible Injury (C) 2 Suspected Minor Injury (B) 3 Suspected Serious Injury (A) 4 Fatal Injury (K) 5 Injured, Severity Unknown (U) 6 Died Prior to Crash 9 Unknown/Not Reported"
+      }
+    ]
+  },
+  "REST_MIS": {
+    "variable": "REST_MIS",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 205,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Indication of Misuse"
+          },
+          {
+            "code": "1",
+            "label": "Yes, Indication of Misuse"
+          },
+          {
+            "code": "7",
+            "label": "None Used/Not Applicable"
+          },
+          {
+            "code": "8",
+            "label": "Not a Motor Vehicle Occupant"
+          },
+          {
+            "code": "1",
+            "label": "Yes"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 200 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P10B. Indication of Restraint System Misuse Definition This data element identifies any misuse of the available restraint system used by this person. Additional Information Prior to 2019 this data element’s name was “Indication of Misuse of Restraint System/Helmet” that included helmet misuse, and the Data Element ID was P11. Starting in 2019 helmet misuse is captured as part of the data element “Indication of Helmet Misuse.” SAS Name REST_MIS Attribute Codes 2016-2018 2019-Later 0 -- No -- 0 No Indication of Misuse 1 -- Yes -- 1 Yes, Indication of Misuse -- 7 None Used/Not Applicable 8 8 Not a Motor Vehicle Occupant"
+      }
+    ]
+  },
+  "REST_USE": {
+    "variable": "REST_USE",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 204,
+        "codes": [
+          {
+            "code": "1",
+            "label": "Shoulder Belt Only Used"
+          },
+          {
+            "code": "2",
+            "label": "Lap Belt Only Used"
+          },
+          {
+            "code": "3",
+            "label": "Shoulder and Lap Belt Used"
+          },
+          {
+            "code": "6",
+            "label": "Racing-Style Harness Used"
+          },
+          {
+            "code": "12",
+            "label": "Booster Seat"
+          },
+          {
+            "code": "20",
+            "label": "None Used/Not Applicable"
+          },
+          {
+            "code": "96",
+            "label": "Not a Motor Vehicle Occupant"
+          },
+          {
+            "code": "97",
+            "label": "Other"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Unknown/Reported as Unknown (Since 2018)"
+          },
+          {
+            "code": "99",
+            "label": "Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 199 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P10A. Restraint System Use Definition This data element records the restraint equipment in use by this occupant at the time of the crash. Additional Information Prior to 2019 this data element’s name was “Restraint System/Helmet Use” that included helmet use, and the Data Element ID was P10. Starting in 2019 helmet use is captured as part of the data element “Helmet Use.” See Appendix C: Analytical Classification of Select CRSS Data Elements for the standard NCSA classifications for this data element. SAS Name REST_USE Attribute Codes 2016 2018 2019-Later 0 -- -- Not Applicable 1 1 1 Shoulder Belt Only Used 2 2 2 Lap Belt Only Used 3 3 3 Shoulder and Lap Belt Used 4 4 4 Child Restraint – Type Unknown 5 5 -- DOT-Compliant Motorcycle Helmet -- -- 6 Racing-Style Harness Used 7 -- -- None Used 8 8 8 Restraint Used – Type Unknown 10 10 10 Child Restraint System – Forward Facing 11 11 11 Child Restraint System – Rear Facing 12 12 12 Booster Seat 16 16 -- Helmet, Other Than DOT-Compliant Motorcycle Helmet 17 17 -- No Helmet 19 19 -- Helmet, Unknown if DOT-Compliant -- 20 20 None Used/Not Applicable 29 29 -- Unknown if Helmet Worn 96 96 96 Not a Motor Vehicle Occupant 97 97 97 Other 98 98 98 Not Reported 99 99 99 Unknown/Reported as Unknown (Since 2018)"
+      }
+    ]
+  },
+  "ROLLOVER": {
+    "variable": "ROLLOVER",
+    "derived": true,
+    "contexts": [
+      {
+        "page": 139,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Rollover"
+          },
+          {
+            "code": "3",
+            "label": "Rollover"
+          },
+          {
+            "code": "8",
+            "label": "Not Applicable"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 134 Crash Report Sampling System Analytical User’s Manual, 2016-2024 V32. Rollover Definition This data element identifies this vehicle’s involvement in a rollover or overturn during the crash. Rollover is defined as any vehicle rotation of 90° or more about any true longitudinal or lateral axis. Rollover can occur at any time during the crash. Additional Information Prior to 2020 the Data Element ID was V27. Starting in 2022 this data element is derived from the “Sequence of Events” data element for each vehicle with an event equal to 01. See Appendix B: Rules for Derived Data Elements for an explanation of this data element and how it is derived. This data element also appears in the Person data file. SAS Name ROLLOVER Attribute Codes 2016-2021 2022-Later 0 0 No Rollover 1 -- Rollover, Tripped By Object/Vehicle 2 -- Rollover, Untripped -- 3 Rollover -- 8 Not Applicable 9 -- Rollover, Unknown Type"
+      }
+    ]
+  },
+  "SEAT_POS": {
+    "variable": "SEAT_POS",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 201,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Not a Motor Vehicle Occupant"
+          },
+          {
+            "code": "12",
+            "label": "Front Seat, Middle"
+          },
+          {
+            "code": "13",
+            "label": "Front Seat, Right Side"
+          },
+          {
+            "code": "18",
+            "label": "Front Seat, Other"
+          },
+          {
+            "code": "19",
+            "label": "Front Seat, Unknown"
+          },
+          {
+            "code": "21",
+            "label": "Second Seat, Left Side"
+          },
+          {
+            "code": "22",
+            "label": "Second Seat, Middle"
+          },
+          {
+            "code": "23",
+            "label": "Second Seat, Right Side"
+          },
+          {
+            "code": "28",
+            "label": "Second Seat, Other"
+          },
+          {
+            "code": "29",
+            "label": "Second Seat, Unknown"
+          },
+          {
+            "code": "31",
+            "label": "Third Seat, Left Side"
+          },
+          {
+            "code": "32",
+            "label": "Third Seat, Middle"
+          },
+          {
+            "code": "33",
+            "label": "Third Seat, Right Side"
+          },
+          {
+            "code": "38",
+            "label": "Third Seat, Other"
+          },
+          {
+            "code": "39",
+            "label": "Third Seat, Unknown"
+          },
+          {
+            "code": "41",
+            "label": "Fourth Seat, Left Side"
+          },
+          {
+            "code": "42",
+            "label": "Fourth Seat, Middle"
+          },
+          {
+            "code": "43",
+            "label": "Fourth Seat, Right Side"
+          },
+          {
+            "code": "48",
+            "label": "Fourth Seat, Other"
+          },
+          {
+            "code": "49",
+            "label": "Fourth Seat, Unknown"
+          },
+          {
+            "code": "50",
+            "label": "Sleeper Section of Cab (Truck)"
+          },
+          {
+            "code": "51",
+            "label": "Other Passenger in Enclosed Passenger or Cargo Area"
+          },
+          {
+            "code": "52",
+            "label": "Other Passenger in Unenclosed Passenger or Cargo Area"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 196 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P9. Seating Position Definition This data element identifies the location of this person in or on the vehicle. Additional Information More than one person can be assigned the same seat position, however this is coded only when a person is sitting on someone’s lap. SAS Name SEAT_POS Attribute Codes 2016-2018 2019-Later 0 0 Not a Motor Vehicle Occupant 11 11 Front Seat, Left Side (Driver’s Side) 12 12 Front Seat, Middle 13 13 Front Seat, Right Side 18 18 Front Seat, Other 19 19 Front Seat, Unknown 21 21 Second Seat, Left Side 22 22 Second Seat, Middle 23 23 Second Seat, Right Side 28 28 Second Seat, Other 29 29 Second Seat, Unknown 31 31 Third Seat, Left Side 32 32 Third Seat, Middle 33 33 Third Seat, Right Side 38 38 Third Seat, Other 39 39 Third Seat, Unknown 41 41 Fourth Seat, Left Side 42 42 Fourth Seat, Middle 43 43 Fourth Seat, Right Side 48 48 Fourth Seat, Other 49 49 Fourth Seat, Unknown 50 50 Sleeper Section of Cab (Truck) 51 51 Other Passenger in Enclosed Passenger or Cargo Area 52 52 Other Passenger in Unenclosed Passenger or Cargo Area"
+      }
+    ]
+  },
+  "SEX": {
+    "variable": "SEX",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 195,
+        "codes": [
+          {
+            "code": "1",
+            "label": "Male"
+          },
+          {
+            "code": "2",
+            "label": "Female"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The PERSON Data File 190 Crash Report Sampling System Analytical User’s Manual, 2016-2024 P6/NM6. Sex Definition This data element identifies the sex of this person involved in the crash. Additional Information SAS Name SEX Attribute Codes 2016-2017 2018-Later 1 1 Male 2 2 Female 8 8 Not Reported 9 -- Unknown -- 9 Reported as Unknown"
+      }
+    ]
+  },
+  "ACC_TYPE": {
+    "variable": "ACC_TYPE",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 180,
+        "codes": [
+          {
+            "code": "1",
+            "label": "Drive off Road"
+          },
+          {
+            "code": "2",
+            "label": "Control/Traction Loss"
+          },
+          {
+            "code": "3",
+            "label": "Avoid Collision with Vehicle, Pedestrian, Animal"
+          },
+          {
+            "code": "4",
+            "label": "Specifics Other"
+          },
+          {
+            "code": "6",
+            "label": "Drive off Road"
+          },
+          {
+            "code": "7",
+            "label": "Control/Traction Loss"
+          },
+          {
+            "code": "8",
+            "label": "Avoid Collision With Vehicle, Pedestrian, Animal"
+          },
+          {
+            "code": "9",
+            "label": "Specifics Other"
+          },
+          {
+            "code": "11",
+            "label": "Parked Vehicle"
+          },
+          {
+            "code": "12",
+            "label": "Stationary Object"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 175 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC23. Crash Type Definition This data element identifies the attribute that best describes the type of crash this vehicle was involved in based on the “First Harmful Event” and the precrash circumstances. Additional Information For graphic descriptions of possible values see Appendix A: PC23 Crash Type Diagram. SAS Name ACC_TYPE 2016- Later Attribute Codes 2016-Later 0 No Impact Category I: Single Driver Configuration A: Right Roadside Departure 2016-Later 1 Drive off Road 2 Control/Traction Loss 3 Avoid Collision with Vehicle, Pedestrian, Animal 4 Specifics Other 5 Specifics Unknown Configuration B: Left Roadside Departure 2016-Later 6 Drive off Road 7 Control/Traction Loss 8 Avoid Collision With Vehicle, Pedestrian, Animal 9 Specifics Other 10 Specifics Unknown Configuration C: Forward Impact 2016-Later 11 Parked Vehicle 12 Stationary Object"
+      }
+    ]
+  },
+  "DEFORMED": {
+    "variable": "DEFORMED",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 143,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Damage"
+          },
+          {
+            "code": "2",
+            "label": "Minor Damage"
+          },
+          {
+            "code": "4",
+            "label": "Functional Damage"
+          },
+          {
+            "code": "6",
+            "label": "Disabling Damage"
+          },
+          {
+            "code": "7",
+            "label": "Damage Reported, Extent Unknown"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 138 Crash Report Sampling System Analytical User’s Manual, 2016-2024 V35. Extent of Damage Definition This data element records the amount of damage sustained by this vehicle as indicated on the police crash report based on an operational damage scale. Additional Information Prior to 2020 the Data Element ID was V30. This data element also appears in the Parkwork data file as PVEH_SEV. SAS Name DEFORMED Attribute Codes 2016-2017 2018-2021 2022-Later 0 0 0 No Damage 2 2 2 Minor Damage 4 4 4 Functional Damage 6 6 6 Disabling Damage -- -- 7 Damage Reported, Extent Unknown 8 8 8 Not Reported 9 -- -- Unknown -- 9 9 Reported as Unknown"
+      }
+    ]
+  },
+  "SPEEDREL": {
+    "variable": "SPEEDREL",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 162,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No 2"
+          },
+          {
+            "code": "2",
+            "label": "Yes, Racing"
+          },
+          {
+            "code": "3",
+            "label": "Yes, Exceeded Speed Limit"
+          },
+          {
+            "code": "4",
+            "label": "Yes, Too Fast for Conditions"
+          },
+          {
+            "code": "5",
+            "label": "Yes, Specifics Unknown"
+          },
+          {
+            "code": "8",
+            "label": "No Driver Present/Unknown if Driver Present"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          },
+          {
+            "code": "2",
+            "label": "Yes"
+          },
+          {
+            "code": "3",
+            "label": "Yes"
+          },
+          {
+            "code": "4",
+            "label": "Yes"
+          },
+          {
+            "code": "5",
+            "label": "Yes"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 157 Crash Report Sampling System Analytical User’s Manual, 2016-2024 D22. Speeding Related Definition This data element identifies if the driver was speeding and it was related to the crash as identified by law enforcement. Additional Information SAS Name SPEEDREL Attribute Codes 2016-2017 2018-Later 0 0 No 2 2 Yes, Racing 3 3 Yes, Exceeded Speed Limit 4 4 Yes, Too Fast for Conditions 5 5 Yes, Specifics Unknown 8 8 No Driver Present/Unknown if Driver Present 9 -- Unknown -- 9 Reported as Unknown"
+      }
+    ]
+  },
+  "TRAV_SP": {
+    "variable": "TRAV_SP",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 137,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Stopped Motor Vehicle In-Transport 1-151 1-151 Reported Speed up to"
+          },
+          {
+            "code": "151",
+            "label": "mph"
+          },
+          {
+            "code": "997",
+            "label": "Speed Greater Than"
+          },
+          {
+            "code": "998",
+            "label": "Not Reported"
+          },
+          {
+            "code": "999",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 132 Crash Report Sampling System Analytical User’s Manual, 2016-2024 V30. Travel Speed Definition This data element records the speed the vehicle was traveling prior to the occurrence of the crash as reported by the investigating officer. Additional Information Prior to 2020 the Data Element ID was V25. SAS Name TRAV_SP Attribute Codes 2016-2017 2018-Later 0 0 Stopped Motor Vehicle In-Transport 1-151 1-151 Reported Speed up to 151 mph 997 997 Speed Greater Than 151 mph 998 998 Not Reported 999 -- Unknown -- 999 Reported as Unknown"
+      }
+    ]
+  },
+  "VALIGN": {
+    "variable": "VALIGN",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 166,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Non-Trafficway or Driveway Access"
+          },
+          {
+            "code": "1",
+            "label": "Straight"
+          },
+          {
+            "code": "2",
+            "label": "Curve Right"
+          },
+          {
+            "code": "3",
+            "label": "Curve Left"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 161 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC8. Roadway Alignment Definition This data element identifies the attribute that best represents the roadway alignment prior to this vehicle’s critical precrash event. Additional Information SAS Name VALIGN Attribute Codes 2016-2017 2018-Later 0 0 Non-Trafficway or Driveway Access 1 1 Straight 2 2 Curve Right 3 3 Curve Left 4 4 Curve – Unknown Direction 8 8 Not Reported 9 -- Unknown -- 9 Reported as Unknown"
+      }
+    ]
+  },
+  "VNUM_LAN": {
+    "variable": "VNUM_LAN",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 164,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Non-Trafficway or Driveway Access"
+          },
+          {
+            "code": "1",
+            "label": "One Lane"
+          },
+          {
+            "code": "2",
+            "label": "Two Lanes"
+          },
+          {
+            "code": "3",
+            "label": "Three Lanes"
+          },
+          {
+            "code": "4",
+            "label": "Four Lanes"
+          },
+          {
+            "code": "5",
+            "label": "Five Lanes"
+          },
+          {
+            "code": "6",
+            "label": "Six Lanes"
+          },
+          {
+            "code": "7",
+            "label": "Seven or More Lanes"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 159 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC6. Total Lanes in Roadway Definition This data element identifies the attribute that best describes the number of travel lanes just prior to this vehicle’s critical precrash event. Additional Information The number of lanes refers to the number of lanes of a continuous cross-section of roadway. For example, a local roadway with one lane going north and one lane going south would be coded as two lanes. However, if a trafficway is a divided highway with two lanes going north, a median, and two lanes going south, then the number of lanes is coded as two. If a trafficway has two lanes going north immediately adjacent to two lanes going south, one continuous cross-section of roadway, then the number of lanes is coded as four. This data element can be used with the Trafficway Description data element VTRAFWAY to determine the trafficway geometry. For example: If (VNUM_LAN=2) AND (VTRAFWAY=1), then one has a two-lane roadway that is not physically divided, which is what most people think of as a two-lane road (i.e., one lane going in each direction). If the roadway is a divided trafficway, the number of travel lanes counts only lanes in the direction of travel of the first harmful event. If the roadway is an undivided trafficway, the number of travel lanes are all the lanes regardless of their direction of travel. SAS Name VNUM_LAN Attribute Codes 2016-2017 2018-Later 0 0 Non-Trafficway or Driveway Access 1 1 One Lane 2 2 Two Lanes 3 3 Three Lanes 4 4 Four Lanes 5 5 Five Lanes 6 6 Six Lanes 7 7 Seven or More Lanes 8 8 Not Reported 9 -- Unknown -- 9 Reported as Unknown"
+      }
+    ]
+  },
+  "VPROFILE": {
+    "variable": "VPROFILE",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 167,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Non-Trafficway or Driveway Access"
+          },
+          {
+            "code": "1",
+            "label": "Level"
+          },
+          {
+            "code": "2",
+            "label": "Grade, Unknown Slope"
+          },
+          {
+            "code": "3",
+            "label": "Hillcrest"
+          },
+          {
+            "code": "4",
+            "label": "Sag (Bottom)"
+          },
+          {
+            "code": "5",
+            "label": "Uphill"
+          },
+          {
+            "code": "6",
+            "label": "Downhill"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 162 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC9. Roadway Grade Definition This data element identifies the attribute that best represents the roadway grade prior to this vehicle’s critical precrash event. Additional Information SAS Name VPROFILE Attribute Codes 2016-2017 2018-Later 0 0 Non-Trafficway or Driveway Access 1 1 Level 2 2 Grade, Unknown Slope 3 3 Hillcrest 4 4 Sag (Bottom) 5 5 Uphill 6 6 Downhill 8 8 Not Reported 9 -- Unknown -- 9 Reported as Unknown"
+      }
+    ]
+  },
+  "VSPD_LIM": {
+    "variable": "VSPD_LIM",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 165,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Statutory Limit/Non-Trafficway or Driveway Access 5-95 5-95 Speed Limit (in"
+          },
+          {
+            "code": "5",
+            "label": "mph Increments)"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 160 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC7. Speed Limit Definition This data element records the posted speed limit in miles per hour. Additional Information SAS Name VSPD_LIM Attribute Codes 2016-2017 2018-Later 0 0 No Statutory Limit/Non-Trafficway or Driveway Access 5-95 5-95 Speed Limit (in 5 mph Increments) 98 98 Not Reported 99 -- Unknown -- 99 Reported as Unknown"
+      }
+    ]
+  },
+  "VSURCOND": {
+    "variable": "VSURCOND",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 168,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Non-Trafficway or Driveway Access"
+          },
+          {
+            "code": "1",
+            "label": "Dry"
+          },
+          {
+            "code": "2",
+            "label": "Wet"
+          },
+          {
+            "code": "3",
+            "label": "Snow"
+          },
+          {
+            "code": "4",
+            "label": "Ice/Frost"
+          },
+          {
+            "code": "5",
+            "label": "Sand"
+          },
+          {
+            "code": "6",
+            "label": "Water (Standing or Moving)"
+          },
+          {
+            "code": "7",
+            "label": "Oil"
+          },
+          {
+            "code": "8",
+            "label": "Other"
+          },
+          {
+            "code": "10",
+            "label": "Slush"
+          },
+          {
+            "code": "11",
+            "label": "Mud, Dirt, Gravel"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 163 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC11. Roadway Surface Conditions Definition This data element identifies the attribute that best represents the roadway surface condition prior to this vehicle’s critical precrash event. Additional Information SAS Name VSURCOND Attribute Codes 2016-2017 2018-Later 0 0 Non-Trafficway or Driveway Access 1 1 Dry 2 2 Wet 3 3 Snow 4 4 Ice/Frost 5 5 Sand 6 6 Water (Standing or Moving) 7 7 Oil 8 8 Other 10 10 Slush 11 11 Mud, Dirt, Gravel 98 98 Not Reported 99 -- Unknown -- 99 Reported as Unknown"
+      }
+    ]
+  },
+  "VTRAFCON": {
+    "variable": "VTRAFCON",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 169,
+        "codes": [
+          {
+            "code": "0",
+            "label": "No Controls Traffic Signals 2016-2017 2018-Later"
+          },
+          {
+            "code": "1",
+            "label": "Traffic Control Signal (on Colors) Without Pedestrian Signal"
+          },
+          {
+            "code": "2",
+            "label": "Traffic Control Signal (on Colors) With Pedestrian Signal"
+          },
+          {
+            "code": "3",
+            "label": "Traffic Control Signal (on Colors) Not Known if Pedestrian Signal"
+          },
+          {
+            "code": "4",
+            "label": "Flashing Traffic Control Signal"
+          },
+          {
+            "code": "7",
+            "label": "Lane Use Control Signal"
+          },
+          {
+            "code": "8",
+            "label": "Other Highway Traffic Signal"
+          },
+          {
+            "code": "9",
+            "label": "Unknown Highway Traffic Signal Regulatory Signs 2016-2017 2018-Later"
+          },
+          {
+            "code": "20",
+            "label": "Stop Sign"
+          },
+          {
+            "code": "21",
+            "label": "Yield Sign"
+          },
+          {
+            "code": "23",
+            "label": "School Zone Sign/Device"
+          },
+          {
+            "code": "28",
+            "label": "Other Regulatory Sign"
+          },
+          {
+            "code": "29",
+            "label": "Unknown Regulatory Sign"
+          },
+          {
+            "code": "9",
+            "label": "Unknown"
+          },
+          {
+            "code": "29",
+            "label": "Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 164 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC12. Traffic Control Device Definition This data element identifies the attribute that best describes the traffic controls in the vehicle’s environment just prior to this vehicle’s critical precrash event. Additional Information If a vehicle is controlled by more than one device, the device coded is based on the following priority: • 51 - Officer, Crossing Guard, Flagman, etc. • The lowest numbered device shown below. • 0 - No traffic control device. SAS Name VTRAFCON Attribute Codes 2016-2017 2018-Later 0 0 No Controls Traffic Signals 2016-2017 2018-Later 1 1 Traffic Control Signal (on Colors) Without Pedestrian Signal 2 2 Traffic Control Signal (on Colors) With Pedestrian Signal 3 3 Traffic Control Signal (on Colors) Not Known if Pedestrian Signal 4 4 Flashing Traffic Control Signal 7 7 Lane Use Control Signal 8 8 Other Highway Traffic Signal 9 9 Unknown Highway Traffic Signal Regulatory Signs 2016-2017 2018-Later 20 20 Stop Sign 21 21 Yield Sign 23 23 School Zone Sign/Device 28 28 Other Regulatory Sign 29 29 Unknown Regulatory Sign"
+      }
+    ]
+  },
+  "VTRAFWAY": {
+    "variable": "VTRAFWAY",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 163,
+        "codes": [
+          {
+            "code": "0",
+            "label": "Non-Trafficway or Driveway Access"
+          },
+          {
+            "code": "1",
+            "label": "Two-Way, Not Divided"
+          },
+          {
+            "code": "2",
+            "label": "Two-Way, Divided, Unprotected Median"
+          },
+          {
+            "code": "3",
+            "label": "Two-Way, Divided, Positive Median Barrier"
+          },
+          {
+            "code": "4",
+            "label": "One-Way Trafficway"
+          },
+          {
+            "code": "5",
+            "label": "Two-Way, Not Divided With a Continuous Left- Turn Lane"
+          },
+          {
+            "code": "6",
+            "label": "Entrance/Exit Ramp"
+          },
+          {
+            "code": "7",
+            "label": "Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier"
+          },
+          {
+            "code": "8",
+            "label": "Not Reported"
+          },
+          {
+            "code": "9",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The VEHICLE Data File 158 Crash Report Sampling System Analytical User’s Manual, 2016-2024 PC5. Trafficway Description Definition This data element identifies the attribute that best describes the trafficway flow just prior to this vehicle’s critical precrash event. Additional Information SAS Name VTRAFWAY Attribute Codes 2016-2017 2018-2021 2022-Later 0 0 0 Non-Trafficway or Driveway Access 1 1 1 Two-Way, Not Divided 2 2 2 Two-Way, Divided, Unprotected Median 3 3 3 Two-Way, Divided, Positive Median Barrier 4 4 4 One-Way Trafficway 5 5 5 Two-Way, Not Divided With a Continuous Left- Turn Lane 6 6 6 Entrance/Exit Ramp -- -- 7 Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier 8 8 8 Not Reported 9 -- -- Unknown -- 9 9 Reported as Unknown"
+      }
+    ]
+  },
+  "VISION": {
+    "variable": "VISION",
+    "derived": false,
+    "contexts": []
+  },
+  "WEATHER": {
+    "variable": "WEATHER",
+    "derived": false,
+    "contexts": [
+      {
+        "page": 79,
+        "codes": [
+          {
+            "code": "1",
+            "label": "Clear"
+          },
+          {
+            "code": "2",
+            "label": "Rain"
+          },
+          {
+            "code": "3",
+            "label": "Sleet or Hail"
+          },
+          {
+            "code": "4",
+            "label": "Snow"
+          },
+          {
+            "code": "5",
+            "label": "Fog, Smog, Smoke"
+          },
+          {
+            "code": "6",
+            "label": "Severe Crosswinds"
+          },
+          {
+            "code": "7",
+            "label": "Blowing Sand, Soil, Dirt"
+          },
+          {
+            "code": "8",
+            "label": "Other"
+          },
+          {
+            "code": "10",
+            "label": "Cloudy"
+          },
+          {
+            "code": "11",
+            "label": "Blowing Snow"
+          },
+          {
+            "code": "12",
+            "label": "Freezing Rain or Drizzle"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The ACCIDENT Data File 74 Crash Report Sampling System Analytical User’s Manual, 2016-2024 C26. Atmospheric Conditions Definition This derived data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the police crash report. Additional Information Prior to 2020 this data element was derived from up to two conditions that could be selected, WEATHER1 and WEATHER2 based on a hierarchy. The two coded data elements were discontinued after 2019 and moved to the Discontinued Accident Data Elements at the end of the Accident Data File section. Beginning in 2020 all applicable atmospheric conditions are selected and stored in the Weather data file and this data element is derived from those multiple responses using the same hierarchy. See Appendix B: Rules for Derived Data Elements for an explanation of how this data element is derived. SAS Name WEATHER Attribute Codes 2016-2017 2018-Later 1 1 Clear 2 2 Rain 3 3 Sleet or Hail 4 4 Snow 5 5 Fog, Smog, Smoke 6 6 Severe Crosswinds 7 7 Blowing Sand, Soil, Dirt 8 8 Other 10 10 Cloudy 11 11 Blowing Snow 12 12 Freezing Rain or Drizzle 98 98 Not Reported 99 -- Unknown -- 99 Reported as Unknown"
+      },
+      {
+        "page": 336,
+        "codes": [
+          {
+            "code": "1",
+            "label": "Clear"
+          },
+          {
+            "code": "2",
+            "label": "Rain"
+          },
+          {
+            "code": "3",
+            "label": "Sleet or Hail"
+          },
+          {
+            "code": "4",
+            "label": "Snow"
+          },
+          {
+            "code": "5",
+            "label": "Fog, Smog, Smoke"
+          },
+          {
+            "code": "6",
+            "label": "Severe Crosswinds"
+          },
+          {
+            "code": "7",
+            "label": "Blowing Sand, Soil, Dirt"
+          },
+          {
+            "code": "8",
+            "label": "Other"
+          },
+          {
+            "code": "10",
+            "label": "Cloudy"
+          },
+          {
+            "code": "11",
+            "label": "Blowing Snow"
+          },
+          {
+            "code": "12",
+            "label": "Freezing Rain or Drizzle"
+          },
+          {
+            "code": "98",
+            "label": "Not Reported"
+          },
+          {
+            "code": "99",
+            "label": "Reported as Unknown"
+          }
+        ],
+        "context": "Data Element Definitions and Codes The WEATHER Data File 331 Crash Report Sampling System Analytical User’s Manual, 2016-2024 C26. Atmospheric Conditions Definition This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the police crash report. Additional Information Prior to 2020 this data element identified up to two values. If more than two atmospheric conditions were reported, the two conditions that most affect visibility were selected. Accident.WEATHER1 and Accident.WEATHER2 were the coded data elements, and Accident.WEATHER was derived from these two. The two coded data elements were discontinued after 2019 and moved to the Discontinued Accident Data Elements at the end of the Accident Data File section. Beginning in 2020 all applicable atmospheric conditions are selected and stored in this data file. Only the derived data element WEATHER is still stored in the Accident data file and is now derived from the multiple responses in this data file using the same hierarchy. SAS Name WEATHER Attribute Codes 2020-Later 1 Clear 2 Rain 3 Sleet or Hail 4 Snow 5 Fog, Smog, Smoke 6 Severe Crosswinds 7 Blowing Sand, Soil, Dirt 8 Other 10 Cloudy 11 Blowing Snow 12 Freezing Rain or Drizzle 98 Not Reported 99 Reported as Unknown"
+      }
+    ]
+  }
+}

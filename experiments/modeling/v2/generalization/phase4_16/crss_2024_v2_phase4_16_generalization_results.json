@@ -1,0 +1,1291 @@
+{
+  "phase": "4.16",
+  "title": "Scenario-Level Generalization and Distribution-Shift Evaluation",
+  "status": "PASS",
+  "model_path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\baseline\\crss_2024_v2_hgb_y6.joblib",
+  "overall": {
+    "samples": 95851,
+    "positive": 1137,
+    "positive_rate": 0.011862161062482394,
+    "y6_pr_auc": 0.1348723906332306,
+    "y6_roc_auc": 0.6666171680223287
+  },
+  "scenario_summary": {
+    "eligible_scenarios": 181,
+    "total_test_scenarios": 13693,
+    "mean_pr_auc": 0.7058554766289573,
+    "median_pr_auc": 0.746825396825397,
+    "p10_pr_auc": 0.4,
+    "p25_pr_auc": 0.5845238095238094,
+    "p75_pr_auc": 0.8761904761904762,
+    "p90_pr_auc": 0.9285714285714286
+  },
+  "scenario_metrics": [
+    {
+      "scenario_id": "CRSS24_202405544681_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8452380952380952
+    },
+    {
+      "scenario_id": "CRSS24_202405544729_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5666666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202405579050_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.8666666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202405590654_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.9333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202405617540_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6
+    },
+    {
+      "scenario_id": "CRSS24_202405621976_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9047619047619049
+    },
+    {
+      "scenario_id": "CRSS24_202405636754_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.3333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202405639050_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8857142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202405662359_V2",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202405672789_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202405681217_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9285714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202405712825_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.8666666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202405715227_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8761904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202405717170_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202405727354_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405729793_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.81
+    },
+    {
+      "scenario_id": "CRSS24_202405738896_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405740889_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202405741511_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6
+    },
+    {
+      "scenario_id": "CRSS24_202405742877_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7650793650793651
+    },
+    {
+      "scenario_id": "CRSS24_202405746781_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.9666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405749263_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.8541666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405756761_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7678571428571429
+    },
+    {
+      "scenario_id": "CRSS24_202405758966_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405761133_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.9428571428571428
+    },
+    {
+      "scenario_id": "CRSS24_202405763240_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6785714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202405765454_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.976190476190476
+    },
+    {
+      "scenario_id": "CRSS24_202405769332_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6
+    },
+    {
+      "scenario_id": "CRSS24_202405769832_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7023809523809523
+    },
+    {
+      "scenario_id": "CRSS24_202405771702_V3",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.2
+    },
+    {
+      "scenario_id": "CRSS24_202405780893_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.625
+    },
+    {
+      "scenario_id": "CRSS24_202405786553_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9047619047619049
+    },
+    {
+      "scenario_id": "CRSS24_202405796424_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7142857142857143
+    },
+    {
+      "scenario_id": "CRSS24_202405802258_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6499999999999999
+    },
+    {
+      "scenario_id": "CRSS24_202405810953_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8928571428571428
+    },
+    {
+      "scenario_id": "CRSS24_202405821753_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7523809523809525
+    },
+    {
+      "scenario_id": "CRSS24_202405823534_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.8928571428571428
+    },
+    {
+      "scenario_id": "CRSS24_202405823805_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.7333333333333334
+    },
+    {
+      "scenario_id": "CRSS24_202405823986_V2",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202405824245_V2",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.3333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202405867683_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.14285714285714285
+    },
+    {
+      "scenario_id": "CRSS24_202405868199_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8833333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202405869332_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.9
+    },
+    {
+      "scenario_id": "CRSS24_202405879738_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9206349206349207
+    },
+    {
+      "scenario_id": "CRSS24_202405885412_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202405899470_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9285714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202405904817_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8035714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202405905186_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202405905267_V3",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.878968253968254
+    },
+    {
+      "scenario_id": "CRSS24_202405905327_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9150793650793649
+    },
+    {
+      "scenario_id": "CRSS24_202405906803_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8261904761904761
+    },
+    {
+      "scenario_id": "CRSS24_202405910752_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.9166666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405911840_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.5011904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202405914500_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.625
+    },
+    {
+      "scenario_id": "CRSS24_202405927475_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7928571428571428
+    },
+    {
+      "scenario_id": "CRSS24_202405938663_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7291666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202405940950_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6444444444444444
+    },
+    {
+      "scenario_id": "CRSS24_202405943669_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.746825396825397
+    },
+    {
+      "scenario_id": "CRSS24_202405948190_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.26785714285714285
+    },
+    {
+      "scenario_id": "CRSS24_202405951412_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6111111111111112
+    },
+    {
+      "scenario_id": "CRSS24_202405954575_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.5357142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202405959628_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.7333333333333334
+    },
+    {
+      "scenario_id": "CRSS24_202405965181_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.4
+    },
+    {
+      "scenario_id": "CRSS24_202405966328_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8928571428571428
+    },
+    {
+      "scenario_id": "CRSS24_202405969045_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.71
+    },
+    {
+      "scenario_id": "CRSS24_202405973537_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.4
+    },
+    {
+      "scenario_id": "CRSS24_202405980901_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.878968253968254
+    },
+    {
+      "scenario_id": "CRSS24_202405980940_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7936507936507937
+    },
+    {
+      "scenario_id": "CRSS24_202405983779_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202405999482_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202406004074_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406004234_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.2857142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202406005969_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8999999999999999
+    },
+    {
+      "scenario_id": "CRSS24_202406008186_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406008269_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.8666666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406014652_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406031346_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6791666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406040318_V2",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406057438_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7857142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202406060975_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7761904761904761
+    },
+    {
+      "scenario_id": "CRSS24_202406068788_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.3333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406077076_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.915079365079365
+    },
+    {
+      "scenario_id": "CRSS24_202406082320_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406100573_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8761904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202406101958_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.9666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406102669_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.8333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406103152_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202406106871_V3",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202406108196_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5833333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406110919_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.919047619047619
+    },
+    {
+      "scenario_id": "CRSS24_202406121790_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406122712_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5317460317460317
+    },
+    {
+      "scenario_id": "CRSS24_202406123236_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.819047619047619
+    },
+    {
+      "scenario_id": "CRSS24_202406125501_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406132181_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406133019_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202406137882_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7142857142857143
+    },
+    {
+      "scenario_id": "CRSS24_202406137913_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8095238095238095
+    },
+    {
+      "scenario_id": "CRSS24_202406144782_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.5833333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406153504_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.7333333333333334
+    },
+    {
+      "scenario_id": "CRSS24_202406160277_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8317460317460317
+    },
+    {
+      "scenario_id": "CRSS24_202406161073_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7470238095238095
+    },
+    {
+      "scenario_id": "CRSS24_202406170308_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7625
+    },
+    {
+      "scenario_id": "CRSS24_202406170883_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.2857142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202406179232_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9285714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202406180830_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.8041666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406190687_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7345238095238095
+    },
+    {
+      "scenario_id": "CRSS24_202406192835_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.8500000000000001
+    },
+    {
+      "scenario_id": "CRSS24_202406195273_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.25
+    },
+    {
+      "scenario_id": "CRSS24_202406198903_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.8500000000000001
+    },
+    {
+      "scenario_id": "CRSS24_202406200675_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406200936_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406209155_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9523809523809524
+    },
+    {
+      "scenario_id": "CRSS24_202406213112_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406214526_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8484126984126984
+    },
+    {
+      "scenario_id": "CRSS24_202406215443_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8571428571428571
+    },
+    {
+      "scenario_id": "CRSS24_202406216132_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.9333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406217627_V1",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7623015873015873
+    },
+    {
+      "scenario_id": "CRSS24_202406229483_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7228571428571429
+    },
+    {
+      "scenario_id": "CRSS24_202406235207_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.9166666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406240942_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6
+    },
+    {
+      "scenario_id": "CRSS24_202406244638_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406245891_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7345238095238095
+    },
+    {
+      "scenario_id": "CRSS24_202406246632_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.7291666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406252427_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6666666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406262407_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8857142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202406267494_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.5845238095238094
+    },
+    {
+      "scenario_id": "CRSS24_202406272584_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.26666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406282418_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.9166666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406287885_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5888888888888889
+    },
+    {
+      "scenario_id": "CRSS24_202406288640_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.6952380952380952
+    },
+    {
+      "scenario_id": "CRSS24_202406290354_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5833333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406295557_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.6861904761904761
+    },
+    {
+      "scenario_id": "CRSS24_202406296302_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6444444444444444
+    },
+    {
+      "scenario_id": "CRSS24_202406296900_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7861904761904761
+    },
+    {
+      "scenario_id": "CRSS24_202406301108_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.3333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406301658_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9285714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202406302982_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406315574_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.8333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406317002_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.8333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406321263_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6388888888888888
+    },
+    {
+      "scenario_id": "CRSS24_202406325518_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406331557_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.3333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406342999_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9761904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202406343236_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.16666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406352170_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7266666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406353961_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.3333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406354985_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7828571428571429
+    },
+    {
+      "scenario_id": "CRSS24_202406362080_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406366680_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.5107142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202406368096_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.9285714285714286
+    },
+    {
+      "scenario_id": "CRSS24_202406374321_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8761904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202406381229_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8761904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202406386679_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5833333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406386914_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.8866666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406394118_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.8333333333333333
+    },
+    {
+      "scenario_id": "CRSS24_202406410400_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406411904_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7861904761904761
+    },
+    {
+      "scenario_id": "CRSS24_202406427849_V1",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 1.0
+    },
+    {
+      "scenario_id": "CRSS24_202406430678_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.75
+    },
+    {
+      "scenario_id": "CRSS24_202406430853_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406433065_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.7976190476190477
+    },
+    {
+      "scenario_id": "CRSS24_202406436877_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406441372_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.14285714285714285
+    },
+    {
+      "scenario_id": "CRSS24_202406443860_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.5916666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406447755_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.26666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406464154_V1",
+      "samples": 7,
+      "positive": 1,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406472001_V2",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.7595238095238095
+    },
+    {
+      "scenario_id": "CRSS24_202406490100_V2",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6011904761904762
+    },
+    {
+      "scenario_id": "CRSS24_202406491154_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.26785714285714285
+    },
+    {
+      "scenario_id": "CRSS24_202406496688_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6666666666666666
+    },
+    {
+      "scenario_id": "CRSS24_202406527436_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406538388_V2",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.41666666666666663
+    },
+    {
+      "scenario_id": "CRSS24_202406539071_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.5
+    },
+    {
+      "scenario_id": "CRSS24_202406550734_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.6295238095238095
+    },
+    {
+      "scenario_id": "CRSS24_202406559771_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6791666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406562675_V1",
+      "samples": 7,
+      "positive": 4,
+      "pr_auc": 0.6916666666666667
+    },
+    {
+      "scenario_id": "CRSS24_202406591637_V2",
+      "samples": 7,
+      "positive": 3,
+      "pr_auc": 0.6
+    },
+    {
+      "scenario_id": "CRSS24_202406619809_V1",
+      "samples": 7,
+      "positive": 5,
+      "pr_auc": 0.6961904761904761
+    },
+    {
+      "scenario_id": "CRSS24_202406631687_V2",
+      "samples": 7,
+      "positive": 6,
+      "pr_auc": 0.8857142857142857
+    },
+    {
+      "scenario_id": "CRSS24_202406673771_V1",
+      "samples": 7,
+      "positive": 2,
+      "pr_auc": 0.41666666666666663
+    }
+  ],
+  "origin_metrics": {
+    "11": {
+      "samples": 13693,
+      "y6_positive": 245,
+      "y6_rate": 0.01789235375739429,
+      "y3_positive": 166,
+      "y3_rate": 0.012122982545826335,
+      "y6_pr_auc": 0.20017803704023213,
+      "y6_roc_auc": 0.6679667107771128
+    },
+    "12": {
+      "samples": 13693,
+      "y6_positive": 230,
+      "y6_rate": 0.016796903527349742,
+      "y3_positive": 190,
+      "y3_rate": 0.013875702913897612,
+      "y6_pr_auc": 0.1725093989915977,
+      "y6_roc_auc": 0.6620042370555048
+    },
+    "13": {
+      "samples": 13693,
+      "y6_positive": 200,
+      "y6_rate": 0.014606003067260644,
+      "y3_positive": 200,
+      "y3_rate": 0.014606003067260644,
+      "y6_pr_auc": 0.1690962598727321,
+      "y6_roc_auc": 0.6677125176017193
+    },
+    "14": {
+      "samples": 13693,
+      "y6_positive": 167,
+      "y6_rate": 0.012196012561162638,
+      "y3_positive": 167,
+      "y3_rate": 0.012196012561162638,
+      "y6_pr_auc": 0.15121422850352598,
+      "y6_roc_auc": 0.6736679679233872
+    },
+    "15": {
+      "samples": 13693,
+      "y6_positive": 132,
+      "y6_rate": 0.009639962024392025,
+      "y3_positive": 132,
+      "y3_rate": 0.009639962024392025,
+      "y6_pr_auc": 0.13906321658628606,
+      "y6_roc_auc": 0.6730145269522897
+    },
+    "16": {
+      "samples": 13693,
+      "y6_positive": 99,
+      "y6_rate": 0.007229971518294019,
+      "y3_positive": 99,
+      "y3_rate": 0.007229971518294019,
+      "y6_pr_auc": 0.08519393498694668,
+      "y6_roc_auc": 0.6621351814451713
+    },
+    "17": {
+      "samples": 13693,
+      "y6_positive": 64,
+      "y6_rate": 0.004673920981523406,
+      "y3_positive": 64,
+      "y3_rate": 0.004673920981523406,
+      "y6_pr_auc": 0.045669016084406086,
+      "y6_roc_auc": 0.6536899717514124
+    }
+  },
+  "shift_results": {
+    "cyber_instability": {
+      "feature": "cyber_instability_index",
+      "train_q25": 0.343280166387558,
+      "train_q75": 0.6258403658866882,
+      "low_samples": 24399,
+      "high_samples": 24201,
+      "low_positive_rate": 0.0027869994671912784,
+      "low_pr_auc": 0.33061430100807493,
+      "low_roc_auc": 0.956204503090949,
+      "high_positive_rate": 0.028221974298582704,
+      "high_pr_auc": 0.10311043118871582,
+      "high_roc_auc": 0.32512541093411274
+    },
+    "packet_loss": {
+      "feature": "packet_loss_rate",
+      "train_q25": 0.007701640482991934,
+      "train_q75": 0.025843050330877304,
+      "low_samples": 24180,
+      "high_samples": 24403,
+      "low_positive_rate": 0.00045492142266335815,
+      "low_pr_auc": 0.0004131432948051088,
+      "low_roc_auc": 0.430613595928669,
+      "high_positive_rate": 0.045281317870753596,
+      "high_pr_auc": 0.17616729259281538,
+      "high_roc_auc": 0.6682396174064229
+    },
+    "latency_jitter": {
+      "feature": "latency_jitter_ms",
+      "train_q25": 2.9340484142303467,
+      "train_q75": 8.26003360748291,
+      "low_samples": 23674,
+      "high_samples": 23293,
+      "low_positive_rate": 0.0008025682182985554,
+      "low_pr_auc": 0.0885721915092974,
+      "low_roc_auc": 0.578042919600841,
+      "high_positive_rate": 0.04636586098827974,
+      "high_pr_auc": 0.1795671079685642,
+      "high_roc_auc": 0.6732784939083053
+    },
+    "message_integrity": {
+      "feature": "message_integrity_failure_rate",
+      "train_q25": 0.001477834302932024,
+      "train_q75": 0.007115059532225132,
+      "low_samples": 24517,
+      "high_samples": 24138,
+      "low_positive_rate": 0.0005302443202675694,
+      "low_pr_auc": 0.0007547052823853857,
+      "low_roc_auc": 0.5959592154499108,
+      "high_positive_rate": 0.04561272682078051,
+      "high_pr_auc": 0.18489271619189196,
+      "high_roc_auc": 0.6793291146332261
+    },
+    "sensor_disagreement": {
+      "feature": "sensor_disagreement_rate",
+      "train_q25": 0.03139356151223183,
+      "train_q75": 0.08614065125584602,
+      "low_samples": 23517,
+      "high_samples": 24532,
+      "low_positive_rate": 0.0003401794446570566,
+      "low_pr_auc": 0.0005248910923675064,
+      "low_roc_auc": 0.613735696967119,
+      "high_positive_rate": 0.044064894831240826,
+      "high_pr_auc": 0.18649752480054513,
+      "high_roc_auc": 0.674885804167179
+    },
+    "speed_deviation_abs": {
+      "feature": "speed_limit_deviation_abs",
+      "train_q25": 25.0,
+      "train_q75": 953.0,
+      "low_samples": 25200,
+      "high_samples": 29785,
+      "low_positive_rate": 0.008928571428571428,
+      "low_pr_auc": 0.18442608274214214,
+      "low_roc_auc": 0.6949352908464019,
+      "high_positive_rate": 0.013160987074030552,
+      "high_pr_auc": 0.1270901198291306,
+      "high_roc_auc": 0.6653839384221011
+    }
+  },
+  "summary": {
+    "overall_y6_pr_auc": 0.1348723906332306,
+    "scenario_mean_pr_auc": 0.7058554766289573,
+    "scenario_median_pr_auc": 0.746825396825397,
+    "scenario_p10_pr_auc": 0.4,
+    "origin_mean_pr_auc": 0.13756058458081813,
+    "origin_min_pr_auc": 0.045669016084406086,
+    "origin_max_pr_auc": 0.20017803704023213,
+    "shift_high_minus_low_pr_auc": {
+      "cyber_instability": -0.2275038698193591,
+      "packet_loss": 0.17575414929801028,
+      "latency_jitter": 0.0909949164592668,
+      "message_integrity": 0.18413801090950657,
+      "sensor_disagreement": 0.18597263370817763,
+      "speed_deviation_abs": -0.057335962913011546
+    }
+  },
+  "gates": {
+    "test_samples_positive": true,
+    "test_probabilities_finite": true,
+    "scenario_count_expected": true,
+    "seven_origins_per_scenario": true,
+    "overall_pr_auc_valid": true,
+    "scenario_metrics_available": true,
+    "origin_metrics_available": true
+  },
+  "methodological_notes": [
+    "Evaluation uses the existing HGB baseline; no model retraining.",
+    "Scenario IDs are the partition identity.",
+    "Each scenario contributes exactly seven prediction origins.",
+    "prediction_origins 11-17 are local temporal positions.",
+    "Shift analysis uses train-derived quartile thresholds.",
+    "Cyber telemetry and cyber anomaly labels remain synthetic research signals.",
+    "Results should not be interpreted as real-world cyberattack detection performance."
+  ]
+}

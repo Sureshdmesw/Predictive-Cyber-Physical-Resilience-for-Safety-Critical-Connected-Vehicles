@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rows": 90641,
+  "columns": 46,
+  "duplicate_rows": 0,
+  "missing_identifier_rows": 0,
+  "anomaly_rows": 1431,
+  "anomaly_rate": 0.015787557507088403,
+  "numeric_features": 44,
+  "checks": {
+    "nonempty": true,
+    "no_duplicate_rows": true,
+    "identifier_present": true,
+    "resilience_range_valid": true,
+    "anomaly_severity_range_valid": true
+  }
+}

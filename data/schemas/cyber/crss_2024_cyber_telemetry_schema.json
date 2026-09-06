@@ -1,0 +1,59 @@
+{
+  "dataset": "CRSS 2024 Synthetic Cyber Telemetry",
+  "version": "1.0",
+  "seed": 20260902,
+  "purpose": "Synthetic edge/ECU/CAN telemetry layer for studying cyber-physical resilience. This telemetry is simulated and must not be interpreted as observed NHTSA cybersecurity data.",
+  "physical_ground_truth": "data/processed/crss_2024/cyber_physical_features.parquet",
+  "identifier": [
+    "CASENUM",
+    "VEH_NO",
+    "telemetry_scenario_id"
+  ],
+  "feature_groups": {
+    "vehicle_ecu_topology": [
+      "ecu_count",
+      "can_bus_count",
+      "gateway_present",
+      "safety_critical_ecu_ratio"
+    ],
+    "can_behavior": [
+      "can_message_rate",
+      "can_message_rate_deviation",
+      "can_interarrival_mean_ms",
+      "can_interarrival_jitter_ms",
+      "can_bus_load_pct"
+    ],
+    "ecu_diagnostics": [
+      "ecu_state_transition_rate",
+      "diagnostic_event_rate",
+      "uds_request_rate",
+      "authentication_failure_rate"
+    ],
+    "sensor_consistency": [
+      "sensor_plausibility_score",
+      "sensor_disagreement_rate",
+      "redundant_sensor_divergence"
+    ],
+    "connectivity": [
+      "rssi_dbm",
+      "packet_loss_rate",
+      "latency_ms",
+      "latency_jitter_ms",
+      "connectivity_drop_rate",
+      "telemetry_gap_duration_ms"
+    ],
+    "communication_integrity": [
+      "message_integrity_failure_rate",
+      "replay_indicator_rate",
+      "sequence_counter_anomaly_rate",
+      "unexpected_source_id_rate"
+    ],
+    "research_labels": [
+      "synthetic_cyber_anomaly",
+      "cyber_anomaly_severity",
+      "physical_cyber_interaction_score",
+      "connectivity_resilience_score",
+      "cyber_physical_resilience_score"
+    ]
+  }
+}

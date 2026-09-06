@@ -1,0 +1,7 @@
+dataset,source_family,access_method,official_source,download_required,documentation_required,codebook_required,automated_download_allowed,status,next_action
+CISS,CISS,NHTSA web file browser,https://www.nhtsa.gov/file-downloads,Yes,Yes,Yes,To be verified,DISCOVERY_REQUIRED,Inspect official CISS repository
+CRSS,CRSS,NHTSA web file browser,https://www.nhtsa.gov/file-downloads,Yes,Yes,Yes,To be verified,READY_FOR_DISCOVERY,Inspect 2016-2024 directories
+FARS,FARS,NHTSA FTP/file repository,https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars,Yes,Yes,Yes,Yes,READY_FOR_DISCOVERY,Identify current national download package
+SCI,SCI,NHTSA research/data pages,https://www.nhtsa.gov/research-data/special-crash-investigations-sci,Yes,Yes,Yes,To be verified,DISCOVERY_REQUIRED,Identify case/report distribution mechanism
+NTS,NTS,NHTSA web file browser,https://www.nhtsa.gov/file-downloads,Yes,Yes,Yes,To be verified,DISCOVERY_REQUIRED,Inspect NTS repository
+SGO_ADAS_ADS,Standing General Order,NHTSA published CSV,https://www.nhtsa.gov/es/node/103486,Yes,Yes,Yes,Yes,READY_FOR_DISCOVERY,Identify current CSV download endpoints

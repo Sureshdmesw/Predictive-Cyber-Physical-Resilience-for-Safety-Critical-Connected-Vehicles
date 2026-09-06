@@ -1,0 +1,433 @@
+{
+  "phase": "4.10B",
+  "title": "Synthetic Cyber-Label Separability Audit",
+  "status": "PASS",
+  "purpose": "Determine whether unusually strong forecasting performance is caused by intrinsic separability in the synthetic cyber telemetry generation process.",
+  "dataset": "CRSS 2024 Temporal Cyber-Physical States V2",
+  "feature_contract": {
+    "original_feature_count": 63,
+    "removed_constant_features": {
+      "gateway_present": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 1.0,
+        "original_index": 30
+      },
+      "physical_state_completeness": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 1.0,
+        "original_index": 35
+      },
+      "roadway_complexity_index": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 5.0,
+        "original_index": 39
+      },
+      "vehicle_state_observation_count": {
+        "reason": "empirically constant across train, validation, and test",
+        "train_value": 7.0,
+        "original_index": 62
+      }
+    },
+    "final_feature_count": 59,
+    "final_features": [
+      "VISION",
+      "WEATHER",
+      "authentication_failure_rate",
+      "can_bus_count",
+      "can_bus_load_pct",
+      "can_interarrival_jitter_ms",
+      "can_interarrival_mean_ms",
+      "can_message_rate",
+      "can_message_rate_deviation",
+      "collision_event_flag",
+      "connectivity_degradation_rate",
+      "connectivity_drop_rate",
+      "cyber_instability_index",
+      "d1_authentication_failure_rate",
+      "d1_can_bus_load_pct",
+      "d1_can_interarrival_jitter_ms",
+      "d1_can_message_rate",
+      "d1_connectivity_drop_rate",
+      "d1_latency_jitter_ms",
+      "d1_latency_ms",
+      "d1_message_integrity_failure_rate",
+      "d1_packet_loss_rate",
+      "d1_replay_indicator_rate",
+      "d1_sensor_disagreement_rate",
+      "d1_sequence_counter_anomaly_rate",
+      "d1_telemetry_gap_duration_ms",
+      "diagnostic_event_rate",
+      "ecu_count",
+      "ecu_state_transition_rate",
+      "fire_explosion_flag",
+      "latency_jitter_ms",
+      "latency_ms",
+      "message_integrity_failure_rate",
+      "packet_loss_rate",
+      "redundant_sensor_divergence",
+      "replay_indicator_rate",
+      "resilience_degradation_rate",
+      "rolling_mean_3_latency_ms",
+      "rolling_mean_3_message_integrity_failure_rate",
+      "rolling_mean_3_packet_loss_rate",
+      "rolling_mean_3_sensor_disagreement_rate",
+      "rolling_std_3_latency_ms",
+      "rolling_std_3_message_integrity_failure_rate",
+      "rolling_std_3_packet_loss_rate",
+      "rolling_std_3_sensor_disagreement_rate",
+      "rollover_flag",
+      "rssi_dbm",
+      "safety_critical_ecu_ratio",
+      "sensor_disagreement_rate",
+      "sensor_plausibility_score",
+      "sequence_counter_anomaly_rate",
+      "speed_limit_deviation",
+      "speed_limit_deviation_abs",
+      "speed_over_limit_flag",
+      "state_transition_magnitude",
+      "telemetry_gap_duration_ms",
+      "uds_request_rate",
+      "unexpected_source_id_rate",
+      "vehicle_damage_flag"
+    ],
+    "final_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      38,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ]
+  },
+  "summary_representation": {
+    "statistics_per_feature": 8,
+    "dimension": 472,
+    "summary_seconds": 27.05892799999947
+  },
+  "classifier": {
+    "algorithm": "HistGradientBoostingClassifier",
+    "max_training_samples": 120000,
+    "random_seed": 42,
+    "bounded_training": true,
+    "full_validation_used": true,
+    "full_test_used": true
+  },
+  "results": {
+    "y3": {
+      "full_train_positive_count": 3773,
+      "validation_positive_count": 849,
+      "test_positive_count": 1018,
+      "full_train_positive_rate": 0.008496752632574564,
+      "validation_positive_rate": 0.00897614818573966,
+      "test_positive_rate": 0.01062065080176524,
+      "classifier_train_samples": 120000,
+      "classifier_train_positive_count": 3773,
+      "classifier_train_negative_count": 116227,
+      "train_pr_auc": 0.999985149446521,
+      "validation_pr_auc": 0.9967346302738744,
+      "test_pr_auc": 0.9966238975237075,
+      "train_roc_auc": 0.9999995234017397,
+      "validation_roc_auc": 0.9999696535662431,
+      "test_roc_auc": 0.999963051582539,
+      "training_seconds": 77.87879240000075
+    },
+    "y6": {
+      "full_train_positive_count": 4178,
+      "validation_positive_count": 961,
+      "test_positive_count": 1137,
+      "full_train_positive_rate": 0.009408807977444084,
+      "validation_positive_rate": 0.01016028080859342,
+      "test_positive_rate": 0.011862161062482394,
+      "classifier_train_samples": 120000,
+      "classifier_train_positive_count": 4178,
+      "classifier_train_negative_count": 115822,
+      "train_pr_auc": 0.999915148800396,
+      "validation_pr_auc": 0.9904377370314926,
+      "test_pr_auc": 0.988434150376165,
+      "train_roc_auc": 0.9999969808080819,
+      "validation_roc_auc": 0.9994318658167446,
+      "test_roc_auc": 0.9985612845960979,
+      "training_seconds": 87.18074890000025
+    }
+  },
+  "univariate_last_step_y6": {
+    "features_analyzed": 59,
+    "effect_size_ge_1": 24,
+    "effect_size_ge_2": 11,
+    "effect_size_ge_3": 2,
+    "top_20": [
+      {
+        "feature": "unexpected_source_id_rate",
+        "effect_size": 3.628481454527984,
+        "positive_mean": 0.141490176320076,
+        "negative_mean": 0.00259678834117949,
+        "positive_std": 0.053150683641433716,
+        "negative_std": 0.010272079147398472
+      },
+      {
+        "feature": "redundant_sensor_divergence",
+        "effect_size": 3.4583727395413666,
+        "positive_mean": 0.12428601086139679,
+        "negative_mean": 0.02046871744096279,
+        "positive_std": 0.04061662405729294,
+        "negative_std": 0.012352511286735535
+      },
+      {
+        "feature": "latency_jitter_ms",
+        "effect_size": 2.8090606543659384,
+        "positive_mean": 26.822925567626953,
+        "negative_mean": 6.112109184265137,
+        "positive_std": 9.401322364807129,
+        "negative_std": 4.509248733520508
+      },
+      {
+        "feature": "rolling_std_3_packet_loss_rate",
+        "effect_size": 2.7799704210995007,
+        "positive_mean": 0.03934802487492561,
+        "negative_mean": 0.0003269646258559078,
+        "positive_std": 0.019236689433455467,
+        "negative_std": 0.004898627754300833
+      },
+      {
+        "feature": "rolling_std_3_sensor_disagreement_rate",
+        "effect_size": 2.742429354168836,
+        "positive_mean": 0.031328193843364716,
+        "negative_mean": 0.0002619025472085923,
+        "positive_std": 0.015530149452388287,
+        "negative_std": 0.003932235762476921
+      },
+      {
+        "feature": "rolling_std_3_latency_ms",
+        "effect_size": 2.7394610671779542,
+        "positive_mean": 13.927563667297363,
+        "negative_mean": 0.11268310993909836,
+        "positive_std": 6.931797504425049,
+        "negative_std": 1.6769763231277466
+      },
+      {
+        "feature": "rolling_std_3_message_integrity_failure_rate",
+        "effect_size": 2.728138098188561,
+        "positive_mean": 0.031174033880233765,
+        "negative_mean": 0.00026193883968517184,
+        "positive_std": 0.015531584620475769,
+        "negative_std": 0.003942807205021381
+      },
+      {
+        "feature": "replay_indicator_rate",
+        "effect_size": 2.608051773033858,
+        "positive_mean": 0.17630122601985931,
+        "negative_mean": 0.0028336148243397474,
+        "positive_std": 0.09303975850343704,
+        "negative_std": 0.013834180310368538
+      },
+      {
+        "feature": "sequence_counter_anomaly_rate",
+        "effect_size": 2.5941922954761565,
+        "positive_mean": 0.17799724638462067,
+        "negative_mean": 0.004838593769818544,
+        "positive_std": 0.09329483658075333,
+        "negative_std": 0.01438121683895588
+      },
+      {
+        "feature": "packet_loss_rate",
+        "effect_size": 2.0378126132627234,
+        "positive_mean": 0.2644418776035309,
+        "negative_mean": 0.019599977880716324,
+        "positive_std": 0.16799917817115784,
+        "negative_std": 0.025456195697188377
+      },
+      {
+        "feature": "message_integrity_failure_rate",
+        "effect_size": 2.002177013949949,
+        "positive_mean": 0.19923831522464752,
+        "negative_mean": 0.005934438668191433,
+        "positive_std": 0.13542093336582184,
+        "negative_std": 0.017428651452064514
+      },
+      {
+        "feature": "telemetry_gap_duration_ms",
+        "effect_size": 1.9523374710771244,
+        "positive_mean": 502.6753845214844,
+        "negative_mean": 150.47604370117188,
+        "positive_std": 206.2250213623047,
+        "negative_std": 150.19552612304688
+      },
+      {
+        "feature": "connectivity_degradation_rate",
+        "effect_size": 1.9357738232182828,
+        "positive_mean": 0.25075674057006836,
+        "negative_mean": 0.03979024291038513,
+        "positive_std": 0.15233534574508667,
+        "negative_std": 0.023421023041009903
+      },
+      {
+        "feature": "state_transition_magnitude",
+        "effect_size": 1.841941001529078,
+        "positive_mean": 0.022983310744166374,
+        "negative_mean": 0.00022209527378436178,
+        "positive_std": 0.017072897404432297,
+        "negative_std": 0.0037304796278476715
+      },
+      {
+        "feature": "rolling_mean_3_packet_loss_rate",
+        "effect_size": 1.786224067421628,
+        "positive_mean": 0.23497483134269714,
+        "negative_mean": 0.01980815827846527,
+        "positive_std": 0.16825732588768005,
+        "negative_std": 0.026649368926882744
+      },
+      {
+        "feature": "sensor_disagreement_rate",
+        "effect_size": 1.7644428265881589,
+        "positive_mean": 0.26179325580596924,
+        "negative_mean": 0.06355064362287521,
+        "positive_std": 0.15218976140022278,
+        "negative_std": 0.0456642284989357
+      },
+      {
+        "feature": "rolling_mean_3_message_integrity_failure_rate",
+        "effect_size": 1.7422486439018063,
+        "positive_mean": 0.17552760243415833,
+        "negative_mean": 0.0060991812497377396,
+        "positive_std": 0.13627278804779053,
+        "negative_std": 0.01853855326771736
+      },
+      {
+        "feature": "sensor_plausibility_score",
+        "effect_size": 1.6733641915101116,
+        "positive_mean": 0.6044648885726929,
+        "negative_mean": 0.8568633198738098,
+        "positive_std": 0.19217553734779358,
+        "negative_std": 0.09257273375988007
+      },
+      {
+        "feature": "resilience_degradation_rate",
+        "effect_size": 1.5861623424391316,
+        "positive_mean": 0.524022102355957,
+        "negative_mean": 0.3056720197200775,
+        "positive_std": 0.15001875162124634,
+        "negative_std": 0.12407485395669937
+      },
+      {
+        "feature": "uds_request_rate",
+        "effect_size": 1.5748721921848123,
+        "positive_mean": 0.29421281814575195,
+        "negative_mean": 0.12045103311538696,
+        "positive_std": 0.1209769994020462,
+        "negative_std": 0.09854797273874283
+      }
+    ]
+  },
+  "interpretation": "HIGH_SYNTHETIC_SEPARABILITY. The synthetic telemetry generation process produces exceptionally separable future-anomaly targets. The observed predictive performance must therefore be interpreted as a controlled synthetic forecasting result, not as validated real-world cyberattack detection. The research must next evaluate feature ablation, telemetry corruption, temporal perturbation, synthetic-generation sensitivity, and robustness.",
+  "methodological_boundary": "The cyber anomaly labels are synthetic research labels. CRSS supplies physical crash and safety ground truth but is not a cyberattack dataset. Results must not be presented as validated real-world cyberattack detection performance.",
+  "checks": [
+    {
+      "name": "original_feature_count",
+      "status": "PASS",
+      "detail": "count=63"
+    },
+    {
+      "name": "removed_constant_features",
+      "status": "PASS",
+      "detail": "count=4"
+    },
+    {
+      "name": "final_feature_count",
+      "status": "PASS",
+      "detail": "count=59"
+    },
+    {
+      "name": "feature_index_alignment",
+      "status": "PASS",
+      "detail": "feature names match authoritative tensor indices"
+    },
+    {
+      "name": "tensor_shapes",
+      "status": "PASS",
+      "detail": "train=(444052, 12, 63); val=(94584, 12, 63); test=(95851, 12, 63)"
+    },
+    {
+      "name": "final_input_shape",
+      "status": "PASS",
+      "detail": "train=(444052, 12, 59); val=(94584, 12, 59); test=(95851, 12, 59)"
+    },
+    {
+      "name": "summary_dimensions",
+      "status": "PASS",
+      "detail": "dimension=472"
+    },
+    {
+      "name": "summary_finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "train_only_standardization",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "univariate_features_complete",
+      "status": "PASS",
+      "detail": "analyzed=59"
+    },
+    {
+      "name": "metrics_finite",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

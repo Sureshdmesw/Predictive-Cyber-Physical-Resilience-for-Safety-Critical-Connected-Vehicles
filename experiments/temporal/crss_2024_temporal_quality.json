@@ -1,0 +1,116 @@
+{
+  "dataset": "CRSS 2024 Temporal Cyber-Physical State Dataset",
+  "status": "PASS",
+  "rows": 2175384,
+  "columns": 86,
+  "sequences": 90641,
+  "sequence_length": 24,
+  "time_step_range": [
+    0,
+    23
+  ],
+  "future_anomaly_3step_distribution": {
+    "0": 2142471,
+    "1": 32913
+  },
+  "future_anomaly_6step_distribution": {
+    "0": 2142471,
+    "1": 32913
+  },
+  "warning_state_distribution": {
+    "NORMAL": 2167558,
+    "WATCH": 7826
+  },
+  "checks": [
+    {
+      "check": "dataset_nonempty",
+      "passed": true,
+      "detail": "rows=2,175,384"
+    },
+    {
+      "check": "expected_sequence_rows",
+      "passed": true,
+      "detail": "rows=2,175,384; sequences=90,641; expected=2,175,384"
+    },
+    {
+      "check": "sequence_length_exact",
+      "passed": true,
+      "detail": "{24: 2175384}"
+    },
+    {
+      "check": "timestep_range",
+      "passed": true,
+      "detail": "0..23"
+    },
+    {
+      "check": "unique_sequence_timestep",
+      "passed": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "check": "every_sequence_has_24_steps",
+      "passed": true,
+      "detail": "invalid_sequences=0"
+    },
+    {
+      "check": "no_missing_sequence_id",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "check": "no_missing_timestep",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "check": "resilience_range",
+      "passed": true,
+      "detail": "min=0.360467; max=0.993592"
+    },
+    {
+      "check": "future_3step_binary",
+      "passed": true,
+      "detail": "[np.int8(0), np.int8(1)]"
+    },
+    {
+      "check": "future_6step_binary",
+      "passed": true,
+      "detail": "[np.int8(0), np.int8(1)]"
+    },
+    {
+      "check": "warning_score_finite",
+      "passed": true,
+      "detail": "nonfinite=0"
+    },
+    {
+      "check": "warning_states_valid",
+      "passed": true,
+      "detail": "['NORMAL', 'WATCH']"
+    },
+    {
+      "check": "no_warning_state_nulls",
+      "passed": true,
+      "detail": "nulls=0"
+    },
+    {
+      "check": "strict_temporal_order",
+      "passed": true,
+      "detail": "bad_sequences=0"
+    },
+    {
+      "check": "future_labels_trailing_boundary",
+      "passed": true,
+      "detail": "trailing labels are binary and future-window bounded"
+    }
+  ],
+  "passed": 16,
+  "failed": 0,
+  "methodological_notes": [
+    "Temporal sequences are grouped by telemetry_scenario_id.",
+    "Each sequence contains exactly 24 ordered observations.",
+    "Future labels use strictly forward windows and exclude the current timestep.",
+    "First-timestep derivatives are initialized to zero because no prior observation exists.",
+    "CRSS physical variables are safety-ground-truth context; synthetic cyber telemetry is simulated research data.",
+    "Synthetic target-derived fields must not be used as predictive model inputs."
+  ]
+}
