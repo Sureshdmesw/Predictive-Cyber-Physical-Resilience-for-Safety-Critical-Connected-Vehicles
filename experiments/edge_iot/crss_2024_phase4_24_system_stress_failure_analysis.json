@@ -1,0 +1,118 @@
+{
+  "phase": "4.24",
+  "title": "System-Level Stress and Failure Analysis",
+  "status": "PASS",
+  "research_simulation": true,
+  "retraining_performed": false,
+  "scenarios": {
+    "connectivity_loss_during_anomaly": {
+      "event_id": "STRESS-001",
+      "connectivity": "OFFLINE",
+      "integrity": "FAIL",
+      "sensor": "CONSISTENT",
+      "containment_level": "HIGH",
+      "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+      "soc_priority": "HIGH",
+      "direct_vehicle_actuation": false
+    },
+    "sensor_disagreement_during_degraded_connectivity": {
+      "event_id": "STRESS-002",
+      "connectivity": "DEGRADED",
+      "integrity": "PASS",
+      "sensor": "DISAGREEMENT",
+      "containment_level": "MEDIUM",
+      "containment_recommendation": "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+      "soc_priority": "MEDIUM",
+      "direct_vehicle_actuation": false
+    },
+    "simultaneous_cyber_physical_failure": {
+      "event_id": "STRESS-003",
+      "connectivity": "OFFLINE",
+      "integrity": "FAIL",
+      "sensor": "DISAGREEMENT",
+      "containment_level": "HIGH",
+      "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+      "soc_priority": "HIGH",
+      "direct_vehicle_actuation": false
+    },
+    "connectivity_recovery_after_failure": {
+      "event_id": "STRESS-004",
+      "connectivity": "CONNECTED",
+      "integrity": "PASS",
+      "sensor": "CONSISTENT",
+      "containment_level": "NORMAL",
+      "containment_recommendation": "CONTINUE_MONITORING",
+      "soc_priority": "ROUTINE",
+      "direct_vehicle_actuation": false
+    }
+  },
+  "buffer_capacity_test": {
+    "capacity": 16,
+    "events_inserted": 100,
+    "records_retained": 16,
+    "bounded": true,
+    "integrity_valid": true
+  },
+  "repeated_anomaly_test": {
+    "events": 20,
+    "all_high_containment": true,
+    "integrity_valid": true
+  },
+  "recovery_test": {
+    "integrity_during_failure": true,
+    "integrity_after_recovery": true,
+    "records_preserved": true,
+    "recovery_integrity_valid": true
+  },
+  "corruption_test": {
+    "integrity_before_corruption": true,
+    "integrity_after_corruption": false,
+    "corruption_detected": true
+  },
+  "compound_failure_test": {
+    "result": {
+      "event_id": "COMPOUND-001",
+      "connectivity": "OFFLINE",
+      "integrity": "FAIL",
+      "sensor": "DISAGREEMENT",
+      "containment_level": "HIGH",
+      "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+      "soc_priority": "HIGH",
+      "direct_vehicle_actuation": false
+    },
+    "high_containment": true,
+    "no_direct_actuation": true
+  },
+  "gates": {
+    "upstream_phase_4_23_pass": true,
+    "connectivity_loss_escalates": true,
+    "sensor_degradation_escalates": true,
+    "compound_failure_escalates": true,
+    "recovery_returns_to_normal_policy": true,
+    "buffer_remains_bounded": true,
+    "buffer_integrity_after_capacity_pressure": true,
+    "repeated_anomalies_preserve_integrity": true,
+    "recovery_preserves_forensics": true,
+    "payload_corruption_detected": true,
+    "compound_failure_has_no_direct_actuation": true,
+    "no_retraining": true
+  },
+  "stress_dimensions": [
+    "connectivity loss",
+    "sensor disagreement",
+    "communication integrity failure",
+    "compound cyber-physical failure",
+    "repeated anomalies",
+    "buffer capacity pressure",
+    "recovery",
+    "telemetry corruption"
+  ],
+  "safety_boundary": "Stress testing evaluates deterministic research-policy behavior only. No CAN commands are transmitted and no safety-critical vehicle actuation is performed.",
+  "limitations": [
+    "Stress scenarios are synthetic.",
+    "No real vehicle or ECU is connected.",
+    "The forensic buffer is a research implementation.",
+    "Containment recommendations are not production vehicle-control logic.",
+    "Cortex XDR remains an abstraction."
+  ]
+}

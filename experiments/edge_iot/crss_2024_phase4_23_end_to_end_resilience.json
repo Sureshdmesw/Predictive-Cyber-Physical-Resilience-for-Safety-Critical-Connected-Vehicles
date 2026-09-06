@@ -1,0 +1,305 @@
+{
+  "phase": "4.23",
+  "title": "End-to-End Predictive Cyber-Physical Resilience Pipeline",
+  "status": "PASS",
+  "research_simulation": true,
+  "retraining_performed": false,
+  "upstream_phases": {
+    "phase_4_20": "PASS",
+    "phase_4_21": "PASS",
+    "phase_4_22": "PASS"
+  },
+  "pipeline": [
+    "Predictive ML risk probability",
+    "Operational risk policy",
+    "Predictive resilience decision engine",
+    "Edge-IoT deterministic containment",
+    "Tamper-evident forensic recording",
+    "Integrity verification",
+    "Cortex XDR abstraction",
+    "SOC investigation"
+  ],
+  "cases": [
+    {
+      "case": "NORMAL",
+      "decision": {
+        "risk_probability": 0.01,
+        "base_risk_level": "NORMAL",
+        "final_risk_level": "NORMAL",
+        "soc_priority": "ROUTINE",
+        "vehicle_resilience_recommendation": "ROUTINE_MONITORING",
+        "occupant_warning": false,
+        "direct_vehicle_actuation": false,
+        "context": {
+          "connectivity_degraded": false,
+          "integrity_failure": false,
+          "sensor_disagreement": false
+        }
+      },
+      "edge_containment": {
+        "containment_level": "NORMAL",
+        "containment_recommendation": "CONTINUE_MONITORING",
+        "soc_priority": "ROUTINE",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "6da068f23e627fadcfb55cab2b076924516cf5695ed70eba395b6702920fe409",
+      "forensic_integrity_valid": true,
+      "cortex_xdr_event": {
+        "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+        "target_platform": "Cortex XDR",
+        "vehicle_id": "SIM-E2E-001",
+        "ecu_id": "ECU-GW",
+        "can_id": "0x310",
+        "event_type": "E2E_NORMAL",
+        "severity": "NORMAL",
+        "connectivity_state": "CONNECTED",
+        "integrity_status": "PASS",
+        "sensor_consistency_status": "CONSISTENT",
+        "containment_level": "NORMAL",
+        "containment_recommendation": "CONTINUE_MONITORING",
+        "soc_priority": "ROUTINE",
+        "forensic_record_hash": "6da068f23e627fadcfb55cab2b076924516cf5695ed70eba395b6702920fe409",
+        "direct_vehicle_actuation": false
+      },
+      "direct_vehicle_actuation": false
+    },
+    {
+      "case": "EARLY_WARNING",
+      "decision": {
+        "risk_probability": 0.12,
+        "base_risk_level": "LOW",
+        "final_risk_level": "LOW",
+        "soc_priority": "LOW",
+        "vehicle_resilience_recommendation": "EARLY_WARNING",
+        "occupant_warning": false,
+        "direct_vehicle_actuation": false,
+        "context": {
+          "connectivity_degraded": false,
+          "integrity_failure": false,
+          "sensor_disagreement": false
+        }
+      },
+      "edge_containment": {
+        "containment_level": "NORMAL",
+        "containment_recommendation": "CONTINUE_MONITORING",
+        "soc_priority": "ROUTINE",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "cb6419130aafa28442f68b4f5c0582908643f7ef9e38786558f884bedbb2593f",
+      "forensic_integrity_valid": true,
+      "cortex_xdr_event": {
+        "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+        "target_platform": "Cortex XDR",
+        "vehicle_id": "SIM-E2E-001",
+        "ecu_id": "ECU-GW",
+        "can_id": "0x310",
+        "event_type": "E2E_EARLY_WARNING",
+        "severity": "LOW",
+        "connectivity_state": "CONNECTED",
+        "integrity_status": "PASS",
+        "sensor_consistency_status": "CONSISTENT",
+        "containment_level": "NORMAL",
+        "containment_recommendation": "CONTINUE_MONITORING",
+        "soc_priority": "ROUTINE",
+        "forensic_record_hash": "cb6419130aafa28442f68b4f5c0582908643f7ef9e38786558f884bedbb2593f",
+        "direct_vehicle_actuation": false
+      },
+      "direct_vehicle_actuation": false
+    },
+    {
+      "case": "CONNECTIVITY_DEGRADATION",
+      "decision": {
+        "risk_probability": 0.14,
+        "base_risk_level": "LOW",
+        "final_risk_level": "MEDIUM",
+        "soc_priority": "MEDIUM",
+        "vehicle_resilience_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
+        "occupant_warning": true,
+        "direct_vehicle_actuation": false,
+        "context": {
+          "connectivity_degraded": true,
+          "integrity_failure": false,
+          "sensor_disagreement": false
+        }
+      },
+      "edge_containment": {
+        "containment_level": "MEDIUM",
+        "containment_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
+        "soc_priority": "MEDIUM",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "424d764a1f2e77fdf32ad249c25e673582c7733884ec0523cec0606fc5f5360a",
+      "forensic_integrity_valid": true,
+      "cortex_xdr_event": {
+        "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+        "target_platform": "Cortex XDR",
+        "vehicle_id": "SIM-E2E-001",
+        "ecu_id": "ECU-GW",
+        "can_id": "0x310",
+        "event_type": "E2E_CONNECTIVITY_DEGRADATION",
+        "severity": "MEDIUM",
+        "connectivity_state": "DEGRADED",
+        "integrity_status": "PASS",
+        "sensor_consistency_status": "CONSISTENT",
+        "containment_level": "MEDIUM",
+        "containment_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
+        "soc_priority": "MEDIUM",
+        "forensic_record_hash": "424d764a1f2e77fdf32ad249c25e673582c7733884ec0523cec0606fc5f5360a",
+        "direct_vehicle_actuation": false
+      },
+      "direct_vehicle_actuation": false
+    },
+    {
+      "case": "SENSOR_INCONSISTENCY",
+      "decision": {
+        "risk_probability": 0.32,
+        "base_risk_level": "MEDIUM",
+        "final_risk_level": "MEDIUM",
+        "soc_priority": "MEDIUM",
+        "vehicle_resilience_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
+        "occupant_warning": true,
+        "direct_vehicle_actuation": false,
+        "context": {
+          "connectivity_degraded": false,
+          "integrity_failure": false,
+          "sensor_disagreement": true
+        }
+      },
+      "edge_containment": {
+        "containment_level": "MEDIUM",
+        "containment_recommendation": "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "soc_priority": "MEDIUM",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "85e08b45fc7ca848cdf765e758ad6577b93a97dbb4122d85a25f3c73c360803d",
+      "forensic_integrity_valid": true,
+      "cortex_xdr_event": {
+        "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+        "target_platform": "Cortex XDR",
+        "vehicle_id": "SIM-E2E-001",
+        "ecu_id": "ECU-GW",
+        "can_id": "0x310",
+        "event_type": "E2E_SENSOR_INCONSISTENCY",
+        "severity": "MEDIUM",
+        "connectivity_state": "CONNECTED",
+        "integrity_status": "PASS",
+        "sensor_consistency_status": "DISAGREEMENT",
+        "containment_level": "MEDIUM",
+        "containment_recommendation": "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "soc_priority": "MEDIUM",
+        "forensic_record_hash": "85e08b45fc7ca848cdf765e758ad6577b93a97dbb4122d85a25f3c73c360803d",
+        "direct_vehicle_actuation": false
+      },
+      "direct_vehicle_actuation": false
+    },
+    {
+      "case": "INTEGRITY_FAILURE",
+      "decision": {
+        "risk_probability": 0.61,
+        "base_risk_level": "HIGH",
+        "final_risk_level": "HIGH",
+        "soc_priority": "HIGH",
+        "vehicle_resilience_recommendation": "PRIORITIZE_CONTAINMENT_AND_SOC_INVESTIGATION",
+        "occupant_warning": true,
+        "direct_vehicle_actuation": false,
+        "context": {
+          "connectivity_degraded": false,
+          "integrity_failure": true,
+          "sensor_disagreement": false
+        }
+      },
+      "edge_containment": {
+        "containment_level": "HIGH",
+        "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "soc_priority": "HIGH",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "cddbdaf4d20a292fab3cfff6eedd03ec18620a3e00e162ff03f4b682163a1706",
+      "forensic_integrity_valid": true,
+      "cortex_xdr_event": {
+        "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+        "target_platform": "Cortex XDR",
+        "vehicle_id": "SIM-E2E-001",
+        "ecu_id": "ECU-GW",
+        "can_id": "0x310",
+        "event_type": "E2E_INTEGRITY_FAILURE",
+        "severity": "HIGH",
+        "connectivity_state": "CONNECTED",
+        "integrity_status": "FAIL",
+        "sensor_consistency_status": "CONSISTENT",
+        "containment_level": "HIGH",
+        "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "soc_priority": "HIGH",
+        "forensic_record_hash": "cddbdaf4d20a292fab3cfff6eedd03ec18620a3e00e162ff03f4b682163a1706",
+        "direct_vehicle_actuation": false
+      },
+      "direct_vehicle_actuation": false
+    },
+    {
+      "case": "CRITICAL_COMBINED",
+      "decision": {
+        "risk_probability": 0.91,
+        "base_risk_level": "CRITICAL",
+        "final_risk_level": "CRITICAL",
+        "soc_priority": "CRITICAL",
+        "vehicle_resilience_recommendation": "CRITICAL_SOC_ESCALATION",
+        "occupant_warning": true,
+        "direct_vehicle_actuation": false,
+        "context": {
+          "connectivity_degraded": true,
+          "integrity_failure": true,
+          "sensor_disagreement": true
+        }
+      },
+      "edge_containment": {
+        "containment_level": "HIGH",
+        "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "soc_priority": "HIGH",
+        "direct_vehicle_actuation": false
+      },
+      "forensic_record_hash": "ea304b44f22cb9e3f4769df704ca1f98ca4d7db669f379ade41481fc9f9b9e75",
+      "forensic_integrity_valid": true,
+      "cortex_xdr_event": {
+        "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
+        "target_platform": "Cortex XDR",
+        "vehicle_id": "SIM-E2E-001",
+        "ecu_id": "ECU-GW",
+        "can_id": "0x310",
+        "event_type": "E2E_CRITICAL_COMBINED",
+        "severity": "CRITICAL",
+        "connectivity_state": "DEGRADED",
+        "integrity_status": "FAIL",
+        "sensor_consistency_status": "DISAGREEMENT",
+        "containment_level": "HIGH",
+        "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "soc_priority": "HIGH",
+        "forensic_record_hash": "ea304b44f22cb9e3f4769df704ca1f98ca4d7db669f379ade41481fc9f9b9e75",
+        "direct_vehicle_actuation": false
+      },
+      "direct_vehicle_actuation": false
+    }
+  ],
+  "gates": {
+    "upstream_phases_4_20_to_4_22_pass": true,
+    "six_end_to_end_cases_executed": true,
+    "risk_policy_sequence_valid": true,
+    "connectivity_reaches_edge_layer": true,
+    "sensor_disagreement_reaches_edge_layer": true,
+    "integrity_failure_reaches_high_containment": true,
+    "combined_condition_reaches_high_containment": true,
+    "forensic_record_created_for_every_case": true,
+    "forensic_integrity_valid_for_every_case": true,
+    "cortex_xdr_abstraction_complete": true,
+    "no_direct_vehicle_actuation": true,
+    "no_retraining": true
+  },
+  "architecture_hash": "7b13df24de0a4aca668a07426669f65cbbb8f4b4b20a103a37164af6c5bfc5a6",
+  "safety_boundary": "Predictive ML provides forecasting and decision support. Edge containment is deterministic and simulated. No component transmits CAN commands or performs direct safety-critical vehicle actuation.",
+  "limitations": [
+    "The pipeline is a research simulation.",
+    "Cyber telemetry and attack conditions are synthetic.",
+    "CRSS provides physical safety ground truth, not cyberattack labels.",
+    "Cortex XDR is represented as an abstraction rather than a live tenant.",
+    "Containment recommendations are not validated vehicle-control logic."
+  ]
+}

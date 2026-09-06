@@ -37,7 +37,7 @@
         "soc_priority": "ROUTINE",
         "direct_vehicle_actuation": false
       },
-      "forensic_record_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5"
+      "forensic_record_hash": "b908a6c0f58f021c1ee8f051cd7e1834aa28f09842a5ba36e2d8f203e77e67c4"
     },
     {
       "event_id": "EDGE-0002",
@@ -47,7 +47,7 @@
         "soc_priority": "MEDIUM",
         "direct_vehicle_actuation": false
       },
-      "forensic_record_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06"
+      "forensic_record_hash": "6d784633838c36c67e0bbf3a0c51ae4d7f927523c98729ca2f180decac57c8da"
     },
     {
       "event_id": "EDGE-0003",
@@ -57,7 +57,7 @@
         "soc_priority": "MEDIUM",
         "direct_vehicle_actuation": false
       },
-      "forensic_record_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7"
+      "forensic_record_hash": "28fa642253f4a26e7c68238b5f211bcd1ebb70437600830df60dbfecad29c36b"
     },
     {
       "event_id": "EDGE-0004",
@@ -67,7 +67,7 @@
         "soc_priority": "HIGH",
         "direct_vehicle_actuation": false
       },
-      "forensic_record_hash": "07455381261f797d80bd31e19105b66c30f526d4f74e48bd087980db8770b8e6"
+      "forensic_record_hash": "a4747e43e203c42c72cce5f37e9c80c3e1f28cdf9dd98fcb60c3706cf6aa82c7"
     }
   ],
   "cortex_xdr_events": [
@@ -85,7 +85,7 @@
       "containment_level": "NORMAL",
       "containment_recommendation": "CONTINUE_MONITORING",
       "soc_priority": "ROUTINE",
-      "forensic_record_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5",
+      "forensic_record_hash": "b908a6c0f58f021c1ee8f051cd7e1834aa28f09842a5ba36e2d8f203e77e67c4",
       "direct_vehicle_actuation": false
     },
     {
@@ -102,7 +102,7 @@
       "containment_level": "MEDIUM",
       "containment_recommendation": "ENTER_LOCAL_RESILIENCE_MODE",
       "soc_priority": "MEDIUM",
-      "forensic_record_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06",
+      "forensic_record_hash": "6d784633838c36c67e0bbf3a0c51ae4d7f927523c98729ca2f180decac57c8da",
       "direct_vehicle_actuation": false
     },
     {
@@ -119,7 +119,7 @@
       "containment_level": "MEDIUM",
       "containment_recommendation": "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
       "soc_priority": "MEDIUM",
-      "forensic_record_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7",
+      "forensic_record_hash": "28fa642253f4a26e7c68238b5f211bcd1ebb70437600830df60dbfecad29c36b",
       "direct_vehicle_actuation": false
     },
     {
@@ -136,14 +136,14 @@
       "containment_level": "HIGH",
       "containment_recommendation": "ISOLATE_SUSPECT_COMMUNICATION_PATH",
       "soc_priority": "HIGH",
-      "forensic_record_hash": "07455381261f797d80bd31e19105b66c30f526d4f74e48bd087980db8770b8e6",
+      "forensic_record_hash": "a4747e43e203c42c72cce5f37e9c80c3e1f28cdf9dd98fcb60c3706cf6aa82c7",
       "direct_vehicle_actuation": false
     }
   ],
   "synchronized_forensic_records": [
     {
       "event_id": "EDGE-0001",
-      "timestamp": 1788710999.4254851,
+      "timestamp": 1788711938.9130268,
       "vehicle_id": "SIM-VEH-001",
       "ecu_id": "ECU-GW",
       "can_id": "0x120",
@@ -152,13 +152,13 @@
       "connectivity_state": "CONNECTED",
       "integrity_status": "PASS",
       "sensor_consistency_status": "CONSISTENT",
-      "payload_hash": "5609f19e2e513cc30bfb20ffbb4a6bab3469b02bf011a668321456a5feffa207",
+      "payload_hash": "173d56c90475f073d30b3f11fc4e3be9ed19d149c162c7dec1871d8c2a84663d",
       "previous_hash": "GENESIS",
-      "record_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5"
+      "record_hash": "b908a6c0f58f021c1ee8f051cd7e1834aa28f09842a5ba36e2d8f203e77e67c4"
     },
     {
       "event_id": "EDGE-0002",
-      "timestamp": 1788711004.4254851,
+      "timestamp": 1788711943.9130268,
       "vehicle_id": "SIM-VEH-001",
       "ecu_id": "ECU-GW",
       "can_id": "0x120",
@@ -167,13 +167,13 @@
       "connectivity_state": "DEGRADED",
       "integrity_status": "PASS",
       "sensor_consistency_status": "CONSISTENT",
-      "payload_hash": "db6f2e872d2cee658bd88cf8b2837e4700e97961763c2aac33ea76d74616a848",
-      "previous_hash": "8302c915b0fd301e6bc5895e62a310a84f78da01bef1629859962b6533b628d5",
-      "record_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06"
+      "payload_hash": "c0fa666d149a2477ed83d3f519e0cbd104cfa162c46d791ba1822ef01329cba8",
+      "previous_hash": "b908a6c0f58f021c1ee8f051cd7e1834aa28f09842a5ba36e2d8f203e77e67c4",
+      "record_hash": "6d784633838c36c67e0bbf3a0c51ae4d7f927523c98729ca2f180decac57c8da"
     },
     {
       "event_id": "EDGE-0003",
-      "timestamp": 1788711009.4254851,
+      "timestamp": 1788711948.9130268,
       "vehicle_id": "SIM-VEH-001",
       "ecu_id": "ECU-ADAS",
       "can_id": "0x245",
@@ -182,13 +182,13 @@
       "connectivity_state": "DEGRADED",
       "integrity_status": "PASS",
       "sensor_consistency_status": "DISAGREEMENT",
-      "payload_hash": "c339c4b4d2944e9ae730353b65fcd3ef1a9e617baae9d1320e78ffdba261805d",
-      "previous_hash": "d69fb92eafb595f47aa823a8a50e30a35b205ca23f6dd7c322afac061bc16e06",
-      "record_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7"
+      "payload_hash": "48f646384895a4d0a2145b0678915f8e9776011bed5c00108761f72d2d7c3ae1",
+      "previous_hash": "6d784633838c36c67e0bbf3a0c51ae4d7f927523c98729ca2f180decac57c8da",
+      "record_hash": "28fa642253f4a26e7c68238b5f211bcd1ebb70437600830df60dbfecad29c36b"
     },
     {
       "event_id": "EDGE-0004",
-      "timestamp": 1788711014.4254851,
+      "timestamp": 1788711953.9130268,
       "vehicle_id": "SIM-VEH-001",
       "ecu_id": "ECU-GW",
       "can_id": "0x310",
@@ -197,9 +197,9 @@
       "connectivity_state": "OFFLINE",
       "integrity_status": "FAIL",
       "sensor_consistency_status": "DISAGREEMENT",
-      "payload_hash": "8b644090773ab227d5f0f58003a711d5e7301ac7b6168ee875dae4bd9ca6cd0c",
-      "previous_hash": "48a4e52b7c24d2964127f7738dbe2c3e48ff7e6a1889b9d44f1855030c659bb7",
-      "record_hash": "07455381261f797d80bd31e19105b66c30f526d4f74e48bd087980db8770b8e6"
+      "payload_hash": "f7f590ea590c87430f0314cc36ccfb8f41515e7eb2b6315192df41cc370274d2",
+      "previous_hash": "28fa642253f4a26e7c68238b5f211bcd1ebb70437600830df60dbfecad29c36b",
+      "record_hash": "a4747e43e203c42c72cce5f37e9c80c3e1f28cdf9dd98fcb60c3706cf6aa82c7"
     }
   ],
   "safety_boundary": "ML and this research simulation provide decision support, warning, containment recommendation, and SOC prioritization. No direct safety-critical vehicle actuation is performed.",
@@ -208,5 +208,6 @@
     "Cyberattack labels are simulated research labels.",
     "Cortex XDR is represented as an ingestion/event abstraction.",
     "Containment policy is deterministic engineering logic, not empirically validated vehicle control logic."
-  ]
+  ],
+  "buffer_rollover_policy": "When the bounded forensic window reaches capacity, the retained window is re-anchored at ROLLING_GENESIS so its current contents remain tamper-evident and independently verifiable."
 }

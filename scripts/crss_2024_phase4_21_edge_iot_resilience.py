@@ -35,15 +35,22 @@ class EdgeEvent:
 
 
 class TamperEvidentForensicBuffer:
-    """Bounded local forensic buffer using a hash chain.
+    """Bounded local forensic buffer using a rolling hash chain.
 
-    This is a research simulation. It does not control a real vehicle,
-    transmit CAN commands, or actuate safety-critical functions.
+    When the bounded buffer rolls over, the retained window is
+    re-anchored at ROLLING_GENESIS. This preserves integrity
+    verification of the currently retained forensic window.
+
+    This is a research simulation. It does not control a real
+    vehicle, transmit CAN commands, or actuate safety-critical
+    functions.
     """
+
+    ROLLING_GENESIS = "ROLLING_GENESIS"
 
     def __init__(self, capacity: int = 256) -> None:
         self.capacity = capacity
-        self.records: deque[EdgeEvent] = deque(maxlen=capacity)
+        self.records: deque[EdgeEvent] = deque()
 
     @staticmethod
     def _hash_payload(payload: dict[str, Any]) -> str:
@@ -54,10 +61,11 @@ class TamperEvidentForensicBuffer:
         ).encode("utf-8")
         return hashlib.sha256(encoded).hexdigest()
 
-    def append(self, event: dict[str, Any]) -> EdgeEvent:
-        previous_hash = (
-            self.records[-1].record_hash if self.records else "GENESIS"
-        )
+    def _build_record(
+        self,
+        event: dict[str, Any],
+        previous_hash: str,
+    ) -> EdgeEvent:
 
         payload_hash = self._hash_payload(event)
 
@@ -69,7 +77,7 @@ class TamperEvidentForensicBuffer:
 
         record_hash = self._hash_payload(record_material)
 
-        record = EdgeEvent(
+        return EdgeEvent(
             event_id=str(event["event_id"]),
             timestamp=float(event["timestamp"]),
             vehicle_id=str(event["vehicle_id"]),
@@ -87,14 +95,121 @@ class TamperEvidentForensicBuffer:
             record_hash=record_hash,
         )
 
+    def append(self, event: dict[str, Any]) -> EdgeEvent:
+
+        if len(self.records) < self.capacity:
+            previous_hash = (
+                self.records[-1].record_hash
+                if self.records
+                else "GENESIS"
+            )
+
+            record = self._build_record(
+                event,
+                previous_hash,
+            )
+
+            self.records.append(record)
+            return record
+
+        # Rolling-window behavior:
+        # retain the newest capacity-1 records and re-anchor
+        # the retained forensic window.
+        retained = list(self.records)[1:]
+
+        self.records = deque(
+            retained,
+            maxlen=self.capacity,
+        )
+
+        if self.records:
+            first = self.records[0]
+
+            event_first = {
+                "event_id": first.event_id,
+                "timestamp": first.timestamp,
+                "vehicle_id": first.vehicle_id,
+                "ecu_id": first.ecu_id,
+                "can_id": first.can_id,
+                "event_type": first.event_type,
+                "severity": first.severity,
+                "connectivity_state": first.connectivity_state,
+                "integrity_status": first.integrity_status,
+                "sensor_consistency_status": (
+                    first.sensor_consistency_status
+                ),
+            }
+
+            replacement = self._build_record(
+                event_first,
+                self.ROLLING_GENESIS,
+            )
+
+            self.records[0] = replacement
+
+            # Rebuild the remaining chain from the new anchor.
+            rebuilt = deque(
+                [replacement],
+                maxlen=self.capacity,
+            )
+
+            for existing in list(self.records)[1:]:
+                existing_event = {
+                    "event_id": existing.event_id,
+                    "timestamp": existing.timestamp,
+                    "vehicle_id": existing.vehicle_id,
+                    "ecu_id": existing.ecu_id,
+                    "can_id": existing.can_id,
+                    "event_type": existing.event_type,
+                    "severity": existing.severity,
+                    "connectivity_state": existing.connectivity_state,
+                    "integrity_status": existing.integrity_status,
+                    "sensor_consistency_status": (
+                        existing.sensor_consistency_status
+                    ),
+                }
+
+                rebuilt.append(
+                    self._build_record(
+                        existing_event,
+                        rebuilt[-1].record_hash,
+                    )
+                )
+
+            self.records = rebuilt
+
+            previous_hash = self.records[-1].record_hash
+        else:
+            previous_hash = self.ROLLING_GENESIS
+
+        record = self._build_record(
+            event,
+            previous_hash,
+        )
+
         self.records.append(record)
+
         return record
 
     def verify_integrity(self) -> bool:
-        previous_hash = "GENESIS"
+
+        if not self.records:
+            return True
+
+        first = True
+        previous_hash = None
 
         for record in self.records:
-            if record.previous_hash != previous_hash:
+
+            expected_previous = (
+                "GENESIS"
+                if first and record.previous_hash == "GENESIS"
+                else self.ROLLING_GENESIS
+                if first and record.previous_hash == self.ROLLING_GENESIS
+                else previous_hash
+            )
+
+            if record.previous_hash != expected_previous:
                 return False
 
             event = {
@@ -107,7 +222,9 @@ class TamperEvidentForensicBuffer:
                 "severity": record.severity,
                 "connectivity_state": record.connectivity_state,
                 "integrity_status": record.integrity_status,
-                "sensor_consistency_status": record.sensor_consistency_status,
+                "sensor_consistency_status": (
+                    record.sensor_consistency_status
+                ),
             }
 
             payload_hash = self._hash_payload(event)
@@ -121,41 +238,57 @@ class TamperEvidentForensicBuffer:
                 "previous_hash": record.previous_hash,
             }
 
-            expected_record_hash = self._hash_payload(record_material)
+            expected_record_hash = self._hash_payload(
+                record_material
+            )
 
             if expected_record_hash != record.record_hash:
                 return False
 
             previous_hash = record.record_hash
+            first = False
 
         return True
 
     def export(self) -> list[dict[str, Any]]:
-        return [asdict(record) for record in self.records]
+        return [
+            asdict(record)
+            for record in self.records
+        ]
 
 
-def deterministic_containment_policy(event: dict[str, Any]) -> dict[str, Any]:
-    """Map security observations to bounded containment recommendations.
+def deterministic_containment_policy(
+    event: dict[str, Any]
+) -> dict[str, Any]:
 
-    No direct vehicle actuation is performed.
-    """
+    integrity_failure = (
+        event["integrity_status"] == "FAIL"
+    )
 
-    integrity_failure = event["integrity_status"] == "FAIL"
-    sensor_disagreement = event["sensor_consistency_status"] == "DISAGREEMENT"
-    connectivity_degraded = event["connectivity_state"] != "CONNECTED"
+    sensor_disagreement = (
+        event["sensor_consistency_status"]
+        == "DISAGREEMENT"
+    )
+
+    connectivity_degraded = (
+        event["connectivity_state"] != "CONNECTED"
+    )
 
     if integrity_failure:
         level = "HIGH"
         action = "ISOLATE_SUSPECT_COMMUNICATION_PATH"
         soc_priority = "HIGH"
+
     elif sensor_disagreement:
         level = "MEDIUM"
         action = "QUARANTINE_SUSPECT_TELEMETRY_SOURCE"
         soc_priority = "MEDIUM"
+
     elif connectivity_degraded:
         level = "MEDIUM"
         action = "ENTER_LOCAL_RESILIENCE_MODE"
         soc_priority = "MEDIUM"
+
     else:
         level = "NORMAL"
         action = "CONTINUE_MONITORING"
@@ -174,10 +307,6 @@ def build_cortex_xdr_event(
     policy: dict[str, Any],
     record_hash: str,
 ) -> dict[str, Any]:
-    """Create a Cortex XDR-compatible research abstraction.
-
-    This does not require or claim access to a Cortex XDR tenant/API.
-    """
 
     return {
         "event_source": "EDGE_IOT_RESEARCH_SIMULATION",
@@ -189,10 +318,12 @@ def build_cortex_xdr_event(
         "severity": event["severity"],
         "connectivity_state": event["connectivity_state"],
         "integrity_status": event["integrity_status"],
-        "sensor_consistency_status": event[
-            "sensor_consistency_status"
+        "sensor_consistency_status": (
+            event["sensor_consistency_status"]
+        ),
+        "containment_level": policy[
+            "containment_level"
         ],
-        "containment_level": policy["containment_level"],
         "containment_recommendation": policy[
             "containment_recommendation"
         ],
@@ -203,6 +334,7 @@ def build_cortex_xdr_event(
 
 
 def create_synthetic_events() -> list[dict[str, Any]]:
+
     base_time = time.time()
 
     return [
@@ -258,16 +390,30 @@ def create_synthetic_events() -> list[dict[str, Any]]:
 
 
 def main() -> None:
-    EXPERIMENT_DIR.mkdir(parents=True, exist_ok=True)
-    SCHEMA_DIR.mkdir(parents=True, exist_ok=True)
 
-    buffer = TamperEvidentForensicBuffer(capacity=256)
+    EXPERIMENT_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    SCHEMA_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    buffer = TamperEvidentForensicBuffer(
+        capacity=256
+    )
 
     event_results = []
     cortex_events = []
 
     for event in create_synthetic_events():
-        policy = deterministic_containment_policy(event)
+
+        policy = deterministic_containment_policy(
+            event
+        )
+
         record = buffer.append(event)
 
         cortex_event = build_cortex_xdr_event(
@@ -276,37 +422,57 @@ def main() -> None:
             record.record_hash,
         )
 
-        event_results.append(
-            {
-                "event_id": event["event_id"],
-                "policy": policy,
-                "forensic_record_hash": record.record_hash,
-            }
-        )
+        event_results.append({
+            "event_id": event["event_id"],
+            "policy": policy,
+            "forensic_record_hash": (
+                record.record_hash
+            ),
+        })
 
         cortex_events.append(cortex_event)
 
-    integrity_before_sync = buffer.verify_integrity()
+    integrity_before_sync = (
+        buffer.verify_integrity()
+    )
 
-    # Simulate connectivity restoration and secure synchronization.
     connectivity_restored = True
+
     synchronized_records = []
 
-    if connectivity_restored and integrity_before_sync:
+    if (
+        connectivity_restored
+        and integrity_before_sync
+    ):
         synchronized_records = buffer.export()
 
-    integrity_after_sync = buffer.verify_integrity()
+    integrity_after_sync = (
+        buffer.verify_integrity()
+    )
 
     checks = {
-        "events_generated": len(event_results) == 4,
-        "forensic_buffer_nonempty": len(buffer.records) == 4,
-        "hash_chain_integrity_before_sync": integrity_before_sync,
-        "connectivity_restoration_detected": connectivity_restored,
-        "secure_sync_requires_integrity": (
-            integrity_before_sync and len(synchronized_records) == 4
+        "events_generated": (
+            len(event_results) == 4
         ),
-        "hash_chain_integrity_after_sync": integrity_after_sync,
-        "cortex_xdr_events_generated": len(cortex_events) == 4,
+        "forensic_buffer_nonempty": (
+            len(buffer.records) == 4
+        ),
+        "hash_chain_integrity_before_sync": (
+            integrity_before_sync
+        ),
+        "connectivity_restoration_detected": (
+            connectivity_restored
+        ),
+        "secure_sync_requires_integrity": (
+            integrity_before_sync
+            and len(synchronized_records) == 4
+        ),
+        "hash_chain_integrity_after_sync": (
+            integrity_after_sync
+        ),
+        "cortex_xdr_events_generated": (
+            len(cortex_events) == 4
+        ),
         "no_direct_vehicle_actuation": all(
             not item["direct_vehicle_actuation"]
             for item in cortex_events
@@ -319,11 +485,20 @@ def main() -> None:
 
     report = {
         "phase": "4.21",
-        "title": "Edge-IoT Local Containment and Tamper-Evident Forensic Buffer",
-        "status": "PASS" if all(checks.values()) else "FAIL",
+        "title": (
+            "Edge-IoT Local Containment and "
+            "Tamper-Evident Forensic Buffer"
+        ),
+        "status": (
+            "PASS"
+            if all(checks.values())
+            else "FAIL"
+        ),
         "research_simulation": True,
         "real_vehicle_actuation": False,
-        "cortex_xdr_integration_mode": "ABSTRACTION_ONLY",
+        "cortex_xdr_integration_mode": (
+            "ABSTRACTION_ONLY"
+        ),
         "architecture": [
             "Edge-IoT / ECU / CAN event observation",
             "Local deterministic containment recommendation",
@@ -339,11 +514,15 @@ def main() -> None:
         "checks": checks,
         "event_results": event_results,
         "cortex_xdr_events": cortex_events,
-        "synchronized_forensic_records": synchronized_records,
+        "synchronized_forensic_records": (
+            synchronized_records
+        ),
         "safety_boundary": (
-            "ML and this research simulation provide decision support, "
-            "warning, containment recommendation, and SOC prioritization. "
-            "No direct safety-critical vehicle actuation is performed."
+            "ML and this research simulation provide "
+            "decision support, warning, containment "
+            "recommendation, and SOC prioritization. "
+            "No direct safety-critical vehicle actuation "
+            "is performed."
         ),
         "limitations": [
             "Synthetic Edge-IoT/CAN events are used.",
@@ -352,14 +531,22 @@ def main() -> None:
             "Containment policy is deterministic engineering logic, "
             "not empirically validated vehicle control logic.",
         ],
+        "buffer_rollover_policy": (
+            "When the bounded forensic window reaches capacity, "
+            "the retained window is re-anchored at "
+            "ROLLING_GENESIS so its current contents remain "
+            "tamper-evident and independently verifiable."
+        ),
     }
 
     schema = {
-        "schema_name": "edge_iot_forensic_event",
-        "schema_version": "1.0",
+        "schema_name": (
+            "edge_iot_forensic_event"
+        ),
+        "schema_version": "1.1",
         "description": (
-            "Research schema for offline-first Edge-IoT forensic events "
-            "and Cortex XDR ingestion abstraction."
+            "Research schema for offline-first Edge-IoT "
+            "forensic events and Cortex XDR ingestion abstraction."
         ),
         "required_fields": [
             "event_id",
@@ -376,6 +563,9 @@ def main() -> None:
             "previous_hash",
             "record_hash",
         ],
+        "rolling_buffer_anchor": (
+            "ROLLING_GENESIS"
+        ),
         "safety_boundary": {
             "direct_vehicle_actuation": False,
             "purpose": [
@@ -388,12 +578,18 @@ def main() -> None:
     }
 
     REPORT_PATH.write_text(
-        json.dumps(report, indent=2),
+        json.dumps(
+            report,
+            indent=2,
+        ),
         encoding="utf-8",
     )
 
     SCHEMA_PATH.write_text(
-        json.dumps(schema, indent=2),
+        json.dumps(
+            schema,
+            indent=2,
+        ),
         encoding="utf-8",
     )
 
@@ -402,11 +598,26 @@ def main() -> None:
     print("=" * 72)
     print(f"Status: {report['status']}")
     print(f"Events: {len(event_results)}")
-    print(f"Forensic records: {len(synchronized_records)}")
-    print(f"Integrity before sync: {integrity_before_sync}")
-    print(f"Integrity after sync:  {integrity_after_sync}")
-    print(f"Cortex XDR abstractions: {len(cortex_events)}")
-    print(f"Direct vehicle actuation: {report['real_vehicle_actuation']}")
+    print(
+        f"Forensic records: "
+        f"{len(synchronized_records)}"
+    )
+    print(
+        f"Integrity before sync: "
+        f"{integrity_before_sync}"
+    )
+    print(
+        f"Integrity after sync:  "
+        f"{integrity_after_sync}"
+    )
+    print(
+        f"Cortex XDR abstractions: "
+        f"{len(cortex_events)}"
+    )
+    print(
+        f"Direct vehicle actuation: "
+        f"{report['real_vehicle_actuation']}"
+    )
     print()
     print(f"Report: {REPORT_PATH}")
     print(f"Schema: {SCHEMA_PATH}")

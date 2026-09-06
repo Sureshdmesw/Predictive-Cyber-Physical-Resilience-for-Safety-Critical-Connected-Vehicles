@@ -180,8 +180,8 @@
     "integrity_before_tampering": true,
     "integrity_after_tampering": false,
     "tamper_detected": true,
-    "original_record_hash": "c9fb393ed0cbd6155abb8c0496bdd844e5e935284c8bf11d8b4b3f146022f850",
-    "tampered_record_hash": "c9fb393ed0cbd6155abb8c0496bdd844e5e935284c8bf11d8b4b3f146022f850"
+    "original_record_hash": "f62be8c711977bd78f3266246d151cea36f6c2d46f6d571a2f898bd6b2cc8e53",
+    "tampered_record_hash": "f62be8c711977bd78f3266246d151cea36f6c2d46f6d571a2f898bd6b2cc8e53"
   },
   "gates": {
     "normal_operation_safe": true,
