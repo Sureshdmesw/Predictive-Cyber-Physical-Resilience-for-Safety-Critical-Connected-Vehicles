@@ -1,0 +1,214 @@
+{
+  "phase": "4.22",
+  "title": "Edge-IoT Attack and Telemetry Scenario Evaluation",
+  "status": "PASS",
+  "research_simulation": true,
+  "retraining_performed": false,
+  "scenario_count": 8,
+  "scenarios": [
+    {
+      "scenario": "NORMAL_CONNECTED",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "NORMAL",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "CONTINUE_MONITORING",
+        "ENTER_LOCAL_RESILIENCE_MODE",
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "ROUTINE",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    },
+    {
+      "scenario": "CONNECTIVITY_DEGRADATION",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "ENTER_LOCAL_RESILIENCE_MODE",
+        "ENTER_LOCAL_RESILIENCE_MODE",
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    },
+    {
+      "scenario": "CONNECTIVITY_LOSS",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "ENTER_LOCAL_RESILIENCE_MODE",
+        "ENTER_LOCAL_RESILIENCE_MODE",
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    },
+    {
+      "scenario": "MESSAGE_INTEGRITY_FAILURE",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "HIGH",
+        "HIGH",
+        "HIGH",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "HIGH",
+        "HIGH",
+        "HIGH",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    },
+    {
+      "scenario": "SENSOR_DISAGREEMENT",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    },
+    {
+      "scenario": "CYBER_CONNECTIVITY_COMBINATION",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "HIGH",
+        "HIGH",
+        "HIGH",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "HIGH",
+        "HIGH",
+        "HIGH",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    },
+    {
+      "scenario": "RECOVERY_AND_SYNCHRONIZATION",
+      "event_count": 4,
+      "integrity_valid": true,
+      "containment_levels": [
+        "NORMAL",
+        "NORMAL",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "containment_recommendations": [
+        "CONTINUE_MONITORING",
+        "CONTINUE_MONITORING",
+        "QUARANTINE_SUSPECT_TELEMETRY_SOURCE",
+        "ISOLATE_SUSPECT_COMMUNICATION_PATH"
+      ],
+      "soc_priorities": [
+        "ROUTINE",
+        "ROUTINE",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "direct_vehicle_actuation": false
+    }
+  ],
+  "forensic_tampering_test": {
+    "scenario": "FORENSIC_BUFFER_TAMPERING",
+    "integrity_before_tampering": true,
+    "integrity_after_tampering": false,
+    "tamper_detected": true,
+    "original_record_hash": "c9fb393ed0cbd6155abb8c0496bdd844e5e935284c8bf11d8b4b3f146022f850",
+    "tampered_record_hash": "c9fb393ed0cbd6155abb8c0496bdd844e5e935284c8bf11d8b4b3f146022f850"
+  },
+  "gates": {
+    "normal_operation_safe": true,
+    "connectivity_degradation_detected": true,
+    "connectivity_loss_detected": true,
+    "integrity_failure_escalates": true,
+    "sensor_disagreement_escalates": true,
+    "combined_attack_escalates": true,
+    "recovery_integrity_valid": true,
+    "forensic_tampering_detected": true,
+    "no_direct_vehicle_actuation": true
+  },
+  "architecture_under_test": [
+    "Edge-IoT / ECU / CAN observation",
+    "Local deterministic containment",
+    "Tamper-evident forensic buffer",
+    "Connectivity recovery",
+    "Integrity verification",
+    "Secure synchronization",
+    "Cortex XDR abstraction",
+    "SOC investigation"
+  ],
+  "safety_boundary": "This evaluation does not transmit CAN commands, control a vehicle, or perform safety-critical actuation. Containment is simulated deterministic policy logic.",
+  "limitations": [
+    "All attack and telemetry scenarios are synthetic.",
+    "No real vehicle or ECU is connected.",
+    "Cortex XDR remains an abstraction.",
+    "Results demonstrate software-policy behavior, not production vehicle safety validation."
+  ]
+}
