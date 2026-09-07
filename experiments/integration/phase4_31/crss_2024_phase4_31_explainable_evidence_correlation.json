@@ -1,0 +1,778 @@
+{
+  "phase": "4.31",
+  "title": "Predictive Resilience Explainability and Forensic Evidence Correlation",
+  "status": "PASS",
+  "research_simulation": true,
+  "retraining_performed": false,
+  "objective": [
+    "Explain predictive risk using explicit risk drivers.",
+    "Explain deterministic policy modifiers.",
+    "Correlate resilience decisions with forensic evidence.",
+    "Explain integrity verification outcomes.",
+    "Generate integrity-aware SOC investigation context.",
+    "Refuse trusted synchronization after evidence tampering.",
+    "Refuse SOC handoff after evidence tampering.",
+    "Preserve scientific and vehicle safety boundaries."
+  ],
+  "upstream_sources": {
+    "phase_20_status": "PASS",
+    "phase_21_status": "PASS",
+    "phase_27a_status": "PASS",
+    "phase_28a_status": "PASS",
+    "phase_28b_status": "PASS",
+    "phase_28c_status": "PASS",
+    "phase_29_status": "PASS",
+    "phase_30_status": "PASS"
+  },
+  "cases": [
+    {
+      "scenario": "normal_baseline",
+      "explanation": {
+        "explanation_id": "EXPLANATION-normal_baseline",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "CONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.02,
+          "risk_level": "NORMAL",
+          "uncertainty": 0.001,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          }
+        ],
+        "decision": {
+          "base_policy_level": "NORMAL",
+          "modifiers": [],
+          "final_policy_level": "NORMAL",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "PREDICTIVE_RISK",
+          "current_state": "SOC_HANDOFF",
+          "transition_reason": "Trusted evidence was available without a connectivity-loss recovery cycle."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-NORMAL_BASELINE-001",
+            "EXPLAIN-NORMAL_BASELINE-002",
+            "EXPLAIN-NORMAL_BASELINE-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "13030d5c6571ff59fb72c2c2b47b41821ecb41367841a0a873e969ff20382b4d"
+        },
+        "integrity": {
+          "payload_integrity": true,
+          "record_integrity": true,
+          "chain_integrity": true,
+          "trusted_synchronization": true,
+          "soc_handoff_allowed": true
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "LOW",
+          "investigation_reason": "Correlate predictive risk, resilience state, and verified forensic evidence.",
+          "recommended_checks": [
+            "Correlate predictive risk with forensic event IDs.",
+            "Verify ECU and CAN identifiers.",
+            "Review connectivity transition timeline."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-NORMAL_BASELINE-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"PASS\"}",
+          "payload_hash": "5075b9a0cf57940782cb9796ed5c6c17cedc72f47fd1557f2f3585c4f17c9c1e",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "7721b605c41359a64d99bf7e0ebe44df2bb8aea802b3dd6329d6224fb1f1f025"
+        },
+        {
+          "event_id": "EXPLAIN-NORMAL_BASELINE-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"PASS\"}",
+          "payload_hash": "c7f4c9451f2fd43b14f03d7e8f88782309d175f407543d57050a6104b8888616",
+          "previous_hash": "7721b605c41359a64d99bf7e0ebe44df2bb8aea802b3dd6329d6224fb1f1f025",
+          "record_hash": "ed5a68b1681cb8ef2379949d1c4d802d9cac98371dfb6bfe5736f2e3d1d81cef"
+        },
+        {
+          "event_id": "EXPLAIN-NORMAL_BASELINE-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "ed5a68b1681cb8ef2379949d1c4d802d9cac98371dfb6bfe5736f2e3d1d81cef",
+          "record_hash": "c7995adc71ffbb4c6910a2f77d92326b5900ed977dcefd0de616e8a46734e231"
+        }
+      ]
+    },
+    {
+      "scenario": "predictive_medium",
+      "explanation": {
+        "explanation_id": "EXPLANATION-predictive_medium",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "CONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.31,
+          "risk_level": "MEDIUM",
+          "uncertainty": 0.02,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          }
+        ],
+        "decision": {
+          "base_policy_level": "MEDIUM",
+          "modifiers": [],
+          "final_policy_level": "MEDIUM",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "PREDICTIVE_RISK",
+          "current_state": "SOC_HANDOFF",
+          "transition_reason": "Trusted evidence was available without a connectivity-loss recovery cycle."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-PREDICTIVE_MEDIUM-001",
+            "EXPLAIN-PREDICTIVE_MEDIUM-002",
+            "EXPLAIN-PREDICTIVE_MEDIUM-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "646dbfb52c3c06e79499ac35c1ddbecb118281fa720bfcb100a74241f495e91b"
+        },
+        "integrity": {
+          "payload_integrity": true,
+          "record_integrity": true,
+          "chain_integrity": true,
+          "trusted_synchronization": true,
+          "soc_handoff_allowed": true
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "MEDIUM",
+          "investigation_reason": "Correlate predictive risk, resilience state, and verified forensic evidence.",
+          "recommended_checks": [
+            "Correlate predictive risk with forensic event IDs.",
+            "Verify ECU and CAN identifiers.",
+            "Review connectivity transition timeline."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-PREDICTIVE_MEDIUM-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"PASS\"}",
+          "payload_hash": "5075b9a0cf57940782cb9796ed5c6c17cedc72f47fd1557f2f3585c4f17c9c1e",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "20a3dd8e960561737029e7b80aeabb4c82589bd2fd96bd29f3fa8168a364f4a5"
+        },
+        {
+          "event_id": "EXPLAIN-PREDICTIVE_MEDIUM-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"PASS\"}",
+          "payload_hash": "c7f4c9451f2fd43b14f03d7e8f88782309d175f407543d57050a6104b8888616",
+          "previous_hash": "20a3dd8e960561737029e7b80aeabb4c82589bd2fd96bd29f3fa8168a364f4a5",
+          "record_hash": "7a18f651dd688d0d97af1f3315ec9956c6e5da07bf9cf0f58738101c92a1902c"
+        },
+        {
+          "event_id": "EXPLAIN-PREDICTIVE_MEDIUM-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "7a18f651dd688d0d97af1f3315ec9956c6e5da07bf9cf0f58738101c92a1902c",
+          "record_hash": "79cf0e7f1447f3f752001bff28b256b3c7f71250ca34b289dfd5393e47f97713"
+        }
+      ]
+    },
+    {
+      "scenario": "connectivity_degraded",
+      "explanation": {
+        "explanation_id": "EXPLANATION-connectivity_degraded",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "DISCONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.1,
+          "risk_level": "LOW",
+          "uncertainty": 0.01,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          },
+          {
+            "feature": "connectivity_degradation_rate",
+            "value": "DEGRADED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.25
+          }
+        ],
+        "decision": {
+          "base_policy_level": "LOW",
+          "modifiers": [
+            "connectivity_degraded"
+          ],
+          "final_policy_level": "MEDIUM",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "INTEGRITY_VERIFICATION",
+          "current_state": "SOC_HANDOFF",
+          "transition_reason": "Evidence integrity was verified after connectivity recovery."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-CONNECTIVITY_DEGRADED-001",
+            "EXPLAIN-CONNECTIVITY_DEGRADED-002",
+            "EXPLAIN-CONNECTIVITY_DEGRADED-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "1b07cd5d09a5dde549b2e0099054d0fe53c17493fbeda629baf00550da394f22"
+        },
+        "integrity": {
+          "payload_integrity": true,
+          "record_integrity": true,
+          "chain_integrity": true,
+          "trusted_synchronization": true,
+          "soc_handoff_allowed": true
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "MEDIUM",
+          "investigation_reason": "Correlate predictive risk, resilience state, and verified forensic evidence.",
+          "recommended_checks": [
+            "Correlate predictive risk with forensic event IDs.",
+            "Verify ECU and CAN identifiers.",
+            "Review connectivity transition timeline."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-CONNECTIVITY_DEGRADED-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"PASS\"}",
+          "payload_hash": "5075b9a0cf57940782cb9796ed5c6c17cedc72f47fd1557f2f3585c4f17c9c1e",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "3c4871c8bb65c4e6464eb27f81a7404bc2c2c17715b657ec292ecb40b60575b1"
+        },
+        {
+          "event_id": "EXPLAIN-CONNECTIVITY_DEGRADED-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"PASS\"}",
+          "payload_hash": "c7f4c9451f2fd43b14f03d7e8f88782309d175f407543d57050a6104b8888616",
+          "previous_hash": "3c4871c8bb65c4e6464eb27f81a7404bc2c2c17715b657ec292ecb40b60575b1",
+          "record_hash": "25901772abd030655972a64a5d81608ba61d5fff99a94db3c0fc20b557b5b4c1"
+        },
+        {
+          "event_id": "EXPLAIN-CONNECTIVITY_DEGRADED-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "25901772abd030655972a64a5d81608ba61d5fff99a94db3c0fc20b557b5b4c1",
+          "record_hash": "72dc42b3ee0bd245572d7312f1b7d1c8e8e6a73d0ee9ee8b93d8ef9396734502"
+        }
+      ]
+    },
+    {
+      "scenario": "sensor_disagreement",
+      "explanation": {
+        "explanation_id": "EXPLANATION-sensor_disagreement",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "CONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.12,
+          "risk_level": "LOW",
+          "uncertainty": 0.015,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          },
+          {
+            "feature": "sensor_disagreement",
+            "value": "ELEVATED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.2
+          }
+        ],
+        "decision": {
+          "base_policy_level": "LOW",
+          "modifiers": [
+            "sensor_disagreement"
+          ],
+          "final_policy_level": "MEDIUM",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "PREDICTIVE_RISK",
+          "current_state": "SOC_HANDOFF",
+          "transition_reason": "Trusted evidence was available without a connectivity-loss recovery cycle."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-SENSOR_DISAGREEMENT-001",
+            "EXPLAIN-SENSOR_DISAGREEMENT-002",
+            "EXPLAIN-SENSOR_DISAGREEMENT-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "1e3a34a19c263800079712bbb83b0efafa095a087bf3f0445cec6402f3a88af6"
+        },
+        "integrity": {
+          "payload_integrity": true,
+          "record_integrity": true,
+          "chain_integrity": true,
+          "trusted_synchronization": true,
+          "soc_handoff_allowed": true
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "MEDIUM",
+          "investigation_reason": "Correlate predictive risk, resilience state, and verified forensic evidence.",
+          "recommended_checks": [
+            "Correlate predictive risk with forensic event IDs.",
+            "Verify ECU and CAN identifiers.",
+            "Review connectivity transition timeline.",
+            "Compare redundant sensor measurements and timing."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-SENSOR_DISAGREEMENT-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"PASS\"}",
+          "payload_hash": "5075b9a0cf57940782cb9796ed5c6c17cedc72f47fd1557f2f3585c4f17c9c1e",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "78be207d55aa3c9cba61fa23963eb46cb25abe3235279c1597609a6667ebe174"
+        },
+        {
+          "event_id": "EXPLAIN-SENSOR_DISAGREEMENT-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"PASS\"}",
+          "payload_hash": "c7f4c9451f2fd43b14f03d7e8f88782309d175f407543d57050a6104b8888616",
+          "previous_hash": "78be207d55aa3c9cba61fa23963eb46cb25abe3235279c1597609a6667ebe174",
+          "record_hash": "c6bbe05b83fe4de5746612ca336d9125a901ce8673cc99a2b48f654f6d3975f0"
+        },
+        {
+          "event_id": "EXPLAIN-SENSOR_DISAGREEMENT-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "c6bbe05b83fe4de5746612ca336d9125a901ce8673cc99a2b48f654f6d3975f0",
+          "record_hash": "c65bb6c2b71c86f79dbf9d67871428e3bdcb10e6e35b46adfc982693a32bab14"
+        }
+      ]
+    },
+    {
+      "scenario": "integrity_failure",
+      "explanation": {
+        "explanation_id": "EXPLANATION-integrity_failure",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "DISCONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.18,
+          "risk_level": "LOW",
+          "uncertainty": 0.02,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          },
+          {
+            "feature": "message_integrity_failure",
+            "value": "FAIL",
+            "direction": "INCREASE_RISK",
+            "importance": 0.35
+          },
+          {
+            "feature": "connectivity_degradation_rate",
+            "value": "DEGRADED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.25
+          }
+        ],
+        "decision": {
+          "base_policy_level": "LOW",
+          "modifiers": [
+            "connectivity_degraded",
+            "integrity_failure"
+          ],
+          "final_policy_level": "HIGH",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "INTEGRITY_VERIFICATION",
+          "current_state": "UNVERIFIED_EVIDENCE",
+          "transition_reason": "Integrity verification failed; evidence cannot enter trusted synchronization."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-INTEGRITY_FAILURE-001",
+            "EXPLAIN-INTEGRITY_FAILURE-002",
+            "EXPLAIN-INTEGRITY_FAILURE-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "18acd66d07cb69a74728b2766767357993777d616084bfc7432a2612e139e430"
+        },
+        "integrity": {
+          "payload_integrity": false,
+          "record_integrity": false,
+          "chain_integrity": false,
+          "trusted_synchronization": false,
+          "soc_handoff_allowed": false
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "HOLD_UNVERIFIED",
+          "investigation_reason": "Evidence integrity failed. Preserve the evidence as unverified and prevent trusted synchronization or SOC handoff.",
+          "recommended_checks": [
+            "Verify payload hashes.",
+            "Verify record hashes.",
+            "Verify forensic hash-chain continuity.",
+            "Preserve the original unverified evidence.",
+            "Investigate possible unauthorized modification."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-INTEGRITY_FAILURE-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"FAIL\"}",
+          "payload_hash": "3dd67c0fe8ac2382e307daea76130c881c6e56fec4b2c9350c3d986ee525ce57",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "b7e03a2a629955b31ee62bdd0c20fd35a0fcf18aaf6c706ae3f37560fe7fa557"
+        },
+        {
+          "event_id": "EXPLAIN-INTEGRITY_FAILURE-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"UNAUTHORIZED_MODIFICATION\"}",
+          "payload_hash": "0d476c3fe56829b7a54a72b07a838ff0cc89da42301f911255cc5e197f3d8825",
+          "previous_hash": "b7e03a2a629955b31ee62bdd0c20fd35a0fcf18aaf6c706ae3f37560fe7fa557",
+          "record_hash": "b465a6b5f745ed3c024ba4834356438120c93490731784aa2852508add3ccf1a"
+        },
+        {
+          "event_id": "EXPLAIN-INTEGRITY_FAILURE-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "b465a6b5f745ed3c024ba4834356438120c93490731784aa2852508add3ccf1a",
+          "record_hash": "7d62049990e2a34ae82cebe39d738667250cdedbc4cae0b2615a6defaf509f14"
+        }
+      ]
+    },
+    {
+      "scenario": "compound_high_risk",
+      "explanation": {
+        "explanation_id": "EXPLANATION-compound_high_risk",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "DISCONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.72,
+          "risk_level": "HIGH",
+          "uncertainty": 0.08,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          },
+          {
+            "feature": "connectivity_degradation_rate",
+            "value": "DEGRADED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.25
+          },
+          {
+            "feature": "sensor_disagreement",
+            "value": "ELEVATED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.2
+          }
+        ],
+        "decision": {
+          "base_policy_level": "HIGH",
+          "modifiers": [
+            "connectivity_degraded",
+            "sensor_disagreement"
+          ],
+          "final_policy_level": "HIGH",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "INTEGRITY_VERIFICATION",
+          "current_state": "SOC_HANDOFF",
+          "transition_reason": "Evidence integrity was verified after connectivity recovery."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-COMPOUND_HIGH_RISK-001",
+            "EXPLAIN-COMPOUND_HIGH_RISK-002",
+            "EXPLAIN-COMPOUND_HIGH_RISK-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "04e6859ccc99ea378417be8870166b4b12ec85c4d37370d4040fc111fbd6b30e"
+        },
+        "integrity": {
+          "payload_integrity": true,
+          "record_integrity": true,
+          "chain_integrity": true,
+          "trusted_synchronization": true,
+          "soc_handoff_allowed": true
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "HIGH",
+          "investigation_reason": "Correlate predictive risk, resilience state, and verified forensic evidence.",
+          "recommended_checks": [
+            "Correlate predictive risk with forensic event IDs.",
+            "Verify ECU and CAN identifiers.",
+            "Review connectivity transition timeline.",
+            "Compare redundant sensor measurements and timing."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-COMPOUND_HIGH_RISK-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"PASS\"}",
+          "payload_hash": "5075b9a0cf57940782cb9796ed5c6c17cedc72f47fd1557f2f3585c4f17c9c1e",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "cad70fb558932ad99f620fec28468724550946c0f928b91cb9e6f9db6ca51888"
+        },
+        {
+          "event_id": "EXPLAIN-COMPOUND_HIGH_RISK-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"PASS\"}",
+          "payload_hash": "c7f4c9451f2fd43b14f03d7e8f88782309d175f407543d57050a6104b8888616",
+          "previous_hash": "cad70fb558932ad99f620fec28468724550946c0f928b91cb9e6f9db6ca51888",
+          "record_hash": "1d51fd2f398ea0ba37ac5b8f3c9e878b4e6af58d18c22d0116e7bfa33f78517d"
+        },
+        {
+          "event_id": "EXPLAIN-COMPOUND_HIGH_RISK-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "1d51fd2f398ea0ba37ac5b8f3c9e878b4e6af58d18c22d0116e7bfa33f78517d",
+          "record_hash": "2f39d66b7797ad6fcd8ee0fba046c3417d0c1c304e172356e747fb6754f9a26a"
+        }
+      ]
+    },
+    {
+      "scenario": "compound_tampered_evidence",
+      "explanation": {
+        "explanation_id": "EXPLANATION-compound_tampered_evidence",
+        "timestamp": "2026-09-07T07:59:44.754140+00:00",
+        "vehicle_context": {
+          "vehicle_id": "RESEARCH-VEHICLE-001",
+          "ecu_id": "ECU-1",
+          "connectivity_state": "DISCONNECTED"
+        },
+        "prediction": {
+          "risk_probability": 0.72,
+          "risk_level": "HIGH",
+          "uncertainty": 0.08,
+          "horizon": "Y6"
+        },
+        "risk_drivers": [
+          {
+            "feature": "predictive_risk_probability",
+            "value": 0.72,
+            "direction": "INCREASE_RISK",
+            "importance": 0.4
+          },
+          {
+            "feature": "message_integrity_failure",
+            "value": "FAIL",
+            "direction": "INCREASE_RISK",
+            "importance": 0.35
+          },
+          {
+            "feature": "connectivity_degradation_rate",
+            "value": "DEGRADED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.25
+          },
+          {
+            "feature": "sensor_disagreement",
+            "value": "ELEVATED",
+            "direction": "INCREASE_RISK",
+            "importance": 0.2
+          }
+        ],
+        "decision": {
+          "base_policy_level": "HIGH",
+          "modifiers": [
+            "connectivity_degraded",
+            "sensor_disagreement",
+            "integrity_failure"
+          ],
+          "final_policy_level": "HIGH",
+          "reason": "Base predictive risk was evaluated first; deterministic safety modifiers then applied minimum policy levels."
+        },
+        "resilience_state": {
+          "previous_state": "INTEGRITY_VERIFICATION",
+          "current_state": "UNVERIFIED_EVIDENCE",
+          "transition_reason": "Integrity verification failed; evidence cannot enter trusted synchronization."
+        },
+        "forensic_evidence": {
+          "event_ids": [
+            "EXPLAIN-COMPOUND_TAMPERED_EVIDENCE-001",
+            "EXPLAIN-COMPOUND_TAMPERED_EVIDENCE-002",
+            "EXPLAIN-COMPOUND_TAMPERED_EVIDENCE-003"
+          ],
+          "event_count": 3,
+          "evidence_digest": "89954d13e03a318413e94d8ba0b6fc1ced87f56f93417bd5b6740583d5cc3e0e"
+        },
+        "integrity": {
+          "payload_integrity": false,
+          "record_integrity": false,
+          "chain_integrity": false,
+          "trusted_synchronization": false,
+          "soc_handoff_allowed": false
+        },
+        "soc_investigation": {
+          "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+          "priority": "HOLD_UNVERIFIED",
+          "investigation_reason": "Evidence integrity failed. Preserve the evidence as unverified and prevent trusted synchronization or SOC handoff.",
+          "recommended_checks": [
+            "Verify payload hashes.",
+            "Verify record hashes.",
+            "Verify forensic hash-chain continuity.",
+            "Preserve the original unverified evidence.",
+            "Investigate possible unauthorized modification."
+          ]
+        },
+        "safety_boundary": {
+          "direct_vehicle_actuation": false,
+          "live_cortex_xdr_api_used": false,
+          "real_world_cyberattack_performance_claim": false
+        }
+      },
+      "forensic_records": [
+        {
+          "event_id": "EXPLAIN-COMPOUND_TAMPERED_EVIDENCE-001",
+          "payload": "{\"can_id\": \"0x100\", \"ecu_id\": \"ECU-1\", \"signal\": \"message_integrity\", \"status\": \"FAIL\"}",
+          "payload_hash": "3dd67c0fe8ac2382e307daea76130c881c6e56fec4b2c9350c3d986ee525ce57",
+          "previous_hash": "ROLLING_GENESIS",
+          "record_hash": "dcf0ea4d3ebd9f4798f1583267bf176553e52879baeda9def88ad562b6e455f7"
+        },
+        {
+          "event_id": "EXPLAIN-COMPOUND_TAMPERED_EVIDENCE-002",
+          "payload": "{\"can_id\": \"0x101\", \"ecu_id\": \"ECU-2\", \"signal\": \"sensor_consistency\", \"status\": \"UNAUTHORIZED_MODIFICATION\"}",
+          "payload_hash": "0d476c3fe56829b7a54a72b07a838ff0cc89da42301f911255cc5e197f3d8825",
+          "previous_hash": "dcf0ea4d3ebd9f4798f1583267bf176553e52879baeda9def88ad562b6e455f7",
+          "record_hash": "2114489a915d0639ee247194819ba0541e1b18a2c4acf855a9d9ab95ed5a6bd6"
+        },
+        {
+          "event_id": "EXPLAIN-COMPOUND_TAMPERED_EVIDENCE-003",
+          "payload": "{\"can_id\": \"0x102\", \"ecu_id\": \"ECU-3\", \"signal\": \"connectivity\", \"status\": \"DEGRADED\"}",
+          "payload_hash": "2c39ad8e5688d9af3d960ec084f00431ba726d6558e771e10c93da9be769a2ac",
+          "previous_hash": "2114489a915d0639ee247194819ba0541e1b18a2c4acf855a9d9ab95ed5a6bd6",
+          "record_hash": "bbe6de4bd99ca9a49f722f5ee19633d9b74d9410c6af0a2c1ed8494f24bb833f"
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "phase_20_source_pass": true,
+    "phase_21_source_pass": true,
+    "phase_27a_source_pass": true,
+    "phase_28a_source_pass": true,
+    "phase_28b_source_pass": true,
+    "phase_28c_source_pass": true,
+    "phase_29_source_pass": true,
+    "phase_30_source_pass": true,
+    "schema_has_required_fields": true,
+    "all_explanation_cases_generated": true,
+    "risk_levels_are_deterministic": true,
+    "risk_drivers_present_when_expected": true,
+    "driver_importance_sorted": true,
+    "connectivity_modifier_explained": true,
+    "sensor_modifier_explained": true,
+    "integrity_modifier_explained": true,
+    "forensic_event_correlation_present": true,
+    "clean_evidence_chain_valid": true,
+    "integrity_failure_refuses_sync": true,
+    "integrity_failure_refuses_soc": true,
+    "tampered_evidence_explained": true,
+    "tampered_evidence_preserved": true,
+    "soc_investigation_context_present": true,
+    "evidence_digest_present": true,
+    "direct_vehicle_actuation_disabled": true,
+    "live_cortex_xdr_api_claim_disabled": true,
+    "real_attack_claim_disabled": true,
+    "explanation_digest_stable": true
+  },
+  "gate_count": 28,
+  "gates_passed": 28,
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_api_used": false,
+    "real_world_cyberattack_performance_claim": false
+  },
+  "evidence_digest": "9bfa85d5d3949cb0584f2d46720ae2ebd7abeab9b0434c91e22ad54eeabf26be"
+}

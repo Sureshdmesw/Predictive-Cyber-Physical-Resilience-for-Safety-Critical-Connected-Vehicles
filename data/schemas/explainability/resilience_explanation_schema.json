@@ -1,0 +1,235 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Predictive Resilience Explanation Event",
+  "type": "object",
+  "required": [
+    "explanation_id",
+    "timestamp",
+    "vehicle_context",
+    "prediction",
+    "risk_drivers",
+    "decision",
+    "resilience_state",
+    "forensic_evidence",
+    "integrity",
+    "soc_investigation",
+    "safety_boundary"
+  ],
+  "properties": {
+    "explanation_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "vehicle_context": {
+      "type": "object",
+      "required": [
+        "vehicle_id",
+        "ecu_id",
+        "connectivity_state"
+      ],
+      "properties": {
+        "vehicle_id": {
+          "type": "string"
+        },
+        "ecu_id": {
+          "type": "string"
+        },
+        "connectivity_state": {
+          "type": "string"
+        }
+      }
+    },
+    "prediction": {
+      "type": "object",
+      "required": [
+        "risk_probability",
+        "risk_level",
+        "uncertainty",
+        "horizon"
+      ],
+      "properties": {
+        "risk_probability": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "risk_level": {
+          "type": "string"
+        },
+        "uncertainty": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "horizon": {
+          "type": "string"
+        }
+      }
+    },
+    "risk_drivers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "feature",
+          "value",
+          "direction",
+          "importance"
+        ],
+        "properties": {
+          "feature": {
+            "type": "string"
+          },
+          "value": {},
+          "direction": {
+            "type": "string"
+          },
+          "importance": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "required": [
+        "base_policy_level",
+        "modifiers",
+        "final_policy_level",
+        "reason"
+      ],
+      "properties": {
+        "base_policy_level": {
+          "type": "string"
+        },
+        "modifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "final_policy_level": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "resilience_state": {
+      "type": "object",
+      "required": [
+        "previous_state",
+        "current_state",
+        "transition_reason"
+      ],
+      "properties": {
+        "previous_state": {
+          "type": "string"
+        },
+        "current_state": {
+          "type": "string"
+        },
+        "transition_reason": {
+          "type": "string"
+        }
+      }
+    },
+    "forensic_evidence": {
+      "type": "object",
+      "required": [
+        "event_ids",
+        "event_count",
+        "evidence_digest"
+      ],
+      "properties": {
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "event_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidence_digest": {
+          "type": "string"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": [
+        "payload_integrity",
+        "record_integrity",
+        "chain_integrity",
+        "trusted_synchronization",
+        "soc_handoff_allowed"
+      ],
+      "properties": {
+        "payload_integrity": {
+          "type": "boolean"
+        },
+        "record_integrity": {
+          "type": "boolean"
+        },
+        "chain_integrity": {
+          "type": "boolean"
+        },
+        "trusted_synchronization": {
+          "type": "boolean"
+        },
+        "soc_handoff_allowed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "soc_investigation": {
+      "type": "object",
+      "required": [
+        "event_type",
+        "priority",
+        "investigation_reason",
+        "recommended_checks"
+      ],
+      "properties": {
+        "event_type": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string"
+        },
+        "investigation_reason": {
+          "type": "string"
+        },
+        "recommended_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "safety_boundary": {
+      "type": "object",
+      "required": [
+        "direct_vehicle_actuation",
+        "live_cortex_xdr_api_used",
+        "real_world_cyberattack_performance_claim"
+      ],
+      "properties": {
+        "direct_vehicle_actuation": {
+          "const": false
+        },
+        "live_cortex_xdr_api_used": {
+          "const": false
+        },
+        "real_world_cyberattack_performance_claim": {
+          "const": false
+        }
+      }
+    }
+  }
+}
