@@ -1,0 +1,504 @@
+{
+  "phase": "4.27B",
+  "title": "OOD and Regime-Aware Uncertainty Analysis",
+  "status": "FAIL",
+  "method": {
+    "ensemble": "3-member temporal Transformer deep ensemble",
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "ood_detector": "IncrementalPCA(32) + Ledoit-Wolf Mahalanobis distance",
+    "reference_training_sequences": 100000,
+    "temporal_summary_dimensions": 472,
+    "pca_dimensions": 32,
+    "ood_threshold_quantile": 0.99,
+    "uncertainty_threshold_quantile": 0.9
+  },
+  "feature_partition": {
+    "total": 59,
+    "cyber": 34,
+    "physical": 12,
+    "derived": 13,
+    "feature_names": [
+      "VISION",
+      "WEATHER",
+      "authentication_failure_rate",
+      "can_bus_count",
+      "can_bus_load_pct",
+      "can_interarrival_jitter_ms",
+      "can_interarrival_mean_ms",
+      "can_message_rate",
+      "can_message_rate_deviation",
+      "collision_event_flag",
+      "connectivity_degradation_rate",
+      "connectivity_drop_rate",
+      "cyber_instability_index",
+      "d1_authentication_failure_rate",
+      "d1_can_bus_load_pct",
+      "d1_can_interarrival_jitter_ms",
+      "d1_can_message_rate",
+      "d1_connectivity_drop_rate",
+      "d1_latency_jitter_ms",
+      "d1_latency_ms",
+      "d1_message_integrity_failure_rate",
+      "d1_packet_loss_rate",
+      "d1_replay_indicator_rate",
+      "d1_sensor_disagreement_rate",
+      "d1_sequence_counter_anomaly_rate",
+      "d1_telemetry_gap_duration_ms",
+      "diagnostic_event_rate",
+      "ecu_count",
+      "ecu_state_transition_rate",
+      "fire_explosion_flag",
+      "latency_jitter_ms",
+      "latency_ms",
+      "message_integrity_failure_rate",
+      "packet_loss_rate",
+      "redundant_sensor_divergence",
+      "replay_indicator_rate",
+      "resilience_degradation_rate",
+      "rolling_mean_3_latency_ms",
+      "rolling_mean_3_message_integrity_failure_rate",
+      "rolling_mean_3_packet_loss_rate",
+      "rolling_mean_3_sensor_disagreement_rate",
+      "rolling_std_3_latency_ms",
+      "rolling_std_3_message_integrity_failure_rate",
+      "rolling_std_3_packet_loss_rate",
+      "rolling_std_3_sensor_disagreement_rate",
+      "rollover_flag",
+      "rssi_dbm",
+      "safety_critical_ecu_ratio",
+      "sensor_disagreement_rate",
+      "sensor_plausibility_score",
+      "sequence_counter_anomaly_rate",
+      "speed_limit_deviation",
+      "speed_limit_deviation_abs",
+      "speed_over_limit_flag",
+      "state_transition_magnitude",
+      "telemetry_gap_duration_ms",
+      "uds_request_rate",
+      "unexpected_source_id_rate",
+      "vehicle_damage_flag"
+    ]
+  },
+  "ood_threshold": 60.09089357528251,
+  "validation_ood_results": {
+    "cyber_noise_10pct": {
+      "ood_auc": 0.9989424999999998,
+      "shifted_ood_detection_rate": 1.0,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 1070.7839539836614,
+      "shifted_p95_distance": 2059.486071263679
+    },
+    "physical_noise_10pct": {
+      "ood_auc": 0.560663665,
+      "shifted_ood_detection_rate": 0.0099,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 18.95557281155356,
+      "shifted_p95_distance": 41.01740957390341
+    },
+    "combined_noise_10pct": {
+      "ood_auc": 0.99896301,
+      "shifted_ood_detection_rate": 1.0,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 1073.8446639339002,
+      "shifted_p95_distance": 2031.6770865981282
+    },
+    "temporal_mask_2": {
+      "ood_auc": 0.49998149625,
+      "shifted_ood_detection_rate": 0.0097,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 15.832484682276982,
+      "shifted_p95_distance": 39.78948994795131
+    },
+    "cyber_shift_1sigma": {
+      "ood_auc": 1.0,
+      "shifted_ood_detection_rate": 1.0,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 9661.310103952288,
+      "shifted_p95_distance": 9732.564163455723
+    },
+    "physical_shift_1sigma": {
+      "ood_auc": 0.9961927549999999,
+      "shifted_ood_detection_rate": 1.0,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 459.602220059984,
+      "shifted_p95_distance": 507.63238803090496
+    },
+    "combined_shift_1sigma": {
+      "ood_auc": 1.0,
+      "shifted_ood_detection_rate": 1.0,
+      "clean_mean_distance": 17.86814578203162,
+      "shifted_mean_distance": 10749.465914952343,
+      "shifted_p95_distance": 10838.13190845431
+    }
+  },
+  "test_regime_results": {
+    "clean": {
+      "pr_auc": 0.9707017640136817,
+      "roc_auc": 0.9975927668482084,
+      "brier": 0.002395092975348234,
+      "mean_risk": 0.014994227327406406,
+      "risk_p95": 0.0018376795342192054,
+      "mean_ensemble_variance": 8.524271106580272e-05,
+      "p90_uncertainty_threshold": 4.181994199825567e-07,
+      "high_uncertainty_rate": 0.1000302552920679,
+      "mean_predictive_entropy": 0.007309221662580967,
+      "mean_ood_distance": 22.613796192658384,
+      "ood_p95_distance": 41.952962849149465,
+      "ood_rate": 0.02414163649831509,
+      "error_rate": 0.002576916255438128
+    },
+    "cyber_noise_10pct": {
+      "pr_auc": 0.08126182711745636,
+      "roc_auc": 0.8072053478630635,
+      "brier": 0.12710332870483398,
+      "mean_risk": 0.28079500794410706,
+      "risk_p95": 0.7518126368522644,
+      "mean_ensemble_variance": 0.02755308710038662,
+      "p90_uncertainty_threshold": 0.07537370175123215,
+      "high_uncertainty_rate": 0.10000938957340039,
+      "mean_predictive_entropy": 0.4644859731197357,
+      "mean_ood_distance": 1072.2740485235322,
+      "ood_p95_distance": 2039.0119581665688,
+      "ood_rate": 1.0,
+      "error_rate": 0.165016536082044
+    },
+    "physical_noise_10pct": {
+      "pr_auc": 0.968615010208978,
+      "roc_auc": 0.9973295246909972,
+      "brier": 0.0024484724272042513,
+      "mean_risk": 0.015538091771304607,
+      "risk_p95": 0.0033239948097616434,
+      "mean_ensemble_variance": 0.00011021735554095358,
+      "p90_uncertainty_threshold": 1.2583078614625265e-06,
+      "high_uncertainty_rate": 0.10000938957340039,
+      "mean_predictive_entropy": 0.010264883749186993,
+      "mean_ood_distance": 23.69594109822315,
+      "ood_p95_distance": 43.334492558244484,
+      "ood_rate": 0.02459024944966667,
+      "error_rate": 0.0026082148334394006
+    },
+    "combined_noise_10pct": {
+      "pr_auc": 0.09921945459660811,
+      "roc_auc": 0.8166221016363868,
+      "brier": 0.12823708355426788,
+      "mean_risk": 0.2844674289226532,
+      "risk_p95": 0.7491703033447266,
+      "mean_ensemble_variance": 0.02659584954380989,
+      "p90_uncertainty_threshold": 0.07222449779510498,
+      "high_uncertainty_rate": 0.10000938957340039,
+      "mean_predictive_entropy": 0.4699317514896393,
+      "mean_ood_distance": 1074.813095799773,
+      "ood_p95_distance": 2045.1354720120944,
+      "ood_rate": 1.0,
+      "error_rate": 0.16661276356010893
+    },
+    "temporal_mask_2": {
+      "pr_auc": 0.9305408821769476,
+      "roc_auc": 0.991977161666296,
+      "brier": 0.005411804653704166,
+      "mean_risk": 0.01708108000457287,
+      "risk_p95": 0.0018329197773709893,
+      "mean_ensemble_variance": 5.486926238518208e-05,
+      "p90_uncertainty_threshold": 4.1758593738450145e-07,
+      "high_uncertainty_rate": 0.10006155387006917,
+      "mean_predictive_entropy": 0.007043300662189722,
+      "mean_ood_distance": 17.72956917021583,
+      "ood_p95_distance": 41.768420083513625,
+      "ood_rate": 0.022660170472921515,
+      "error_rate": 0.005644176899562863
+    },
+    "combined_shift_1sigma": {
+      "pr_auc": 0.010731338310197045,
+      "roc_auc": 0.06763529398851802,
+      "brier": 0.7994507551193237,
+      "mean_risk": 0.8993479013442993,
+      "risk_p95": 0.9001488089561462,
+      "mean_ensemble_variance": 0.0029773013666272163,
+      "p90_uncertainty_threshold": 0.003037978196516633,
+      "high_uncertainty_rate": 0.10004068815140166,
+      "mean_predictive_entropy": 0.3265073001384735,
+      "mean_ood_distance": 10758.357258711088,
+      "ood_p95_distance": 10847.756487609273,
+      "ood_rate": 1.0,
+      "error_rate": 0.9881378389375176
+    }
+  },
+  "risk_uncertainty_ood_matrix": {
+    "clean": {
+      "risk_LOW__unc_LOW__ood_IN": {
+        "count": 84917,
+        "rate": 0.8859271160446943,
+        "error_rate": 8.24334350012365e-05
+      },
+      "risk_LOW__unc_LOW__ood_OUT": {
+        "count": 336,
+        "rate": 0.0035054407361425548,
+        "error_rate": 0.0
+      },
+      "risk_LOW__unc_HIGH__ood_IN": {
+        "count": 8575,
+        "rate": 0.08946176878697144,
+        "error_rate": 0.0008163265306122449
+      },
+      "risk_LOW__unc_HIGH__ood_OUT": {
+        "count": 675,
+        "rate": 0.007042180050286382,
+        "error_rate": 0.005925925925925926
+      },
+      "risk_HIGH__unc_LOW__ood_IN": {
+        "count": 18,
+        "rate": 0.00018779146800763685,
+        "error_rate": 0.0
+      },
+      "risk_HIGH__unc_LOW__ood_OUT": {
+        "count": 992,
+        "rate": 0.010349396459087543,
+        "error_rate": 0.06754032258064516
+      },
+      "risk_HIGH__unc_HIGH__ood_IN": {
+        "count": 27,
+        "rate": 0.0002816872020114553,
+        "error_rate": 0.7777777777777778
+      },
+      "risk_HIGH__unc_HIGH__ood_OUT": {
+        "count": 311,
+        "rate": 0.0032446192527986143,
+        "error_rate": 0.4533762057877814
+      }
+    },
+    "cyber_noise_10pct": {
+      "risk_LOW__unc_LOW__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_LOW__ood_OUT": {
+        "count": 73381,
+        "rate": 0.7655736507704667,
+        "error_rate": 0.005369237268502746
+      },
+      "risk_LOW__unc_HIGH__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_HIGH__ood_OUT": {
+        "count": 6432,
+        "rate": 0.0671041512347289,
+        "error_rate": 0.009950248756218905
+      },
+      "risk_HIGH__unc_LOW__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_LOW__ood_OUT": {
+        "count": 12884,
+        "rate": 0.13441695965613296,
+        "error_rate": 0.9509469108972369
+      },
+      "risk_HIGH__unc_HIGH__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_HIGH__ood_OUT": {
+        "count": 3154,
+        "rate": 0.03290523833867148,
+        "error_rate": 0.9850982878883957
+      }
+    },
+    "physical_noise_10pct": {
+      "risk_LOW__unc_LOW__ood_IN": {
+        "count": 84755,
+        "rate": 0.8842369928326257,
+        "error_rate": 8.259099758126364e-05
+      },
+      "risk_LOW__unc_LOW__ood_OUT": {
+        "count": 459,
+        "rate": 0.00478868243419474,
+        "error_rate": 0.0
+      },
+      "risk_LOW__unc_HIGH__ood_IN": {
+        "count": 8691,
+        "rate": 0.09067198046968733,
+        "error_rate": 0.0008054309055344609
+      },
+      "risk_LOW__unc_HIGH__ood_OUT": {
+        "count": 591,
+        "rate": 0.006165819866250743,
+        "error_rate": 0.00338409475465313
+      },
+      "risk_HIGH__unc_LOW__ood_IN": {
+        "count": 18,
+        "rate": 0.00018779146800763685,
+        "error_rate": 0.0
+      },
+      "risk_HIGH__unc_LOW__ood_OUT": {
+        "count": 1033,
+        "rate": 0.010777143691771603,
+        "error_rate": 0.07841239109390126
+      },
+      "risk_HIGH__unc_HIGH__ood_IN": {
+        "count": 30,
+        "rate": 0.00031298578001272807,
+        "error_rate": 0.8333333333333334
+      },
+      "risk_HIGH__unc_HIGH__ood_OUT": {
+        "count": 274,
+        "rate": 0.0028586034574495833,
+        "error_rate": 0.46715328467153283
+      }
+    },
+    "combined_noise_10pct": {
+      "risk_LOW__unc_LOW__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_LOW__ood_OUT": {
+        "count": 73137,
+        "rate": 0.7630280330930298,
+        "error_rate": 0.004963288075802945
+      },
+      "risk_LOW__unc_HIGH__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_HIGH__ood_OUT": {
+        "count": 6457,
+        "rate": 0.06736497271807285,
+        "error_rate": 0.00960198234474214
+      },
+      "risk_HIGH__unc_LOW__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_LOW__ood_OUT": {
+        "count": 13128,
+        "rate": 0.1369625773335698,
+        "error_rate": 0.9494972577696527
+      },
+      "risk_HIGH__unc_HIGH__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_HIGH__ood_OUT": {
+        "count": 3129,
+        "rate": 0.03264441685532754,
+        "error_rate": 0.9843400447427293
+      }
+    },
+    "temporal_mask_2": {
+      "risk_LOW__unc_LOW__ood_IN": {
+        "count": 84906,
+        "rate": 0.885812354592023,
+        "error_rate": 0.00028266553600452265
+      },
+      "risk_LOW__unc_LOW__ood_OUT": {
+        "count": 336,
+        "rate": 0.0035054407361425548,
+        "error_rate": 0.0
+      },
+      "risk_LOW__unc_HIGH__ood_IN": {
+        "count": 8627,
+        "rate": 0.09000427747232684,
+        "error_rate": 0.003593369653413701
+      },
+      "risk_LOW__unc_HIGH__ood_OUT": {
+        "count": 418,
+        "rate": 0.004360935201510678,
+        "error_rate": 0.004784688995215311
+      },
+      "risk_HIGH__unc_LOW__ood_IN": {
+        "count": 95,
+        "rate": 0.0009911216367069723,
+        "error_rate": 0.0
+      },
+      "risk_HIGH__unc_LOW__ood_OUT": {
+        "count": 923,
+        "rate": 0.009629529165058267,
+        "error_rate": 0.12242686890574214
+      },
+      "risk_HIGH__unc_HIGH__ood_IN": {
+        "count": 51,
+        "rate": 0.0005320758260216377,
+        "error_rate": 0.4117647058823529
+      },
+      "risk_HIGH__unc_HIGH__ood_OUT": {
+        "count": 495,
+        "rate": 0.005164265370210013,
+        "error_rate": 0.7070707070707071
+      }
+    },
+    "combined_shift_1sigma": {
+      "risk_LOW__unc_LOW__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_LOW__ood_OUT": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_HIGH__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_LOW__unc_HIGH__ood_OUT": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_LOW__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_LOW__ood_OUT": {
+        "count": 86262,
+        "rate": 0.8999593118485983,
+        "error_rate": 0.9971482228559505
+      },
+      "risk_HIGH__unc_HIGH__ood_IN": {
+        "count": 0,
+        "rate": 0.0,
+        "error_rate": null
+      },
+      "risk_HIGH__unc_HIGH__ood_OUT": {
+        "count": 9589,
+        "rate": 0.10004068815140166,
+        "error_rate": 0.9070810303472729
+      }
+    }
+  },
+  "gates": {
+    "checkpoint_seed_42_exists": true,
+    "checkpoint_seed_52_exists": true,
+    "checkpoint_seed_62_exists": true,
+    "feature_count_59": true,
+    "modality_counts_34_12_13": true,
+    "modality_partition_complete": true,
+    "ood_threshold_from_validation_normal_only": true,
+    "ood_detector_fit_train_only": true,
+    "test_not_used_for_ood_threshold": true,
+    "ensemble_members_3": true,
+    "ood_auc_all_conditions_above_0_5": false,
+    "direct_vehicle_actuation_disabled": true
+  },
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "system_role": "decision support and predictive resilience research",
+    "production_cyberattack_claim": false,
+    "synthetic_label_caveat": true
+  }
+}

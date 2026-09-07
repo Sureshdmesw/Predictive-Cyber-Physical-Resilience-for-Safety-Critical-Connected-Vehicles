@@ -1,0 +1,113 @@
+{
+  "project": "Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+  "phase": "4.27A",
+  "status": "PASS",
+  "title": "Uncertainty-Aware Temporal Transformer Deep Ensemble",
+  "experiment_type": "expensive_temporal_deep_ensemble",
+  "model": {
+    "members": 3,
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "input_shape": [
+      12,
+      59
+    ],
+    "architecture": {
+      "d_model": 128,
+      "attention_heads": 8,
+      "encoder_layers": 3,
+      "feedforward_dimension": 256,
+      "dropout": 0.1
+    },
+    "training": {
+      "training_samples": 100000,
+      "batch_size": 128,
+      "max_epochs": 5,
+      "best_epoch_all_members": 5
+    }
+  },
+  "member_results": [
+    {
+      "seed": 42,
+      "checkpoint_epoch": 5,
+      "validation_pr_auc": 0.9711018442719361,
+      "validation_roc_auc": 0.9979424753135994,
+      "validation_brier": 0.00201401743106544,
+      "checkpoint": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_42_best.pt"
+    },
+    {
+      "seed": 52,
+      "checkpoint_epoch": 5,
+      "validation_pr_auc": 0.972586858147816,
+      "validation_roc_auc": 0.9976536400561409,
+      "validation_brier": 0.001823592116124928,
+      "checkpoint": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_52_best.pt"
+    },
+    {
+      "seed": 62,
+      "checkpoint_epoch": 5,
+      "validation_pr_auc": 0.9709477993299872,
+      "validation_roc_auc": 0.9977372552345708,
+      "validation_brier": 0.0019995819311589003,
+      "checkpoint": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_62_best.pt"
+    }
+  ],
+  "ensemble_validation": {
+    "pr_auc": 0.9759293163975664,
+    "roc_auc": 0.997919884877582,
+    "brier": 0.001870949985459447
+  },
+  "ensemble_test": {
+    "pr_auc": 0.9759137051228501,
+    "roc_auc": 0.9976493042267005,
+    "brier": 0.002313037635758519
+  },
+  "uncertainty": {
+    "method": "ensemble predictive standard deviation",
+    "validation_p90_threshold": 0.0006578570464625955,
+    "test_mean_std": 0.0005486806039698422,
+    "test_p90_std": 0.0006493348046205938,
+    "test_p95_std": 0.0009047977509908378,
+    "high_uncertainty_rate": 0.09708818895994825,
+    "high_uncertainty_error_rate": 0.022458628841607566,
+    "low_uncertainty_error_rate": 0.0003119764284476284,
+    "mean_validation_pairwise_disagreement": 0.000945202773436904
+  },
+  "methodological_boundary": {
+    "train_data": "CRSS-derived synthetic cyber-physical temporal dataset",
+    "cyber_labels": "synthetic research telemetry labels",
+    "physical_ground_truth": "NHTSA CRSS 2024",
+    "test_used_for_training": false,
+    "test_used_for_model_selection": false,
+    "uncertainty_threshold_source": "validation ensemble disagreement",
+    "real_world_cyberattack_claim": false
+  },
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "allowed_roles": [
+      "forecasting",
+      "uncertainty estimation",
+      "risk qualification",
+      "SOC prioritization",
+      "decision support"
+    ]
+  },
+  "gates": {
+    "three_members_loaded": true,
+    "all_checkpoints_epoch_5": true,
+    "validation_predictions_finite": true,
+    "test_predictions_finite": true,
+    "ensemble_validation_pr_auc_finite": true,
+    "ensemble_test_pr_auc_finite": true,
+    "ensemble_test_roc_auc_finite": true,
+    "ensemble_test_brier_finite": true,
+    "uncertainty_finite": true,
+    "uncertainty_threshold_validation_only": true,
+    "test_not_used_for_model_selection": true,
+    "no_retraining_during_finalization": true,
+    "direct_vehicle_actuation_disabled": true
+  }
+}
