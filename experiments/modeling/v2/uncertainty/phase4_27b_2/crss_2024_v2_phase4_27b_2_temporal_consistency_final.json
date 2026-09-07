@@ -1,0 +1,144 @@
+{
+  "phase": "4.27B.2",
+  "title": "Self-Supervised Temporal Consistency Model",
+  "status": "FAIL",
+  "gates_passed": 5,
+  "gates_total": 8,
+  "architecture": {
+    "type": "GRU next-step predictor",
+    "input_features": 59,
+    "context_steps": 11,
+    "prediction_target": "next observation",
+    "hidden_dim": 128,
+    "layers": 2,
+    "dropout": 0.1,
+    "loss": "HuberLoss",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0
+  },
+  "training": {
+    "normal_sequences": 100000,
+    "best_epoch": 8,
+    "best_train_loss": 0.024833162221312523,
+    "seed": 42,
+    "anomaly_labels_used_for_training": false
+  },
+  "threshold": {
+    "method": "99th percentile normal validation prediction error",
+    "value": 0.02597699500620365
+  },
+  "validation_results": [
+    {
+      "condition": "VAL_temporal_mask_1",
+      "roc_auc": 0.4999788558365032,
+      "average_precision": 0.500310108113086,
+      "threshold": 0.02597699500620365,
+      "detection_rate": 0.01993994755984099,
+      "score_mean": 0.5789178013801575,
+      "score_median": 0.0026084405835717916,
+      "score_p95": 0.011828714050352573,
+      "score_p99": 24.927467346191406
+    },
+    {
+      "condition": "VAL_temporal_mask_2",
+      "roc_auc": 0.4999268231876385,
+      "average_precision": 0.5004929934183534,
+      "threshold": 0.02597699500620365,
+      "detection_rate": 0.0198395077391525,
+      "score_mean": 0.5889233946800232,
+      "score_median": 0.0026084405835717916,
+      "score_p95": 0.011828676797449589,
+      "score_p99": 25.702444076538086
+    },
+    {
+      "condition": "VAL_temporal_mask_3",
+      "roc_auc": 0.49985794750737056,
+      "average_precision": 0.5004117011311465,
+      "threshold": 0.02597699500620365,
+      "detection_rate": 0.019717922693055907,
+      "score_mean": 0.5844950675964355,
+      "score_median": 0.0026084405835717916,
+      "score_p95": 0.011823507025837898,
+      "score_p99": 25.759599685668945
+    },
+    {
+      "condition": "VAL_temporal_noise_10pct",
+      "roc_auc": 0.9721888497585968,
+      "average_precision": 0.9145449470606877,
+      "threshold": 0.02597699500620365,
+      "detection_rate": 0.04873974456567707,
+      "score_mean": 0.5685850977897644,
+      "score_median": 0.012294773943722248,
+      "score_p95": 0.02583184465765953,
+      "score_p99": 24.653648376464844
+    },
+    {
+      "condition": "VAL_temporal_velocity_shift",
+      "roc_auc": 0.5000958264307757,
+      "average_precision": 0.5065601059442585,
+      "threshold": 0.02597699500620365,
+      "detection_rate": 0.019992810623361244,
+      "score_mean": 1.4895446300506592,
+      "score_median": 0.0026084405835717916,
+      "score_p95": 0.011828714050352573,
+      "score_p99": 36.56229782104492
+    }
+  ],
+  "test_results": [
+    {
+      "condition": "clean",
+      "score_mean": 0.6575431823730469,
+      "score_median": 0.0025898695457726717,
+      "score_p95": 0.011843385174870491,
+      "score_p99": 28.653240203857422,
+      "detection_rate": 0.023599127812959697
+    },
+    {
+      "condition": "temporal_mask_1",
+      "score_mean": 0.7125955820083618,
+      "score_median": 0.0025889226235449314,
+      "score_p95": 0.011828410439193249,
+      "score_p99": 30.199932098388672,
+      "detection_rate": 0.023432202063619578
+    },
+    {
+      "condition": "temporal_mask_2",
+      "score_mean": 0.7523051500320435,
+      "score_median": 0.0025889226235449314,
+      "score_p95": 0.011780093424022198,
+      "score_p99": 32.756736755371094,
+      "detection_rate": 0.023171380580275635
+    },
+    {
+      "condition": "temporal_mask_3",
+      "score_mean": 0.7330957651138306,
+      "score_median": 0.002588676055893302,
+      "score_p95": 0.01173031609505415,
+      "score_p99": 32.80500030517578,
+      "detection_rate": 0.02285839480026291
+    },
+    {
+      "condition": "temporal_noise_10pct",
+      "score_mean": 0.6746966242790222,
+      "score_median": 0.020170122385025024,
+      "score_p95": 0.03190183639526367,
+      "score_p99": 28.76514434814453,
+      "detection_rate": 0.1470824508873147
+    },
+    {
+      "condition": "temporal_velocity_shift",
+      "score_mean": 2.8736236095428467,
+      "score_median": 0.0025898695457726717,
+      "score_p95": 0.011843385174870491,
+      "score_p99": 119.91691589355469,
+      "detection_rate": 0.023599127812959697
+    }
+  ],
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "system_role": "predictive decision support and anomaly detection"
+  },
+  "scientific_note": "This phase evaluates a self-supervised temporal consistency signal independently from the Phase 4.27A predictive ensemble. Synthetic anomaly labels are not used to train the temporal predictor. Results are research evidence and must not be interpreted as real-world cyberattack detection performance."
+}
