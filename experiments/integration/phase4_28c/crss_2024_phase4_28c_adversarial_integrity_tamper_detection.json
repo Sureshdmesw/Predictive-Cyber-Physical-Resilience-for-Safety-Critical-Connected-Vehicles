@@ -1,0 +1,151 @@
+{
+  "phase": "4.28C",
+  "title": "Adversarial Integrity and Tamper Detection",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-07T05:14:22.556846+00:00",
+  "research_simulation": true,
+  "purpose": "Demonstrate that modification of buffered forensic evidence is detected and that unverified evidence cannot be synchronized or handed to the SOC.",
+  "source_artifacts": {
+    "phase_4_28a": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\integration\\phase4_28\\crss_2024_phase4_28a_predictive_soc_event_pipeline.json",
+    "phase_4_28b": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\integration\\phase4_28\\crss_2024_phase4_28b_connectivity_recovery_sync.json"
+  },
+  "source_event": {
+    "event_id": "EVT-001",
+    "vehicle_id": "VEHICLE-RESEARCH-001",
+    "ecu_id": "ECU-ADAS-001"
+  },
+  "baseline": {
+    "validation": {
+      "missing_required_fields": [],
+      "payload_hash_valid": true,
+      "record_hash_valid": true,
+      "event_valid": true
+    },
+    "chain": {
+      "chain_valid": true,
+      "results": [
+        {
+          "event_id": "EVT-001",
+          "previous_hash_matches": true,
+          "payload_hash_valid": true,
+          "record_hash_valid": true,
+          "event_valid": true,
+          "chain_valid": true
+        }
+      ]
+    },
+    "synchronization": {
+      "integrity_verified": true,
+      "synchronization_allowed": true,
+      "soc_handoff_allowed": true,
+      "evidence_state": "VERIFIED",
+      "refusal_reason": null
+    }
+  },
+  "payload_tamper_test": {
+    "original_payload": {
+      "risk_score": 0.31,
+      "risk_level": "MEDIUM",
+      "source": "predictive_model"
+    },
+    "tampered_payload": {
+      "risk_score": 0.31,
+      "risk_level": "MEDIUM",
+      "source": "predictive_model",
+      "tamper_test_marker": "ADVERSARIAL_MODIFICATION"
+    },
+    "tampered_payload_hash_recomputed": "c4a544d83e091bd2d9e2b588c76c62a00de092b4c1f41586a6474182e93a1473",
+    "stored_payload_hash": "102da5c0ff7b2d3ed57649363c7e42c88c6160379428927396e1ec69dca477d9",
+    "validation": {
+      "missing_required_fields": [],
+      "payload_hash_valid": false,
+      "record_hash_valid": true,
+      "event_valid": false
+    },
+    "chain": {
+      "chain_valid": false,
+      "results": [
+        {
+          "event_id": "EVT-001",
+          "previous_hash_matches": true,
+          "payload_hash_valid": false,
+          "record_hash_valid": true,
+          "event_valid": false,
+          "chain_valid": false
+        }
+      ]
+    },
+    "synchronization": {
+      "integrity_verified": false,
+      "synchronization_allowed": false,
+      "soc_handoff_allowed": false,
+      "evidence_state": "UNVERIFIED",
+      "refusal_reason": "INTEGRITY_VERIFICATION_FAILED"
+    }
+  },
+  "previous_hash_tamper_test": {
+    "original_previous_hash": "ROLLING_GENESIS",
+    "tampered_previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "validation": {
+      "missing_required_fields": [],
+      "payload_hash_valid": true,
+      "record_hash_valid": false,
+      "event_valid": false
+    },
+    "chain": {
+      "chain_valid": false,
+      "results": [
+        {
+          "event_id": "EVT-001",
+          "previous_hash_matches": false,
+          "payload_hash_valid": true,
+          "record_hash_valid": false,
+          "event_valid": false,
+          "chain_valid": false
+        }
+      ]
+    },
+    "synchronization": {
+      "integrity_verified": false,
+      "synchronization_allowed": false,
+      "soc_handoff_allowed": false,
+      "evidence_state": "UNVERIFIED",
+      "refusal_reason": "INTEGRITY_VERIFICATION_FAILED"
+    }
+  },
+  "security_policy": {
+    "unverified_evidence": "REFUSE_SYNCHRONIZATION_AND_SOC_HANDOFF",
+    "verified_evidence": "ALLOW_SYNCHRONIZATION_AND_SOC_HANDOFF",
+    "direct_vehicle_actuation": false
+  },
+  "scientific_boundary": {
+    "synthetic_telemetry_labels": true,
+    "real_world_cyberattack_performance_claim": false,
+    "live_cortex_xdr_api_used": false,
+    "direct_vehicle_actuation": false
+  },
+  "gates": {
+    "source_4_28a_pass": true,
+    "source_4_28b_pass": true,
+    "baseline_payload_integrity_valid": true,
+    "baseline_record_integrity_valid": true,
+    "baseline_chain_valid": true,
+    "baseline_synchronization_allowed": true,
+    "baseline_soc_handoff_allowed": true,
+    "payload_tampering_detected": true,
+    "payload_tampered_event_rejected": true,
+    "payload_tampered_chain_rejected": true,
+    "tampered_evidence_marked_unverified": true,
+    "tampered_synchronization_refused": true,
+    "tampered_soc_handoff_refused": true,
+    "previous_hash_tampering_detected": true,
+    "previous_hash_tampered_sync_refused": true,
+    "direct_vehicle_actuation_disabled": true,
+    "scientific_real_attack_claim_disabled": true,
+    "live_cortex_xdr_api_claim_disabled": true
+  },
+  "gate_summary": {
+    "passed": 18,
+    "total": 18
+  }
+}
