@@ -1,0 +1,126 @@
+{
+  "phase": "4.27B.3",
+  "title": "Frozen Transformer Temporal Representation OOD",
+  "status": "FAIL",
+  "gates_passed": 5,
+  "gates_total": 7,
+  "ensemble_seeds": [
+    42,
+    52,
+    62
+  ],
+  "encoder_frozen": true,
+  "architecture": {
+    "input_features": 59,
+    "sequence_length": 12,
+    "hidden_dimension": 128,
+    "transformer_layers": 3,
+    "attention_heads": 8,
+    "feedforward_dimension": 256
+  },
+  "score_components": [
+    "hidden_velocity",
+    "hidden_acceleration",
+    "hidden_direction_change",
+    "ensemble_disagreement"
+  ],
+  "threshold_method": "99th percentile of clean normal validation learned-space score",
+  "threshold": 9.022015571594238,
+  "validation_results": [
+    {
+      "condition": "temporal_mask_1",
+      "roc_auc": 0.4998221314181178,
+      "average_precision": 0.49793044011396326,
+      "detection_rate": 0.018142603400152245,
+      "score_mean_clean": 84.0567626953125,
+      "score_mean_perturbed": 49.596214294433594
+    },
+    {
+      "condition": "temporal_mask_2",
+      "roc_auc": 0.49957372163189084,
+      "average_precision": 0.4968205568902535,
+      "detection_rate": 0.017159350418675463,
+      "score_mean_clean": 84.0567626953125,
+      "score_mean_perturbed": 35.85600280761719
+    },
+    {
+      "condition": "temporal_mask_3",
+      "roc_auc": 0.49927198114993027,
+      "average_precision": 0.495732403098861,
+      "detection_rate": 0.015922354732301445,
+      "score_mean_clean": 84.0567626953125,
+      "score_mean_perturbed": 25.128393173217773
+    },
+    {
+      "condition": "temporal_noise_10pct",
+      "roc_auc": 0.8551325406309718,
+      "average_precision": 0.8018725690464655,
+      "detection_rate": 0.04093715639008712,
+      "score_mean_clean": 84.0567626953125,
+      "score_mean_perturbed": 86.14571380615234
+    },
+    {
+      "condition": "temporal_velocity_shift",
+      "roc_auc": 0.5000348985419785,
+      "average_precision": 0.5022963159451292,
+      "detection_rate": 0.018798105387803434,
+      "score_mean_clean": 84.0567626953125,
+      "score_mean_perturbed": 125.26528930664062
+    }
+  ],
+  "test_results": [
+    {
+      "condition": "clean",
+      "score_mean": 100.74541473388672,
+      "score_median": 0.7361749410629272,
+      "score_p95": 3.676269292831421,
+      "score_p99": 3334.73681640625,
+      "ood_detection_rate": 0.02110567443219163
+    },
+    {
+      "condition": "temporal_mask_1",
+      "score_mean": 59.31393051147461,
+      "score_median": 0.7361329793930054,
+      "score_p95": 3.6599574089050293,
+      "score_p99": 1615.51513671875,
+      "ood_detection_rate": 0.020260612826157265
+    },
+    {
+      "condition": "temporal_mask_2",
+      "score_mean": 42.47743225097656,
+      "score_median": 0.7359275221824646,
+      "score_p95": 3.619173288345337,
+      "score_p99": 1145.9012451171875,
+      "ood_detection_rate": 0.01897737112810508
+    },
+    {
+      "condition": "temporal_mask_3",
+      "score_mean": 30.02906036376953,
+      "score_median": 0.7353476285934448,
+      "score_p95": 3.5596060752868652,
+      "score_p99": 924.6167602539062,
+      "ood_detection_rate": 0.017422875087375198
+    },
+    {
+      "condition": "temporal_noise_10pct",
+      "score_mean": 103.1963119506836,
+      "score_median": 2.988685369491577,
+      "score_p95": 9.182541847229004,
+      "score_p99": 3342.65576171875,
+      "ood_detection_rate": 0.051934773763445345
+    },
+    {
+      "condition": "temporal_velocity_shift",
+      "score_mean": 149.02853393554688,
+      "score_median": 0.7361749410629272,
+      "score_p95": 3.676269292831421,
+      "score_p99": 6210.845703125,
+      "ood_detection_rate": 0.02110567443219163
+    }
+  ],
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "system_role": "predictive decision support and anomaly detection"
+  },
+  "scientific_note": "The Phase 4.27A predictive Transformer ensemble is used strictly as a frozen representation extractor. No model retraining or anomaly-label optimization occurs in this phase. The detector evaluates whether temporal perturbations become distinguishable in learned representation space."
+}
