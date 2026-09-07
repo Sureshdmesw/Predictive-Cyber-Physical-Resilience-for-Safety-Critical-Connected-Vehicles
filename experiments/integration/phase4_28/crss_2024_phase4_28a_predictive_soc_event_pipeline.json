@@ -1,0 +1,403 @@
+{
+  "phase": "4.28A",
+  "title": "Predictive Risk to SOC Event Integration Pipeline",
+  "status": "PASS",
+  "training_performed": false,
+  "model_retraining_performed": false,
+  "purpose": [
+    "connect predictive risk output to deterministic decision policy",
+    "generate tamper-evident forensic events",
+    "represent connectivity-aware local resilience",
+    "prepare Cortex XDR-compatible SOC events"
+  ],
+  "architecture": [
+    "Predictive Model",
+    "Risk + Uncertainty",
+    "Decision Engine",
+    "Forensic Event",
+    "Tamper-Evident Buffer",
+    "SOC Event Abstraction"
+  ],
+  "policy": {
+    "risk_thresholds": {
+      "NORMAL": 0.05,
+      "LOW": 0.2,
+      "MEDIUM": 0.5,
+      "HIGH": 0.8
+    },
+    "modifier_minimums": {
+      "connectivity_degraded": "MEDIUM",
+      "sensor_disagreement": "MEDIUM",
+      "integrity_failure": "HIGH"
+    },
+    "direct_vehicle_actuation": false
+  },
+  "source_foundation": {
+    "decision_engine": {
+      "path": "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+      "exists": true
+    },
+    "edge_report": {
+      "path": "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json",
+      "exists": true
+    },
+    "forensic_schema": {
+      "path": "data\\schemas\\edge_iot\\edge_iot_forensic_event_schema.json",
+      "exists": true
+    },
+    "ensemble_report": {
+      "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27\\crss_2024_v2_phase4_27a_deep_ensemble_final.json",
+      "exists": true
+    }
+  },
+  "scenario_results": [
+    {
+      "scenario": {
+        "scenario_id": "normal_connected",
+        "risk_score": 0.02,
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": false
+      },
+      "decision": {
+        "base_risk_level": "NORMAL",
+        "final_risk_level": "NORMAL",
+        "actions": [],
+        "direct_vehicle_actuation": false
+      },
+      "forensic_event": {
+        "schema_version": "1.1",
+        "event_type": "PREDICTIVE_CYBER_PHYSICAL_RISK",
+        "event_id": "PCR-normal_connected",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "scenario_id": "normal_connected",
+        "risk_score": 0.02,
+        "base_risk_level": "NORMAL",
+        "final_risk_level": "NORMAL",
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "decision_actions": [],
+        "direct_vehicle_actuation": false,
+        "previous_hash": "ROLLING_GENESIS",
+        "event_hash": "14b0b2f5c6e3aaaff662072007e7f342f2082fc1c7f376e6b09e5b6d227ec95a"
+      },
+      "soc_event": {
+        "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+        "integration_mode": "ABSTRACTION_ONLY",
+        "live_cortex_xdr_api_used": false,
+        "event_id": "PCR-normal_connected",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "severity": "NORMAL",
+        "risk_score": 0.02,
+        "source": "vehicle_edge_predictive_resilience",
+        "scenario_id": "normal_connected",
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "forensic_hash": "14b0b2f5c6e3aaaff662072007e7f342f2082fc1c7f376e6b09e5b6d227ec95a",
+        "direct_vehicle_actuation": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "predictive_medium",
+        "risk_score": 0.31,
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": false
+      },
+      "decision": {
+        "base_risk_level": "MEDIUM",
+        "final_risk_level": "MEDIUM",
+        "actions": [
+          "increase_monitoring"
+        ],
+        "direct_vehicle_actuation": false
+      },
+      "forensic_event": {
+        "schema_version": "1.1",
+        "event_type": "PREDICTIVE_CYBER_PHYSICAL_RISK",
+        "event_id": "PCR-predictive_medium",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "scenario_id": "predictive_medium",
+        "risk_score": 0.31,
+        "base_risk_level": "MEDIUM",
+        "final_risk_level": "MEDIUM",
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "decision_actions": [
+          "increase_monitoring"
+        ],
+        "direct_vehicle_actuation": false,
+        "previous_hash": "14b0b2f5c6e3aaaff662072007e7f342f2082fc1c7f376e6b09e5b6d227ec95a",
+        "event_hash": "1215b5311957ed86229fda0c21ff759cc4288402480ad0310d5acf9702384ac1"
+      },
+      "soc_event": {
+        "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+        "integration_mode": "ABSTRACTION_ONLY",
+        "live_cortex_xdr_api_used": false,
+        "event_id": "PCR-predictive_medium",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "severity": "MEDIUM",
+        "risk_score": 0.31,
+        "source": "vehicle_edge_predictive_resilience",
+        "scenario_id": "predictive_medium",
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "forensic_hash": "1215b5311957ed86229fda0c21ff759cc4288402480ad0310d5acf9702384ac1",
+        "direct_vehicle_actuation": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "connectivity_degraded",
+        "risk_score": 0.1,
+        "connectivity_degraded": true,
+        "sensor_disagreement": false,
+        "integrity_failure": false
+      },
+      "decision": {
+        "base_risk_level": "LOW",
+        "final_risk_level": "MEDIUM",
+        "actions": [
+          "increase_monitoring",
+          "retain_local_resilience"
+        ],
+        "direct_vehicle_actuation": false
+      },
+      "forensic_event": {
+        "schema_version": "1.1",
+        "event_type": "PREDICTIVE_CYBER_PHYSICAL_RISK",
+        "event_id": "PCR-connectivity_degraded",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "scenario_id": "connectivity_degraded",
+        "risk_score": 0.1,
+        "base_risk_level": "LOW",
+        "final_risk_level": "MEDIUM",
+        "connectivity_degraded": true,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "decision_actions": [
+          "increase_monitoring",
+          "retain_local_resilience"
+        ],
+        "direct_vehicle_actuation": false,
+        "previous_hash": "1215b5311957ed86229fda0c21ff759cc4288402480ad0310d5acf9702384ac1",
+        "event_hash": "a6ee630c3ee1f752a39c7ddb008338900740445cf07f112835f3f4c0f7051194"
+      },
+      "soc_event": {
+        "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+        "integration_mode": "ABSTRACTION_ONLY",
+        "live_cortex_xdr_api_used": false,
+        "event_id": "PCR-connectivity_degraded",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "severity": "MEDIUM",
+        "risk_score": 0.1,
+        "source": "vehicle_edge_predictive_resilience",
+        "scenario_id": "connectivity_degraded",
+        "connectivity_degraded": true,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "forensic_hash": "a6ee630c3ee1f752a39c7ddb008338900740445cf07f112835f3f4c0f7051194",
+        "direct_vehicle_actuation": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "sensor_disagreement",
+        "risk_score": 0.12,
+        "connectivity_degraded": false,
+        "sensor_disagreement": true,
+        "integrity_failure": false
+      },
+      "decision": {
+        "base_risk_level": "LOW",
+        "final_risk_level": "MEDIUM",
+        "actions": [
+          "increase_monitoring"
+        ],
+        "direct_vehicle_actuation": false
+      },
+      "forensic_event": {
+        "schema_version": "1.1",
+        "event_type": "PREDICTIVE_CYBER_PHYSICAL_RISK",
+        "event_id": "PCR-sensor_disagreement",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "scenario_id": "sensor_disagreement",
+        "risk_score": 0.12,
+        "base_risk_level": "LOW",
+        "final_risk_level": "MEDIUM",
+        "connectivity_degraded": false,
+        "sensor_disagreement": true,
+        "integrity_failure": false,
+        "decision_actions": [
+          "increase_monitoring"
+        ],
+        "direct_vehicle_actuation": false,
+        "previous_hash": "a6ee630c3ee1f752a39c7ddb008338900740445cf07f112835f3f4c0f7051194",
+        "event_hash": "561dbc51cac0a13239f8edb7e3073809a9a2cf30227ce74736aecfd9974d540e"
+      },
+      "soc_event": {
+        "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+        "integration_mode": "ABSTRACTION_ONLY",
+        "live_cortex_xdr_api_used": false,
+        "event_id": "PCR-sensor_disagreement",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "severity": "MEDIUM",
+        "risk_score": 0.12,
+        "source": "vehicle_edge_predictive_resilience",
+        "scenario_id": "sensor_disagreement",
+        "connectivity_degraded": false,
+        "sensor_disagreement": true,
+        "integrity_failure": false,
+        "forensic_hash": "561dbc51cac0a13239f8edb7e3073809a9a2cf30227ce74736aecfd9974d540e",
+        "direct_vehicle_actuation": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "integrity_failure",
+        "risk_score": 0.18,
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": true
+      },
+      "decision": {
+        "base_risk_level": "LOW",
+        "final_risk_level": "HIGH",
+        "actions": [
+          "increase_monitoring",
+          "preserve_forensic_context",
+          "integrity_verification_required"
+        ],
+        "direct_vehicle_actuation": false
+      },
+      "forensic_event": {
+        "schema_version": "1.1",
+        "event_type": "PREDICTIVE_CYBER_PHYSICAL_RISK",
+        "event_id": "PCR-integrity_failure",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "scenario_id": "integrity_failure",
+        "risk_score": 0.18,
+        "base_risk_level": "LOW",
+        "final_risk_level": "HIGH",
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": true,
+        "decision_actions": [
+          "increase_monitoring",
+          "preserve_forensic_context",
+          "integrity_verification_required"
+        ],
+        "direct_vehicle_actuation": false,
+        "previous_hash": "561dbc51cac0a13239f8edb7e3073809a9a2cf30227ce74736aecfd9974d540e",
+        "event_hash": "1c9b496fe84c9cc665c7db7ec6c7edecaa407089674027d5fbe04937670daa5b"
+      },
+      "soc_event": {
+        "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+        "integration_mode": "ABSTRACTION_ONLY",
+        "live_cortex_xdr_api_used": false,
+        "event_id": "PCR-integrity_failure",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "severity": "HIGH",
+        "risk_score": 0.18,
+        "source": "vehicle_edge_predictive_resilience",
+        "scenario_id": "integrity_failure",
+        "connectivity_degraded": false,
+        "sensor_disagreement": false,
+        "integrity_failure": true,
+        "forensic_hash": "1c9b496fe84c9cc665c7db7ec6c7edecaa407089674027d5fbe04937670daa5b",
+        "direct_vehicle_actuation": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "combined_high_risk",
+        "risk_score": 0.72,
+        "connectivity_degraded": true,
+        "sensor_disagreement": true,
+        "integrity_failure": true
+      },
+      "decision": {
+        "base_risk_level": "HIGH",
+        "final_risk_level": "HIGH",
+        "actions": [
+          "increase_monitoring",
+          "preserve_forensic_context",
+          "retain_local_resilience",
+          "integrity_verification_required"
+        ],
+        "direct_vehicle_actuation": false
+      },
+      "forensic_event": {
+        "schema_version": "1.1",
+        "event_type": "PREDICTIVE_CYBER_PHYSICAL_RISK",
+        "event_id": "PCR-combined_high_risk",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "scenario_id": "combined_high_risk",
+        "risk_score": 0.72,
+        "base_risk_level": "HIGH",
+        "final_risk_level": "HIGH",
+        "connectivity_degraded": true,
+        "sensor_disagreement": true,
+        "integrity_failure": true,
+        "decision_actions": [
+          "increase_monitoring",
+          "preserve_forensic_context",
+          "retain_local_resilience",
+          "integrity_verification_required"
+        ],
+        "direct_vehicle_actuation": false,
+        "previous_hash": "1c9b496fe84c9cc665c7db7ec6c7edecaa407089674027d5fbe04937670daa5b",
+        "event_hash": "d45a8f36aa59ddb3a896ef674300a2f2f0f2bcd993628874da5115aaabae1b04"
+      },
+      "soc_event": {
+        "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+        "integration_mode": "ABSTRACTION_ONLY",
+        "live_cortex_xdr_api_used": false,
+        "event_id": "PCR-combined_high_risk",
+        "timestamp_utc": "2026-09-07T05:03:27.941135+00:00",
+        "severity": "HIGH",
+        "risk_score": 0.72,
+        "source": "vehicle_edge_predictive_resilience",
+        "scenario_id": "combined_high_risk",
+        "connectivity_degraded": true,
+        "sensor_disagreement": true,
+        "integrity_failure": true,
+        "forensic_hash": "d45a8f36aa59ddb3a896ef674300a2f2f0f2bcd993628874da5115aaabae1b04",
+        "direct_vehicle_actuation": false
+      }
+    }
+  ],
+  "gates": {
+    "required_source_files_present": true,
+    "six_scenarios_generated": true,
+    "normal_risk_classification": true,
+    "predictive_medium_classification": true,
+    "connectivity_minimum_medium": true,
+    "sensor_disagreement_minimum_medium": true,
+    "integrity_failure_minimum_high": true,
+    "combined_high_risk_escalates": true,
+    "direct_vehicle_actuation_disabled": true,
+    "forensic_hashes_present": true,
+    "forensic_hash_chain_valid": true,
+    "soc_events_present": true,
+    "live_cortex_xdr_not_claimed": true,
+    "integrity_failure_requires_verification": true,
+    "connectivity_retains_local_resilience": true,
+    "all_events_have_required_identity": true
+  },
+  "gate_summary": {
+    "passed": 16,
+    "total": 16
+  },
+  "scientific_boundary": {
+    "synthetic_telemetry_labels": true,
+    "real_world_cyberattack_performance_claim": false,
+    "live_cortex_xdr_connection_claim": false,
+    "direct_vehicle_actuation": false
+  }
+}

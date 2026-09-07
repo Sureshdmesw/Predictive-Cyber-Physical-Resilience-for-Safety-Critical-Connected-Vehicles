@@ -1,0 +1,221 @@
+{
+  "phase": "4.28B",
+  "title": "Connectivity Loss, Forensic Buffer, Recovery, Integrity Verification and Secure Synchronization",
+  "status": "PASS",
+  "training_performed": false,
+  "model_retraining_performed": false,
+  "architecture": [
+    "Connected Event Generation",
+    "Connectivity Loss",
+    "Local Forensic Buffer",
+    "Rolling Hash Chain",
+    "Connectivity Recovery",
+    "Integrity Verification",
+    "Secure Synchronization",
+    "Cortex XDR-Compatible SOC Handoff"
+  ],
+  "source_foundation": {
+    "phase4_21_report": "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json",
+    "forensic_schema": "data\\schemas\\edge_iot\\edge_iot_forensic_event_schema.json",
+    "phase4_28a_report": "experiments\\integration\\phase4_28\\crss_2024_phase4_28a_predictive_soc_event_pipeline.json"
+  },
+  "source_checks": {
+    "phase4_21_report": true,
+    "forensic_schema": true,
+    "phase4_28a_report": true
+  },
+  "buffer_policy": {
+    "anchor": "ROLLING_GENESIS",
+    "offline_first": true,
+    "hash_algorithm": "SHA-256",
+    "synchronize_only_after_integrity_verification": true
+  },
+  "connected_events": [
+    {
+      "event_id": "EVT-001",
+      "timestamp": "2026-09-07T05:06:58.817795+00:00",
+      "vehicle_id": "VEHICLE-RESEARCH-001",
+      "ecu_id": "ECU-ADAS-001",
+      "can_id": "0x245",
+      "event_type": "CYBER_PHYSICAL_FORENSIC_EVENT",
+      "severity": "MEDIUM",
+      "connectivity_state": "CONNECTED",
+      "integrity_status": "VALID",
+      "sensor_consistency_status": "CONSISTENT",
+      "payload_hash": "102da5c0ff7b2d3ed57649363c7e42c88c6160379428927396e1ec69dca477d9",
+      "previous_hash": "ROLLING_GENESIS",
+      "record_hash": "54c7c6195d262cd2c12a91569e5c1b34b328e8db7ff20cbafa55e56af63cdb58",
+      "payload": {
+        "risk_score": 0.31,
+        "risk_level": "MEDIUM",
+        "source": "predictive_model"
+      }
+    },
+    {
+      "event_id": "EVT-002",
+      "timestamp": "2026-09-07T05:06:58.817795+00:00",
+      "vehicle_id": "VEHICLE-RESEARCH-001",
+      "ecu_id": "ECU-ADAS-001",
+      "can_id": "0x245",
+      "event_type": "CYBER_PHYSICAL_FORENSIC_EVENT",
+      "severity": "HIGH",
+      "connectivity_state": "CONNECTED",
+      "integrity_status": "VALID",
+      "sensor_consistency_status": "INCONSISTENT",
+      "payload_hash": "cb730ba4328614481ab60f0165f14908c96bd8c1d6b36a6388115689dd8a78b6",
+      "previous_hash": "54c7c6195d262cd2c12a91569e5c1b34b328e8db7ff20cbafa55e56af63cdb58",
+      "record_hash": "0fbcf81f07a7e1d88cd913be806d9fa8e40239cc1370ccc8236d46594b0bde07",
+      "payload": {
+        "risk_score": 0.18,
+        "risk_level": "HIGH",
+        "source": "sensor_disagreement"
+      }
+    }
+  ],
+  "offline_buffer_events": [
+    {
+      "event_id": "EVT-003",
+      "timestamp": "2026-09-07T05:06:58.817795+00:00",
+      "vehicle_id": "VEHICLE-RESEARCH-001",
+      "ecu_id": "ECU-ADAS-001",
+      "can_id": "0x245",
+      "event_type": "CYBER_PHYSICAL_FORENSIC_EVENT",
+      "severity": "HIGH",
+      "connectivity_state": "DISCONNECTED",
+      "integrity_status": "VALID",
+      "sensor_consistency_status": "INCONSISTENT",
+      "payload_hash": "7340df59face3ed61b644f90c16e0bd6e0771ddedc2df56c3b0189d3b5b228a2",
+      "previous_hash": "0fbcf81f07a7e1d88cd913be806d9fa8e40239cc1370ccc8236d46594b0bde07",
+      "record_hash": "a51f3e41985d9ab3c1c0b88f9837db735fcd5aa39f7ea5f0576a912456bbae40",
+      "payload": {
+        "risk_score": 0.72,
+        "risk_level": "HIGH",
+        "source": "edge_predictive_resilience",
+        "local_action": "preserve_forensic_context"
+      }
+    },
+    {
+      "event_id": "EVT-004",
+      "timestamp": "2026-09-07T05:06:58.817795+00:00",
+      "vehicle_id": "VEHICLE-RESEARCH-001",
+      "ecu_id": "ECU-ADAS-001",
+      "can_id": "0x245",
+      "event_type": "CYBER_PHYSICAL_FORENSIC_EVENT",
+      "severity": "HIGH",
+      "connectivity_state": "DISCONNECTED",
+      "integrity_status": "VALID",
+      "sensor_consistency_status": "INCONSISTENT",
+      "payload_hash": "5d72897a8dc01e9d9848619c65c87ca83a3b65811535874fbdd48d302e571809",
+      "previous_hash": "a51f3e41985d9ab3c1c0b88f9837db735fcd5aa39f7ea5f0576a912456bbae40",
+      "record_hash": "4d6431f72b06892da333bfcbf48cce53b868238d83c3ac86431b8072ac75bf18",
+      "payload": {
+        "risk_score": 0.76,
+        "risk_level": "HIGH",
+        "source": "edge_predictive_resilience",
+        "local_action": "retain_local_resilience"
+      }
+    },
+    {
+      "event_id": "EVT-005",
+      "timestamp": "2026-09-07T05:06:58.817795+00:00",
+      "vehicle_id": "VEHICLE-RESEARCH-001",
+      "ecu_id": "ECU-ADAS-001",
+      "can_id": "0x245",
+      "event_type": "CYBER_PHYSICAL_FORENSIC_EVENT",
+      "severity": "HIGH",
+      "connectivity_state": "DISCONNECTED",
+      "integrity_status": "VALID",
+      "sensor_consistency_status": "INCONSISTENT",
+      "payload_hash": "0acad1b90a1b2b2140a1e2d9cf7ab1cf90ad2aff33377fba82bda6dc50220c45",
+      "previous_hash": "4d6431f72b06892da333bfcbf48cce53b868238d83c3ac86431b8072ac75bf18",
+      "record_hash": "eae2bd8592492cd95693f6d8d5ca73660feb3905a907b3f8d3f6d6b7da7bb0cc",
+      "payload": {
+        "risk_score": 0.81,
+        "risk_level": "CRITICAL",
+        "source": "edge_predictive_resilience",
+        "local_action": "preserve_forensic_context"
+      }
+    }
+  ],
+  "recovery_event": {
+    "event_id": "EVT-006",
+    "timestamp": "2026-09-07T05:06:58.817795+00:00",
+    "vehicle_id": "VEHICLE-RESEARCH-001",
+    "ecu_id": "ECU-ADAS-001",
+    "can_id": "0x245",
+    "event_type": "CYBER_PHYSICAL_FORENSIC_EVENT",
+    "severity": "HIGH",
+    "connectivity_state": "RECOVERED",
+    "integrity_status": "PENDING_VERIFICATION",
+    "sensor_consistency_status": "INCONSISTENT",
+    "payload_hash": "c8ccbca32e46a2dc3e7230df61274d7c008f9300d0c18095df0ab10c9d0c81a4",
+    "previous_hash": "eae2bd8592492cd95693f6d8d5ca73660feb3905a907b3f8d3f6d6b7da7bb0cc",
+    "record_hash": "994691c7e09f7103452f094164d8ad2b38ad3babf2a83a76df3a0bb38a7fba14",
+    "payload": {
+      "recovery_detected": true,
+      "buffered_events": 3,
+      "synchronization_required": true
+    }
+  },
+  "buffer_integrity": {
+    "chain_valid": true,
+    "buffered_event_count": 3
+  },
+  "synchronization_manifest": {
+    "vehicle_id": "VEHICLE-RESEARCH-001",
+    "buffer_anchor": "ROLLING_GENESIS",
+    "first_buffered_event": "EVT-003",
+    "last_buffered_event": "EVT-005",
+    "buffered_event_count": 3,
+    "chain_integrity_verified": true,
+    "transport_security": "RESEARCH_ABSTRACTION",
+    "destination": "CORTEX_XDR_COMPATIBLE_SOC_EVENT_PIPELINE",
+    "live_cortex_xdr_api_used": false
+  },
+  "synchronization_hash": "2e30925d1f0858721de62bd56c91744d491ebb8c1a13467a120a1be6708832fe",
+  "soc_handoff": {
+    "event_type": "CORTEX_XDR_COMPATIBLE_RESEARCH_EVENT",
+    "integration_mode": "ABSTRACTION_ONLY",
+    "live_cortex_xdr_api_used": false,
+    "vehicle_id": "VEHICLE-RESEARCH-001",
+    "severity": "HIGH",
+    "source": "vehicle_edge_predictive_resilience",
+    "synchronized_event_ids": [
+      "EVT-003",
+      "EVT-004",
+      "EVT-005"
+    ],
+    "buffer_chain_verified": true,
+    "synchronization_hash": "2e30925d1f0858721de62bd56c91744d491ebb8c1a13467a120a1be6708832fe",
+    "direct_vehicle_actuation": false
+  },
+  "gates": {
+    "source_foundations_present": true,
+    "connected_events_generated": true,
+    "offline_events_generated": true,
+    "offline_events_marked_disconnected": true,
+    "offline_events_preserve_hash_chain": true,
+    "buffer_chain_integrity_valid": true,
+    "recovery_event_generated": true,
+    "recovery_requires_verification": true,
+    "synchronization_requires_integrity": true,
+    "synchronization_hash_present": true,
+    "soc_handoff_generated": true,
+    "soc_handoff_chain_verified": true,
+    "live_cortex_xdr_not_claimed": true,
+    "direct_vehicle_actuation_disabled": true,
+    "forensic_records_have_required_hashes": true,
+    "offline_first_resilience_preserved": true
+  },
+  "gate_summary": {
+    "passed": 16,
+    "total": 16
+  },
+  "scientific_boundary": {
+    "research_simulation": true,
+    "live_cortex_xdr_connection": false,
+    "real_vehicle_network_connection": false,
+    "direct_vehicle_actuation": false,
+    "secure_transport_is_represented_as_abstraction": true
+  }
+}
