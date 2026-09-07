@@ -1,0 +1,232 @@
+{
+  "phase": "4.29",
+  "title": "Resilience State-Machine and Safety-Boundary Verification",
+  "status": "PASS",
+  "research_simulation": true,
+  "state_machine": {
+    "states": [
+      "NORMAL",
+      "PREDICTIVE_RISK",
+      "CONNECTIVITY_DEGRADED",
+      "DISCONNECTED",
+      "LOCAL_FORENSIC_BUFFER",
+      "RECOVERY",
+      "INTEGRITY_VERIFICATION",
+      "SYNCHRONIZED",
+      "SOC_HANDOFF",
+      "REFUSE_SYNC",
+      "REFUSE_SOC_HANDOFF",
+      "UNVERIFIED_EVIDENCE"
+    ],
+    "valid_path": [
+      "NORMAL",
+      "PREDICTIVE_RISK",
+      "CONNECTIVITY_DEGRADED",
+      "DISCONNECTED",
+      "LOCAL_FORENSIC_BUFFER",
+      "RECOVERY",
+      "INTEGRITY_VERIFICATION",
+      "SYNCHRONIZED",
+      "SOC_HANDOFF"
+    ],
+    "tampered_path": [
+      "NORMAL",
+      "PREDICTIVE_RISK",
+      "CONNECTIVITY_DEGRADED",
+      "DISCONNECTED",
+      "LOCAL_FORENSIC_BUFFER",
+      "RECOVERY",
+      "INTEGRITY_VERIFICATION",
+      "UNVERIFIED_EVIDENCE",
+      "REFUSE_SYNC",
+      "REFUSE_SOC_HANDOFF"
+    ]
+  },
+  "valid_path_transitions": [
+    {
+      "source": "NORMAL",
+      "event": "PREDICTIVE_RISK",
+      "destination": "PREDICTIVE_RISK",
+      "allowed": true,
+      "reason": "Predictive risk detected before active containment."
+    },
+    {
+      "source": "PREDICTIVE_RISK",
+      "event": "CONNECTIVITY_DEGRADED",
+      "destination": "CONNECTIVITY_DEGRADED",
+      "allowed": true,
+      "reason": "Connectivity degradation requires resilience mode."
+    },
+    {
+      "source": "CONNECTIVITY_DEGRADED",
+      "event": "DISCONNECT",
+      "destination": "DISCONNECTED",
+      "allowed": true,
+      "reason": "Connectivity loss requires offline-first operation."
+    },
+    {
+      "source": "DISCONNECTED",
+      "event": "BUFFER_FORENSIC",
+      "destination": "LOCAL_FORENSIC_BUFFER",
+      "allowed": true,
+      "reason": "Forensic events remain local while disconnected."
+    },
+    {
+      "source": "LOCAL_FORENSIC_BUFFER",
+      "event": "CONNECTIVITY_RECOVERED",
+      "destination": "RECOVERY",
+      "allowed": true,
+      "reason": "Connectivity returned; evidence remains local pending verification."
+    },
+    {
+      "source": "RECOVERY",
+      "event": "VERIFY_INTEGRITY",
+      "destination": "INTEGRITY_VERIFICATION",
+      "allowed": true,
+      "reason": "Recovered evidence requires integrity verification before synchronization."
+    },
+    {
+      "source": "INTEGRITY_VERIFICATION",
+      "event": "INTEGRITY_VALID",
+      "destination": "SYNCHRONIZED",
+      "allowed": true,
+      "reason": "Integrity verified; synchronized evidence is permitted."
+    },
+    {
+      "source": "SYNCHRONIZED",
+      "event": "SOC_HANDOFF",
+      "destination": "SOC_HANDOFF",
+      "allowed": true,
+      "reason": "Verified evidence may be handed to the SOC abstraction."
+    }
+  ],
+  "tampered_path_transitions": [
+    {
+      "source": "NORMAL",
+      "event": "PREDICTIVE_RISK",
+      "destination": "PREDICTIVE_RISK",
+      "allowed": true,
+      "reason": "Predictive risk detected before active containment."
+    },
+    {
+      "source": "PREDICTIVE_RISK",
+      "event": "CONNECTIVITY_DEGRADED",
+      "destination": "CONNECTIVITY_DEGRADED",
+      "allowed": true,
+      "reason": "Connectivity degradation requires resilience mode."
+    },
+    {
+      "source": "CONNECTIVITY_DEGRADED",
+      "event": "DISCONNECT",
+      "destination": "DISCONNECTED",
+      "allowed": true,
+      "reason": "Connectivity loss requires offline-first operation."
+    },
+    {
+      "source": "DISCONNECTED",
+      "event": "BUFFER_FORENSIC",
+      "destination": "LOCAL_FORENSIC_BUFFER",
+      "allowed": true,
+      "reason": "Forensic events remain local while disconnected."
+    },
+    {
+      "source": "LOCAL_FORENSIC_BUFFER",
+      "event": "CONNECTIVITY_RECOVERED",
+      "destination": "RECOVERY",
+      "allowed": true,
+      "reason": "Connectivity returned; evidence remains local pending verification."
+    },
+    {
+      "source": "RECOVERY",
+      "event": "VERIFY_INTEGRITY",
+      "destination": "INTEGRITY_VERIFICATION",
+      "allowed": true,
+      "reason": "Recovered evidence requires integrity verification before synchronization."
+    },
+    {
+      "source": "INTEGRITY_VERIFICATION",
+      "event": "INTEGRITY_TAMPERED",
+      "destination": "UNVERIFIED_EVIDENCE",
+      "allowed": true,
+      "reason": "Tampering detected; evidence is explicitly unverified."
+    },
+    {
+      "source": "UNVERIFIED_EVIDENCE",
+      "event": "ATTEMPT_SYNC",
+      "destination": "REFUSE_SYNC",
+      "allowed": true,
+      "reason": "Synchronization refused because evidence integrity is unverified."
+    },
+    {
+      "source": "REFUSE_SYNC",
+      "event": "ATTEMPT_SOC_HANDOFF",
+      "destination": "REFUSE_SOC_HANDOFF",
+      "allowed": true,
+      "reason": "SOC handoff refused because trusted evidence was not established."
+    }
+  ],
+  "bypass_tests": [
+    {
+      "name": "soc_handoff_from_normal_blocked",
+      "passed": true,
+      "result": {
+        "source": "NORMAL",
+        "event": "SOC_HANDOFF",
+        "destination": "NORMAL",
+        "allowed": false,
+        "reason": "Transition is not permitted by the deterministic safety state machine."
+      }
+    },
+    {
+      "name": "sync_from_normal_blocked",
+      "passed": true,
+      "result": {
+        "source": "NORMAL",
+        "event": "ATTEMPT_SYNC",
+        "destination": "NORMAL",
+        "allowed": false,
+        "reason": "Transition is not permitted by the deterministic safety state machine."
+      }
+    },
+    {
+      "name": "tampered_evidence_soc_bypass_blocked",
+      "passed": true,
+      "result": {
+        "source": "UNVERIFIED_EVIDENCE",
+        "event": "SOC_HANDOFF",
+        "destination": "UNVERIFIED_EVIDENCE",
+        "allowed": false,
+        "reason": "Transition is not permitted by the deterministic safety state machine."
+      }
+    }
+  ],
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "real_world_cyberattack_performance_claim": false,
+    "live_cortex_xdr_api_used": false
+  },
+  "source_status": {
+    "phase_4_28a_status": "PASS",
+    "phase_4_28b_status": "PASS",
+    "phase_4_28c_status": "PASS"
+  },
+  "gates": {
+    "source_4_28a_present": true,
+    "source_4_28b_present": true,
+    "source_4_28c_present": true,
+    "valid_path_reaches_soc_handoff": true,
+    "valid_path_all_transitions_allowed": true,
+    "tampered_path_reaches_unverified": true,
+    "tampered_path_refuses_sync": true,
+    "tampered_path_refuses_soc_handoff": true,
+    "tampered_path_never_reaches_synchronized": true,
+    "tampered_path_never_reaches_soc_handoff": true,
+    "bypass_tests_all_pass": true,
+    "direct_vehicle_actuation_disabled": true,
+    "scientific_real_attack_claim_disabled": true,
+    "live_cortex_xdr_api_claim_disabled": true
+  },
+  "gate_count": 14,
+  "gates_passed": 14,
+  "evidence_digest": "6d0868359193d38f610b21926f6eb5dbaa317df1f2d2994607d85784c29c4899"
+}
