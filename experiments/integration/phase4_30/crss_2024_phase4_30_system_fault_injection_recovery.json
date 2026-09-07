@@ -1,0 +1,247 @@
+{
+  "phase": "4.30",
+  "title": "System-Level Fault Injection and Recovery Verification",
+  "status": "PASS",
+  "research_simulation": true,
+  "retraining_performed": false,
+  "objective": [
+    "Evaluate compound cyber-physical fault conditions.",
+    "Verify forensic chain preservation through connectivity loss.",
+    "Verify buffer rollover behavior.",
+    "Verify recovery after connectivity restoration.",
+    "Verify integrity failure prevents trusted synchronization.",
+    "Verify integrity failure prevents SOC handoff.",
+    "Verify repeated recovery cycles remain deterministic."
+  ],
+  "scenarios": [
+    {
+      "scenario": "high_predictive_risk_connectivity_loss",
+      "inputs": {
+        "predictive_risk": true,
+        "connectivity_loss": true,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "buffer_rollover": false,
+        "repeated_recovery": false
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": false
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": true,
+        "trusted_synchronization_allowed": true,
+        "soc_handoff_allowed": true,
+        "recovery_cycles": 1,
+        "final_safety_state": "SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    },
+    {
+      "scenario": "connectivity_loss_sensor_disagreement",
+      "inputs": {
+        "predictive_risk": false,
+        "connectivity_loss": true,
+        "sensor_disagreement": true,
+        "integrity_failure": false,
+        "buffer_rollover": false,
+        "repeated_recovery": false
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": false
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": true,
+        "trusted_synchronization_allowed": true,
+        "soc_handoff_allowed": true,
+        "recovery_cycles": 1,
+        "final_safety_state": "SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    },
+    {
+      "scenario": "connectivity_loss_integrity_failure",
+      "inputs": {
+        "predictive_risk": false,
+        "connectivity_loss": true,
+        "sensor_disagreement": false,
+        "integrity_failure": true,
+        "buffer_rollover": false,
+        "repeated_recovery": false
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": true
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": false,
+        "trusted_synchronization_allowed": false,
+        "soc_handoff_allowed": false,
+        "recovery_cycles": 1,
+        "final_safety_state": "REFUSE_SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    },
+    {
+      "scenario": "compound_high_risk_multi_fault",
+      "inputs": {
+        "predictive_risk": true,
+        "connectivity_loss": true,
+        "sensor_disagreement": true,
+        "integrity_failure": true,
+        "buffer_rollover": false,
+        "repeated_recovery": false
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": true
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": false,
+        "trusted_synchronization_allowed": false,
+        "soc_handoff_allowed": false,
+        "recovery_cycles": 1,
+        "final_safety_state": "REFUSE_SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    },
+    {
+      "scenario": "forensic_buffer_rollover_during_outage",
+      "inputs": {
+        "predictive_risk": true,
+        "connectivity_loss": true,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "buffer_rollover": true,
+        "repeated_recovery": false
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": false
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": true,
+        "trusted_synchronization_allowed": true,
+        "soc_handoff_allowed": true,
+        "recovery_cycles": 1,
+        "final_safety_state": "SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    },
+    {
+      "scenario": "buffer_rollover_then_integrity_failure",
+      "inputs": {
+        "predictive_risk": true,
+        "connectivity_loss": true,
+        "sensor_disagreement": false,
+        "integrity_failure": true,
+        "buffer_rollover": true,
+        "repeated_recovery": false
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": true
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": false,
+        "trusted_synchronization_allowed": false,
+        "soc_handoff_allowed": false,
+        "recovery_cycles": 1,
+        "final_safety_state": "REFUSE_SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    },
+    {
+      "scenario": "repeated_disconnect_recovery",
+      "inputs": {
+        "predictive_risk": true,
+        "connectivity_loss": true,
+        "sensor_disagreement": false,
+        "integrity_failure": false,
+        "buffer_rollover": false,
+        "repeated_recovery": true
+      },
+      "fault_injection": {
+        "forensic_event_count": 8,
+        "tampering_injected": false
+      },
+      "verification": {
+        "baseline_chain_valid": true,
+        "chain_after_fault_injection_valid": true,
+        "integrity_after_fault_valid": true,
+        "trusted_synchronization_allowed": true,
+        "soc_handoff_allowed": true,
+        "recovery_cycles": 3,
+        "final_safety_state": "SOC_HANDOFF"
+      },
+      "safety_properties": {
+        "direct_vehicle_actuation": false,
+        "trusted_sync_requires_integrity": true,
+        "soc_handoff_requires_trusted_sync": true
+      }
+    }
+  ],
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "real_world_cyberattack_performance_claim": false,
+    "live_cortex_xdr_api_used": false
+  },
+  "gates": {
+    "phase_28a_source_pass": true,
+    "phase_28b_source_pass": true,
+    "phase_28c_source_pass": true,
+    "phase_29_source_pass": true,
+    "all_scenarios_executed": true,
+    "baseline_chains_valid": true,
+    "fault_injection_chains_valid_when_not_tampered": true,
+    "tampering_invalidates_integrity": true,
+    "trusted_sync_refused_after_integrity_failure": true,
+    "soc_handoff_refused_after_integrity_failure": true,
+    "buffer_rollover_preserves_valid_chain": true,
+    "repeated_recovery_completes": true,
+    "compound_fault_safe_degradation": true,
+    "no_direct_vehicle_actuation": true,
+    "scientific_real_attack_claim_disabled": true,
+    "live_cortex_xdr_api_claim_disabled": true
+  },
+  "gate_count": 16,
+  "gates_passed": 16,
+  "evidence_digest": "a7f426ccc3b01be7797a1d29f61e851e51380d9a9ea61da0d40bb69df7a1560f"
+}
