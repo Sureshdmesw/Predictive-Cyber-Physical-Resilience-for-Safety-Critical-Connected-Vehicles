@@ -1,0 +1,324 @@
+{
+  "architecture_path": [
+    "predictive_risk",
+    "decision_engine",
+    "connectivity_loss",
+    "local_forensic_buffer",
+    "integrity_verification",
+    "synchronization",
+    "soc_handoff"
+  ],
+  "case_count": 13,
+  "cases": [
+    {
+      "expected": {
+        "chain_valid": true,
+        "final_state": "LOCAL_FORENSIC_BUFFER",
+        "predicted_risk": "NORMAL",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE"
+      },
+      "name": "normal_connected",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": false,
+        "final_state": "LOCAL_FORENSIC_BUFFER",
+        "predicted_risk": "NORMAL",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": true,
+        "predicted_risk": "HIGH",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE"
+      },
+      "name": "predictive_high_connected",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": false,
+        "final_state": "LOCAL_FORENSIC_BUFFER",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW"
+      },
+      "name": "high_risk_connectivity_loss",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": true,
+        "predicted_risk": "MEDIUM",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW"
+      },
+      "name": "medium_risk_connectivity_loss",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "MEDIUM",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": false,
+        "final_state": "REFUSE_SOC_HANDOFF",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE"
+      },
+      "name": "payload_tampering",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": false,
+        "connectivity_loss": true,
+        "final_state": "REFUSE_SOC_HANDOFF",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE",
+        "tamper_payload": true,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": false,
+        "final_state": "REFUSE_SOC_HANDOFF",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE"
+      },
+      "name": "previous_hash_tampering",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": false,
+        "connectivity_loss": true,
+        "final_state": "REFUSE_SOC_HANDOFF",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE",
+        "tamper_payload": false,
+        "tamper_previous_hash": true
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": false,
+        "predicted_risk": "HIGH",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE"
+      },
+      "name": "compound_high_risk_payload_tampering",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": false,
+        "connectivity_loss": true,
+        "final_state": "REFUSE_SOC_HANDOFF",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "REFUSE",
+        "synchronization": "REFUSE",
+        "tamper_payload": true,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": true,
+        "predicted_risk": "CRITICAL",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW"
+      },
+      "name": "critical_risk_connectivity_loss",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "CRITICAL",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "buffered_events": 5,
+        "chain_valid": true,
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW"
+      },
+      "name": "buffer_rollover",
+      "pass": true,
+      "result": {
+        "buffer_rollover": true,
+        "buffered_events": 5,
+        "chain_valid": true,
+        "connectivity_loss": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "HIGH",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": true,
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW"
+      },
+      "name": "repeated_disconnect_recovery",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "MEDIUM",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "chain_valid": true,
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW"
+      },
+      "name": "repeated_disconnect_recovery_consistency",
+      "pass": true,
+      "result": {
+        "buffer_rollover": false,
+        "buffered_events": 3,
+        "chain_valid": true,
+        "connectivity_loss": true,
+        "final_state": "SOC_HANDOFF",
+        "predicted_risk": "MEDIUM",
+        "soc_handoff": "ALLOW",
+        "synchronization": "ALLOW",
+        "tamper_payload": false,
+        "tamper_previous_hash": false
+      }
+    },
+    {
+      "expected": {
+        "decision": "MEDIUM"
+      },
+      "name": "sensor_disagreement_escalation",
+      "pass": true,
+      "result": {
+        "decision": "MEDIUM"
+      }
+    },
+    {
+      "expected": {
+        "decision": "HIGH"
+      },
+      "name": "integrity_failure_escalation",
+      "pass": true,
+      "result": {
+        "decision": "HIGH"
+      }
+    }
+  ],
+  "check_count": {
+    "passed": 14,
+    "total": 14
+  },
+  "checks": {
+    "all_adversarial_cases_pass": true,
+    "buffer_rollover_chain_preserved": true,
+    "direct_vehicle_actuation_disabled": true,
+    "high_risk_connectivity_recovery_preserved": true,
+    "live_cortex_xdr_api_disabled": true,
+    "phase4_28a_pass": true,
+    "phase4_28b_pass": true,
+    "phase4_28c_pass": true,
+    "phase4_29_pass": true,
+    "phase4_30_pass": true,
+    "phase4_31_pass": true,
+    "real_world_attack_claim_disabled": true,
+    "tampering_never_allows_soc_handoff": true,
+    "tampering_never_allows_sync": true
+  },
+  "evidence_digest": "fbe5c4fbb31bdeb373c5948bd77c6a99e0ffcb826f7eb338d92306b94c449e4b",
+  "phase": "4.35",
+  "retraining_performed": false,
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_api_used": false,
+    "real_world_cyberattack_performance_claim": false
+  },
+  "scientific_boundary": {
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_connection_claim": false,
+    "real_world_cyberattack_performance_claim": false,
+    "synthetic_telemetry_labels": true
+  },
+  "source_artifacts": [
+    "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+    "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json",
+    "experiments\\integration\\phase4_28\\crss_2024_phase4_28a_predictive_soc_event_pipeline.json",
+    "experiments\\integration\\phase4_28\\crss_2024_phase4_28b_connectivity_recovery_sync.json",
+    "experiments\\integration\\phase4_28c\\crss_2024_phase4_28c_adversarial_integrity_tamper_detection.json",
+    "experiments\\integration\\phase4_29\\crss_2024_phase4_29_resilience_state_machine_verification.json",
+    "experiments\\integration\\phase4_30\\crss_2024_phase4_30_system_fault_injection_recovery.json",
+    "experiments\\integration\\phase4_31\\crss_2024_phase4_31_explainable_evidence_correlation.json"
+  ],
+  "status": "PASS",
+  "timestamp_utc": "2026-09-07T15:58:58.336590+00:00",
+  "title": "End-to-End Adversarial Resilience Validation",
+  "validation_only": true
+}

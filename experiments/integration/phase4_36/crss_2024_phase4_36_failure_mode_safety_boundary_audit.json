@@ -1,0 +1,196 @@
+{
+  "phase": "4.36",
+  "title": "Failure-Mode / Safety-Boundary Audit",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-07T16:30:56.516635+00:00",
+  "check_count": 22,
+  "passed_checks": 22,
+  "failed_checks": [],
+  "source_artifact_count": 14,
+  "source_artifacts": {
+    "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json": {
+      "status": "PASS",
+      "sha256": "8d9af56fef1b2dca9129329efd2c3c43b4047609cc67c7839fd30db25fa2fcab"
+    },
+    "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json": {
+      "status": "PASS",
+      "sha256": "864742c63946b6c611134b44c423c311a46ca8ad202db29d5e3b587327f2a818"
+    },
+    "experiments\\integration\\phase4_28\\crss_2024_phase4_28a_predictive_soc_event_pipeline.json": {
+      "status": "PASS",
+      "sha256": "2ba6954a8c5b5571a3936f9729fb383b91b638cd59f6af223add265f90cbd971"
+    },
+    "experiments\\integration\\phase4_28\\crss_2024_phase4_28b_connectivity_recovery_sync.json": {
+      "status": "PASS",
+      "sha256": "11fd0ce0b7e8f82435f6214c5a3e6a7ddaa6158b771003a3f7358624fbe117b7"
+    },
+    "experiments\\integration\\phase4_28c\\crss_2024_phase4_28c_adversarial_integrity_tamper_detection.json": {
+      "status": "PASS",
+      "sha256": "eec63342671ccbf15f10b6a81df20fa85e542ef0e0b0cf9e707bddc522eeccde"
+    },
+    "experiments\\integration\\phase4_29\\crss_2024_phase4_29_resilience_state_machine_verification.json": {
+      "status": "PASS",
+      "sha256": "da23c8817394c641a0c763d569065d2ef6f55a915be385fea90e1151e981a8aa"
+    },
+    "experiments\\integration\\phase4_30\\crss_2024_phase4_30_system_fault_injection_recovery.json": {
+      "status": "PASS",
+      "sha256": "6b9f05052ac0e07272bd8f824ab70004f4358f93bcc55e86a2de3f1b2670a703"
+    },
+    "experiments\\integration\\phase4_31\\crss_2024_phase4_31_explainable_evidence_correlation.json": {
+      "status": "PASS",
+      "sha256": "41e316c1f9b3435dbf2979f5d5364f2cd1981299049cc8c57a76e4cb3a0b02b1"
+    },
+    "experiments\\integration\\phase4_32\\crss_2024_phase4_32_model_grounded_explainability.json": {
+      "status": "PASS",
+      "sha256": "5d1ed36a65bbbd780b57f08f4060b03d75d25689f5b0659a669a9bf3b2a7dd4b"
+    },
+    "experiments\\integration\\phase4_32b\\crss_2024_phase4_32b2_origin_balanced_model_grounded_explainability.json": {
+      "status": "PASS",
+      "sha256": "949be5d92b3830dd3e090ad6b621353b7260b264914b69036a297c6e208c0e8f"
+    },
+    "experiments\\integration\\phase4_32c\\crss_2024_phase4_32c_modality_grounded_explainability.json": {
+      "status": "PASS",
+      "sha256": "44438bd20743db53bb926de6e84c669d6585220254749bc8ed8e27373571ae98"
+    },
+    "experiments\\integration\\phase4_33\\crss_2024_phase4_33_explainability_stability.json": {
+      "status": "PASS",
+      "sha256": "ed8c303f1e7a4b610960f781562163524bbab45d3711737a364a7995134a9309"
+    },
+    "experiments\\integration\\phase4_34\\crss_2024_phase4_34_predictive_resilience_decision_validation.json": {
+      "status": "PASS",
+      "sha256": "98215fa1be12c520f32b6671a7b2a1b44e4296930ba42f3a6b72a52e142f3a05"
+    },
+    "experiments\\integration\\phase4_35\\crss_2024_phase4_35_end_to_end_adversarial_resilience_validation.json": {
+      "status": "PASS",
+      "sha256": "4305bb2f79355794b85e4730d000292b8fda01b257605d33cb7531b5c9f9ee29"
+    }
+  },
+  "audit_scope": [
+    "decision policy boundaries",
+    "connectivity degradation",
+    "sensor disagreement",
+    "integrity failure",
+    "tamper rejection",
+    "connectivity recovery",
+    "synchronization gating",
+    "SOC handoff boundary",
+    "uncertainty safety boundary",
+    "direct vehicle actuation boundary",
+    "synthetic-label scientific boundary",
+    "end-to-end adversarial resilience"
+  ],
+  "checks": [
+    {
+      "name": "all_required_artifacts_present",
+      "status": "PASS",
+      "detail": "14/14 required artifacts loaded."
+    },
+    {
+      "name": "all_source_artifacts_pass",
+      "status": "PASS",
+      "detail": "Non-PASS source artifacts: []"
+    },
+    {
+      "name": "risk_policy_has_monotonic_levels",
+      "status": "PASS",
+      "detail": "Decision policy contains all five expected risk levels."
+    },
+    {
+      "name": "connectivity_degradation_cannot_lower_risk",
+      "status": "PASS",
+      "detail": "Connectivity degradation imposes at least MEDIUM risk."
+    },
+    {
+      "name": "sensor_disagreement_cannot_lower_risk",
+      "status": "PASS",
+      "detail": "Sensor disagreement imposes at least MEDIUM risk."
+    },
+    {
+      "name": "integrity_failure_cannot_lower_risk",
+      "status": "PASS",
+      "detail": "Integrity failure imposes at least HIGH risk."
+    },
+    {
+      "name": "direct_vehicle_actuation_forbidden",
+      "status": "PASS",
+      "detail": "No source artifact declares direct vehicle actuation enabled."
+    },
+    {
+      "name": "payload_tampering_rejected",
+      "status": "PASS",
+      "detail": "Phase 4.28C contains explicit payload-tamper rejection evidence."
+    },
+    {
+      "name": "tampered_path_refuses_sync",
+      "status": "PASS",
+      "detail": "Tampered evidence enters the refuse-sync safety boundary."
+    },
+    {
+      "name": "tampered_path_refuses_soc_handoff",
+      "status": "PASS",
+      "detail": "Tampered evidence cannot proceed to SOC handoff."
+    },
+    {
+      "name": "unverified_evidence_state_exists",
+      "status": "PASS",
+      "detail": "State machine explicitly represents unverified evidence."
+    },
+    {
+      "name": "recovery_requires_integrity_verification",
+      "status": "PASS",
+      "detail": "Recovery/synchronization evidence includes integrity verification."
+    },
+    {
+      "name": "synchronization_after_integrity_verification",
+      "status": "PASS",
+      "detail": "Synchronization exists only in the verified recovery lifecycle."
+    },
+    {
+      "name": "uncertainty_evidence_present",
+      "status": "PASS",
+      "detail": "Deep-ensemble uncertainty evidence is available."
+    },
+    {
+      "name": "decision_validation_passed",
+      "status": "PASS",
+      "detail": "Phase 4.34 decision validation passed."
+    },
+    {
+      "name": "uncertainty_does_not_lower_risk",
+      "status": "PASS",
+      "detail": "Decision validation contains uncertainty safety-boundary evidence."
+    },
+    {
+      "name": "phase4_35_end_to_end_passed",
+      "status": "PASS",
+      "detail": "Phase 4.35 end-to-end adversarial validation passed."
+    },
+    {
+      "name": "phase4_35_has_zero_failed_checks",
+      "status": "PASS",
+      "detail": "Phase 4.35 reports zero failed checks."
+    },
+    {
+      "name": "invalid_or_unverified_evidence_does_not_cross_soc_boundary",
+      "status": "PASS",
+      "detail": "Unverified evidence remains outside the SOC handoff boundary."
+    },
+    {
+      "name": "safety_boundary_is_fail_closed_for_integrity_failure",
+      "status": "PASS",
+      "detail": "Integrity failure produces elevated risk and blocks unsafe synchronization."
+    },
+    {
+      "name": "synthetic_labels_not_real_attack_claim",
+      "status": "PASS",
+      "detail": "Evidence remains explicitly bounded as synthetic research evidence."
+    },
+    {
+      "name": "no_retraining_in_audit",
+      "status": "PASS",
+      "detail": "Phase 4.36 is an audit-only phase; no retraining performed."
+    }
+  ],
+  "methodological_note": "Phase 4.36 is a deterministic safety-boundary audit over previously generated research evidence. It does not retrain, modify, or claim validation of a production vehicle system.",
+  "evidence_digest_sha256": "b2d2d77043ec465deedaa986c11961b48014354bce7b1d5cb65b90f6238dccd8"
+}

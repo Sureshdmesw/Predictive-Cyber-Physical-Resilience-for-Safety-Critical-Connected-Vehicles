@@ -1,0 +1,503 @@
+{
+  "phase": "4.32",
+  "title": "Model-Grounded Predictive Resilience Explainability and Counterfactual Verification",
+  "status": "PASS",
+  "research_simulation": true,
+  "model_grounded": true,
+  "retraining_performed": false,
+  "feature_contract": {
+    "original_feature_count": 63,
+    "removed_constant_features": 4,
+    "final_feature_count": 59,
+    "sequence_length": 12,
+    "observation_window_seconds": 60
+  },
+  "attribution_method": {
+    "type": "leave_one_feature_out_perturbation",
+    "uses_actual_frozen_model": true,
+    "manual_driver_assignment": false
+  },
+  "counterfactual_method": {
+    "type": "feature_zeroing",
+    "uses_actual_frozen_model": true
+  },
+  "cases": [
+    {
+      "explanation_id": "PHASE4_32_SAMPLE_0",
+      "timestamp": "2026-09-07T08:19:57.230237+00:00",
+      "vehicle_context": {
+        "source_dataset": "CRSS_2024",
+        "sample_index": 0,
+        "target_y6": 0,
+        "observation_window_steps": 12,
+        "observation_window_seconds": 60,
+        "feature_count": 59
+      },
+      "prediction": {
+        "ensemble_member_count": 3,
+        "seed_values": [
+          42,
+          52,
+          62
+        ],
+        "member_probabilities": [
+          0.5473651885986328,
+          0.6232695579528809,
+          0.5321357846260071
+        ],
+        "ensemble_mean_probability": 0.5675901770591736,
+        "ensemble_std_probability": 0.03985915705561638,
+        "risk_level": "HIGH"
+      },
+      "model_attribution": {
+        "method": "leave_one_feature_out_perturbation",
+        "baseline": "zero_after_train_only_normalization",
+        "top_features": [
+          {
+            "feature": "can_message_rate",
+            "feature_index": 7,
+            "modality": "cyber",
+            "ensemble_mean_delta": -0.010210017673671246,
+            "ensemble_abs_delta": 0.1334829479455948,
+            "seed_deltas": [
+              -0.12078213691711426,
+              0.1849094033241272,
+              -0.0947573184967041
+            ]
+          },
+          {
+            "feature": "speed_limit_deviation",
+            "feature_index": 51,
+            "modality": "physical",
+            "ensemble_mean_delta": 0.09203637391328812,
+            "ensemble_abs_delta": 0.10799166560173035,
+            "seed_deltas": [
+              0.109219491481781,
+              -0.023932933807373047,
+              0.190822571516037
+            ]
+          },
+          {
+            "feature": "speed_limit_deviation_abs",
+            "feature_index": 52,
+            "modality": "physical",
+            "ensemble_mean_delta": -0.035505831241607666,
+            "ensemble_abs_delta": 0.047944050282239914,
+            "seed_deltas": [
+              0.018657326698303223,
+              -0.09147238731384277,
+              -0.03370243310928345
+            ]
+          },
+          {
+            "feature": "telemetry_gap_duration_ms",
+            "feature_index": 55,
+            "modality": "cyber",
+            "ensemble_mean_delta": 0.0005390246515162289,
+            "ensemble_abs_delta": 0.01714456081390381,
+            "seed_deltas": [
+              0.010706722736358643,
+              0.015818655490875244,
+              -0.02490830421447754
+            ]
+          },
+          {
+            "feature": "rssi_dbm",
+            "feature_index": 46,
+            "modality": "derived_temporal_resilience",
+            "ensemble_mean_delta": -0.004772941116243601,
+            "ensemble_abs_delta": 0.009862224571406841,
+            "seed_deltas": [
+              -0.0009170770645141602,
+              0.00763392448425293,
+              -0.02103567123413086
+            ]
+          },
+          {
+            "feature": "can_bus_load_pct",
+            "feature_index": 4,
+            "modality": "cyber",
+            "ensemble_mean_delta": -0.003977974411100149,
+            "ensemble_abs_delta": 0.003977974411100149,
+            "seed_deltas": [
+              -0.0006082653999328613,
+              -0.006989538669586182,
+              -0.004336118698120117
+            ]
+          },
+          {
+            "feature": "rolling_mean_3_latency_ms",
+            "feature_index": 37,
+            "modality": "derived_temporal_resilience",
+            "ensemble_mean_delta": 0.0021865565795451403,
+            "ensemble_abs_delta": 0.0037707288283854723,
+            "seed_deltas": [
+              0.0042945146560668945,
+              -0.002376258373260498,
+              0.004641413688659668
+            ]
+          },
+          {
+            "feature": "latency_ms",
+            "feature_index": 31,
+            "modality": "cyber",
+            "ensemble_mean_delta": 0.0029249589424580336,
+            "ensemble_abs_delta": 0.0029249589424580336,
+            "seed_deltas": [
+              0.004220783710479736,
+              0.002687394618988037,
+              0.0018666982650756836
+            ]
+          },
+          {
+            "feature": "can_message_rate_deviation",
+            "feature_index": 8,
+            "modality": "cyber",
+            "ensemble_mean_delta": 0.0013677278766408563,
+            "ensemble_abs_delta": 0.001692096353508532,
+            "seed_deltas": [
+              -0.00048655271530151367,
+              0.0019480586051940918,
+              0.0026416778564453125
+            ]
+          },
+          {
+            "feature": "latency_jitter_ms",
+            "feature_index": 30,
+            "modality": "cyber",
+            "ensemble_mean_delta": -9.934107220033184e-05,
+            "ensemble_abs_delta": 0.000979344011284411,
+            "seed_deltas": [
+              -0.000849604606628418,
+              0.0013200044631958008,
+              -0.0007684230804443359
+            ]
+          }
+        ]
+      },
+      "counterfactual_verification": {
+        "method": "feature_zeroing",
+        "top_driver_tests": [
+          {
+            "baseline_mean_probability": 0.5675901770591736,
+            "counterfactual_mean_probability": 0.5778002142906189,
+            "probability_change": 0.010210037231445312,
+            "direction_verified": true,
+            "feature": "can_message_rate",
+            "feature_index": 7
+          },
+          {
+            "baseline_mean_probability": 0.5675901770591736,
+            "counterfactual_mean_probability": 0.4755537807941437,
+            "probability_change": -0.09203639626502991,
+            "direction_verified": true,
+            "feature": "speed_limit_deviation",
+            "feature_index": 51
+          },
+          {
+            "baseline_mean_probability": 0.5675901770591736,
+            "counterfactual_mean_probability": 0.6030960083007812,
+            "probability_change": 0.035505831241607666,
+            "direction_verified": true,
+            "feature": "speed_limit_deviation_abs",
+            "feature_index": 52
+          },
+          {
+            "baseline_mean_probability": 0.5675901770591736,
+            "counterfactual_mean_probability": 0.5670511722564697,
+            "probability_change": -0.0005390048027038574,
+            "direction_verified": true,
+            "feature": "telemetry_gap_duration_ms",
+            "feature_index": 55
+          },
+          {
+            "baseline_mean_probability": 0.5675901770591736,
+            "counterfactual_mean_probability": 0.5723631381988525,
+            "probability_change": 0.004772961139678955,
+            "direction_verified": true,
+            "feature": "rssi_dbm",
+            "feature_index": 46
+          }
+        ],
+        "verified_driver_count": 5
+      },
+      "decision": {
+        "policy_source": "Phase 4.20 deterministic predictive resilience policy",
+        "risk_level": "HIGH",
+        "direct_vehicle_actuation": false
+      },
+      "resilience_state": "PREDICTIVE_RISK",
+      "forensic_evidence": {
+        "source": "Phase 4.32 model-grounded explanation",
+        "evidence_type": "model_attribution_plus_counterfactual",
+        "tamper_evident_forensic_buffer": true
+      },
+      "integrity": {
+        "model_checkpoint_count": 3,
+        "checkpoint_integrity_verified": true,
+        "evidence_integrity_required": true
+      },
+      "soc_investigation": {
+        "integration_mode": "CORTEX_XDR_COMPATIBLE_RESEARCH_ABSTRACTION",
+        "live_cortex_xdr_api_used": false,
+        "recommended_investigation": [
+          "Review top model driver: can_message_rate",
+          "Review top model driver: speed_limit_deviation",
+          "Review top model driver: speed_limit_deviation_abs"
+        ]
+      },
+      "safety_boundary": {
+        "direct_vehicle_actuation": false,
+        "autonomous_safety_actuation": false,
+        "real_world_cyberattack_performance_claim": false
+      }
+    },
+    {
+      "explanation_id": "PHASE4_32_SAMPLE_231",
+      "timestamp": "2026-09-07T08:19:57.536324+00:00",
+      "vehicle_context": {
+        "source_dataset": "CRSS_2024",
+        "sample_index": 231,
+        "target_y6": 1,
+        "observation_window_steps": 12,
+        "observation_window_seconds": 60,
+        "feature_count": 59
+      },
+      "prediction": {
+        "ensemble_member_count": 3,
+        "seed_values": [
+          42,
+          52,
+          62
+        ],
+        "member_probabilities": [
+          0.5670225024223328,
+          0.6309609413146973,
+          0.5091134309768677
+        ],
+        "ensemble_mean_probability": 0.5690323114395142,
+        "ensemble_std_probability": 0.04976433515548706,
+        "risk_level": "HIGH"
+      },
+      "model_attribution": {
+        "method": "leave_one_feature_out_perturbation",
+        "baseline": "zero_after_train_only_normalization",
+        "top_features": [
+          {
+            "feature": "can_message_rate",
+            "feature_index": 7,
+            "modality": "cyber",
+            "ensemble_mean_delta": -0.009497483260929585,
+            "ensemble_abs_delta": 0.1245071068406105,
+            "seed_deltas": [
+              -0.11539912223815918,
+              0.1725144386291504,
+              -0.08560776710510254
+            ]
+          },
+          {
+            "feature": "speed_limit_deviation",
+            "feature_index": 51,
+            "modality": "physical",
+            "ensemble_mean_delta": 0.09136185795068741,
+            "ensemble_abs_delta": 0.10847089439630508,
+            "seed_deltas": [
+              0.1049242615699768,
+              -0.025663554668426514,
+              0.19482487440109253
+            ]
+          },
+          {
+            "feature": "speed_limit_deviation_abs",
+            "feature_index": 52,
+            "modality": "physical",
+            "ensemble_mean_delta": -0.03581547737121582,
+            "ensemble_abs_delta": 0.04583084583282471,
+            "seed_deltas": [
+              0.01502305269241333,
+              -0.09113556146621704,
+              -0.03133392333984375
+            ]
+          },
+          {
+            "feature": "telemetry_gap_duration_ms",
+            "feature_index": 55,
+            "modality": "cyber",
+            "ensemble_mean_delta": 0.0005811651353724301,
+            "ensemble_abs_delta": 0.030574262142181396,
+            "seed_deltas": [
+              0.01881319284439087,
+              0.0279199481010437,
+              -0.04498964548110962
+            ]
+          },
+          {
+            "feature": "rssi_dbm",
+            "feature_index": 46,
+            "modality": "derived_temporal_resilience",
+            "ensemble_mean_delta": -0.005748490337282419,
+            "ensemble_abs_delta": 0.01178791094571352,
+            "seed_deltas": [
+              -0.0010256767272949219,
+              0.009059131145477295,
+              -0.025278925895690918
+            ]
+          },
+          {
+            "feature": "can_interarrival_jitter_ms",
+            "feature_index": 5,
+            "modality": "cyber",
+            "ensemble_mean_delta": 0.003940741065889597,
+            "ensemble_abs_delta": 0.003940741065889597,
+            "seed_deltas": [
+              0.004807829856872559,
+              0.004044830799102783,
+              0.0029695630073547363
+            ]
+          },
+          {
+            "feature": "rolling_mean_3_latency_ms",
+            "feature_index": 37,
+            "modality": "derived_temporal_resilience",
+            "ensemble_mean_delta": 0.0021885831374675035,
+            "ensemble_abs_delta": 0.0037749011535197496,
+            "seed_deltas": [
+              0.004277408123016357,
+              -0.002379477024078369,
+              0.004667818546295166
+            ]
+          },
+          {
+            "feature": "can_message_rate_deviation",
+            "feature_index": 8,
+            "modality": "cyber",
+            "ensemble_mean_delta": -0.0029879410285502672,
+            "ensemble_abs_delta": 0.003683368442580104,
+            "seed_deltas": [
+              0.0010431408882141113,
+              -0.004244983196258545,
+              -0.005761981010437012
+            ]
+          },
+          {
+            "feature": "latency_ms",
+            "feature_index": 31,
+            "modality": "cyber",
+            "ensemble_mean_delta": 0.0028762221336364746,
+            "ensemble_abs_delta": 0.0028762221336364746,
+            "seed_deltas": [
+              0.0041787028312683105,
+              0.002674579620361328,
+              0.0017753839492797852
+            ]
+          },
+          {
+            "feature": "can_bus_load_pct",
+            "feature_index": 4,
+            "modality": "cyber",
+            "ensemble_mean_delta": -0.0021255810279399157,
+            "ensemble_abs_delta": 0.0021255810279399157,
+            "seed_deltas": [
+              -0.0003457069396972656,
+              -0.003738701343536377,
+              -0.002292335033416748
+            ]
+          }
+        ]
+      },
+      "counterfactual_verification": {
+        "method": "feature_zeroing",
+        "top_driver_tests": [
+          {
+            "baseline_mean_probability": 0.5690323114395142,
+            "counterfactual_mean_probability": 0.5785297751426697,
+            "probability_change": 0.009497463703155518,
+            "direction_verified": true,
+            "feature": "can_message_rate",
+            "feature_index": 7
+          },
+          {
+            "baseline_mean_probability": 0.5690323114395142,
+            "counterfactual_mean_probability": 0.47767043113708496,
+            "probability_change": -0.0913618803024292,
+            "direction_verified": true,
+            "feature": "speed_limit_deviation",
+            "feature_index": 51
+          },
+          {
+            "baseline_mean_probability": 0.5690323114395142,
+            "counterfactual_mean_probability": 0.60484778881073,
+            "probability_change": 0.03581547737121582,
+            "direction_verified": true,
+            "feature": "speed_limit_deviation_abs",
+            "feature_index": 52
+          },
+          {
+            "baseline_mean_probability": 0.5690323114395142,
+            "counterfactual_mean_probability": 0.5684511661529541,
+            "probability_change": -0.0005811452865600586,
+            "direction_verified": true,
+            "feature": "telemetry_gap_duration_ms",
+            "feature_index": 55
+          },
+          {
+            "baseline_mean_probability": 0.5690323114395142,
+            "counterfactual_mean_probability": 0.5747807621955872,
+            "probability_change": 0.005748450756072998,
+            "direction_verified": true,
+            "feature": "rssi_dbm",
+            "feature_index": 46
+          }
+        ],
+        "verified_driver_count": 5
+      },
+      "decision": {
+        "policy_source": "Phase 4.20 deterministic predictive resilience policy",
+        "risk_level": "HIGH",
+        "direct_vehicle_actuation": false
+      },
+      "resilience_state": "PREDICTIVE_RISK",
+      "forensic_evidence": {
+        "source": "Phase 4.32 model-grounded explanation",
+        "evidence_type": "model_attribution_plus_counterfactual",
+        "tamper_evident_forensic_buffer": true
+      },
+      "integrity": {
+        "model_checkpoint_count": 3,
+        "checkpoint_integrity_verified": true,
+        "evidence_integrity_required": true
+      },
+      "soc_investigation": {
+        "integration_mode": "CORTEX_XDR_COMPATIBLE_RESEARCH_ABSTRACTION",
+        "live_cortex_xdr_api_used": false,
+        "recommended_investigation": [
+          "Review top model driver: can_message_rate",
+          "Review top model driver: speed_limit_deviation",
+          "Review top model driver: speed_limit_deviation_abs"
+        ]
+      },
+      "safety_boundary": {
+        "direct_vehicle_actuation": false,
+        "autonomous_safety_actuation": false,
+        "real_world_cyberattack_performance_claim": false
+      }
+    }
+  ],
+  "checks": {
+    "feature_contract_verified": true,
+    "checkpoint_count_verified": true,
+    "all_checkpoints_loaded": true,
+    "ensemble_inference_completed": true,
+    "model_grounded_attribution": true,
+    "counterfactual_verification_completed": true,
+    "direct_vehicle_actuation_disabled": true,
+    "live_cortex_xdr_api_not_used": true,
+    "real_world_cyberattack_performance_claim_disabled": true
+  },
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_api_used": false,
+    "real_world_cyberattack_performance_claim": false
+  },
+  "evidence_digest": "2db572b04cb634132daa2280a71d594fd3e62f9458670420ee10d9ffe0f38e8f"
+}

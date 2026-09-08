@@ -1,0 +1,38 @@
+{
+  "phase": "4.39",
+  "title": "Research Governance, Safety, and Scientific Claims Audit",
+  "status": "PASS",
+  "checks_passed": 19,
+  "checks_total": 19,
+  "checks": {
+    "required_governance_artifact_resolver.py_present": true,
+    "required_governance_audit_artifact_registry.py_present": true,
+    "required_governance_phase_dependency_gate.py_present": true,
+    "required_governance_artifact_registry.json_present": true,
+    "phase4_37_present": true,
+    "phase4_37_pass": true,
+    "phase4_37_32_of_32": true,
+    "crss_2024_phase4_21_edge_iot_resilience_safety_artifact_present": true,
+    "crss_2024_phase4_28a_predictive_soc_event_pipeline_safety_artifact_present": true,
+    "crss_2024_phase4_29_resilience_state_machine_verification_safety_artifact_present": true,
+    "crss_2024_phase4_36_failure_mode_safety_boundary_audit_safety_artifact_present": true,
+    "decision_engine_present": true,
+    "decision_engine_policy_documented": true,
+    "direct_vehicle_actuation_not_claimed": true,
+    "synthetic_label_limitation_documented": true,
+    "ood_limitation_evidence_present": true,
+    "cortex_xdr_live_integration_not_claimed": true,
+    "final_audit_does_not_retrain": true,
+    "tamper_refusal_path_documented": true
+  },
+  "evidence_digest": "22f69031f498dd88e83fd5f78b05a63a173485132311d328e598c1b925f1bce1",
+  "governance_statement": {
+    "synthetic_cyber_labels": true,
+    "real_world_cyberattack_claim": false,
+    "live_cortex_xdr_claim": false,
+    "direct_vehicle_actuation": false,
+    "research_system_boundary": true,
+    "test_set_calibration": false,
+    "retraining_in_phase_4_39": false
+  }
+}

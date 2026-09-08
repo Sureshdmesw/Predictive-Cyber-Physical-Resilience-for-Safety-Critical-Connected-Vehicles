@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model-Grounded Predictive Resilience Explanation Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "explanation_id",
+    "timestamp",
+    "vehicle_context",
+    "prediction",
+    "model_attribution",
+    "counterfactual_verification",
+    "decision",
+    "resilience_state",
+    "forensic_evidence",
+    "integrity",
+    "soc_investigation",
+    "safety_boundary"
+  ],
+  "properties": {
+    "explanation_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "vehicle_context": {
+      "type": "object"
+    },
+    "prediction": {
+      "type": "object"
+    },
+    "model_attribution": {
+      "type": "object"
+    },
+    "counterfactual_verification": {
+      "type": "object"
+    },
+    "decision": {
+      "type": "object"
+    },
+    "resilience_state": {
+      "type": "string"
+    },
+    "forensic_evidence": {
+      "type": "object"
+    },
+    "integrity": {
+      "type": "object"
+    },
+    "soc_investigation": {
+      "type": "object"
+    },
+    "safety_boundary": {
+      "type": "object"
+    }
+  }
+}

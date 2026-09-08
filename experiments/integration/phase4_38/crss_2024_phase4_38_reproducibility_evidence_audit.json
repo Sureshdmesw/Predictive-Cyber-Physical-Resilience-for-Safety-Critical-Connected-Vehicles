@@ -1,0 +1,666 @@
+{
+  "phase": "4.38",
+  "title": "Reproducibility and Evidence Audit",
+  "status": "PASS",
+  "checks_passed": 53,
+  "checks_total": 53,
+  "checks": {
+    "phase4_20_exists": true,
+    "phase4_20_json_valid": true,
+    "phase4_21_exists": true,
+    "phase4_21_json_valid": true,
+    "phase4_22_exists": true,
+    "phase4_22_json_valid": true,
+    "phase4_23_exists": true,
+    "phase4_23_json_valid": true,
+    "phase4_24_exists": true,
+    "phase4_24_json_valid": true,
+    "phase4_25_exists": true,
+    "phase4_25_json_valid": true,
+    "phase4_26_exists": true,
+    "phase4_26_json_valid": true,
+    "phase4_27a_exists": true,
+    "phase4_27a_json_valid": true,
+    "phase4_27b_exists": true,
+    "phase4_27b_json_valid": true,
+    "phase4_28a_exists": true,
+    "phase4_28a_json_valid": true,
+    "phase4_28b_exists": true,
+    "phase4_28b_json_valid": true,
+    "phase4_28c_exists": true,
+    "phase4_28c_json_valid": true,
+    "phase4_29_exists": true,
+    "phase4_29_json_valid": true,
+    "phase4_30_exists": true,
+    "phase4_30_json_valid": true,
+    "phase4_31_exists": true,
+    "phase4_31_json_valid": true,
+    "phase4_32_exists": true,
+    "phase4_32_json_valid": true,
+    "phase4_32b2_exists": true,
+    "phase4_32b2_json_valid": true,
+    "phase4_32c_exists": true,
+    "phase4_32c_json_valid": true,
+    "phase4_33_exists": true,
+    "phase4_33_json_valid": true,
+    "phase4_34_exists": true,
+    "phase4_34_json_valid": true,
+    "phase4_35_exists": true,
+    "phase4_35_json_valid": true,
+    "phase4_36_exists": true,
+    "phase4_36_json_valid": true,
+    "phase4_37_exists": true,
+    "phase4_37_json_valid": true,
+    "phase4_37_status_pass": true,
+    "phase4_37_checks_32_of_32": true,
+    "canonical_explainability_schema_exists": true,
+    "canonical_explainability_schema_valid": true,
+    "all_frozen_model_checkpoints_present": true,
+    "forecasting_tensor_directory_exists": true,
+    "all_forecasting_tensors_present": true
+  },
+  "artifacts": {
+    "phase4_20": {
+      "path": "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+      "sha256": "8d9af56fef1b2dca9129329efd2c3c43b4047609cc67c7839fd30db25fa2fcab",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_21": {
+      "path": "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json",
+      "sha256": "864742c63946b6c611134b44c423c311a46ca8ad202db29d5e3b587327f2a818",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "events_generated": true,
+        "forensic_buffer_nonempty": true,
+        "hash_chain_integrity_before_sync": true,
+        "connectivity_restoration_detected": true,
+        "secure_sync_requires_integrity": true,
+        "hash_chain_integrity_after_sync": true,
+        "cortex_xdr_events_generated": true,
+        "no_direct_vehicle_actuation": true,
+        "offline_first_behavior": true
+      }
+    },
+    "phase4_22": {
+      "path": "experiments\\edge_iot\\crss_2024_phase4_22_scenario_evaluation.json",
+      "sha256": "ff22383244dc9ea34b5302af9e45ab0c0cdf018b8330dfa0ece992c238f0d86f",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_23": {
+      "path": "experiments\\edge_iot\\crss_2024_phase4_23_end_to_end_resilience.json",
+      "sha256": "687f050111900704501d1603fac4d1b7267b65ede502e718cfd191e9b4867a6f",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_24": {
+      "path": "experiments\\edge_iot\\crss_2024_phase4_24_system_stress_failure_analysis.json",
+      "sha256": "e20002786b3fd65f5f70a4b9089f388ec92772c864c5a4f4dbba35c50ad67ef9",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_25": {
+      "path": "experiments\\modeling\\v2\\evidence\\crss_2024_v2_phase4_25_evidence_manifest.json",
+      "sha256": "8df6ebabf2f54175cd829e74017ef40696a71a69aa4dc9c01d75cbe74f74c2fa",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_26": {
+      "path": "experiments\\modeling\\v2\\error_analysis\\phase4_26\\crss_2024_v2_phase4_26_temporal_regime_error_analysis.json",
+      "sha256": "e7c8cf0306a88a536d6f4c4ea8df275469848d913d4ed003cba5130689137d30",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_27a": {
+      "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27\\crss_2024_v2_phase4_27a_deep_ensemble_final.json",
+      "sha256": "b0a305856ad34941e38b48dc36a0a5e41415ad87d1d5e2ef2328953a78d398de",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_27b": {
+      "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27b\\crss_2024_v2_phase4_27b_ood_regime_uncertainty_final.json",
+      "sha256": "df86b121720f28c02ca4f45728d40edf65be0dafef8b4a0f697f829d0469947b",
+      "json_valid": true,
+      "status": "FAIL",
+      "checks": null
+    },
+    "phase4_28a": {
+      "path": "experiments\\integration\\phase4_28\\crss_2024_phase4_28a_predictive_soc_event_pipeline.json",
+      "sha256": "2ba6954a8c5b5571a3936f9729fb383b91b638cd59f6af223add265f90cbd971",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_28b": {
+      "path": "experiments\\integration\\phase4_28\\crss_2024_phase4_28b_connectivity_recovery_sync.json",
+      "sha256": "11fd0ce0b7e8f82435f6214c5a3e6a7ddaa6158b771003a3f7358624fbe117b7",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_28c": {
+      "path": "experiments\\integration\\phase4_28c\\crss_2024_phase4_28c_adversarial_integrity_tamper_detection.json",
+      "sha256": "eec63342671ccbf15f10b6a81df20fa85e542ef0e0b0cf9e707bddc522eeccde",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_29": {
+      "path": "experiments\\integration\\phase4_29\\crss_2024_phase4_29_resilience_state_machine_verification.json",
+      "sha256": "da23c8817394c641a0c763d569065d2ef6f55a915be385fea90e1151e981a8aa",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_30": {
+      "path": "experiments\\integration\\phase4_30\\crss_2024_phase4_30_system_fault_injection_recovery.json",
+      "sha256": "6b9f05052ac0e07272bd8f824ab70004f4358f93bcc55e86a2de3f1b2670a703",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_31": {
+      "path": "experiments\\integration\\phase4_31\\crss_2024_phase4_31_explainable_evidence_correlation.json",
+      "sha256": "41e316c1f9b3435dbf2979f5d5364f2cd1981299049cc8c57a76e4cb3a0b02b1",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": null
+    },
+    "phase4_32": {
+      "path": "experiments\\integration\\phase4_32\\crss_2024_phase4_32_model_grounded_explainability.json",
+      "sha256": "5d1ed36a65bbbd780b57f08f4060b03d75d25689f5b0659a669a9bf3b2a7dd4b",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "feature_contract_verified": true,
+        "checkpoint_count_verified": true,
+        "all_checkpoints_loaded": true,
+        "ensemble_inference_completed": true,
+        "model_grounded_attribution": true,
+        "counterfactual_verification_completed": true,
+        "direct_vehicle_actuation_disabled": true,
+        "live_cortex_xdr_api_not_used": true,
+        "real_world_cyberattack_performance_claim_disabled": true
+      }
+    },
+    "phase4_32b2": {
+      "path": "experiments\\integration\\phase4_32b\\crss_2024_phase4_32b2_origin_balanced_model_grounded_explainability.json",
+      "sha256": "949be5d92b3830dd3e090ad6b621353b7260b264914b69036a297c6e208c0e8f",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "50_cases": true,
+        "25_negative": true,
+        "25_positive": true,
+        "50_unique_scenarios": true,
+        "all_origins_11_to_17_represented": true,
+        "three_frozen_models": true,
+        "manual_driver_assignment_disabled": true,
+        "temporal_attribution_present": true,
+        "counterfactuals_present": true,
+        "scenario_ids_recorded": true,
+        "origins_recorded": true,
+        "schema_present": true,
+        "checkpoint_hashes_recorded": true,
+        "no_retraining": true,
+        "test_not_training": true,
+        "test_not_calibration": true,
+        "causal_claim_disabled": true
+      }
+    },
+    "phase4_32c": {
+      "path": "experiments\\integration\\phase4_32c\\crss_2024_phase4_32c_modality_grounded_explainability.json",
+      "sha256": "44438bd20743db53bb926de6e84c669d6585220254749bc8ed8e27373571ae98",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "50_unique_scenarios": true,
+        "25_negative_25_positive": true,
+        "origins_11_to_17_all_present": true,
+        "phase4_11_total_features_59": true,
+        "phase4_11_cyber_34": true,
+        "phase4_11_physical_12": true,
+        "phase4_11_derived_13": true,
+        "ordered_map_exact_59": true,
+        "reduced_feature_order_exact": true,
+        "all_features_have_modality": true,
+        "three_frozen_models": true,
+        "model_grounded_attribution": true,
+        "temporal_attribution": true,
+        "counterfactual_verification": true,
+        "test_not_training": true,
+        "test_not_calibration": true,
+        "causal_claim_disabled": true
+      }
+    },
+    "phase4_33": {
+      "path": "experiments\\integration\\phase4_33\\crss_2024_phase4_33_explainability_stability.json",
+      "sha256": "ed8c303f1e7a4b610960f781562163524bbab45d3711737a364a7995134a9309",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "50_cases": true,
+        "25_negative_25_positive": true,
+        "50_unique_scenarios": true,
+        "origins_11_to_17_present": true,
+        "three_frozen_models": true,
+        "59_features": true,
+        "model_grounded_attribution": true,
+        "temporal_attribution": true,
+        "counterfactual_verification": true,
+        "modality_mapping_59": true,
+        "modality_mapping_34_12_13": true,
+        "test_not_training": true,
+        "test_not_calibration": true,
+        "causal_claim_disabled": true,
+        "vehicle_actuation_disabled": true,
+        "live_cortex_xdr_disabled": true,
+        "real_world_attack_claim_disabled": true
+      }
+    },
+    "phase4_34": {
+      "path": "experiments\\integration\\phase4_34\\crss_2024_phase4_34_predictive_resilience_decision_validation.json",
+      "sha256": "98215fa1be12c520f32b6671a7b2a1b44e4296930ba42f3a6b72a52e142f3a05",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "compound_modifiers_monotonic": true,
+        "connectivity_modifier_minimum_medium": true,
+        "decision_engine_source_loaded": true,
+        "direct_vehicle_actuation_disabled": true,
+        "ensemble_retraining_false": true,
+        "ensemble_source_loaded": true,
+        "ensemble_test_used_for_training_false": true,
+        "integrity_modifier_minimum_high": true,
+        "invalid_probability_rejected": true,
+        "invalid_uncertainty_rejected": true,
+        "live_cortex_xdr_api_disabled": true,
+        "policy_boundaries_correct": true,
+        "real_world_attack_claim_disabled": true,
+        "risk_probability_monotonicity": true,
+        "sensor_modifier_minimum_medium": true,
+        "uncertainty_does_not_reduce_risk": true
+      }
+    },
+    "phase4_35": {
+      "path": "experiments\\integration\\phase4_35\\crss_2024_phase4_35_end_to_end_adversarial_resilience_validation.json",
+      "sha256": "4305bb2f79355794b85e4730d000292b8fda01b257605d33cb7531b5c9f9ee29",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": {
+        "all_adversarial_cases_pass": true,
+        "buffer_rollover_chain_preserved": true,
+        "direct_vehicle_actuation_disabled": true,
+        "high_risk_connectivity_recovery_preserved": true,
+        "live_cortex_xdr_api_disabled": true,
+        "phase4_28a_pass": true,
+        "phase4_28b_pass": true,
+        "phase4_28c_pass": true,
+        "phase4_29_pass": true,
+        "phase4_30_pass": true,
+        "phase4_31_pass": true,
+        "real_world_attack_claim_disabled": true,
+        "tampering_never_allows_soc_handoff": true,
+        "tampering_never_allows_sync": true
+      }
+    },
+    "phase4_36": {
+      "path": "experiments\\integration\\phase4_36\\crss_2024_phase4_36_failure_mode_safety_boundary_audit.json",
+      "sha256": "f7b45a0b683b531983b022b94d3409ec128ffe0a5d3a14df89ee481c13dbf4c3",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "all_required_artifacts_present",
+          "status": "PASS",
+          "detail": "14/14 required artifacts loaded."
+        },
+        {
+          "name": "all_source_artifacts_pass",
+          "status": "PASS",
+          "detail": "Non-PASS source artifacts: []"
+        },
+        {
+          "name": "risk_policy_has_monotonic_levels",
+          "status": "PASS",
+          "detail": "Decision policy contains all five expected risk levels."
+        },
+        {
+          "name": "connectivity_degradation_cannot_lower_risk",
+          "status": "PASS",
+          "detail": "Connectivity degradation imposes at least MEDIUM risk."
+        },
+        {
+          "name": "sensor_disagreement_cannot_lower_risk",
+          "status": "PASS",
+          "detail": "Sensor disagreement imposes at least MEDIUM risk."
+        },
+        {
+          "name": "integrity_failure_cannot_lower_risk",
+          "status": "PASS",
+          "detail": "Integrity failure imposes at least HIGH risk."
+        },
+        {
+          "name": "direct_vehicle_actuation_forbidden",
+          "status": "PASS",
+          "detail": "No source artifact declares direct vehicle actuation enabled."
+        },
+        {
+          "name": "payload_tampering_rejected",
+          "status": "PASS",
+          "detail": "Phase 4.28C contains explicit payload-tamper rejection evidence."
+        },
+        {
+          "name": "tampered_path_refuses_sync",
+          "status": "PASS",
+          "detail": "Tampered evidence enters the refuse-sync safety boundary."
+        },
+        {
+          "name": "tampered_path_refuses_soc_handoff",
+          "status": "PASS",
+          "detail": "Tampered evidence cannot proceed to SOC handoff."
+        },
+        {
+          "name": "unverified_evidence_state_exists",
+          "status": "PASS",
+          "detail": "State machine explicitly represents unverified evidence."
+        },
+        {
+          "name": "recovery_requires_integrity_verification",
+          "status": "PASS",
+          "detail": "Recovery/synchronization evidence includes integrity verification."
+        },
+        {
+          "name": "synchronization_after_integrity_verification",
+          "status": "PASS",
+          "detail": "Synchronization exists only in the verified recovery lifecycle."
+        },
+        {
+          "name": "uncertainty_evidence_present",
+          "status": "PASS",
+          "detail": "Deep-ensemble uncertainty evidence is available."
+        },
+        {
+          "name": "decision_validation_passed",
+          "status": "PASS",
+          "detail": "Phase 4.34 decision validation passed."
+        },
+        {
+          "name": "uncertainty_does_not_lower_risk",
+          "status": "PASS",
+          "detail": "Decision validation contains uncertainty safety-boundary evidence."
+        },
+        {
+          "name": "phase4_35_end_to_end_passed",
+          "status": "PASS",
+          "detail": "Phase 4.35 end-to-end adversarial validation passed."
+        },
+        {
+          "name": "phase4_35_has_zero_failed_checks",
+          "status": "PASS",
+          "detail": "Phase 4.35 reports zero failed checks."
+        },
+        {
+          "name": "invalid_or_unverified_evidence_does_not_cross_soc_boundary",
+          "status": "PASS",
+          "detail": "Unverified evidence remains outside the SOC handoff boundary."
+        },
+        {
+          "name": "safety_boundary_is_fail_closed_for_integrity_failure",
+          "status": "PASS",
+          "detail": "Integrity failure produces elevated risk and blocks unsafe synchronization."
+        },
+        {
+          "name": "synthetic_labels_not_real_attack_claim",
+          "status": "PASS",
+          "detail": "Evidence remains explicitly bounded as synthetic research evidence."
+        },
+        {
+          "name": "no_retraining_in_audit",
+          "status": "PASS",
+          "detail": "Phase 4.36 is an audit-only phase; no retraining performed."
+        }
+      ]
+    },
+    "phase4_37": {
+      "path": "experiments\\integration\\phase4_37\\crss_2024_phase4_37_final_integrated_system_validation.json",
+      "sha256": "c732e21a024a16d8f66e9ec33f9c49f4fe470610d6437cfdcfcaf780a4fdd65e",
+      "json_valid": true,
+      "status": "PASS",
+      "checks": [
+        {
+          "detail": "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+          "name": "phase_4_20_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\edge_iot\\crss_2024_phase4_21_edge_iot_resilience.json",
+          "name": "phase_4_21_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\edge_iot\\crss_2024_phase4_22_scenario_evaluation.json",
+          "name": "phase_4_22_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\edge_iot\\crss_2024_phase4_23_end_to_end_resilience.json",
+          "name": "phase_4_23_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\edge_iot\\crss_2024_phase4_24_system_stress_failure_analysis.json",
+          "name": "phase_4_24_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\modeling\\v2\\evidence\\crss_2024_v2_phase4_25_evidence_manifest.json",
+          "name": "phase_4_25_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\modeling\\v2\\error_analysis\\phase4_26\\crss_2024_v2_phase4_26_temporal_regime_error_analysis.json",
+          "name": "phase_4_26_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_28\\crss_2024_phase4_28a_predictive_soc_event_pipeline.json",
+          "name": "phase_4_28_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_29\\crss_2024_phase4_29_resilience_state_machine_verification.json",
+          "name": "phase_4_29_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_30\\crss_2024_phase4_30_system_fault_injection_recovery.json",
+          "name": "phase_4_30_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_31\\crss_2024_phase4_31_explainable_evidence_correlation.json",
+          "name": "phase_4_31_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_32\\crss_2024_phase4_32_model_grounded_explainability.json",
+          "name": "phase_4_32_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_33\\crss_2024_phase4_33_explainability_stability.json",
+          "name": "phase_4_33_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_34\\crss_2024_phase4_34_predictive_resilience_decision_validation.json",
+          "name": "phase_4_34_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_35\\crss_2024_phase4_35_end_to_end_adversarial_resilience_validation.json",
+          "name": "phase_4_35_resolved",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\integration\\phase4_36\\crss_2024_phase4_36_failure_mode_safety_boundary_audit.json",
+          "name": "phase_4_36_resolved",
+          "passed": true
+        },
+        {
+          "detail": "data\\schemas\\explainability\\model_grounded_resilience_explanation_schema.json",
+          "name": "model_grounded_explainability_schema_present",
+          "passed": true
+        },
+        {
+          "detail": "data\\schemas\\nhtsa\\crss_2024_canonical_schema.json",
+          "name": "crss_canonical_schema_present",
+          "passed": true
+        },
+        {
+          "detail": "experiments\\nhtsa\\crss_2024_release_gate.json",
+          "name": "crss_release_gate_present",
+          "passed": true
+        },
+        {
+          "detail": "RELEASED",
+          "name": "crss_release_gate_released",
+          "passed": true
+        },
+        {
+          "detail": [
+            "models\\v2\\advanced\\crss_2024_v2_temporal_transformer_best.pt",
+            "models\\v2\\advanced\\crss_2024_v2_temporal_transformer_controlled_best.pt",
+            "models\\v2\\baseline\\crss_2024_v2_hgb_y3.joblib",
+            "models\\v2\\baseline\\crss_2024_v2_hgb_y6.joblib",
+            "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_42_best.pt",
+            "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_52_best.pt",
+            "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_62_best.pt",
+            "models\\v2\\uncertainty\\phase4_27b_2\\temporal_predictor_best.pt"
+          ],
+          "name": "model_checkpoints_present",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "artifact_registry_script_present",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "dependency_gate_script_present",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "shared_artifact_resolver_present",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "synthetic_cyber_label_boundary",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "cortex_xdr_abstraction_boundary",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "no_direct_vehicle_actuation_boundary",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "integrity_verification_evidence",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "tamper_detection_evidence",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "recovery_synchronization_evidence",
+          "passed": true
+        },
+        {
+          "detail": null,
+          "name": "explainability_evidence",
+          "passed": true
+        },
+        {
+          "detail": [
+            {
+              "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27b\\crss_2024_v2_phase4_27b_ood_regime_uncertainty_final.json",
+              "sha256": "df86b121720f28c02ca4f45728d40edf65be0dafef8b4a0f697f829d0469947b",
+              "status": "FAIL"
+            },
+            {
+              "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27b\\crss_2024_v2_phase4_27b_static_ood_baseline.json",
+              "sha256": "df86b121720f28c02ca4f45728d40edf65be0dafef8b4a0f697f829d0469947b",
+              "status": "FAIL"
+            },
+            {
+              "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27b_1\\crss_2024_v2_phase4_27b_1_temporal_dynamics_ood_final.json",
+              "sha256": "45ed05343ca4ba8b38adf5cc41eb4367028b0eb0d36d79eaac14521c9609a4d6",
+              "status": "FAIL"
+            },
+            {
+              "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27b_2\\crss_2024_v2_phase4_27b_2_temporal_consistency_final.json",
+              "sha256": "93f6204d7ca795ef7e3432359706ebfb779d3f93ec51f7501f86015da77d0e4e",
+              "status": "FAIL"
+            },
+            {
+              "path": "experiments\\modeling\\v2\\uncertainty\\phase4_27b_3\\crss_2024_v2_phase4_27b_3_frozen_representation_ood_final.json",
+              "sha256": "9601a1664f4dcfde7a6ecd9e431de8bf945dd80eb41ae26831f2c43b4952bb00",
+              "status": "FAIL"
+            }
+          ],
+          "name": "historical_ood_limitations_preserved",
+          "passed": true
+        }
+      ]
+    },
+    "canonical_explainability_schema": {
+      "path": "data\\schemas\\explainability\\model_grounded_resilience_explanation_schema.json",
+      "sha256": "6c7506e7564d91a1f6009c669324c6eb2be68bf214ec052fc7883ddb6a06858b",
+      "json_valid": true
+    },
+    "transformer_y6_seed_42_best.pt": {
+      "path": "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_42_best.pt",
+      "sha256": "7f1e099b2287d45daa5c241b30219100e4a5e4b1cff5649182e1c481c64e3c6a",
+      "size_bytes": 1645912
+    },
+    "transformer_y6_seed_52_best.pt": {
+      "path": "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_52_best.pt",
+      "sha256": "7aaa5a29168f4b5cbcec14008c4dad17a4d9a8111690ddb1eecdc24e1327e844",
+      "size_bytes": 1645912
+    },
+    "transformer_y6_seed_62_best.pt": {
+      "path": "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_62_best.pt",
+      "sha256": "47212e284dc47c1351fbf1aada838e40041cf69f9d91498c5bdf428b99ee8ac0",
+      "size_bytes": 1645912
+    }
+  },
+  "evidence_digest": "4a756feefe1856a79afe84a0f56d45ddb92e9773d80e56f78210506bee21739b",
+  "scientific_boundary": {
+    "retraining_performed": false,
+    "test_set_used_for_calibration": false,
+    "synthetic_cyber_labels": true,
+    "real_world_cyberattack_claim": false,
+    "live_cortex_xdr_integration_claim": false
+  }
+}

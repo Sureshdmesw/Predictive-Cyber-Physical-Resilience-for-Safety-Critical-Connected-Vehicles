@@ -1,0 +1,110 @@
+{
+  "artifact_count": 11,
+  "artifacts": [
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_20_decision_engine",
+      "path": "experiments/modeling/v2/decision_engine/crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+      "sha256": "8d9af56fef1b2dca9129329efd2c3c43b4047609cc67c7839fd30db25fa2fcab",
+      "size_bytes": 4660,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_21_edge_iot",
+      "path": "experiments/edge_iot/crss_2024_phase4_21_edge_iot_resilience.json",
+      "sha256": "864742c63946b6c611134b44c423c311a46ca8ad202db29d5e3b587327f2a818",
+      "size_bytes": 8568,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_27a_deep_ensemble",
+      "path": "experiments/modeling/v2/uncertainty/phase4_27/crss_2024_v2_phase4_27a_deep_ensemble_final.json",
+      "sha256": "b0a305856ad34941e38b48dc36a0a5e41415ad87d1d5e2ef2328953a78d398de",
+      "size_bytes": 3915,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_28a_predictive_soc",
+      "path": "experiments/integration/phase4_28/crss_2024_phase4_28a_predictive_soc_event_pipeline.json",
+      "sha256": "2ba6954a8c5b5571a3936f9729fb383b91b638cd59f6af223add265f90cbd971",
+      "size_bytes": 14811,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_28b_connectivity_recovery",
+      "path": "experiments/integration/phase4_28/crss_2024_phase4_28b_connectivity_recovery_sync.json",
+      "sha256": "11fd0ce0b7e8f82435f6214c5a3e6a7ddaa6158b771003a3f7358624fbe117b7",
+      "size_bytes": 8482,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_28c_adversarial_integrity",
+      "path": "experiments/integration/phase4_28c/crss_2024_phase4_28c_adversarial_integrity_tamper_detection.json",
+      "sha256": "eec63342671ccbf15f10b6a81df20fa85e542ef0e0b0cf9e707bddc522eeccde",
+      "size_bytes": 5124,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_29_state_machine",
+      "path": "experiments/integration/phase4_29/crss_2024_phase4_29_resilience_state_machine_verification.json",
+      "sha256": "da23c8817394c641a0c763d569065d2ef6f55a915be385fea90e1151e981a8aa",
+      "size_bytes": 7167,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_30_fault_recovery",
+      "path": "experiments/integration/phase4_30/crss_2024_phase4_30_system_fault_injection_recovery.json",
+      "sha256": "6b9f05052ac0e07272bd8f824ab70004f4358f93bcc55e86a2de3f1b2670a703",
+      "size_bytes": 8347,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_31_explainability",
+      "path": "experiments/integration/phase4_31/crss_2024_phase4_31_explainable_evidence_correlation.json",
+      "sha256": "41e316c1f9b3435dbf2979f5d5364f2cd1981299049cc8c57a76e4cb3a0b02b1",
+      "size_bytes": 33067,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_33_explainability_stability",
+      "path": "experiments/integration/phase4_33/crss_2024_phase4_33_explainability_stability.json",
+      "sha256": "ed8c303f1e7a4b610960f781562163524bbab45d3711737a364a7995134a9309",
+      "size_bytes": 207435,
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "json_valid": true,
+      "key": "phase4_34_decision_validation",
+      "path": "experiments/integration/phase4_34/crss_2024_phase4_34_predictive_resilience_decision_validation.json",
+      "sha256": "98215fa1be12c520f32b6671a7b2a1b44e4296930ba42f3a6b72a52e142f3a05",
+      "size_bytes": 15794,
+      "status": "PASS"
+    }
+  ],
+  "generated_utc": "2026-09-07T15:56:46.288126+00:00",
+  "invalid_json_artifacts": [],
+  "missing_artifacts": [],
+  "non_pass_artifacts": [],
+  "registry_version": "1.1",
+  "status": "PASS"
+}

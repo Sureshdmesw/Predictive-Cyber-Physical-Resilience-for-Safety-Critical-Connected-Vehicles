@@ -1,0 +1,105 @@
+{
+  "phase": "4.40",
+  "title": "Final Release Manifest and Reproducibility Package",
+  "status": "PASS",
+  "checks_passed": 13,
+  "checks_total": 13,
+  "checks": {
+    "phase4_37_report_present": true,
+    "phase4_37_status_pass": true,
+    "phase4_38_report_present": true,
+    "phase4_38_status_pass": true,
+    "phase4_39_report_present": true,
+    "phase4_39_status_pass": true,
+    "canonical_explainability_schema_present": true,
+    "canonical_explainability_schema_valid": true,
+    "artifact_registry_present": true,
+    "artifact_registry_status_pass": true,
+    "all_frozen_checkpoints_present": true,
+    "all_forecasting_tensors_present": true,
+    "no_unresolved_merge_conflicts": true
+  },
+  "manifest": {
+    "phase4_37": {
+      "path": "experiments\\integration\\phase4_37\\crss_2024_phase4_37_final_integrated_system_validation.json",
+      "sha256": "c732e21a024a16d8f66e9ec33f9c49f4fe470610d6437cfdcfcaf780a4fdd65e",
+      "status": "PASS"
+    },
+    "phase4_38": {
+      "path": "experiments\\integration\\phase4_38\\crss_2024_phase4_38_reproducibility_evidence_audit.json",
+      "sha256": "06874ebb3fb1f99bfa12a7c66145f8bfb2c3b9b08522fd385479960e0e6966a8",
+      "status": "PASS"
+    },
+    "phase4_39": {
+      "path": "experiments\\integration\\phase4_39\\crss_2024_phase4_39_research_governance_safety_claims_audit.json",
+      "sha256": "0b9c7f985a444025d476ad1474f634c1ddae4a0857481444ef8840fa922c6c77",
+      "status": "PASS"
+    },
+    "canonical_explainability_schema": {
+      "path": "data\\schemas\\explainability\\model_grounded_resilience_explanation_schema.json",
+      "sha256": "6c7506e7564d91a1f6009c669324c6eb2be68bf214ec052fc7883ddb6a06858b"
+    },
+    "artifact_registry": {
+      "path": "experiments\\governance\\artifact_registry.json",
+      "sha256": "24eb8eedf7bca266c30c47173164b120dfeb6c69ea5aa62c70faf4f7246c2071",
+      "status": "PASS"
+    },
+    "transformer_y6_seed_42_best.pt": {
+      "path": "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_42_best.pt",
+      "sha256": "7f1e099b2287d45daa5c241b30219100e4a5e4b1cff5649182e1c481c64e3c6a",
+      "size_bytes": 1645912
+    },
+    "transformer_y6_seed_52_best.pt": {
+      "path": "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_52_best.pt",
+      "sha256": "7aaa5a29168f4b5cbcec14008c4dad17a4d9a8111690ddb1eecdc24e1327e844",
+      "size_bytes": 1645912
+    },
+    "transformer_y6_seed_62_best.pt": {
+      "path": "models\\v2\\uncertainty\\phase4_27\\transformer_y6_seed_62_best.pt",
+      "sha256": "47212e284dc47c1351fbf1aada838e40041cf69f9d91498c5bdf428b99ee8ac0",
+      "size_bytes": 1645912
+    },
+    "git_status_before_final_commit": [
+      "?? data/schemas/explainability/model_grounded_resilience_explanation_schema.json",
+      "?? experiments/governance/",
+      "?? experiments/integration/phase4_32/",
+      "?? experiments/integration/phase4_32b/crss_2024_phase4_32b_model_grounded_explainability.json",
+      "?? experiments/integration/phase4_32b/crss_2024_phase4_32b_unique_scenario_model_grounded_explainability.json",
+      "?? experiments/integration/phase4_33/",
+      "?? experiments/integration/phase4_34/",
+      "?? experiments/integration/phase4_35/",
+      "?? experiments/integration/phase4_36/",
+      "?? experiments/integration/phase4_37/",
+      "?? experiments/integration/phase4_38/",
+      "?? experiments/integration/phase4_39/",
+      "?? experiments/integration/phase4_40/",
+      "?? experiments/release/",
+      "?? scripts/governance/",
+      "?? scripts/integration/audit_phase4_32b2.py",
+      "?? scripts/integration/crss_2024_phase4_32_model_grounded_explainability.py",
+      "?? scripts/integration/crss_2024_phase4_32b_1_origin_balance_audit.py",
+      "?? scripts/integration/crss_2024_phase4_32b_model_grounded_explainability.py",
+      "?? scripts/integration/crss_2024_phase4_33_explainability_stability.py",
+      "?? scripts/integration/crss_2024_phase4_34_predictive_resilience_decision_validation.py",
+      "?? scripts/integration/crss_2024_phase4_35_end_to_end_adversarial_resilience_validation.py",
+      "?? scripts/integration/phase4_33_explainability_stability.py",
+      "?? scripts/integration/phase4_36/",
+      "?? scripts/integration/phase4_37/",
+      "?? scripts/integration/phase4_38/",
+      "?? scripts/integration/phase4_39/",
+      "?? scripts/integration/phase4_40/"
+    ]
+  },
+  "release_boundary": {
+    "research_release": true,
+    "production_vehicle_deployment": false,
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_api": false,
+    "real_world_cyberattack_labels": false,
+    "synthetic_cyber_telemetry": true,
+    "test_set_calibration": false,
+    "final_release_retraining": false
+  },
+  "evidence_digest": "8bb4947d8793faaeb21f35a1577d922f8aa010410923672f16cbe995202d22b6",
+  "generated_at_utc": "2026-09-07T17:22:53.770555+00:00"
+}

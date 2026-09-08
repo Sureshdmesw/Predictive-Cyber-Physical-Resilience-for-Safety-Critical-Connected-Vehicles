@@ -1,0 +1,557 @@
+{
+  "case_count": 33,
+  "cases": [
+    {
+      "expected": "NORMAL",
+      "name": "boundary_0_00",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "NORMAL",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.0,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "NORMAL",
+      "name": "boundary_0_049999",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "NORMAL",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.049999,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "LOW",
+      "name": "boundary_0_05",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "LOW",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.05,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "LOW",
+      "name": "boundary_0_199999",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "LOW",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.199999,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "boundary_0_20",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.2,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "boundary_0_499999",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.499999,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "boundary_0_50",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.5,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "boundary_0_799999",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.799999,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "CRITICAL",
+      "name": "boundary_0_80",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "CRITICAL",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.8,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "CRITICAL",
+      "name": "boundary_1_00",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "CRITICAL",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 1.0,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "connectivity_low_to_medium",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.1,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "connectivity_normal_to_medium",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.02,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "connectivity_high_unchanged",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.7,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "sensor_low_to_medium",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.1,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "sensor_normal_to_medium",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.02,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "sensor_high_unchanged",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.7,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "integrity_normal_to_high",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.02,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "integrity_low_to_high",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.1,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "integrity_medium_to_high",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.3,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "integrity_high_unchanged",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.7,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "CRITICAL",
+      "name": "integrity_critical_unchanged",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "CRITICAL",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.9,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "compound_all_low_probability",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.01,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "compound_medium_integrity",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.3,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "compound_high_all",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.7,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "CRITICAL",
+      "name": "compound_critical_all",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": true,
+        "decision": "CRITICAL",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.9,
+        "sensor_disagreement": true,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "uncertainty_zero",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.3,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "uncertainty_moderate",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.3,
+        "sensor_disagreement": false,
+        "uncertainty_score": 0.5,
+        "valid": true
+      }
+    },
+    {
+      "expected": "MEDIUM",
+      "name": "uncertainty_high",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "MEDIUM",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": false,
+        "predictive_risk_probability": 0.3,
+        "sensor_disagreement": false,
+        "uncertainty_score": 1.0,
+        "valid": true
+      }
+    },
+    {
+      "expected": "HIGH",
+      "name": "uncertainty_high_integrity",
+      "pass": true,
+      "result": {
+        "connectivity_degraded": false,
+        "decision": "HIGH",
+        "direct_vehicle_actuation": false,
+        "integrity_failure": true,
+        "predictive_risk_probability": 0.1,
+        "sensor_disagreement": false,
+        "uncertainty_score": 1.0,
+        "valid": true
+      }
+    },
+    {
+      "name": "invalid_probability_negative",
+      "pass": true,
+      "result": {
+        "decision": "REJECT_INVALID_INPUT",
+        "reason": "risk_probability_out_of_range",
+        "valid": false
+      }
+    },
+    {
+      "name": "invalid_probability_above_one",
+      "pass": true,
+      "result": {
+        "decision": "REJECT_INVALID_INPUT",
+        "reason": "risk_probability_out_of_range",
+        "valid": false
+      }
+    },
+    {
+      "name": "invalid_uncertainty_negative",
+      "pass": true,
+      "result": {
+        "decision": "REJECT_INVALID_INPUT",
+        "reason": "uncertainty_out_of_range",
+        "valid": false
+      }
+    },
+    {
+      "name": "invalid_uncertainty_above_one",
+      "pass": true,
+      "result": {
+        "decision": "REJECT_INVALID_INPUT",
+        "reason": "uncertainty_out_of_range",
+        "valid": false
+      }
+    }
+  ],
+  "check_count": {
+    "passed": 16,
+    "total": 16
+  },
+  "checks": {
+    "compound_modifiers_monotonic": true,
+    "connectivity_modifier_minimum_medium": true,
+    "decision_engine_source_loaded": true,
+    "direct_vehicle_actuation_disabled": true,
+    "ensemble_retraining_false": true,
+    "ensemble_source_loaded": true,
+    "ensemble_test_used_for_training_false": true,
+    "integrity_modifier_minimum_high": true,
+    "invalid_probability_rejected": true,
+    "invalid_uncertainty_rejected": true,
+    "live_cortex_xdr_api_disabled": true,
+    "policy_boundaries_correct": true,
+    "real_world_attack_claim_disabled": true,
+    "risk_probability_monotonicity": true,
+    "sensor_modifier_minimum_medium": true,
+    "uncertainty_does_not_reduce_risk": true
+  },
+  "decision_engine_source": "experiments\\modeling\\v2\\decision_engine\\crss_2024_v2_phase4_20_predictive_resilience_decision_engine.json",
+  "ensemble_evidence_source": "experiments\\modeling\\v2\\uncertainty\\phase4_27\\crss_2024_v2_phase4_27a_deep_ensemble_final.json",
+  "evidence_digest": "41aa95168894e13ababd934ae56bee2122217ad110137253d5b3f027c764434b",
+  "modifier_policy": {
+    "connectivity_degraded": "minimum_MEDIUM",
+    "integrity_failure": "minimum_HIGH",
+    "sensor_disagreement": "minimum_MEDIUM"
+  },
+  "monotonicity": {
+    "decisions": [
+      "NORMAL",
+      "LOW",
+      "LOW",
+      "MEDIUM",
+      "MEDIUM",
+      "HIGH",
+      "HIGH",
+      "CRITICAL",
+      "CRITICAL",
+      "CRITICAL"
+    ],
+    "passed": true,
+    "probabilities": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ]
+  },
+  "phase": "4.34",
+  "policy": {
+    "CRITICAL": ">=0.80",
+    "HIGH": ">=0.50 and <0.80",
+    "LOW": ">=0.05 and <0.20",
+    "MEDIUM": ">=0.20 and <0.50",
+    "NORMAL": "<0.05"
+  },
+  "retraining_performed": false,
+  "safety_boundary": {
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_api_used": false,
+    "real_world_cyberattack_performance_claim": false
+  },
+  "scientific_boundary": {
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr_connection_claim": false,
+    "real_world_cyberattack_performance_claim": false,
+    "synthetic_telemetry_labels": true
+  },
+  "status": "PASS",
+  "timestamp_utc": "2026-09-07T15:42:37.117658+00:00",
+  "title": "Predictive Resilience Decision Validation",
+  "validation_only": true
+}
