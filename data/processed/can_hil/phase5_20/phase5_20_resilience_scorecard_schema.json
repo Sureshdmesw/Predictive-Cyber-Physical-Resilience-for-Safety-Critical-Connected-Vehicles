@@ -1,0 +1,35 @@
+{
+  "phase": "5.20",
+  "title": "End-to-End Resilience Scorecard",
+  "input": "data\\processed\\can_hil\\phase5_19\\phase5_19_end_to_end_resilience_validation.csv",
+  "scenarios": [
+    "C01_SPEED_SENSOR_SPOOFING",
+    "C02_BRAKE_ACCELERATOR_ATTACK",
+    "C03_TORQUE_DYNAMICS_ATTACK",
+    "C04_HV_POWER_ATTACK",
+    "C05_BATTERY_THERMAL_ATTACK",
+    "C06_HV_CONTACTOR_ATTACK",
+    "C07_HEARTBEAT_INTEGRITY_ATTACK",
+    "C08_SEQUENCE_GATEWAY_ATTACK",
+    "C09_RESTRAINT_DOMAIN_ATTACK",
+    "C10_MULTI_DOMAIN_ATTACK"
+  ],
+  "score_components": [
+    "recovery",
+    "synchronization",
+    "SOC handoff",
+    "baseline integrity",
+    "adversarial resilience",
+    "safety boundary"
+  ],
+  "score_range": "0-100",
+  "validated_score": 100.0,
+  "scientific_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr": false,
+    "model_retraining": false,
+    "real_world_cyberattack": false
+  }
+}

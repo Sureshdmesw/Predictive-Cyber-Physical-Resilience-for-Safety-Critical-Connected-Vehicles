@@ -1,0 +1,183 @@
+{
+  "phase": "5.3",
+  "status": "BUILT",
+  "scope": "Virtual EV CAN laboratory",
+  "physical_vehicle_access": false,
+  "direct_vehicle_actuation": false,
+  "production_dbc": false,
+  "laboratory_generated_signals": true,
+  "can_message_count": 15,
+  "virtual_nodes": [
+    "VCU",
+    "BMS",
+    "INV",
+    "ABS",
+    "SENSOR_GATEWAY",
+    "CHARGER",
+    "DIAG",
+    "RCM",
+    "OCCUPANT_SENSOR"
+  ],
+  "requirements": [
+    {
+      "id": "EV-CHECK-001",
+      "check": "vehicle_wheel_speed_consistency"
+    },
+    {
+      "id": "EV-CHECK-002",
+      "check": "accelerator_torque_consistency"
+    },
+    {
+      "id": "EV-CHECK-003",
+      "check": "brake_regenerative_consistency"
+    },
+    {
+      "id": "EV-CHECK-004",
+      "check": "torque_command_feedback_consistency"
+    },
+    {
+      "id": "EV-CHECK-005",
+      "check": "battery_soc_plausibility"
+    },
+    {
+      "id": "EV-CHECK-006",
+      "check": "battery_soh_plausibility"
+    },
+    {
+      "id": "EV-CHECK-007",
+      "check": "hv_voltage_plausibility"
+    },
+    {
+      "id": "EV-CHECK-008",
+      "check": "hv_current_plausibility"
+    },
+    {
+      "id": "EV-CHECK-009",
+      "check": "battery_temperature_plausibility"
+    },
+    {
+      "id": "EV-CHECK-010",
+      "check": "cell_voltage_deviation"
+    },
+    {
+      "id": "EV-CHECK-011",
+      "check": "cell_temperature_deviation"
+    },
+    {
+      "id": "EV-CHECK-012",
+      "check": "isolation_status"
+    },
+    {
+      "id": "EV-CHECK-013",
+      "check": "contactor_state_consistency"
+    },
+    {
+      "id": "EV-CHECK-014",
+      "check": "precharge_state_consistency"
+    },
+    {
+      "id": "EV-CHECK-015",
+      "check": "motor_temperature_plausibility"
+    },
+    {
+      "id": "EV-CHECK-016",
+      "check": "inverter_state_consistency"
+    },
+    {
+      "id": "EV-CHECK-017",
+      "check": "charging_connector_consistency"
+    },
+    {
+      "id": "EV-CHECK-018",
+      "check": "ecu_heartbeat_presence"
+    },
+    {
+      "id": "EV-CHECK-019",
+      "check": "can_message_timing"
+    },
+    {
+      "id": "EV-CHECK-020",
+      "check": "sequence_counter_continuity"
+    },
+    {
+      "id": "EV-CHECK-021",
+      "check": "diagnostic_state_consistency"
+    },
+    {
+      "id": "EV-CHECK-022",
+      "check": "command_physical_response_consistency"
+    },
+    {
+      "id": "RES-CHECK-001",
+      "check": "restraint_ecu_heartbeat_presence"
+    },
+    {
+      "id": "RES-CHECK-002",
+      "check": "restraint_can_timing_consistency"
+    },
+    {
+      "id": "RES-CHECK-003",
+      "check": "restraint_sequence_counter_continuity"
+    },
+    {
+      "id": "RES-CHECK-004",
+      "check": "occupant_status_consistency"
+    },
+    {
+      "id": "RES-CHECK-005",
+      "check": "seatbelt_status_consistency"
+    },
+    {
+      "id": "RES-CHECK-006",
+      "check": "pretensioner_status_consistency"
+    },
+    {
+      "id": "RES-CHECK-007",
+      "check": "airbag_state_consistency"
+    },
+    {
+      "id": "RES-CHECK-008",
+      "check": "crash_event_status_consistency"
+    },
+    {
+      "id": "RES-CHECK-009",
+      "check": "longitudinal_acceleration_plausibility"
+    },
+    {
+      "id": "RES-CHECK-010",
+      "check": "lateral_acceleration_plausibility"
+    },
+    {
+      "id": "RES-CHECK-011",
+      "check": "yaw_rate_plausibility"
+    },
+    {
+      "id": "RES-CHECK-012",
+      "check": "acceleration_speed_consistency"
+    },
+    {
+      "id": "RES-CHECK-013",
+      "check": "acceleration_wheel_speed_consistency"
+    },
+    {
+      "id": "RES-CHECK-014",
+      "check": "yaw_steering_consistency"
+    },
+    {
+      "id": "RES-CHECK-015",
+      "check": "restraint_diagnostic_consistency"
+    },
+    {
+      "id": "RES-CHECK-016",
+      "check": "restraint_integrity_verification"
+    },
+    {
+      "id": "RES-CHECK-017",
+      "check": "restraint_gateway_integrity"
+    },
+    {
+      "id": "RES-CHECK-018",
+      "check": "cyber_anomaly_occupant_safety_correlation"
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "phase": "5.16",
+  "title": "Connectivity Loss and Recovery",
+  "status": "PASS",
+  "forensic_records": 4650,
+  "attack_scenarios": [
+    "C01_SPEED_SENSOR_SPOOFING",
+    "C02_BRAKE_ACCELERATOR_ATTACK",
+    "C03_TORQUE_DYNAMICS_ATTACK",
+    "C04_HV_POWER_ATTACK",
+    "C05_BATTERY_THERMAL_ATTACK",
+    "C06_HV_CONTACTOR_ATTACK",
+    "C07_HEARTBEAT_INTEGRITY_ATTACK",
+    "C08_SEQUENCE_GATEWAY_ATTACK",
+    "C09_RESTRAINT_DOMAIN_ATTACK",
+    "C10_MULTI_DOMAIN_ATTACK"
+  ],
+  "scenario_count": 10,
+  "disconnect_start_timestep": 300,
+  "disconnect_end_timestep": 305,
+  "event_timestep": 300,
+  "recovery_sha256": "4cd6400a7bdf1884d564bba637c6f815e6ea1331daca63308d6dbf7415def508",
+  "checks_passed": 72,
+  "checks_total": 72,
+  "laboratory_only": true,
+  "physical_vehicle": false,
+  "direct_actuation": false,
+  "model_retraining": false,
+  "live_cortex_xdr": false,
+  "architecture": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "LOCAL_FORENSIC_BUFFER",
+    "RECOVERED",
+    "INTEGRITY_VERIFICATION",
+    "SYNCHRONIZATION_READY",
+    "SOC_HANDOFF_READY"
+  ],
+  "validation": [
+    {
+      "check": "forensic_input_exists",
+      "status": "PASS"
+    },
+    {
+      "check": "integrity_input_exists",
+      "status": "PASS"
+    },
+    {
+      "check": "forensic_records_4650",
+      "status": "PASS"
+    },
+    {
+      "check": "integrity_validation_present",
+      "status": "PASS"
+    },
+    {
+      "check": "valid_evidence_available",
+      "status": "PASS"
+    },
+    {
+      "check": "valid_evidence_integrity_true",
+      "status": "PASS"
+    },
+    {
+      "check": "valid_evidence_sync_eligible",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_records_465",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_timesteps_30",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_disconnect_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_recovery_present",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_event_present",
+      "status": "PASS"
+    },
+    {
+      "check": "ten_attack_scenarios",
+      "status": "PASS"
+    },
+    {
+      "check": "local_buffer_used_during_disconnect",
+      "status": "PASS"
+    },
+    {
+      "check": "no_local_buffer_after_recovery",
+      "status": "PASS"
+    },
+    {
+      "check": "recovery_queue_nonempty",
+      "status": "PASS"
+    },
+    {
+      "check": "recovery_integrity_digest_generated",
+      "status": "PASS"
+    },
+    {
+      "check": "state_summary_records_30",
+      "status": "PASS"
+    },
+    {
+      "check": "connected_states_10",
+      "status": "PASS"
+    },
+    {
+      "check": "disconnected_states_10",
+      "status": "PASS"
+    },
+    {
+      "check": "recovered_states_10",
+      "status": "PASS"
+    },
+    {
+      "check": "disconnect_sync_deferred",
+      "status": "PASS"
+    },
+    {
+      "check": "recovery_sync_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "recovery_soc_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "laboratory_only",
+      "status": "PASS"
+    },
+    {
+      "check": "no_physical_vehicle",
+      "status": "PASS"
+    },
+    {
+      "check": "no_direct_actuation",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "6.3",
+  "title": "Scientific Review and OOD Validation",
+  "status": "SCIENTIFIC_REVIEW_ACCEPTED_WITH_LIMITATIONS",
+  "input": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.csv",
+  "input_sha256": "b5e356442180d124dd3bc625aeba9bb120d9d5352c9c966aab1e570ffee534ff",
+  "outputs": {
+    "scenario_summary": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase6_3\\phase6_3_ood_scenario_summary.csv",
+    "scientific_review": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase6_3\\phase6_3_ood_scientific_review.json"
+  },
+  "validation_count": 12,
+  "validation_pass_count": 12,
+  "validation_fail_count": 0,
+  "scientific_review_required": true,
+  "scientific_review_completed": true,
+  "limitations_preserved": true,
+  "model_input_modified": false,
+  "phase_6_2_frozen": true
+}

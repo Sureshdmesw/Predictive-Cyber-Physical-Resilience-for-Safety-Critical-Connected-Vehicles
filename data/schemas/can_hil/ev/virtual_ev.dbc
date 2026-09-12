@@ -1,0 +1,111 @@
+VERSION ""
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA
+    ENVVAR_DATA
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU BMS INV ABS SENSOR_GATEWAY CHARGER DIAG
+
+BO_ 256 VEHICLE_DYNAMICS: 8 VCU
+ SG_ VehicleSpeed : 0|16@1+ (0.01,0) [0|300] "km/h" VCU
+ SG_ WheelSpeedFL : 16|16@1+ (0.01,0) [0|300] "km/h" SENSOR_GATEWAY
+ SG_ WheelSpeedFR : 32|16@1+ (0.01,0) [0|300] "km/h" SENSOR_GATEWAY
+ SG_ SteeringAngle : 48|16@1- (-0.1,0) [-720|720] "deg" SENSOR_GATEWAY
+
+BO_ 257 DRIVER_INPUT: 8 VCU
+ SG_ AcceleratorPosition : 0|16@1+ (0.1,0) [0|100] "%" VCU
+ SG_ BrakeStatus : 16|8@1+ (1,0) [0|3] "" ABS
+ SG_ BrakePressure : 24|16@1+ (0.1,0) [0|1000] "bar" ABS
+ SG_ RegenBrakeRequest : 40|8@1+ (1,0) [0|100] "%" VCU
+
+BO_ 258 POWERTRAIN_STATE: 8 VCU
+ SG_ VCUState : 0|8@1+ (1,0) [0|10] "" VCU
+ SG_ MotorRPM : 8|16@1+ (1,0) [0|20000] "rpm" INV
+ SG_ TorqueCommand : 24|16@1- (0.1,0) [-1000|1000] "Nm" VCU
+ SG_ TorqueFeedback : 40|16@1- (0.1,0) [-1000|1000] "Nm" INV
+ SG_ InverterTemperature : 56|8@1+ (1,0) [0|255] "degC" INV
+
+BO_ 259 BATTERY_STATUS: 8 BMS
+ SG_ BatterySOC : 0|8@1+ (0.5,0) [0|100] "%" BMS
+ SG_ BatterySOH : 8|8@1+ (0.5,0) [0|100] "%" BMS
+ SG_ HVVoltage : 16|16@1+ (1,0) [0|1000] "V" BMS
+ SG_ HVCurrent : 32|16@1- (0.1,0) [-3276.8|3276.7] "A" BMS
+ SG_ BatteryTemperature : 48|8@1- (1,-40) [-40|215] "degC" BMS
+ SG_ BMSState : 56|8@1+ (1,0) [0|10] "" BMS
+
+BO_ 260 BATTERY_CELL_STATUS: 8 BMS
+ SG_ CellVoltageDeviation : 0|16@1+ (0.001,0) [0|65.535] "V" BMS
+ SG_ CellTemperatureDeviation : 16|16@1+ (0.1,0) [0|6553.5] "degC" BMS
+ SG_ IsolationStatus : 32|8@1+ (1,0) [0|3] "" BMS
+ SG_ HVContactorState : 40|8@1+ (1,0) [0|3] "" BMS
+ SG_ PrechargeState : 48|8@1+ (1,0) [0|3] "" BMS
+ SG_ DCLinkVoltage : 56|8@1+ (1,0) [0|255] "V_scaled" BMS
+
+BO_ 261 MOTOR_STATUS: 8 INV
+ SG_ MotorTemperature : 0|8@1- (1,-40) [-40|215] "degC" INV
+ SG_ MotorRPMStatus : 8|16@1+ (1,0) [0|20000] "rpm" INV
+ SG_ MotorTorqueFeedback : 24|16@1- (0.1,0) [-1000|1000] "Nm" INV
+ SG_ RegenAvailable : 40|8@1+ (1,0) [0|1] "" INV
+ SG_ InverterState : 48|8@1+ (1,0) [0|10] "" INV
+ SG_ InverterHeartbeat : 56|8@1+ (1,0) [0|255] "" INV
+
+BO_ 262 ECU_HEARTBEAT: 8 VCU
+ SG_ VCUHeartbeat : 0|8@1+ (1,0) [0|255] "" VCU
+ SG_ BMSHeartbeat : 8|8@1+ (1,0) [0|255] "" BMS
+ SG_ INVHeartbeat : 16|8@1+ (1,0) [0|255] "" INV
+ SG_ GatewayHeartbeat : 24|8@1+ (1,0) [0|255] "" SENSOR_GATEWAY
+ SG_ Counter : 32|8@1+ (1,0) [0|255] "" VCU
+
+BO_ 263 CHARGING_STATUS: 8 CHARGER
+ SG_ ChargingState : 0|8@1+ (1,0) [0|5] "" CHARGER
+ SG_ ConnectorState : 8|8@1+ (1,0) [0|3] "" CHARGER
+ SG_ ChargeCurrent : 16|16@1+ (0.1,0) [0|1000] "A" CHARGER
+ SG_ ChargeVoltage : 32|16@1+ (1,0) [0|1000] "V" CHARGER
+ SG_ ThermalManagementState : 48|8@1+ (1,0) [0|10] "" CHARGER
+ SG_ ChargeHeartbeat : 56|8@1+ (1,0) [0|255] "" CHARGER
+
+BO_ 264 DIAGNOSTIC_STATUS: 8 DIAG
+ SG_ DiagnosticState : 0|8@1+ (1,0) [0|10] "" DIAG
+ SG_ SensorStatus : 8|8@1+ (1,0) [0|15] "" SENSOR_GATEWAY
+ SG_ GatewayStatus : 16|8@1+ (1,0) [0|15] "" SENSOR_GATEWAY
+ SG_ IntegrityStatus : 24|8@1+ (1,0) [0|3] "" DIAG
+ SG_ SequenceStatus : 32|8@1+ (1,0) [0|3] "" DIAG
+ SG_ ConnectivityStatus : 40|8@1+ (1,0) [0|3] "" DIAG
+ SG_ DiagnosticHeartbeat : 48|8@1+ (1,0) [0|255] "" DIAG
+
+BO_ 265 AUXILIARY_POWER: 8 BMS
+ SG_ AuxBatteryVoltage : 0|16@1+ (0.01,0) [0|30] "V" BMS
+ SG_ AuxBatteryStatus : 16|8@1+ (1,0) [0|3] "" BMS
+ SG_ HVSystemReady : 24|8@1+ (1,0) [0|1] "" BMS
+ SG_ SafetyInterlock : 32|8@1+ (1,0) [0|1] "" BMS
+ SG_ ThermalState : 40|8@1+ (1,0) [0|10] "" BMS
+ SG_ GatewayMode : 48|8@1+ (1,0) [0|10] "" SENSOR_GATEWAY
+ SG_ Reserved : 56|8@1+ (1,0) [0|255] "" BMS

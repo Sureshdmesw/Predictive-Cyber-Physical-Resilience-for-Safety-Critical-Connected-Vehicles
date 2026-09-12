@@ -1,0 +1,29 @@
+{
+  "phase": "5.19",
+  "title": "End-to-End CAN-HIL Resilience Validation",
+  "inputs": {
+    "phase5_17": "data\\processed\\can_hil\\phase5_17\\phase5_17_secure_synchronization.csv",
+    "phase5_18": "data\\processed\\can_hil\\phase5_18\\phase5_18_adversarial_integrity_validation.csv"
+  },
+  "validated_chain": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "RECOVERED",
+    "SYNCHRONIZATION_ELIGIBLE",
+    "SOC_HANDOFF_ELIGIBLE"
+  ],
+  "adversarial_path": [
+    "TAMPERED_EVIDENCE",
+    "REJECTED",
+    "SYNCHRONIZATION_REFUSED",
+    "SOC_HANDOFF_REFUSED"
+  ],
+  "safety_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr": false,
+    "model_retraining": false,
+    "real_world_cyberattack": false
+  }
+}

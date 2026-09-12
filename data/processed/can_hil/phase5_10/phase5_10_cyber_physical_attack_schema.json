@@ -1,0 +1,56 @@
+{
+  "phase": "5.10",
+  "title": "Cyber-Physical Attack Scenarios",
+  "status": "PASS",
+  "input": {
+    "path": "data\\processed\\can_hil\\phase5_9\\phase5_9_controlled_can_anomalies.csv",
+    "rows": 162000,
+    "sha256": "58799e7bf1287ba6bb29fdb0ffec2bae35a55c682f2adb08043d04db7d1423f5"
+  },
+  "output": {
+    "csv": "data\\processed\\can_hil\\phase5_10\\phase5_10_cyber_physical_attack_scenarios.csv",
+    "jsonl": "data\\processed\\can_hil\\phase5_10\\phase5_10_cyber_physical_attack_scenarios.jsonl"
+  },
+  "dataset": {
+    "baseline_rows": 9000,
+    "attack_scenarios": 10,
+    "rows_per_attack": 9000,
+    "total_rows": 99000,
+    "active_timesteps": 20,
+    "messages_per_timestep": 15
+  },
+  "safety_boundary": {
+    "laboratory_generated": true,
+    "physical_vehicle": false,
+    "direct_actuation": false,
+    "production_dbc": false,
+    "real_world_cyberattack": false,
+    "live_cortex_xdr": false
+  },
+  "scenario_ids": [
+    "C01_SPEED_SENSOR_SPOOFING",
+    "C02_BRAKE_ACCELERATOR_ATTACK",
+    "C03_TORQUE_DYNAMICS_ATTACK",
+    "C04_HV_POWER_ATTACK",
+    "C05_BATTERY_THERMAL_ATTACK",
+    "C06_HV_CONTACTOR_ATTACK",
+    "C07_HEARTBEAT_INTEGRITY_ATTACK",
+    "C08_SEQUENCE_GATEWAY_ATTACK",
+    "C09_RESTRAINT_DOMAIN_ATTACK",
+    "C10_MULTI_DOMAIN_ATTACK"
+  ],
+  "disk_scenario_counts": {
+    "S00_NORMAL_BASELINE": 9000,
+    "C01_SPEED_SENSOR_SPOOFING": 9000,
+    "C02_BRAKE_ACCELERATOR_ATTACK": 9000,
+    "C03_TORQUE_DYNAMICS_ATTACK": 9000,
+    "C04_HV_POWER_ATTACK": 9000,
+    "C05_BATTERY_THERMAL_ATTACK": 9000,
+    "C06_HV_CONTACTOR_ATTACK": 9000,
+    "C07_HEARTBEAT_INTEGRITY_ATTACK": 9000,
+    "C08_SEQUENCE_GATEWAY_ATTACK": 9000,
+    "C09_RESTRAINT_DOMAIN_ATTACK": 9000,
+    "C10_MULTI_DOMAIN_ATTACK": 9000
+  },
+  "validation_failures": []
+}

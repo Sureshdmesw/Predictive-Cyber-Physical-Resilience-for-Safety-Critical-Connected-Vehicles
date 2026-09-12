@@ -1,0 +1,41 @@
+{
+  "phase": "5.17",
+  "title": "Secure Synchronization and SOC Handoff",
+  "input": "data\\processed\\can_hil\\phase5_16\\phase5_16_connectivity_recovery.csv",
+  "output_csv": "data\\processed\\can_hil\\phase5_17\\phase5_17_secure_synchronization.csv",
+  "output_jsonl": "data\\processed\\can_hil\\phase5_17\\phase5_17_secure_synchronization.jsonl",
+  "source_contract": {
+    "input_rows": 30,
+    "rows_per_scenario": 3,
+    "scenarios": 10,
+    "states": [
+      "CONNECTED",
+      "DISCONNECTED",
+      "RECOVERED"
+    ]
+  },
+  "decision_states": [
+    "SYNCHRONIZATION_ELIGIBLE",
+    "SYNCHRONIZATION_BLOCKED",
+    "SOC_HANDOFF_ELIGIBLE",
+    "SOC_HANDOFF_BLOCKED"
+  ],
+  "required_properties": [
+    "scenario_id",
+    "source_records",
+    "state_rows",
+    "connectivity_states",
+    "state_coverage_valid",
+    "recovery_synchronization_present",
+    "synchronization_state",
+    "soc_state",
+    "synchronization_digest",
+    "integration_mode",
+    "laboratory_generated",
+    "physical_vehicle",
+    "direct_actuation",
+    "model_retraining",
+    "live_cortex_xdr",
+    "real_world_cyberattack"
+  ]
+}

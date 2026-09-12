@@ -1,0 +1,67 @@
+{
+  "phase": "5.3",
+  "status": "PASS",
+  "scenario": "NORMAL_BASELINE",
+  "random_seed": 42,
+  "duration_seconds": 30.0,
+  "step_seconds": 0.05,
+  "expected_records": 9000,
+  "actual_records": 9000,
+  "can_messages_per_step": 15,
+  "unique_can_messages": [
+    "AIRBAG_STATUS",
+    "AUXILIARY_POWER",
+    "BATTERY_CELL_STATUS",
+    "BATTERY_STATUS",
+    "CHARGING_STATUS",
+    "DIAGNOSTIC_STATUS",
+    "DRIVER_INPUT",
+    "ECU_HEARTBEAT",
+    "MOTOR_STATUS",
+    "OCCUPANT_STATUS",
+    "POWERTRAIN_STATE",
+    "RESCUE_DYNAMICS",
+    "RESTRAINT_HEARTBEAT",
+    "RESTRAINT_STATUS",
+    "VEHICLE_DYNAMICS"
+  ],
+  "unique_can_ids": [
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270
+  ],
+  "checks": {
+    "record_count": true,
+    "message_count": true,
+    "can_id_count": true,
+    "can_ids_contiguous": true,
+    "all_dlc_8": true,
+    "all_laboratory_generated": true,
+    "no_physical_vehicle": true,
+    "no_direct_actuation": true
+  },
+  "artifacts": {
+    "dbc": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\schemas\\can_hil\\ev\\virtual_ev_complete.dbc",
+    "csv": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.csv",
+    "jsonl": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.jsonl"
+  },
+  "safety_boundary": {
+    "physical_vehicle_access": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "production_dbc": false,
+    "laboratory_generated_signals": true
+  }
+}

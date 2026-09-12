@@ -1,0 +1,166 @@
+﻿{
+  "schema_version": "1.0",
+  "scope": "Controlled virtual EV CAN/ECU HIL research laboratory",
+  "deployment_boundary": {
+    "physical_vehicle": false,
+    "road_vehicle": false,
+    "direct_actuation": false,
+    "real_ecu": false
+  },
+  "requirements": [
+    {
+      "id": "EV-CHECK-001",
+      "category": "vehicle_dynamics",
+      "name": "vehicle_wheel_speed_consistency",
+      "description": "Vehicle speed should remain consistent with available wheel-speed measurements.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-002",
+      "category": "driver_input",
+      "name": "accelerator_torque_consistency",
+      "description": "Accelerator position and requested motor torque should remain physically consistent.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-003",
+      "category": "braking",
+      "name": "brake_regenerative_consistency",
+      "description": "Brake demand and regenerative braking state should remain consistent.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-004",
+      "category": "powertrain",
+      "name": "torque_command_feedback_consistency",
+      "description": "Requested and measured motor torque should remain within configured laboratory tolerance.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-005",
+      "category": "battery",
+      "name": "battery_soc_plausibility",
+      "description": "Battery SOC must remain within configured laboratory bounds.",
+      "severity": "medium"
+    },
+    {
+      "id": "EV-CHECK-006",
+      "category": "battery",
+      "name": "battery_soh_plausibility",
+      "description": "Battery SOH must remain within configured laboratory bounds.",
+      "severity": "medium"
+    },
+    {
+      "id": "EV-CHECK-007",
+      "category": "battery",
+      "name": "hv_voltage_plausibility",
+      "description": "HV battery voltage must remain within configured laboratory bounds.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-008",
+      "category": "battery",
+      "name": "hv_current_plausibility",
+      "description": "HV battery current must remain within configured laboratory bounds.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-009",
+      "category": "thermal",
+      "name": "battery_temperature_plausibility",
+      "description": "Battery temperature must remain within configured laboratory bounds.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-010",
+      "category": "cell_balance",
+      "name": "cell_voltage_deviation",
+      "description": "Cell voltage deviation must remain within configured laboratory tolerance.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-011",
+      "category": "cell_balance",
+      "name": "cell_temperature_deviation",
+      "description": "Cell temperature deviation must remain within configured laboratory tolerance.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-012",
+      "category": "hv_safety",
+      "name": "isolation_status",
+      "description": "HV isolation status must be valid before the modeled HV system is considered ready.",
+      "severity": "critical"
+    },
+    {
+      "id": "EV-CHECK-013",
+      "category": "hv_safety",
+      "name": "contactor_state_consistency",
+      "description": "HV contactor state must be consistent with modeled system readiness.",
+      "severity": "critical"
+    },
+    {
+      "id": "EV-CHECK-014",
+      "category": "hv_safety",
+      "name": "precharge_state_consistency",
+      "description": "Pre-charge state must be consistent with modeled HV startup sequence.",
+      "severity": "critical"
+    },
+    {
+      "id": "EV-CHECK-015",
+      "category": "motor",
+      "name": "motor_temperature_plausibility",
+      "description": "Motor temperature must remain within configured laboratory bounds.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-016",
+      "category": "inverter",
+      "name": "inverter_state_consistency",
+      "description": "Inverter state must remain consistent with motor and VCU state.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-017",
+      "category": "charging",
+      "name": "charging_connector_consistency",
+      "description": "Charging state and connector state must remain consistent.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-018",
+      "category": "heartbeat",
+      "name": "ecu_heartbeat_presence",
+      "description": "Required ECU heartbeat messages must arrive within configured timing limits.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-019",
+      "category": "timing",
+      "name": "can_message_timing",
+      "description": "CAN message inter-arrival times must remain within configured laboratory bounds.",
+      "severity": "medium"
+    },
+    {
+      "id": "EV-CHECK-020",
+      "category": "integrity",
+      "name": "sequence_counter_continuity",
+      "description": "Modeled sequence counters should remain continuous.",
+      "severity": "high"
+    },
+    {
+      "id": "EV-CHECK-021",
+      "category": "diagnostics",
+      "name": "diagnostic_state_consistency",
+      "description": "Diagnostic and gateway states must remain internally consistent.",
+      "severity": "medium"
+    },
+    {
+      "id": "EV-CHECK-022",
+      "category": "cyber_physical",
+      "name": "command_physical_response_consistency",
+      "description": "CAN commands should remain consistent with modeled physical response.",
+      "severity": "critical"
+    }
+  ]
+}

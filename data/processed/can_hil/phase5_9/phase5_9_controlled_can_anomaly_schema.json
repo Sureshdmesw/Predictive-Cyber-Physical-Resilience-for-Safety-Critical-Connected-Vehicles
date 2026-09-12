@@ -1,0 +1,183 @@
+{
+  "phase": "5.9",
+  "name": "controlled_can_anomaly_scenarios",
+  "status": "BUILT",
+  "scope": "Virtual EV CAN laboratory",
+  "input": "data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.csv",
+  "base_records": 9000,
+  "timesteps": 600,
+  "messages_per_timestep": 15,
+  "scenario_count": 17,
+  "total_streams": 18,
+  "total_output_records": 162000,
+  "active_timesteps_per_scenario": 20,
+  "active_records_per_scenario": 300,
+  "scenario_definitions": [
+    {
+      "id": "S01_CAN_TIMING_ANOMALY",
+      "category": "CAN_TIMING",
+      "target_message": "VEHICLE_DYNAMICS",
+      "target_signals": [],
+      "description": "Controlled CAN inter-frame timing anomaly."
+    },
+    {
+      "id": "S02_SEQUENCE_COUNTER_ANOMALY",
+      "category": "SEQUENCE",
+      "target_message": "ECU_HEARTBEAT",
+      "target_signals": [
+        "SequenceCounter"
+      ],
+      "description": "Controlled ECU heartbeat sequence-counter discontinuity."
+    },
+    {
+      "id": "S03_PAYLOAD_INTEGRITY_ANOMALY",
+      "category": "INTEGRITY",
+      "target_message": "DIAGNOSTIC_STATUS",
+      "target_signals": [
+        "IntegrityStatus"
+      ],
+      "description": "Controlled diagnostic payload-integrity status failure."
+    },
+    {
+      "id": "S04_GATEWAY_INTEGRITY_ANOMALY",
+      "category": "INTEGRITY",
+      "target_message": "DIAGNOSTIC_STATUS",
+      "target_signals": [
+        "GatewayIntegrity"
+      ],
+      "description": "Controlled gateway integrity status failure."
+    },
+    {
+      "id": "S05_SENSOR_CONSISTENCY_ANOMALY",
+      "category": "SENSOR_CONSISTENCY",
+      "target_message": "VEHICLE_DYNAMICS",
+      "target_signals": [
+        "VehicleSpeed"
+      ],
+      "description": "Controlled vehicle-dynamics sensor consistency anomaly."
+    },
+    {
+      "id": "S06_SPEED_WHEEL_SPEED_ANOMALY",
+      "category": "VEHICLE_DYNAMICS",
+      "target_message": "VEHICLE_DYNAMICS",
+      "target_signals": [
+        "VehicleSpeed"
+      ],
+      "description": "Controlled vehicle-speed versus wheel-speed inconsistency."
+    },
+    {
+      "id": "S07_BRAKE_ACCELERATOR_CONFLICT",
+      "category": "DRIVER_INPUT",
+      "target_message": "DRIVER_INPUT",
+      "target_signals": [
+        "BrakePressure",
+        "BrakeStatus",
+        "Accelerator"
+      ],
+      "description": "Controlled simultaneous brake and accelerator demand."
+    },
+    {
+      "id": "S08_TORQUE_TRACKING_ANOMALY",
+      "category": "POWERTRAIN",
+      "target_message": "MOTOR_STATUS",
+      "target_signals": [
+        "TorqueFeedback"
+      ],
+      "description": "Controlled motor torque command/feedback tracking anomaly."
+    },
+    {
+      "id": "S09_HV_VOLTAGE_ANOMALY",
+      "category": "BATTERY_HV",
+      "target_message": "BATTERY_STATUS",
+      "target_signals": [
+        "HVVoltage"
+      ],
+      "description": "Controlled HV voltage plausibility excursion."
+    },
+    {
+      "id": "S10_HV_CURRENT_ANOMALY",
+      "category": "BATTERY_HV",
+      "target_message": "BATTERY_STATUS",
+      "target_signals": [
+        "HVCurrent"
+      ],
+      "description": "Controlled HV current excursion."
+    },
+    {
+      "id": "S11_BATTERY_TEMPERATURE_ANOMALY",
+      "category": "BATTERY_THERMAL",
+      "target_message": "BATTERY_STATUS",
+      "target_signals": [
+        "BatteryTemperature"
+      ],
+      "description": "Controlled battery-temperature excursion."
+    },
+    {
+      "id": "S12_CELL_VOLTAGE_DEVIATION_ANOMALY",
+      "category": "BATTERY_CELL",
+      "target_message": "BATTERY_CELL_STATUS",
+      "target_signals": [
+        "CellVoltageDeviation"
+      ],
+      "description": "Controlled cell-voltage deviation excursion."
+    },
+    {
+      "id": "S13_CELL_TEMPERATURE_DEVIATION_ANOMALY",
+      "category": "BATTERY_CELL",
+      "target_signals": [
+        "CellTemperatureDeviation"
+      ],
+      "target_message": "BATTERY_CELL_STATUS",
+      "description": "Controlled cell-temperature deviation excursion."
+    },
+    {
+      "id": "S14_HV_CONTACTOR_PRECHARGE_CONFLICT",
+      "category": "HV_SAFETY",
+      "target_message": "BATTERY_CELL_STATUS",
+      "target_signals": [
+        "ContactorState",
+        "PrechargeState"
+      ],
+      "description": "Controlled HV contactor/pre-charge state inconsistency."
+    },
+    {
+      "id": "S15_ECU_HEARTBEAT_ANOMALY",
+      "category": "ECU_HEARTBEAT",
+      "target_message": "ECU_HEARTBEAT",
+      "target_signals": [
+        "VCUHeartbeat",
+        "BMSHeartbeat",
+        "InverterHeartbeat"
+      ],
+      "description": "Controlled ECU heartbeat loss."
+    },
+    {
+      "id": "S16_RESTRAINT_SAFETY_ANOMALY",
+      "category": "RESTRAINT",
+      "target_message": "RESTRAINT_STATUS",
+      "target_signals": [
+        "DriverSeatbelt",
+        "PassengerSeatbelt",
+        "RestraintIntegrity"
+      ],
+      "description": "Controlled restraint/occupant-safety status inconsistency."
+    },
+    {
+      "id": "S17_CROSS_DOMAIN_ANOMALY",
+      "category": "CROSS_DOMAIN",
+      "target_message": "MOTOR_STATUS",
+      "target_signals": [
+        "TorqueFeedback"
+      ],
+      "description": "Controlled EV powertrain/vehicle-dynamics cross-domain inconsistency."
+    }
+  ],
+  "signal_encoding": "Decoded signal modifications are stored inside signals_json. The Phase 5.3 raw CAN record structure is preserved.",
+  "ground_truth_definition": "Deterministic laboratory scenario labels based on controlled activation windows. These labels are not real-world cyberattack ground truth.",
+  "physical_vehicle": false,
+  "direct_vehicle_actuation": false,
+  "production_dbc": false,
+  "real_world_cyberattack_labels": false,
+  "laboratory_generated": true,
+  "hash_chain_genesis": "PHASE5_9_CAN_ANOMALY_GENESIS"
+}

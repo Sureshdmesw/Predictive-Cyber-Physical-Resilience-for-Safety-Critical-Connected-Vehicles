@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "dataset": "CRSS 2024",
+  "reports": {
+    "crash": {
+      "rows": 51658,
+      "columns": 6,
+      "duplicate_rows": 0,
+      "null_cells": 0
+    },
+    "vehicle": {
+      "rows": 90641,
+      "columns": 27,
+      "duplicate_rows": 0,
+      "null_cells": 0
+    },
+    "occupant": {
+      "rows": 126159,
+      "columns": 26,
+      "duplicate_rows": 0,
+      "null_cells": 15747
+    },
+    "environment": {
+      "rows": 51658,
+      "columns": 3,
+      "duplicate_rows": 0,
+      "null_cells": 0
+    },
+    "event": {
+      "rows": 268458,
+      "columns": 10,
+      "duplicate_rows": 0,
+      "null_cells": 364678
+    },
+    "cyber_physical": {
+      "rows": 90641,
+      "columns": 15,
+      "duplicate_rows": 0,
+      "null_cells": 0
+    }
+  },
+  "checks": {
+    "crash_features_nonempty": true,
+    "vehicle_features_nonempty": true,
+    "occupant_features_nonempty": true,
+    "environment_features_nonempty": true,
+    "event_features_nonempty": true,
+    "cyber_physical_features_nonempty": true,
+    "casenum_present": true,
+    "vehicle_key_present": true,
+    "occupant_key_present": true
+  }
+}

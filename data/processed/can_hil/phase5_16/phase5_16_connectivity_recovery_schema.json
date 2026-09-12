@@ -1,0 +1,21 @@
+{
+  "phase": "5.16",
+  "title": "Connectivity Loss and Recovery",
+  "input": "data\\processed\\can_hil\\phase5_14\\phase5_14_forensic_evidence.csv",
+  "integrity_reference": "data\\processed\\can_hil\\phase5_15\\phase5_15_integrity_validation.csv",
+  "states": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "RECOVERED"
+  ],
+  "disconnect_start_timestep": 300,
+  "disconnect_end_timestep": 305,
+  "event_timestep": 300,
+  "local_buffer_during_disconnect": true,
+  "synchronization_after_recovery": true,
+  "soc_handoff_after_recovery": true,
+  "integrity_digest": "SHA-256",
+  "laboratory_generated": true,
+  "physical_vehicle": false,
+  "direct_actuation": false
+}

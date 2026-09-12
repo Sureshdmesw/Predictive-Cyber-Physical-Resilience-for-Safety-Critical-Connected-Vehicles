@@ -1,0 +1,93 @@
+{
+  "phase": "6.1",
+  "title": "Integrated Research System Validation & Completion Audit",
+  "status": "PASS_WITH_SCIENTIFIC_REVIEW_REQUIRED",
+  "timestamp_utc": "2026-09-11T17:31:29.540823+00:00",
+  "validation": {
+    "checks_passed": 51,
+    "checks_total": 52,
+    "checks_failed": 1,
+    "engineering_checks_passed": 51,
+    "engineering_checks_total": 51,
+    "engineering_valid": true,
+    "scientific_review_required": true
+  },
+  "phase5": {
+    "phases_audited": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "phase5_21": {
+      "manifest_exists": true,
+      "manifest_valid_json": true,
+      "status_pass": true,
+      "input_rows": 10,
+      "scenario_count": 10,
+      "gate_passed": 93,
+      "gate_total": 93,
+      "all_components_valid": true,
+      "all_end_to_end_valid": true,
+      "all_evidence_complete": true,
+      "all_scores_100": true,
+      "safety_boundaries_valid": true
+    },
+    "phase5_21_status": "PASS"
+  },
+  "documentation": {
+    "required_documents": [
+      "docs/threat_model.md",
+      "docs/system_architecture.md",
+      "docs/data_architecture.md",
+      "docs/safety_architecture.md",
+      "docs/connectivity_resilience.md",
+      "docs/cortex_xdr_integration.md",
+      "docs/research_questions.md"
+    ],
+    "all_present": true
+  },
+  "safety_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr": false,
+    "model_retraining": false,
+    "real_world_cyberattack": false
+  },
+  "phase5_12_scientific_review": {
+    "required": true,
+    "details": "{\"rows\": 6479, \"max_ood_score\": 4835564.0, \"review_required\": true, \"reason\": \"Extreme OOD score detected; Phase 5.12 statistical methodology requires scientific review before claiming production-grade OOD robustness.\"}"
+  },
+  "outputs": {
+    "csv": "data\\processed\\phase6_1\\phase6_1_integrated_validation.csv",
+    "jsonl": "data\\processed\\phase6_1\\phase6_1_integrated_validation.jsonl",
+    "schema": "data\\processed\\phase6_1\\phase6_1_integrated_validation_schema.json",
+    "manifest": "experiments\\phase6_1\\phase6_1_integrated_validation_manifest.json"
+  },
+  "scientific_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr": false,
+    "model_retraining": false,
+    "real_world_cyberattack": false
+  }
+}

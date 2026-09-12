@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EV Cyber-Physical Feature Adapter Schema",
+  "version": "5.5.0",
+  "description": "Research adapter mapping decoded virtual EV CAN signals into an explicit cyber-physical feature representation.",
+  "semantics": {
+    "source": "Phase 5.4 decoded virtual EV CAN laboratory data",
+    "target": "EV cyber-physical resilience feature representation",
+    "crss_equivalence": false,
+    "crss_note": "These CAN-laboratory features are not claimed to be replacements for the existing CRSS-derived feature representation.",
+    "production_dbc": false,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false
+  },
+  "feature_groups": {
+    "vehicle_dynamics": [
+      "vehicle_speed",
+      "wheel_speed_fl",
+      "wheel_speed_fr",
+      "steering_angle",
+      "longitudinal_acceleration",
+      "lateral_acceleration",
+      "yaw_rate",
+      "speed_wheel_speed_error",
+      "steering_yaw_joint_magnitude"
+    ],
+    "driver_demand": [
+      "accelerator_position",
+      "brake_pressure",
+      "brake_status",
+      "regen_command",
+      "accelerator_torque_joint"
+    ],
+    "ev_powertrain": [
+      "vcu_state",
+      "motor_rpm",
+      "motor_torque_command",
+      "motor_torque_feedback",
+      "motor_torque_tracking_error"
+    ],
+    "battery_hv": [
+      "battery_soc",
+      "battery_soh",
+      "hv_voltage",
+      "hv_current",
+      "battery_temperature",
+      "cell_voltage_deviation",
+      "cell_temperature_deviation",
+      "estimated_hv_power_kw"
+    ],
+    "hv_safety": [
+      "bms_state",
+      "hv_contactor_state",
+      "precharge_state",
+      "dc_link_voltage",
+      "hv_isolation_status"
+    ],
+    "charging_thermal": [
+      "charging_state",
+      "charge_connector_state",
+      "thermal_management_state",
+      "inverter_temperature",
+      "regen_available"
+    ],
+    "connectivity_integrity": [
+      "vcu_heartbeat",
+      "bms_heartbeat",
+      "inverter_heartbeat",
+      "gateway_heartbeat",
+      "restraint_heartbeat",
+      "sequence_counter",
+      "restraint_sequence_counter",
+      "can_frame_interval_s"
+    ],
+    "diagnostics": [
+      "diagnostic_state",
+      "sensor_status"
+    ],
+    "occupant_safety": [
+      "restraint_ecu_state",
+      "crash_event_status",
+      "impact_severity",
+      "driver_occupant_status",
+      "passenger_occupant_status",
+      "driver_seatbelt_status",
+      "passenger_seatbelt_status",
+      "driver_pretensioner_status",
+      "passenger_pretensioner_status",
+      "driver_airbag_status",
+      "passenger_airbag_status",
+      "side_airbag_status",
+      "curtain_airbag_status",
+      "rollover_status"
+    ],
+    "auxiliary_power": [
+      "aux_battery_voltage"
+    ]
+  },
+  "source_feature_inventory": {
+    "vehicle_dynamics": [
+      "VehicleSpeed",
+      "WheelSpeedFL",
+      "WheelSpeedFR",
+      "SteeringAngle",
+      "LongitudinalAcceleration",
+      "LateralAcceleration",
+      "YawRate",
+      "speed_wheel_speed_error",
+      "steering_yaw_joint_magnitude"
+    ],
+    "driver_input": [
+      "Accelerator",
+      "BrakePressure",
+      "BrakeStatus",
+      "RegenCommand",
+      "accelerator_torque_joint"
+    ],
+    "ev_powertrain": [
+      "VCUState",
+      "MotorRPM",
+      "MotorTorqueCommand",
+      "MotorTorqueFeedback",
+      "motor_torque_tracking_error"
+    ],
+    "battery_hv": [
+      "BatterySOC",
+      "BatterySOH",
+      "HVVoltage",
+      "HVCurrent",
+      "BatteryTemperature",
+      "CellVoltageDeviation",
+      "CellTemperatureDeviation",
+      "cell_voltage_deviation_abs",
+      "cell_temperature_deviation_abs",
+      "estimated_hv_power_kw"
+    ],
+    "hv_safety": [
+      "BMSState",
+      "HVContactorState",
+      "PrechargeState",
+      "DCLinkVoltage",
+      "HVIsolationStatus"
+    ],
+    "charging_thermal": [
+      "ChargingState",
+      "ChargeConnectorState",
+      "ThermalManagementState",
+      "InverterTemperature",
+      "RegenAvailable"
+    ],
+    "connectivity_integrity": [
+      "VCUHeartbeat",
+      "BMSHeartbeat",
+      "InverterHeartbeat",
+      "GatewayHeartbeat",
+      "RestraintHeartbeat",
+      "SequenceCounter",
+      "RestraintSequenceCounter",
+      "can_frame_interval_s"
+    ],
+    "diagnostics": [
+      "DiagnosticState",
+      "SensorStatus"
+    ],
+    "occupant_protection": [
+      "RestraintECUState",
+      "CrashEventStatus",
+      "ImpactSeverity",
+      "DriverOccupantStatus",
+      "PassengerOccupantStatus",
+      "DriverSeatbeltStatus",
+      "PassengerSeatbeltStatus",
+      "DriverPretensionerStatus",
+      "PassengerPretensionerStatus",
+      "DriverAirbagStatus",
+      "PassengerAirbagStatus",
+      "SideAirbagStatus",
+      "CurtainAirbagStatus",
+      "RolloverStatus"
+    ],
+    "auxiliary_power": [
+      "AuxBatteryVoltage"
+    ]
+  },
+  "derived_consistency_features": [
+    "cp_speed_consistency_error",
+    "cp_brake_consistency_error",
+    "cp_torque_tracking_error",
+    "cp_steering_yaw_consistency",
+    "cp_hv_power_kw",
+    "cp_battery_temperature_abs"
+  ],
+  "adapter_rules": {
+    "direct_signal_mapping": true,
+    "engineering_unit_preservation": true,
+    "cross_domain_features": true,
+    "model_retraining": false,
+    "crss_feature_replacement": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "dataset": "CRSS 2024 Cyber-Physical Feature Layer",
+  "source": "NHTSA CRSS 2024",
+  "status": "phase_1_generated",
+  "source_role": {
+    "CRSS": "physical safety and crash-investigation ground truth",
+    "cyber_telemetry": "future synthetic/edge telemetry layer",
+    "Cortex_XDR": "future SOC/security analytics integration"
+  },
+  "design_principles": [
+    "preserve NHTSA coded missingness",
+    "do not treat CRSS as a cybersecurity-labelled dataset",
+    "separate predictors from downstream outcomes",
+    "preserve PER_TYP=3 special population",
+    "retain event relationships rather than flattening all events",
+    "derived features must remain traceable to source variables"
+  ],
+  "outputs": [
+    "crash_features.parquet",
+    "vehicle_features.parquet",
+    "occupant_features.parquet",
+    "environment_features.parquet",
+    "event_features.parquet",
+    "cyber_physical_features.parquet"
+  ],
+  "derived_features": {
+    "speed_limit_deviation": "TRAV_SP - VSPD_LIM",
+    "speed_limit_deviation_abs": "absolute speed-limit deviation",
+    "speed_over_limit_flag": "TRAV_SP greater than VSPD_LIM",
+    "rollover_flag": "derived from CRSS ROLLOVER coding",
+    "fire_explosion_flag": "FIRE_EXP == 1",
+    "vehicle_damage_flag": "DEFORMED observed and positive",
+    "collision_event_flag": "MAN_COLL indicates collision",
+    "roadway_complexity_index": "count of observed roadway-context variables",
+    "vehicle_state_observation_count": "count of observed vehicle-state variables",
+    "physical_state_completeness": "fraction of core physical-state features observed"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "phase": "5.8",
+  "status": "PASS",
+  "summary": {
+    "checks": 23,
+    "pass": 23,
+    "fail": 0
+  },
+  "checks": {
+    "phase_5_5_input_exists": true,
+    "phase_5_6_input_exists": true,
+    "phase_5_5_row_count_600": true,
+    "phase_5_6_evaluation_count_24000": true,
+    "phase_5_6_unique_timesteps_600": true,
+    "phase_5_6_exactly_40_requirements_per_timestep": true,
+    "ground_truth_rows_600": true,
+    "experiment_ids_unique": true,
+    "record_hashes_unique": true,
+    "first_record_anchored": true,
+    "hash_chain_continuous": true,
+    "requirements_joined_600": true,
+    "predictions_joined_589_or_absent": true,
+    "laboratory_only": true,
+    "no_physical_vehicle": true,
+    "no_direct_actuation": true,
+    "no_real_world_cyberattack_labels": true,
+    "no_synthetic_cyber_labels": true,
+    "no_model_retraining": true,
+    "no_live_cortex_xdr_api": true,
+    "csv_exists": true,
+    "jsonl_exists": true,
+    "schema_exists": true
+  },
+  "input_counts": {
+    "phase_5_5_rows": 600,
+    "phase_5_6_evaluations": 24000,
+    "phase_5_6_unique_steps": 600,
+    "phase_5_7_prediction_rows": 589,
+    "phase_5_7_predictions_joined": 589,
+    "output_rows": 600
+  },
+  "phase_5_6_aggregation": {
+    "step_column": "step",
+    "timestamp_column": "timestamp_s",
+    "status_column": "status",
+    "requirement_id_column": "requirement_id",
+    "category_column": null,
+    "unique_requirement_steps": 600,
+    "max_requirements_per_step": 40,
+    "min_requirements_per_step": 40
+  },
+  "prediction_mapping": {
+    "source_column": "source_row",
+    "step_column": null,
+    "y3_column": "y3_probability",
+    "y6_column": "y6_probability",
+    "prediction_rows": 589
+  },
+  "output_sha256": {
+    "csv": "902089a51ed1920f98ddaea652253b1637bd6de1bb418c743ba77cb41c1266a1",
+    "jsonl": "54df0907eaf7dfd313f0e25657cdc78b73871b78e5c35dcad976135e873e1bab",
+    "schema": "8849960d031db30e17caec5bfb7c7f98ef8af2b2b055c8f9e543189abe82e40f"
+  },
+  "research_boundaries": {
+    "laboratory_generated": true,
+    "physical_vehicle_access": false,
+    "direct_vehicle_actuation": false,
+    "real_world_cyberattack_labels": false,
+    "synthetic_cyber_labels": false,
+    "live_cortex_xdr_api": false,
+    "model_retraining": false
+  },
+  "generated_utc": "2026-09-08T08:38:38.596345+00:00"
+}

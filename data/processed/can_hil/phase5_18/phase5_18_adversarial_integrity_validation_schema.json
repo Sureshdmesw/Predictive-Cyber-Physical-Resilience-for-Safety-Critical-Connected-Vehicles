@@ -1,0 +1,33 @@
+{
+  "phase": "5.18",
+  "title": "Adversarial Integrity Validation",
+  "input_contract": {
+    "source_phase": "5.17",
+    "rows": 10,
+    "one_row_per_scenario": true
+  },
+  "adversarial_tests": [
+    "baseline_digest_validation",
+    "tampered_digest_generation",
+    "tampered_chain_rejection",
+    "tampered_synchronization_refusal",
+    "tampered_soc_handoff_refusal"
+  ],
+  "required_outputs": [
+    "baseline_digest_valid",
+    "baseline_chain_eligible",
+    "tampered_digest",
+    "tampered_chain_valid",
+    "tampered_synchronization_allowed",
+    "tampered_soc_handoff_allowed",
+    "tampered_evidence_refused"
+  ],
+  "safety_boundary": {
+    "laboratory_generated": true,
+    "physical_vehicle": false,
+    "direct_actuation": false,
+    "live_cortex_xdr": false,
+    "model_retraining": false,
+    "real_world_cyberattack": false
+  }
+}

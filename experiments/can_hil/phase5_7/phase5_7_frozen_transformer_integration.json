@@ -1,0 +1,80 @@
+{
+  "phase": "5.7",
+  "status": "PASS",
+  "experiment": "CAN/EV laboratory integration with frozen CRSS-trained Transformer",
+  "input": {
+    "rows": 600,
+    "columns": 82,
+    "source": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_5\\virtual_ev_cyber_physical_features.csv"
+  },
+  "model": {
+    "checkpoint": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\v2\\advanced\\crss_2024_v2_temporal_transformer_controlled_best.pt",
+    "checkpoint_sha256": "3dfa17f3c2630366eec1276ed09c9fbe78cc57535cdab603ec627fa2e1eb343a",
+    "input_shape": [
+      12,
+      59
+    ],
+    "parameter_count": 407811,
+    "embedding_dim": 128,
+    "transformer_layers": 3,
+    "attention_heads": 8,
+    "feedforward_dimension": 256,
+    "dropout": 0.1
+  },
+  "sequences": {
+    "count": 589,
+    "shape": [
+      589,
+      12,
+      59
+    ]
+  },
+  "predictions": {
+    "y3_horizon_seconds": 15,
+    "y6_horizon_seconds": 30,
+    "y3_mean": 0.9899676696149117,
+    "y3_max": 0.9906692504882812,
+    "y6_mean": 0.999041172361131,
+    "y6_max": 0.9990665316581726
+  },
+  "boundary": {
+    "laboratory_generated": true,
+    "physical_vehicle": false,
+    "direct_actuation": false,
+    "model_retraining": false,
+    "crss_replacement_claim": false,
+    "live_cortex_xdr": false
+  },
+  "validation": {
+    "spec_feature_count_59": true,
+    "spec_binary_count_27": true,
+    "spec_continuous_count_32": true,
+    "spec_normalization_train_only_z_score": true,
+    "local_contract_matches_spec": true,
+    "input_rows_600": true,
+    "input_features_82_or_more": true,
+    "model_feature_count_59": true,
+    "sequence_length_12": true,
+    "sequence_feature_count_59": true,
+    "sequence_count_589": true,
+    "checkpoint_exists": true,
+    "checkpoint_parameter_count_407811": true,
+    "checkpoint_sha256_64": true,
+    "inference_rows_589": true,
+    "y3_probability_finite": true,
+    "y6_probability_finite": true,
+    "output_csv_exists": true,
+    "output_jsonl_exists": true,
+    "contract_exists": true,
+    "laboratory_only": true,
+    "no_direct_actuation": true,
+    "no_model_retraining": true,
+    "no_crss_replacement_claim": true,
+    "no_live_cortex_xdr": true
+  },
+  "outputs": {
+    "csv": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_7\\can_ev_frozen_transformer_predictions.csv",
+    "jsonl": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_7\\can_ev_frozen_transformer_predictions.jsonl",
+    "contract": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_7\\phase5_7_model_input_contract.json"
+  }
+}

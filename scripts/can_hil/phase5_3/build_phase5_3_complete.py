@@ -1,0 +1,224 @@
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parents[3]
+
+DBC_DIR = ROOT / "data" / "schemas" / "can_hil" / "ev"
+DBC_PATH = DBC_DIR / "virtual_ev_complete.dbc"
+REQ_PATH = DBC_DIR / "ev_safety_requirements_complete.json"
+
+DBC_DIR.mkdir(parents=True, exist_ok=True)
+
+dbc = r'''VERSION ""
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU BMS INV ABS SENSOR_GATEWAY CHARGER DIAG RCM OCCUPANT_SENSOR
+
+BO_ 256 VEHICLE_DYNAMICS: 8 ABS
+ SG_ VehicleSpeed : 0|16@1+ (0.01,0) [0|655.35] "km/h" ABS
+ SG_ WheelSpeedFL : 16|16@1+ (0.01,0) [0|655.35] "km/h" ABS
+ SG_ WheelSpeedFR : 32|16@1+ (0.01,0) [0|655.35] "km/h" ABS
+ SG_ SteeringAngle : 48|16@1- (0.1,-3276.8) [-3276.8|3276.7] "deg" ABS
+
+BO_ 257 DRIVER_INPUT: 8 VCU
+ SG_ Accelerator : 0|8@1+ (0.4,0) [0|100] "%" VCU
+ SG_ BrakeStatus : 8|8@1+ (1,0) [0|1] "" VCU
+ SG_ BrakePressure : 16|16@1+ (0.1,0) [0|6553.5] "bar" VCU
+ SG_ RegenCommand : 32|8@1+ (0.4,0) [0|100] "%" VCU
+
+BO_ 258 POWERTRAIN_STATE: 8 VCU
+ SG_ VCUState : 0|8@1+ (1,0) [0|255] "" VCU
+ SG_ MotorRPM : 8|16@1+ (1,0) [0|65535] "rpm" VCU
+ SG_ TorqueCommand : 24|16@1- (0.1,0) [-3276.8|3276.7] "Nm" VCU
+ SG_ RegenAvailable : 40|8@1+ (1,0) [0|1] "" VCU
+
+BO_ 259 BATTERY_STATUS: 8 BMS
+ SG_ SOC : 0|8@1+ (0.4,0) [0|100] "%" BMS
+ SG_ SOH : 8|8@1+ (0.4,0) [0|100] "%" BMS
+ SG_ HVVoltage : 16|16@1+ (0.1,0) [0|1000] "V" BMS
+ SG_ HVCurrent : 32|16@1- (0.1,0) [-3276.8|3276.7] "A" BMS
+ SG_ BatteryTemperature : 48|8@1- (1,-40) [-40|215] "degC" BMS
+ SG_ BMSState : 56|8@1+ (1,0) [0|255] "" BMS
+
+BO_ 260 BATTERY_CELL_STATUS: 8 BMS
+ SG_ CellVoltageDeviation : 0|16@1+ (0.001,0) [0|65.535] "V" BMS
+ SG_ CellTemperatureDeviation : 16|16@1+ (0.1,0) [0|6553.5] "degC" BMS
+ SG_ IsolationStatus : 32|8@1+ (1,0) [0|3] "" BMS
+ SG_ ContactorState : 40|8@1+ (1,0) [0|3] "" BMS
+ SG_ PrechargeState : 48|8@1+ (1,0) [0|3] "" BMS
+
+BO_ 261 MOTOR_STATUS: 8 INV
+ SG_ TorqueFeedback : 0|16@1- (0.1,0) [-3276.8|3276.7] "Nm" INV
+ SG_ MotorTemperature : 16|8@1- (1,-40) [-40|215] "degC" INV
+ SG_ InverterTemperature : 24|8@1- (1,-40) [-40|215] "degC" INV
+ SG_ InverterState : 32|8@1+ (1,0) [0|255] "" INV
+
+BO_ 262 ECU_HEARTBEAT: 8 VCU
+ SG_ VCUHeartbeat : 0|8@1+ (1,0) [0|255] "" VCU
+ SG_ BMSHeartbeat : 8|8@1+ (1,0) [0|255] "" BMS
+ SG_ InverterHeartbeat : 16|8@1+ (1,0) [0|255] "" INV
+ SG_ GatewayHeartbeat : 24|8@1+ (1,0) [0|255] "" SENSOR_GATEWAY
+ SG_ SequenceCounter : 32|8@1+ (1,0) [0|255] "" VCU
+
+BO_ 263 CHARGING_STATUS: 8 CHARGER
+ SG_ ChargingState : 0|8@1+ (1,0) [0|255] "" CHARGER
+ SG_ ConnectorState : 8|8@1+ (1,0) [0|3] "" CHARGER
+ SG_ ChargeCurrent : 16|16@1+ (0.1,0) [0|6553.5] "A" CHARGER
+
+BO_ 264 DIAGNOSTIC_STATUS: 8 DIAG
+ SG_ DiagnosticState : 0|8@1+ (1,0) [0|255] "" DIAG
+ SG_ IntegrityStatus : 8|8@1+ (1,0) [0|3] "" DIAG
+ SG_ GatewayIntegrity : 16|8@1+ (1,0) [0|3] "" DIAG
+
+BO_ 265 AUXILIARY_POWER: 8 BMS
+ SG_ AuxBatteryVoltage : 0|16@1+ (0.01,0) [0|655.35] "V" BMS
+ SG_ AuxBatteryStatus : 16|8@1+ (1,0) [0|3] "" BMS
+
+BO_ 266 RESCUE_DYNAMICS: 8 RCM
+ SG_ LongitudinalAcceleration : 0|16@1- (0.01,-327.68) [-327.68|327.67] "g" RCM
+ SG_ LateralAcceleration : 16|16@1- (0.01,-327.68) [-327.68|327.67] "g" RCM
+ SG_ YawRate : 32|16@1- (0.1,-3276.8) [-3276.8|3276.7] "deg/s" RCM
+ SG_ CrashEventStatus : 48|8@1+ (1,0) [0|3] "" RCM
+
+BO_ 267 RESTRAINT_STATUS: 8 RCM
+ SG_ DriverSeatbelt : 0|8@1+ (1,0) [0|3] "" RCM
+ SG_ PassengerSeatbelt : 8|8@1+ (1,0) [0|3] "" RCM
+ SG_ DriverPretensioner : 16|8@1+ (1,0) [0|3] "" RCM
+ SG_ PassengerPretensioner : 24|8@1+ (1,0) [0|3] "" RCM
+ SG_ RolloverStatus : 32|8@1+ (1,0) [0|3] "" RCM
+ SG_ RestraintDiagnostic : 40|8@1+ (1,0) [0|255] "" RCM
+ SG_ RestraintIntegrity : 48|8@1+ (1,0) [0|3] "" RCM
+ SG_ RestraintSequence : 56|8@1+ (1,0) [0|255] "" RCM
+
+BO_ 268 AIRBAG_STATUS: 8 RCM
+ SG_ DriverAirbag : 0|8@1+ (1,0) [0|3] "" RCM
+ SG_ PassengerAirbag : 8|8@1+ (1,0) [0|3] "" RCM
+ SG_ SideAirbag : 16|8@1+ (1,0) [0|3] "" RCM
+ SG_ CurtainAirbag : 24|8@1+ (1,0) [0|3] "" RCM
+ SG_ ImpactSeverity : 32|8@1+ (1,0) [0|255] "" RCM
+
+BO_ 269 OCCUPANT_STATUS: 8 OCCUPANT_SENSOR
+ SG_ DriverOccupant : 0|8@1+ (1,0) [0|3] "" OCCUPANT_SENSOR
+ SG_ PassengerOccupant : 8|8@1+ (1,0) [0|3] "" OCCUPANT_SENSOR
+ SG_ DriverPosition : 16|8@1+ (1,0) [0|255] "" OCCUPANT_SENSOR
+ SG_ PassengerPosition : 24|8@1+ (1,0) [0|255] "" OCCUPANT_SENSOR
+
+BO_ 270 RESTRAINT_HEARTBEAT: 8 RCM
+ SG_ RCMHeartbeat : 0|8@1+ (1,0) [0|255] "" RCM
+ SG_ OccupantSensorHeartbeat : 8|8@1+ (1,0) [0|255] "" OCCUPANT_SENSOR
+ SG_ RestraintGatewayHeartbeat : 16|8@1+ (1,0) [0|255] "" SENSOR_GATEWAY
+ SG_ RestraintSequenceCounter : 24|8@1+ (1,0) [0|255] "" RCM
+'''
+
+DBC_PATH.write_text(dbc, encoding="utf-8")
+
+requirements = [
+    ("EV-CHECK-001", "vehicle_wheel_speed_consistency"),
+    ("EV-CHECK-002", "accelerator_torque_consistency"),
+    ("EV-CHECK-003", "brake_regenerative_consistency"),
+    ("EV-CHECK-004", "torque_command_feedback_consistency"),
+    ("EV-CHECK-005", "battery_soc_plausibility"),
+    ("EV-CHECK-006", "battery_soh_plausibility"),
+    ("EV-CHECK-007", "hv_voltage_plausibility"),
+    ("EV-CHECK-008", "hv_current_plausibility"),
+    ("EV-CHECK-009", "battery_temperature_plausibility"),
+    ("EV-CHECK-010", "cell_voltage_deviation"),
+    ("EV-CHECK-011", "cell_temperature_deviation"),
+    ("EV-CHECK-012", "isolation_status"),
+    ("EV-CHECK-013", "contactor_state_consistency"),
+    ("EV-CHECK-014", "precharge_state_consistency"),
+    ("EV-CHECK-015", "motor_temperature_plausibility"),
+    ("EV-CHECK-016", "inverter_state_consistency"),
+    ("EV-CHECK-017", "charging_connector_consistency"),
+    ("EV-CHECK-018", "ecu_heartbeat_presence"),
+    ("EV-CHECK-019", "can_message_timing"),
+    ("EV-CHECK-020", "sequence_counter_continuity"),
+    ("EV-CHECK-021", "diagnostic_state_consistency"),
+    ("EV-CHECK-022", "command_physical_response_consistency"),
+    ("RES-CHECK-001", "restraint_ecu_heartbeat_presence"),
+    ("RES-CHECK-002", "restraint_can_timing_consistency"),
+    ("RES-CHECK-003", "restraint_sequence_counter_continuity"),
+    ("RES-CHECK-004", "occupant_status_consistency"),
+    ("RES-CHECK-005", "seatbelt_status_consistency"),
+    ("RES-CHECK-006", "pretensioner_status_consistency"),
+    ("RES-CHECK-007", "airbag_state_consistency"),
+    ("RES-CHECK-008", "crash_event_status_consistency"),
+    ("RES-CHECK-009", "longitudinal_acceleration_plausibility"),
+    ("RES-CHECK-010", "lateral_acceleration_plausibility"),
+    ("RES-CHECK-011", "yaw_rate_plausibility"),
+    ("RES-CHECK-012", "acceleration_speed_consistency"),
+    ("RES-CHECK-013", "acceleration_wheel_speed_consistency"),
+    ("RES-CHECK-014", "yaw_steering_consistency"),
+    ("RES-CHECK-015", "restraint_diagnostic_consistency"),
+    ("RES-CHECK-016", "restraint_integrity_verification"),
+    ("RES-CHECK-017", "restraint_gateway_integrity"),
+    ("RES-CHECK-018", "cyber_anomaly_occupant_safety_correlation"),
+]
+
+requirements_json = {
+    "phase": "5.3",
+    "status": "BUILT",
+    "scope": "Virtual EV CAN laboratory",
+    "physical_vehicle_access": False,
+    "direct_vehicle_actuation": False,
+    "production_dbc": False,
+    "laboratory_generated_signals": True,
+    "can_message_count": 15,
+    "virtual_nodes": [
+        "VCU", "BMS", "INV", "ABS", "SENSOR_GATEWAY",
+        "CHARGER", "DIAG", "RCM", "OCCUPANT_SENSOR"
+    ],
+    "requirements": [
+        {"id": rid, "check": name}
+        for rid, name in requirements
+    ]
+}
+
+REQ_PATH.write_text(
+    json.dumps(requirements_json, indent=2),
+    encoding="utf-8"
+)
+
+print("=== PHASE 5.3 BUILD COMPLETE ===")
+print(f"DBC: {DBC_PATH}")
+print("CAN messages: 15")
+print(f"Requirements: {REQ_PATH}")
+print("Safety requirements: 40")
+print("EV requirements: 22")
+print("Restraint/cross-domain requirements: 18")
+print("Virtual nodes: 9")
+print("Physical vehicle access: FALSE")
+print("Direct vehicle actuation: FALSE")
+print("Production DBC: FALSE")
+print("Status: PASS")

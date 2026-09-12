@@ -1,0 +1,32 @@
+﻿{
+    "phase":  "5.2",
+    "title":  "CAN Software Foundation",
+    "timestamp":  "2026-09-08T10:57:11.1001769+05:30",
+    "project_path":  "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+    "python_can":  {
+                       "import":  "can",
+                       "installed":  true,
+                       "package":  "python-can"
+                   },
+    "cantools":  {
+                     "import":  "cantools",
+                     "installed":  true,
+                     "package":  "cantools"
+                 },
+    "can_isotp":  {
+                      "import":  "isotp",
+                      "installed":  true,
+                      "package":  "can-isotp"
+                  },
+    "scapy":  {
+                  "import":  "scapy",
+                  "installed":  true,
+                  "package":  "scapy"
+              },
+    "can_message_test":  true,
+    "physical_vehicle_access":  false,
+    "physical_can_hardware_required":  false,
+    "safety_boundary":  "Controlled virtual CAN/ECU laboratory only; no road vehicle and no actuator control",
+    "status":  "PASS",
+    "next_step":  "Build isolated virtual ECU and CAN traffic generator"
+}

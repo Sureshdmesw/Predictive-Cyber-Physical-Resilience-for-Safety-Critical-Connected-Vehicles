@@ -1,0 +1,380 @@
+{
+  "phase": "5.6",
+  "title": "EV Safety Requirements Consistency Engine",
+  "status": "PASS",
+  "scope": "Virtual EV CAN laboratory",
+  "input": {
+    "path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_5\\virtual_ev_cyber_physical_features.csv",
+    "sha256": "9cc352ee55aa69de1ff6fd75ec6ebacd98ef5e2bd92979f29451744178d2e6ce",
+    "rows": 600
+  },
+  "requirements_source": {
+    "path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\schemas\\can_hil\\ev\\ev_safety_requirements_complete.json",
+    "sha256": "3c344ed60057e019dd39f0657e420b3c9d9eba223d2efcf70d48be3d518fa134",
+    "requirement_count": 40
+  },
+  "evaluation": {
+    "total_evaluations": 24000,
+    "expected_evaluations": 24000,
+    "status_counts": {
+      "PASS": 24000,
+      "FAIL": 0,
+      "NOT_EVALUABLE": 0
+    },
+    "ev_counts": {
+      "PASS": 13200,
+      "FAIL": 0,
+      "NOT_EVALUABLE": 0
+    },
+    "restraint_counts": {
+      "PASS": 10800,
+      "FAIL": 0,
+      "NOT_EVALUABLE": 0
+    }
+  },
+  "requirement_summary": {
+    "EV-CHECK-001": {
+      "check": "vehicle_wheel_speed_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-002": {
+      "check": "accelerator_torque_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-003": {
+      "check": "brake_regenerative_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-004": {
+      "check": "torque_command_feedback_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-005": {
+      "check": "battery_soc_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-006": {
+      "check": "battery_soh_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-007": {
+      "check": "hv_voltage_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-008": {
+      "check": "hv_current_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-009": {
+      "check": "battery_temperature_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-010": {
+      "check": "cell_voltage_deviation",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-011": {
+      "check": "cell_temperature_deviation",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-012": {
+      "check": "isolation_status",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-013": {
+      "check": "contactor_state_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-014": {
+      "check": "precharge_state_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-015": {
+      "check": "motor_temperature_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-016": {
+      "check": "inverter_state_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-017": {
+      "check": "charging_connector_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-018": {
+      "check": "ecu_heartbeat_presence",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-019": {
+      "check": "can_message_timing",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-020": {
+      "check": "sequence_counter_continuity",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-021": {
+      "check": "diagnostic_state_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "EV-CHECK-022": {
+      "check": "command_physical_response_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-001": {
+      "check": "restraint_ecu_heartbeat_presence",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-002": {
+      "check": "restraint_can_timing_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-003": {
+      "check": "restraint_sequence_counter_continuity",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-004": {
+      "check": "occupant_status_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-005": {
+      "check": "seatbelt_status_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-006": {
+      "check": "pretensioner_status_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-007": {
+      "check": "airbag_state_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-008": {
+      "check": "crash_event_status_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-009": {
+      "check": "longitudinal_acceleration_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-010": {
+      "check": "lateral_acceleration_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-011": {
+      "check": "yaw_rate_plausibility",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-012": {
+      "check": "acceleration_speed_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-013": {
+      "check": "acceleration_wheel_speed_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-014": {
+      "check": "yaw_steering_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-015": {
+      "check": "restraint_diagnostic_consistency",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-016": {
+      "check": "restraint_integrity_verification",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-017": {
+      "check": "restraint_gateway_integrity",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    },
+    "RES-CHECK-018": {
+      "check": "cyber_anomaly_occupant_safety_correlation",
+      "timesteps_evaluated": 600,
+      "pass": 600,
+      "fail": 0,
+      "not_evaluable": 0
+    }
+  },
+  "laboratory_thresholds": {
+    "speed_wheel_error_kph": 2.0,
+    "accelerator_torque_joint_max": 100000.0,
+    "brake_regen_conflict": 0.0,
+    "torque_tracking_error": 20.0,
+    "soc_min": 0.0,
+    "soc_max": 100.0,
+    "soh_min": 0.0,
+    "soh_max": 100.0,
+    "hv_voltage_min": 250.0,
+    "hv_voltage_max": 450.0,
+    "hv_current_abs_max": 400.0,
+    "battery_temperature_min": -30.0,
+    "battery_temperature_max": 60.0,
+    "cell_voltage_deviation_max": 0.1,
+    "cell_temperature_deviation_max": 10.0,
+    "motor_temperature_max": 150.0,
+    "can_interval_expected": 0.05,
+    "can_interval_tolerance": 0.01,
+    "acceleration_max": 15.0,
+    "lateral_acceleration_max": 15.0,
+    "yaw_rate_max": 180.0,
+    "acceleration_speed_consistency": 5.0,
+    "acceleration_wheel_speed_consistency": 5.0,
+    "yaw_steering_consistency": 20.0
+  },
+  "threshold_governance": {
+    "source": "Phase 5.6 research laboratory configuration",
+    "oem_safety_limits_claimed": false,
+    "production_validation_claimed": false,
+    "regulatory_compliance_claimed": false
+  },
+  "governance": {
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "production_dbc": false,
+    "research_validation_only": true,
+    "crss_equivalence_claim": false,
+    "crss_replacement": false,
+    "model_retraining": false
+  },
+  "checks": {
+    "input_rows_600": true,
+    "requirements_40": true,
+    "ev_requirements_22": true,
+    "restraint_requirements_18": true,
+    "evaluations_expected_24000": true,
+    "all_requirement_logic_implemented": true,
+    "input_laboratory_only": true,
+    "no_direct_actuation": true,
+    "crss_replacement_false": true,
+    "model_retraining_false": true,
+    "requirements_source_exists": true,
+    "output_csv_exists": true,
+    "output_jsonl_exists": true
+  },
+  "artifacts": {
+    "input": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_5\\virtual_ev_cyber_physical_features.csv",
+    "requirements": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\schemas\\can_hil\\ev\\ev_safety_requirements_complete.json",
+    "output_csv": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_6\\ev_safety_requirements_evaluation.csv",
+    "output_jsonl": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_6\\ev_safety_requirements_evaluation.jsonl",
+    "report": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\can_hil\\phase5_6\\phase5_6_ev_safety_requirements_engine.json"
+  }
+}

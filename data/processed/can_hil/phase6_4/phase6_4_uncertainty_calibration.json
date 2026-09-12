@@ -1,0 +1,56 @@
+{
+  "phase": "6.4",
+  "title": "Uncertainty and OOD Calibration Review",
+  "status": "PASS_WITH_CALIBRATION_LIMITATIONS",
+  "input_phase": "6.2",
+  "scientific_review_phase": "6.3",
+  "input_sha256": "b5e356442180d124dd3bc625aeba9bb120d9d5352c9c966aab1e570ffee534ff",
+  "record_count": 6479,
+  "scenario_count": 11,
+  "model_feature_count": 59,
+  "ood_statistical_feature_count": 2,
+  "excluded_feature_count": 57,
+  "calibration_basis": "S00_NORMAL_BASELINE",
+  "baseline_quantiles": {
+    "q50": 0.6636996611610488,
+    "q90": 0.9660162620551721,
+    "q95": 0.9950910012554849,
+    "q99": 1.0017929644440735,
+    "q999": 1.020780700861664
+  },
+  "baseline_ood_rate": 0.02037351443123939,
+  "attack_ood_rate": 0.036162988115449914,
+  "attack_specific_threshold_tuning": false,
+  "model_input_dimensions_modified": false,
+  "interpretation": [
+    "Calibration statistics are derived from the normal baseline.",
+    "OOD score remains a statistical distance measure.",
+    "OOD detection is not equivalent to attack detection.",
+    "No attack-specific threshold tuning was applied.",
+    "The 59-dimensional model input remains unchanged.",
+    "Only statistically variable baseline dimensions participate in OOD statistics."
+  ],
+  "limitations": [
+    "Only two model dimensions contain measurable baseline variance.",
+    "The remaining model dimensions are excluded from OOD statistics because their baseline variance is constant.",
+    "The calibrated OOD measure does not establish production automotive safety.",
+    "The result does not establish OEM or regulatory compliance.",
+    "Synthetic cyber telemetry remains synthetic experimental data.",
+    "Baseline and attack distributions remain partially overlapping."
+  ],
+  "validation": {
+    "Phase 6.3 scientific review accepted": true,
+    "Expected 6479 records": true,
+    "Expected 11 scenarios": true,
+    "59 model dimensions preserved": true,
+    "OOD statistical dimensions remain 2": true,
+    "Model input remains unchanged": true,
+    "All corrected OOD scores finite": true,
+    "Baseline calibration quantiles finite": true,
+    "Q99 is positive": true,
+    "Baseline OOD rate remains <= 10%": true,
+    "Attack OOD rate >= baseline OOD rate": true,
+    "Calibration does not modify model dimensions": true,
+    "No attack-specific threshold tuning": true
+  }
+}

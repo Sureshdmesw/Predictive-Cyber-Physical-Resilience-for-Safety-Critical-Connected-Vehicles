@@ -1,0 +1,26 @@
+{
+  "phase": "4.9",
+  "algorithm": "HistGradientBoostingClassifier",
+  "targets": [
+    "y3",
+    "y6"
+  ],
+  "feature_count": 59,
+  "representation_dimensions": 472,
+  "representation_statistics": [
+    "last",
+    "mean",
+    "std",
+    "minimum",
+    "maximum",
+    "last_minus_first",
+    "max_absolute_step_change",
+    "last_step_change"
+  ],
+  "normalization": "z_score_train_only",
+  "model_files": {
+    "y3": "models\\v2\\baseline\\crss_2024_v2_hgb_y3.joblib",
+    "y6": "models\\v2\\baseline\\crss_2024_v2_hgb_y6.joblib"
+  },
+  "source_script": "scripts\\crss_2024_phase4_9_strong_baseline.py"
+}

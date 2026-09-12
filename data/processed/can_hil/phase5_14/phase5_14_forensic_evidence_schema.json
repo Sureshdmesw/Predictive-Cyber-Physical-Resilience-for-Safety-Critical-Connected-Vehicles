@@ -1,0 +1,32 @@
+{
+  "phase": "5.14",
+  "title": "Forensic Buffer",
+  "purpose": "Local preservation of cyber-physical evidence around controlled laboratory anomaly events",
+  "input": "data\\processed\\can_hil\\phase5_10\\phase5_10_cyber_physical_attack_scenarios.csv",
+  "buffer_capacity_timesteps": 20,
+  "event_timestep": 300,
+  "post_event_timesteps": 10,
+  "evidence_source": "LOCAL_FORENSIC_BUFFER",
+  "laboratory_generated": true,
+  "physical_vehicle": false,
+  "direct_actuation": false,
+  "columns": [
+    "event_id",
+    "scenario_id",
+    "evidence_phase",
+    "timestep_index",
+    "timestamp_s",
+    "vehicle_id",
+    "ecu_domain",
+    "can_id",
+    "message_name",
+    "dlc",
+    "data_hex",
+    "signals_json",
+    "connectivity_state",
+    "evidence_source",
+    "laboratory_generated",
+    "physical_vehicle",
+    "direct_actuation"
+  ]
+}

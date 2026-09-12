@@ -1,0 +1,345 @@
+{
+  "publication_thesis_evidence_package": {
+    "name": "FINAL_PUBLICATION_THESIS_EVIDENCE_PACKAGE",
+    "timestamp_utc": "2026-09-12T06:28:44.677535+00:00",
+    "read_only_source_mapping": true,
+    "purpose": "Map research claims, methodology, validation, reproducibility, and limitations to authoritative evidence."
+  },
+  "summary": {
+    "sections": 13,
+    "evidence_references": 31,
+    "existing_evidence_references": 31,
+    "missing_evidence_references": 0,
+    "coverage_percentage": 100.0,
+    "status": "PASS"
+  },
+  "sections": [
+    {
+      "section": "Research Objective",
+      "purpose": "Define the research problem and system objective.",
+      "evidence": [
+        {
+          "path": "docs\\research_questions.md",
+          "role": "research_questions",
+          "claim_supported": "Research questions and objectives",
+          "exists": true,
+          "sha256": "1b2f380192f54414bc7c16ab52aac56ad5fe8e1619984b071825f246834e7a64",
+          "size_bytes": 3064
+        },
+        {
+          "path": "docs\\system_architecture.md",
+          "role": "system_architecture",
+          "claim_supported": "Overall research architecture",
+          "exists": true,
+          "sha256": "7db89c1aa83fc33017fcfc3adbafc4592d898f7e4afcafed69621100d54693da",
+          "size_bytes": 4820
+        },
+        {
+          "path": "docs\\FINAL_RESEARCH_DOCUMENTATION.md",
+          "role": "final_documentation",
+          "claim_supported": "Final consolidated research description",
+          "exists": true,
+          "sha256": "dceb8a2a3f222ae99d3975d9542d67919c0394e87b0f85b14940446a7a03da5f",
+          "size_bytes": 13471
+        }
+      ]
+    },
+    {
+      "section": "Dataset Foundation",
+      "purpose": "Establish the data foundation and experimental scope.",
+      "evidence": [
+        {
+          "path": "docs\\data_architecture.md",
+          "role": "data_architecture",
+          "claim_supported": "Dataset architecture and provenance",
+          "exists": true,
+          "sha256": "dfb847a5e5253339cd3704f81347101557b80dc3f299b09215aff0d51d3f2f69",
+          "size_bytes": 7554
+        },
+        {
+          "path": "data\\processed\\can_hil\\phase5_10\\phase5_10_cyber_physical_attack_scenarios.csv",
+          "role": "cyber_physical_dataset",
+          "claim_supported": "Controlled cyber-physical experimental data",
+          "exists": true,
+          "sha256": "f8cabaa9747d7088081eeaf0434eb5ed5efd58be031c28e88d71d7a6848f6691",
+          "size_bytes": 46388782
+        }
+      ]
+    },
+    {
+      "section": "Predictive Modeling",
+      "purpose": "Support the temporal predictive-model methodology.",
+      "evidence": [
+        {
+          "path": "models\\v2\\advanced\\crss_2024_v2_temporal_transformer_best.pt",
+          "role": "frozen_checkpoint",
+          "claim_supported": "Frozen temporal Transformer checkpoint",
+          "exists": true,
+          "sha256": "d54cfc5fb5613fef5bdfd6ac4b2ce780ebd2e64ca47b7e57c630dae3d323a754",
+          "size_bytes": 4946461
+        },
+        {
+          "path": "experiments\\can_hil\\phase5_11\\phase5_11_predictive_detection_manifest.json",
+          "role": "predictive_manifest",
+          "claim_supported": "Predictive-detection experiment provenance",
+          "exists": true,
+          "sha256": "bb0cc3cf6338ad15653ed9c7621005740f77a8da0e3529ec9f0767b82049940a",
+          "size_bytes": 13000
+        }
+      ]
+    },
+    {
+      "section": "Uncertainty and OOD",
+      "purpose": "Support corrected OOD analysis and scientific interpretation.",
+      "evidence": [
+        {
+          "path": "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.csv",
+          "role": "corrected_ood_results",
+          "claim_supported": "Corrected OOD results",
+          "exists": true,
+          "sha256": "b5e356442180d124dd3bc625aeba9bb120d9d5352c9c966aab1e570ffee534ff",
+          "size_bytes": 898450
+        },
+        {
+          "path": "experiments\\phase6_2\\phase6_2_corrected_ood_manifest.json",
+          "role": "ood_manifest",
+          "claim_supported": "Corrected OOD experiment provenance",
+          "exists": true,
+          "sha256": "3c2220d7e70de61d7c8611cc85feb92d79dc5e956622bb23ecd8d3b47b00d854",
+          "size_bytes": 4767
+        },
+        {
+          "path": "experiments\\phase6_3\\phase6_3_scientific_review_manifest.json",
+          "role": "scientific_review_manifest",
+          "claim_supported": "Scientific review of OOD results",
+          "exists": true,
+          "sha256": "61e9cda06954415274f54a17823bc6cfff3aca2efe2fa5ab7162ad1078785bdd",
+          "size_bytes": 1028
+        },
+        {
+          "path": "experiments\\phase6_4\\phase6_4_uncertainty_calibration_manifest.json",
+          "role": "calibration_manifest",
+          "claim_supported": "Uncertainty calibration evidence",
+          "exists": true,
+          "sha256": "184289ca28801edd8a631816b6b2aa8385022d87b0bee5efc25ddee9a1485eb4",
+          "size_bytes": 1032
+        }
+      ]
+    },
+    {
+      "section": "Connectivity Resilience",
+      "purpose": "Support connectivity-loss and recovery claims.",
+      "evidence": [
+        {
+          "path": "experiments\\can_hil\\phase5_16\\phase5_16_connectivity_recovery_manifest.json",
+          "role": "connectivity_manifest",
+          "claim_supported": "Connectivity loss and recovery validation",
+          "exists": true,
+          "sha256": "f6de1f9d6b88dfb9c15b1f20e2448d2ebaa7c9ddaa9879d6b2ba6316823b9fae",
+          "size_bytes": 7906
+        },
+        {
+          "path": "experiments\\can_hil\\phase5_17\\phase5_17_secure_synchronization_manifest.json",
+          "role": "synchronization_manifest",
+          "claim_supported": "Secure synchronization and SOC handoff",
+          "exists": true,
+          "sha256": "6572e2abdb947ee51d4459dee0c0b7948f611acc7ae5804f23221e59f418739d",
+          "size_bytes": 17826
+        }
+      ]
+    },
+    {
+      "section": "Forensic Integrity",
+      "purpose": "Support evidence-integrity and tamper-rejection claims.",
+      "evidence": [
+        {
+          "path": "experiments\\can_hil\\phase5_15\\phase5_15_integrity_tamper_manifest.json",
+          "role": "integrity_manifest",
+          "claim_supported": "Integrity and tamper validation",
+          "exists": true,
+          "sha256": "b5c1f188e3f99de4b916291daff4e8fef15c5f9d34d304ea14d4339aaa1a711f",
+          "size_bytes": 7086
+        },
+        {
+          "path": "experiments\\can_hil\\phase5_18\\phase5_18_adversarial_integrity_validation_manifest.json",
+          "role": "adversarial_integrity_manifest",
+          "claim_supported": "Adversarial integrity validation",
+          "exists": true,
+          "sha256": "e52189c0a79d054d0c35d37b52516627b12b6d01ec509e9b1d35ea799aa41c5d",
+          "size_bytes": 15374
+        }
+      ]
+    },
+    {
+      "section": "End-to-End Resilience",
+      "purpose": "Support integrated resilience claims.",
+      "evidence": [
+        {
+          "path": "experiments\\can_hil\\phase5_19\\phase5_19_end_to_end_resilience_validation_manifest.json",
+          "role": "end_to_end_manifest",
+          "claim_supported": "End-to-end resilience validation",
+          "exists": true,
+          "sha256": "b1b588e94c2c32112765e5d28ac7db9b3d627a2602d682b40bac3a6bfd005334",
+          "size_bytes": 16532
+        },
+        {
+          "path": "experiments\\can_hil\\phase5_20\\phase5_20_resilience_scorecard_manifest.json",
+          "role": "resilience_scorecard",
+          "claim_supported": "Resilience scorecard",
+          "exists": true,
+          "sha256": "93e46f38e4c3136042bfbf687a3b562cfd8dfbb474eade6a312b0c4c7bb55434",
+          "size_bytes": 19518
+        },
+        {
+          "path": "experiments\\can_hil\\phase5_21\\phase5_21_resilience_evidence_matrix_manifest.json",
+          "role": "resilience_evidence_matrix",
+          "claim_supported": "Scenario-level evidence matrix",
+          "exists": true,
+          "sha256": "bf420122dcc7d7d2c34f7646bc9460ac5e1f9b61f84c01b1827bd046366abeff",
+          "size_bytes": 19349
+        }
+      ]
+    },
+    {
+      "section": "Safety Architecture",
+      "purpose": "Support safety boundaries and deterministic policy claims.",
+      "evidence": [
+        {
+          "path": "docs\\safety_architecture.md",
+          "role": "safety_architecture",
+          "claim_supported": "Safety-oriented architecture",
+          "exists": true,
+          "sha256": "f80fcb4921dd84e7d65d566025a3829d7974a5f98d5b248ad157b49f6097bcda",
+          "size_bytes": 7741
+        },
+        {
+          "path": "docs\\threat_model.md",
+          "role": "threat_model",
+          "claim_supported": "Threat model and safety/security boundaries",
+          "exists": true,
+          "sha256": "3bc21a1979376f650ce033a2ca111213d7ccc18797932d5f1be9921a8e03fa38",
+          "size_bytes": 3504
+        }
+      ]
+    },
+    {
+      "section": "SOC/XDR Architecture",
+      "purpose": "Support SOC/XDR-compatible integration claims.",
+      "evidence": [
+        {
+          "path": "docs\\cortex_xdr_integration.md",
+          "role": "cortex_xdr_architecture",
+          "claim_supported": "Cortex XDR-compatible architecture",
+          "exists": true,
+          "sha256": "ba39ee0ad5919d2458cf6346350a56bddb5e51988de12eeaa7a5b0a18faf745d",
+          "size_bytes": 10274
+        }
+      ]
+    },
+    {
+      "section": "Explainability",
+      "purpose": "Support model-grounded explainability claims.",
+      "evidence": [
+        {
+          "path": "docs\\FINAL_RESEARCH_DOCUMENTATION.md",
+          "role": "explainability_documentation",
+          "claim_supported": "Explainability scope and methodology",
+          "exists": true,
+          "sha256": "dceb8a2a3f222ae99d3975d9542d67919c0394e87b0f85b14940446a7a03da5f",
+          "size_bytes": 13471
+        }
+      ]
+    },
+    {
+      "section": "Reproducibility",
+      "purpose": "Support reproducibility and artifact-integrity claims.",
+      "evidence": [
+        {
+          "path": "experiments\\final_release\\final_evidence_consolidation.json",
+          "role": "evidence_consolidation",
+          "claim_supported": "Consolidated evidence inventory",
+          "exists": true,
+          "sha256": "ddabfdf9b809d7f24d5ad64d769c2ed7c2e89189e286dce937028c8556ea9919",
+          "size_bytes": 71634
+        },
+        {
+          "path": "experiments\\final_release\\final_evidence_index.csv",
+          "role": "evidence_index",
+          "claim_supported": "Evidence index and artifact hashes",
+          "exists": true,
+          "sha256": "aea504b09446e8ce5b378d24aa3e77808742450206fd43c08c17de11ebb2e6d8",
+          "size_bytes": 34068
+        },
+        {
+          "path": "experiments\\final_release\\final_reproducibility_audit.json",
+          "role": "reproducibility_audit",
+          "claim_supported": "Reproducibility validation",
+          "exists": true,
+          "sha256": "cbc2d97efdabdcfb135f970764bda5528f5db33012a03e3d906653c942e72cd8",
+          "size_bytes": 5988
+        }
+      ]
+    },
+    {
+      "section": "Claims and Limitations",
+      "purpose": "Support scientifically bounded final claims.",
+      "evidence": [
+        {
+          "path": "docs\\final_research_claims_and_limitations.md",
+          "role": "claims_limitations_document",
+          "claim_supported": "Authoritative claims and limitations",
+          "exists": true,
+          "sha256": "23a631043aa96e40f57c5c36a592c98a37f57f1cf0581b68233651207f611c47",
+          "size_bytes": 8984
+        },
+        {
+          "path": "experiments\\final_release\\final_claims_limitations_audit.json",
+          "role": "claims_limitations_audit",
+          "claim_supported": "Claims and limitations governance validation",
+          "exists": true,
+          "sha256": "1a5a1aa4fd06642722496a2d04ef3f3c1e76bb4a8bc4a415c59c228b7ef408fd",
+          "size_bytes": 6714
+        }
+      ]
+    },
+    {
+      "section": "Final Release Governance",
+      "purpose": "Support overall release-readiness claims.",
+      "evidence": [
+        {
+          "path": "experiments\\final_release\\final_integrated_audit_v2.json",
+          "role": "integrated_audit",
+          "claim_supported": "Final integrated audit",
+          "exists": true,
+          "sha256": "808582c23fd26726152303239a4ac0cd3eae953728113c59b691158f69183887",
+          "size_bytes": 12798
+        },
+        {
+          "path": "experiments\\final_release\\final_evidence_consolidation.json",
+          "role": "evidence_consolidation",
+          "claim_supported": "Final evidence consolidation",
+          "exists": true,
+          "sha256": "ddabfdf9b809d7f24d5ad64d769c2ed7c2e89189e286dce937028c8556ea9919",
+          "size_bytes": 71634
+        },
+        {
+          "path": "experiments\\final_release\\final_reproducibility_audit.json",
+          "role": "reproducibility_audit",
+          "claim_supported": "Final reproducibility audit",
+          "exists": true,
+          "sha256": "cbc2d97efdabdcfb135f970764bda5528f5db33012a03e3d906653c942e72cd8",
+          "size_bytes": 5988
+        },
+        {
+          "path": "experiments\\final_release\\final_claims_limitations_audit.json",
+          "role": "claims_limitations_audit",
+          "claim_supported": "Final claims and limitations audit",
+          "exists": true,
+          "sha256": "1a5a1aa4fd06642722496a2d04ef3f3c1e76bb4a8bc4a415c59c228b7ef408fd",
+          "size_bytes": 6714
+        }
+      ]
+    }
+  ],
+  "missing_evidence": []
+}

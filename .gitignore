@@ -1,33 +1,61 @@
-﻿# Python
+﻿# ============================================================
+# Python / environment
+# ============================================================
 __pycache__/
 *.py[cod]
 .venv/
 *.egg-info/
+.pytest_cache/
+.mypy_cache/
 
+# ============================================================
 # OS / IDE
+# ============================================================
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# Raw/downloaded datasets
+# ============================================================
+# Raw / downloaded datasets
+# Keep these outside Git; manifests/documentation describe them.
+# ============================================================
 data/raw/
 *.zip
 *.7z
 *.rar
 
-# Generated processed datasets
-data/processed/
+# ============================================================
+# Very large generated numerical arrays
+# ============================================================
+data/processed/**/*.npy
 
-# Large/generated model artifacts
-models/
+# ============================================================
+# Large generated parquet datasets
+# ============================================================
+data/processed/**/*.parquet
 
-# Personal/private note
+# ============================================================
+# Large redundant JSONL telemetry artifacts
+# CSV/evidence summaries remain tracked.
+# ============================================================
+data/processed/can_hil/phase5_9/*.jsonl
+data/processed/can_hil/phase5_10/*.jsonl
+
+# ============================================================
+# Models
+# Intentionally NOT ignored.
+# All current model checkpoints are < 5 MB and will be tracked.
+# ============================================================
+
+# ============================================================
+# Private document
+# ============================================================
 Cortex_XDR_Occupant.docx
 
-# Runtime/temp
+# ============================================================
+# Runtime / temporary files
+# ============================================================
 *.log
 *.tmp
 *.bak
-.pytest_cache/
-.mypy_cache/

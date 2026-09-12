@@ -1,0 +1,37 @@
+{
+  "phase": "5.21",
+  "title": "Cross-Scenario Resilience Evidence Matrix",
+  "input": "data\\processed\\can_hil\\phase5_20\\phase5_20_resilience_scorecard.csv",
+  "scenarios": [
+    "C01_SPEED_SENSOR_SPOOFING",
+    "C02_BRAKE_ACCELERATOR_ATTACK",
+    "C03_TORQUE_DYNAMICS_ATTACK",
+    "C04_HV_POWER_ATTACK",
+    "C05_BATTERY_THERMAL_ATTACK",
+    "C06_HV_CONTACTOR_ATTACK",
+    "C07_HEARTBEAT_INTEGRITY_ATTACK",
+    "C08_SEQUENCE_GATEWAY_ATTACK",
+    "C09_RESTRAINT_DOMAIN_ATTACK",
+    "C10_MULTI_DOMAIN_ATTACK"
+  ],
+  "evidence_dimensions": [
+    "recovery",
+    "synchronization",
+    "soc_handoff",
+    "baseline_integrity",
+    "adversarial_resilience",
+    "safety_boundary",
+    "end_to_end_valid",
+    "evidence_complete"
+  ],
+  "score_range": "0-100",
+  "expected_score": 100.0,
+  "scientific_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "live_cortex_xdr": false,
+    "model_retraining": false,
+    "real_world_cyberattack": false
+  }
+}

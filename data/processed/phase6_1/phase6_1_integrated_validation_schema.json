@@ -1,0 +1,13 @@
+{
+  "phase": "6.1",
+  "title": "Integrated Research System Validation & Completion Audit",
+  "format": "CSV/JSONL",
+  "columns": {
+    "timestamp_utc": "UTC execution timestamp",
+    "check_id": "Unique validation check identifier",
+    "category": "Validation category",
+    "item": "Validation item",
+    "status": "PASS or FAIL",
+    "details": "Validation evidence/details"
+  }
+}

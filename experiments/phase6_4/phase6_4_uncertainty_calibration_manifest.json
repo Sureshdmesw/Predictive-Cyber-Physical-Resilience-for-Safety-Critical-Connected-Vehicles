@@ -1,0 +1,19 @@
+{
+  "phase": "6.4",
+  "title": "Uncertainty and OOD Calibration Review",
+  "status": "PASS_WITH_CALIBRATION_LIMITATIONS",
+  "input": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.csv",
+  "input_sha256": "b5e356442180d124dd3bc625aeba9bb120d9d5352c9c966aab1e570ffee534ff",
+  "outputs": {
+    "calibration_summary": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase6_4\\phase6_4_ood_calibration_summary.csv",
+    "calibration_report": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase6_4\\phase6_4_uncertainty_calibration.json"
+  },
+  "validation_count": 13,
+  "validation_pass_count": 13,
+  "validation_fail_count": 0,
+  "threshold_basis": "NORMAL_BASELINE",
+  "attack_specific_threshold_tuning": false,
+  "model_input_modified": false,
+  "phase_6_2_frozen": true,
+  "phase_6_3_frozen": true
+}

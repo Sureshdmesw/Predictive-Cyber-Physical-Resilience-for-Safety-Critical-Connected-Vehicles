@@ -1,0 +1,134 @@
+{
+  "phase": "5.5",
+  "title": "EV Cyber-Physical Feature Adapter",
+  "status": "PASS",
+  "input": {
+    "path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_4\\virtual_ev_decoded_features.csv",
+    "sha256": "495ded7c623199424aebd05d74d5c63fe1aa7d8dab1a965e1b023cfa8c71de6d",
+    "rows": 600,
+    "columns": 80
+  },
+  "adapter": {
+    "version": "5.5.1",
+    "source": "Phase 5.4 decoded virtual EV CAN",
+    "output_semantics": "CAN_LAB_CYBER_PHYSICAL",
+    "feature_groups": {
+      "vehicle_dynamics": 9,
+      "driver_demand": 4,
+      "ev_powertrain": 8,
+      "battery_hv": 8,
+      "hv_safety": 3,
+      "charging_thermal": 5,
+      "connectivity_integrity": 10,
+      "diagnostics": 3,
+      "occupant_safety": 18,
+      "auxiliary_power": 2
+    },
+    "mapped_source_feature_count": 68,
+    "missing_source_feature_count": 0,
+    "missing_source_features": [],
+    "unavailable_laboratory_signals": [
+      "DCLinkVoltage",
+      "ThermalManagementState",
+      "SensorStatus"
+    ],
+    "adapted_feature_count": 82
+  },
+  "feature_group_results": {
+    "vehicle_dynamics": {
+      "expected": 9,
+      "present": 9,
+      "missing": []
+    },
+    "driver_demand": {
+      "expected": 4,
+      "present": 4,
+      "missing": []
+    },
+    "ev_powertrain": {
+      "expected": 8,
+      "present": 8,
+      "missing": []
+    },
+    "battery_hv": {
+      "expected": 8,
+      "present": 8,
+      "missing": []
+    },
+    "hv_safety": {
+      "expected": 3,
+      "present": 3,
+      "missing": []
+    },
+    "charging_thermal": {
+      "expected": 5,
+      "present": 5,
+      "missing": []
+    },
+    "connectivity_integrity": {
+      "expected": 10,
+      "present": 10,
+      "missing": []
+    },
+    "diagnostics": {
+      "expected": 3,
+      "present": 3,
+      "missing": []
+    },
+    "occupant_safety": {
+      "expected": 18,
+      "present": 18,
+      "missing": []
+    },
+    "auxiliary_power": {
+      "expected": 2,
+      "present": 2,
+      "missing": []
+    }
+  },
+  "cross_domain_features": [
+    "cp_speed_consistency_error",
+    "cp_brake_consistency_error",
+    "cp_torque_tracking_error",
+    "cp_steering_yaw_consistency",
+    "cp_hv_power_kw",
+    "cp_battery_temperature_abs",
+    "accelerator_torque_joint"
+  ],
+  "governance": {
+    "crss_equivalence_claim": false,
+    "crss_replacement": false,
+    "model_retraining": false,
+    "production_vehicle": false,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "production_dbc": false,
+    "research_validation_only": true
+  },
+  "checks": {
+    "input_rows_600": true,
+    "output_rows_600": true,
+    "source_feature_inventory_complete": true,
+    "mapped_source_features_nonzero": true,
+    "vehicle_dynamics_present": true,
+    "ev_powertrain_present": true,
+    "battery_hv_present": true,
+    "hv_safety_present": true,
+    "connectivity_integrity_present": true,
+    "occupant_safety_present": true,
+    "cross_domain_features_present": true,
+    "schema_exists": true,
+    "output_csv_exists": true,
+    "output_jsonl_exists": true,
+    "laboratory_only": true,
+    "no_model_retraining": true,
+    "no_crss_replacement_claim": true
+  },
+  "artifacts": {
+    "input": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_4\\virtual_ev_decoded_features.csv",
+    "output_csv": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_5\\virtual_ev_cyber_physical_features.csv",
+    "output_jsonl": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_5\\virtual_ev_cyber_physical_features.jsonl",
+    "schema": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\schemas\\can_hil\\adapter\\ev_cyber_physical_feature_adapter_schema.json",
+    "report": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\can_hil\\phase5_5\\phase5_5_ev_cyber_physical_feature_adapter.json"
+  }
+}

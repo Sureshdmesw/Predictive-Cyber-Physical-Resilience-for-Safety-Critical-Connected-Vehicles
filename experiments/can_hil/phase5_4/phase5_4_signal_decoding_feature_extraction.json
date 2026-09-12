@@ -1,0 +1,857 @@
+{
+  "phase": "5.4",
+  "title": "CAN Signal Decoding and EV Feature Extraction",
+  "status": "PASS",
+  "input": {
+    "path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.csv",
+    "sha256": "035182c423e666f385d6c57e094f2247913a5fdd468711ef50088f52ef5c47e5",
+    "records": 9000
+  },
+  "dbc": {
+    "path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\schemas\\can_hil\\ev\\virtual_ev_complete.dbc",
+    "sha256": "e511e06cdbf1bdf20339b3c9ee11352df327056c594b0a950ee91ea5ca86653d",
+    "message_count": 15,
+    "messages": [
+      {
+        "can_id": "0x100",
+        "name": "VEHICLE_DYNAMICS",
+        "signal_count": 4,
+        "signals": [
+          "VehicleSpeed",
+          "WheelSpeedFL",
+          "WheelSpeedFR",
+          "SteeringAngle"
+        ]
+      },
+      {
+        "can_id": "0x101",
+        "name": "DRIVER_INPUT",
+        "signal_count": 4,
+        "signals": [
+          "Accelerator",
+          "BrakeStatus",
+          "BrakePressure",
+          "RegenCommand"
+        ]
+      },
+      {
+        "can_id": "0x102",
+        "name": "POWERTRAIN_STATE",
+        "signal_count": 4,
+        "signals": [
+          "VCUState",
+          "MotorRPM",
+          "TorqueCommand",
+          "RegenAvailable"
+        ]
+      },
+      {
+        "can_id": "0x103",
+        "name": "BATTERY_STATUS",
+        "signal_count": 6,
+        "signals": [
+          "SOC",
+          "SOH",
+          "HVVoltage",
+          "HVCurrent",
+          "BatteryTemperature",
+          "BMSState"
+        ]
+      },
+      {
+        "can_id": "0x104",
+        "name": "BATTERY_CELL_STATUS",
+        "signal_count": 5,
+        "signals": [
+          "CellVoltageDeviation",
+          "CellTemperatureDeviation",
+          "IsolationStatus",
+          "ContactorState",
+          "PrechargeState"
+        ]
+      },
+      {
+        "can_id": "0x105",
+        "name": "MOTOR_STATUS",
+        "signal_count": 4,
+        "signals": [
+          "TorqueFeedback",
+          "MotorTemperature",
+          "InverterTemperature",
+          "InverterState"
+        ]
+      },
+      {
+        "can_id": "0x106",
+        "name": "ECU_HEARTBEAT",
+        "signal_count": 5,
+        "signals": [
+          "VCUHeartbeat",
+          "BMSHeartbeat",
+          "InverterHeartbeat",
+          "GatewayHeartbeat",
+          "SequenceCounter"
+        ]
+      },
+      {
+        "can_id": "0x107",
+        "name": "CHARGING_STATUS",
+        "signal_count": 3,
+        "signals": [
+          "ChargingState",
+          "ConnectorState",
+          "ChargeCurrent"
+        ]
+      },
+      {
+        "can_id": "0x108",
+        "name": "DIAGNOSTIC_STATUS",
+        "signal_count": 3,
+        "signals": [
+          "DiagnosticState",
+          "IntegrityStatus",
+          "GatewayIntegrity"
+        ]
+      },
+      {
+        "can_id": "0x109",
+        "name": "AUXILIARY_POWER",
+        "signal_count": 2,
+        "signals": [
+          "AuxBatteryVoltage",
+          "AuxBatteryStatus"
+        ]
+      },
+      {
+        "can_id": "0x10A",
+        "name": "RESCUE_DYNAMICS",
+        "signal_count": 4,
+        "signals": [
+          "LongitudinalAcceleration",
+          "LateralAcceleration",
+          "YawRate",
+          "CrashEventStatus"
+        ]
+      },
+      {
+        "can_id": "0x10B",
+        "name": "RESTRAINT_STATUS",
+        "signal_count": 8,
+        "signals": [
+          "DriverSeatbelt",
+          "PassengerSeatbelt",
+          "DriverPretensioner",
+          "PassengerPretensioner",
+          "RolloverStatus",
+          "RestraintDiagnostic",
+          "RestraintIntegrity",
+          "RestraintSequence"
+        ]
+      },
+      {
+        "can_id": "0x10C",
+        "name": "AIRBAG_STATUS",
+        "signal_count": 5,
+        "signals": [
+          "DriverAirbag",
+          "PassengerAirbag",
+          "SideAirbag",
+          "CurtainAirbag",
+          "ImpactSeverity"
+        ]
+      },
+      {
+        "can_id": "0x10D",
+        "name": "OCCUPANT_STATUS",
+        "signal_count": 4,
+        "signals": [
+          "DriverOccupant",
+          "PassengerOccupant",
+          "DriverPosition",
+          "PassengerPosition"
+        ]
+      },
+      {
+        "can_id": "0x10E",
+        "name": "RESTRAINT_HEARTBEAT",
+        "signal_count": 4,
+        "signals": [
+          "RCMHeartbeat",
+          "OccupantSensorHeartbeat",
+          "RestraintGatewayHeartbeat",
+          "RestraintSequenceCounter"
+        ]
+      }
+    ]
+  },
+  "decoding": {
+    "decoded_records": 9000,
+    "decode_failures": 0,
+    "message_counts": {
+      "VEHICLE_DYNAMICS": 600,
+      "DRIVER_INPUT": 600,
+      "POWERTRAIN_STATE": 600,
+      "BATTERY_STATUS": 600,
+      "BATTERY_CELL_STATUS": 600,
+      "MOTOR_STATUS": 600,
+      "ECU_HEARTBEAT": 600,
+      "CHARGING_STATUS": 600,
+      "DIAGNOSTIC_STATUS": 600,
+      "AUXILIARY_POWER": 600,
+      "RESCUE_DYNAMICS": 600,
+      "RESTRAINT_STATUS": 600,
+      "AIRBAG_STATUS": 600,
+      "OCCUPANT_STATUS": 600,
+      "RESTRAINT_HEARTBEAT": 600
+    },
+    "signal_counts": {
+      "VehicleSpeed": 600,
+      "WheelSpeedFL": 600,
+      "WheelSpeedFR": 600,
+      "SteeringAngle": 600,
+      "Accelerator": 600,
+      "BrakeStatus": 600,
+      "BrakePressure": 600,
+      "RegenCommand": 600,
+      "VCUState": 600,
+      "MotorRPM": 600,
+      "TorqueCommand": 600,
+      "RegenAvailable": 600,
+      "SOC": 600,
+      "SOH": 600,
+      "HVVoltage": 600,
+      "HVCurrent": 600,
+      "BatteryTemperature": 600,
+      "BMSState": 600,
+      "CellVoltageDeviation": 600,
+      "CellTemperatureDeviation": 600,
+      "IsolationStatus": 600,
+      "ContactorState": 600,
+      "PrechargeState": 600,
+      "TorqueFeedback": 600,
+      "MotorTemperature": 600,
+      "InverterTemperature": 600,
+      "InverterState": 600,
+      "VCUHeartbeat": 600,
+      "BMSHeartbeat": 600,
+      "InverterHeartbeat": 600,
+      "GatewayHeartbeat": 600,
+      "SequenceCounter": 600,
+      "ChargingState": 600,
+      "ConnectorState": 600,
+      "ChargeCurrent": 600,
+      "DiagnosticState": 600,
+      "IntegrityStatus": 600,
+      "GatewayIntegrity": 600,
+      "AuxBatteryVoltage": 600,
+      "AuxBatteryStatus": 600,
+      "LongitudinalAcceleration": 600,
+      "LateralAcceleration": 600,
+      "YawRate": 600,
+      "CrashEventStatus": 600,
+      "DriverSeatbelt": 600,
+      "PassengerSeatbelt": 600,
+      "DriverPretensioner": 600,
+      "PassengerPretensioner": 600,
+      "RolloverStatus": 600,
+      "RestraintDiagnostic": 600,
+      "RestraintIntegrity": 600,
+      "RestraintSequence": 600,
+      "DriverAirbag": 600,
+      "PassengerAirbag": 600,
+      "SideAirbag": 600,
+      "CurtainAirbag": 600,
+      "ImpactSeverity": 600,
+      "DriverOccupant": 600,
+      "PassengerOccupant": 600,
+      "DriverPosition": 600,
+      "PassengerPosition": 600,
+      "RCMHeartbeat": 600,
+      "OccupantSensorHeartbeat": 600,
+      "RestraintGatewayHeartbeat": 600,
+      "RestraintSequenceCounter": 600
+    }
+  },
+  "feature_extraction": {
+    "unified_timesteps": 600,
+    "dbc_signal_count": 65,
+    "dbc_signals": [
+      "Accelerator",
+      "AuxBatteryStatus",
+      "AuxBatteryVoltage",
+      "BMSHeartbeat",
+      "BMSState",
+      "BatteryTemperature",
+      "BrakePressure",
+      "BrakeStatus",
+      "CellTemperatureDeviation",
+      "CellVoltageDeviation",
+      "ChargeCurrent",
+      "ChargingState",
+      "ConnectorState",
+      "ContactorState",
+      "CrashEventStatus",
+      "CurtainAirbag",
+      "DiagnosticState",
+      "DriverAirbag",
+      "DriverOccupant",
+      "DriverPosition",
+      "DriverPretensioner",
+      "DriverSeatbelt",
+      "GatewayHeartbeat",
+      "GatewayIntegrity",
+      "HVCurrent",
+      "HVVoltage",
+      "ImpactSeverity",
+      "IntegrityStatus",
+      "InverterHeartbeat",
+      "InverterState",
+      "InverterTemperature",
+      "IsolationStatus",
+      "LateralAcceleration",
+      "LongitudinalAcceleration",
+      "MotorRPM",
+      "MotorTemperature",
+      "OccupantSensorHeartbeat",
+      "PassengerAirbag",
+      "PassengerOccupant",
+      "PassengerPosition",
+      "PassengerPretensioner",
+      "PassengerSeatbelt",
+      "PrechargeState",
+      "RCMHeartbeat",
+      "RegenAvailable",
+      "RegenCommand",
+      "RestraintDiagnostic",
+      "RestraintGatewayHeartbeat",
+      "RestraintIntegrity",
+      "RestraintSequence",
+      "RestraintSequenceCounter",
+      "RolloverStatus",
+      "SOC",
+      "SOH",
+      "SequenceCounter",
+      "SideAirbag",
+      "SteeringAngle",
+      "TorqueCommand",
+      "TorqueFeedback",
+      "VCUHeartbeat",
+      "VCUState",
+      "VehicleSpeed",
+      "WheelSpeedFL",
+      "WheelSpeedFR",
+      "YawRate"
+    ],
+    "missing_signals": [],
+    "output_feature_columns": 80,
+    "derived_features": [
+      "wheel_speed_mean",
+      "speed_wheel_speed_error",
+      "motor_torque_tracking_error",
+      "estimated_hv_power_kw",
+      "battery_temperature_abs",
+      "cell_voltage_deviation_abs",
+      "cell_temperature_deviation_abs",
+      "steering_yaw_joint_magnitude",
+      "accelerator_torque_joint",
+      "can_frame_interval_s"
+    ]
+  },
+  "numeric_statistics": {
+    "timestamp_s": {
+      "count": 600,
+      "min": 0.0,
+      "max": 29.95,
+      "mean": 14.975
+    },
+    "step": {
+      "count": 600,
+      "min": 0.0,
+      "max": 599.0,
+      "mean": 299.5
+    },
+    "VehicleSpeed": {
+      "count": 600,
+      "min": 50.0,
+      "max": 68.19,
+      "mean": 60.76475
+    },
+    "WheelSpeedFL": {
+      "count": 600,
+      "min": 50.07,
+      "max": 68.57000000000001,
+      "mean": 61.013400000000004
+    },
+    "WheelSpeedFR": {
+      "count": 600,
+      "min": 49.77,
+      "max": 68.05,
+      "mean": 60.56296666666667
+    },
+    "SteeringAngle": {
+      "count": 600,
+      "min": -4.800000000000001,
+      "max": 4.3,
+      "mean": 0.8235
+    },
+    "Accelerator": {
+      "count": 600,
+      "min": 22.400000000000002,
+      "max": 41.6,
+      "mean": 32.62533333333334
+    },
+    "BrakePressure": {
+      "count": 600,
+      "min": 0.0,
+      "max": 6.7,
+      "mean": 1.5388333333333335
+    },
+    "BrakeStatus": {
+      "count": 600,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.465
+    },
+    "RegenCommand": {
+      "count": 600,
+      "min": 0.4,
+      "max": 5.2,
+      "mean": 3.798666666666667
+    },
+    "VCUState": {
+      "count": 600,
+      "min": 2.0,
+      "max": 2.0,
+      "mean": 2.0
+    },
+    "MotorRPM": {
+      "count": 600,
+      "min": 2750.0,
+      "max": 3750.0,
+      "mean": 3342.048333333333
+    },
+    "HVVoltage": {
+      "count": 600,
+      "min": 397.6,
+      "max": 400.0,
+      "mean": 398.5928333333334
+    },
+    "HVCurrent": {
+      "count": 600,
+      "min": 71.2,
+      "max": 92.9,
+      "mean": 81.21316666666667
+    },
+    "BatteryTemperature": {
+      "count": 600,
+      "min": 30.0,
+      "max": 32.0,
+      "mean": 30.888333333333332
+    },
+    "CellVoltageDeviation": {
+      "count": 600,
+      "min": 0.005,
+      "max": 0.018000000000000002,
+      "mean": 0.011965
+    },
+    "CellTemperatureDeviation": {
+      "count": 600,
+      "min": 1.5,
+      "max": 2.6,
+      "mean": 1.9945000000000002
+    },
+    "BMSState": {
+      "count": 600,
+      "min": 2.0,
+      "max": 2.0,
+      "mean": 2.0
+    },
+    "PrechargeState": {
+      "count": 600,
+      "min": 2.0,
+      "max": 2.0,
+      "mean": 2.0
+    },
+    "InverterTemperature": {
+      "count": 600,
+      "min": 60.0,
+      "max": 68.0,
+      "mean": 65.09166666666667
+    },
+    "ChargingState": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "CrashEventStatus": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "ImpactSeverity": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "RolloverStatus": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "LongitudinalAcceleration": {
+      "count": 600,
+      "min": -0.27,
+      "max": 2.0,
+      "mean": 0.022333333333333334
+    },
+    "LateralAcceleration": {
+      "count": 600,
+      "min": -0.02,
+      "max": 0.02,
+      "mean": 0.00135
+    },
+    "YawRate": {
+      "count": 600,
+      "min": -3.9000000000000004,
+      "max": 3.5,
+      "mean": 0.6576666666666667
+    },
+    "VCUHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "BMSHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "InverterHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "GatewayHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "DiagnosticState": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "wheel_speed_mean": {
+      "count": 600,
+      "min": 49.92,
+      "max": 68.31,
+      "mean": 60.788183333333336
+    },
+    "speed_wheel_speed_error": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.2149999999999963,
+      "mean": 0.04856666666666685
+    },
+    "estimated_hv_power_kw": {
+      "count": 600,
+      "min": 28.3732,
+      "max": 36.99278,
+      "mean": 32.37048818333334
+    },
+    "battery_temperature_abs": {
+      "count": 600,
+      "min": 30.0,
+      "max": 32.0,
+      "mean": 30.888333333333332
+    },
+    "cell_voltage_deviation_abs": {
+      "count": 600,
+      "min": 0.005,
+      "max": 0.018000000000000002,
+      "mean": 0.011965
+    },
+    "cell_temperature_deviation_abs": {
+      "count": 600,
+      "min": 1.5,
+      "max": 2.6,
+      "mean": 1.9945000000000002
+    },
+    "steering_yaw_joint_magnitude": {
+      "count": 600,
+      "min": 0.0,
+      "max": 8.700000000000001,
+      "mean": 4.443833333333334
+    },
+    "can_frame_interval_s": {
+      "count": 600,
+      "min": 0.05,
+      "max": 0.05,
+      "mean": 0.05
+    },
+    "laboratory_generated": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "physical_vehicle": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "direct_actuation": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "TorqueCommand": {
+      "count": 600,
+      "min": 102.7,
+      "max": 128.5,
+      "mean": 116.02666666666667
+    },
+    "RegenAvailable": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "SOC": {
+      "count": 600,
+      "min": 79.60000000000001,
+      "max": 80.0,
+      "mean": 79.79066666666667
+    },
+    "SOH": {
+      "count": 600,
+      "min": 98.0,
+      "max": 98.0,
+      "mean": 98.0
+    },
+    "IsolationStatus": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "ContactorState": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "TorqueFeedback": {
+      "count": 600,
+      "min": 101.5,
+      "max": 131.8,
+      "mean": 116.00633333333334
+    },
+    "MotorTemperature": {
+      "count": 600,
+      "min": 71.0,
+      "max": 81.0,
+      "mean": 76.75333333333333
+    },
+    "InverterState": {
+      "count": 600,
+      "min": 2.0,
+      "max": 2.0,
+      "mean": 2.0
+    },
+    "SequenceCounter": {
+      "count": 600,
+      "min": 0.0,
+      "max": 255.0,
+      "mean": 115.18
+    },
+    "ConnectorState": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "ChargeCurrent": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "IntegrityStatus": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "GatewayIntegrity": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "AuxBatteryVoltage": {
+      "count": 600,
+      "min": 12.49,
+      "max": 12.71,
+      "mean": 12.599566666666666
+    },
+    "AuxBatteryStatus": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "DriverSeatbelt": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "PassengerSeatbelt": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "DriverPretensioner": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "PassengerPretensioner": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "RestraintDiagnostic": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "RestraintIntegrity": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "RestraintSequence": {
+      "count": 600,
+      "min": 0.0,
+      "max": 255.0,
+      "mean": 115.18
+    },
+    "DriverAirbag": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "PassengerAirbag": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "SideAirbag": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "CurtainAirbag": {
+      "count": 600,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "DriverOccupant": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "PassengerOccupant": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "DriverPosition": {
+      "count": 600,
+      "min": 50.0,
+      "max": 50.0,
+      "mean": 50.0
+    },
+    "PassengerPosition": {
+      "count": 600,
+      "min": 50.0,
+      "max": 50.0,
+      "mean": 50.0
+    },
+    "RCMHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "OccupantSensorHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "RestraintGatewayHeartbeat": {
+      "count": 600,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "RestraintSequenceCounter": {
+      "count": 600,
+      "min": 0.0,
+      "max": 255.0,
+      "mean": 115.18
+    }
+  },
+  "checks": {
+    "input_records_9000": true,
+    "decoded_records_9000": true,
+    "unified_timesteps_600": true,
+    "dbc_messages_15": true,
+    "decoded_message_types_15": true,
+    "decode_failures_zero": true,
+    "all_expected_dbc_signals_present": true,
+    "derived_feature_table_600": true,
+    "decoded_csv_exists": true,
+    "decoded_jsonl_exists": true,
+    "laboratory_only": true
+  },
+  "safety_boundary": {
+    "physical_vehicle_access": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "production_dbc": false,
+    "laboratory_generated_data": true,
+    "research_validation_only": true
+  },
+  "outputs": {
+    "decoded_csv": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_4\\virtual_ev_decoded_features.csv",
+    "decoded_jsonl": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_4\\virtual_ev_decoded_features.jsonl",
+    "report": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\experiments\\can_hil\\phase5_4\\phase5_4_signal_decoding_feature_extraction.json"
+  },
+  "decode_failures_detail": []
+}

@@ -1,0 +1,48 @@
+{
+  "phase": "5.8",
+  "name": "ground_truth_experiment_logger",
+  "status": "BUILT",
+  "scope": "Virtual EV CAN laboratory",
+  "purpose": "Reproducible laboratory ground-truth and provenance layer linking Phase 5.5 cyber-physical features, aggregated Phase 5.6 safety requirements, and Phase 5.7 frozen Transformer predictions.",
+  "ground_truth_semantics": {
+    "label_source": "DETERMINISTIC_LABORATORY_RULES",
+    "real_world_cyberattack_labels": false,
+    "synthetic_cyber_labels": false,
+    "manual_labels": false,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false
+  },
+  "aggregation": {
+    "phase_5_5_rows": 600,
+    "phase_5_6_raw_evaluations": 24000,
+    "phase_5_6_evaluations_per_timestep": 40,
+    "phase_5_6_timestep_summaries": 600,
+    "phase_5_7_prediction_rows": 589,
+    "phase_5_7_prediction_rows_joined": 589
+  },
+  "ground_truth_classes": [
+    "PHYSICAL_SAFETY_EVENT",
+    "INTEGRITY_ANOMALY",
+    "SENSOR_CONSISTENCY_ANOMALY",
+    "BATTERY_SAFETY_ANOMALY",
+    "HV_SAFETY_ANOMALY",
+    "DIAGNOSTIC_ANOMALY",
+    "BRAKE_CONSISTENCY_ANOMALY",
+    "NORMAL_LABORATORY_STATE"
+  ],
+  "provenance": {
+    "hash_algorithm": "SHA-256",
+    "chain_genesis": "GROUND_TRUTH_GENESIS",
+    "record_hash_chain": true
+  },
+  "source_files": {
+    "phase_5_5_features": "data\\processed\\can_hil\\phase5_5\\virtual_ev_cyber_physical_features.csv",
+    "phase_5_6_requirements": "data\\processed\\can_hil\\phase5_6\\ev_safety_requirements_evaluation.csv",
+    "phase_5_7_predictions": "data\\processed\\can_hil\\phase5_7\\can_ev_frozen_transformer_predictions.csv"
+  },
+  "output_files": [
+    "data\\processed\\can_hil\\phase5_8\\phase5_8_ground_truth_experiment_log.csv",
+    "data\\processed\\can_hil\\phase5_8\\phase5_8_ground_truth_experiment_log.jsonl",
+    "data\\processed\\can_hil\\phase5_8\\phase5_8_ground_truth_schema.json"
+  ]
+}

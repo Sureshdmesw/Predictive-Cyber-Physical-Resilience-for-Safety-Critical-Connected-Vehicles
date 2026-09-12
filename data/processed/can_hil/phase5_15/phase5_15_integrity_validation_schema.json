@@ -1,0 +1,38 @@
+{
+  "phase": "5.15",
+  "title": "Integrity and Tamper Validation",
+  "input": "data\\processed\\can_hil\\phase5_14\\phase5_14_forensic_evidence.csv",
+  "integrity_algorithm": "SHA-256",
+  "canonical_serialization": {
+    "format": "JSON",
+    "sort_keys": true,
+    "separators": [
+      ",",
+      ":"
+    ],
+    "unicode": "UTF-8"
+  },
+  "valid_path": [
+    "VALID",
+    "ELIGIBLE"
+  ],
+  "tampered_path": [
+    "UNVERIFIED_EVIDENCE",
+    "REFUSE_SYNC",
+    "REFUSE_SOC_HANDOFF"
+  ],
+  "tamper_cases": [
+    "VALID_EVIDENCE",
+    "CAN_PAYLOAD_TAMPER",
+    "SIGNAL_TAMPER",
+    "TIMESTAMP_TAMPER",
+    "SCENARIO_METADATA_TAMPER",
+    "EVENT_ID_TAMPER",
+    "EVIDENCE_REORDER",
+    "EVIDENCE_TRUNCATION",
+    "EVIDENCE_DUPLICATION"
+  ],
+  "laboratory_generated": true,
+  "physical_vehicle": false,
+  "direct_actuation": false
+}

@@ -1,0 +1,166 @@
+{
+  "reproducibility_audit": {
+    "name": "FINAL_RESEARCH_RELEASE_REPRODUCIBILITY_AUDIT",
+    "timestamp_utc": "2026-09-12T06:13:33.754037+00:00",
+    "project_root": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+    "source_evidence": "experiments/final_release/final_evidence_consolidation.json",
+    "read_only_source_validation": true
+  },
+  "summary": {
+    "status": "PASS",
+    "checks_passed": 13,
+    "checks_failed": 0,
+    "checks_total": 13,
+    "completion_percentage": 100.0
+  },
+  "checks": [
+    {
+      "name": "evidence_consolidation_exists",
+      "status": "PASS",
+      "details": "experiments\\final_release\\final_evidence_consolidation.json"
+    },
+    {
+      "name": "evidence_consolidation_json_valid",
+      "status": "PASS",
+      "details": "JSON parsing successful"
+    },
+    {
+      "name": "evidence_records_present",
+      "status": "PASS",
+      "details": "records=161"
+    },
+    {
+      "name": "all_consolidated_evidence_files_present",
+      "status": "PASS",
+      "details": "missing=0"
+    },
+    {
+      "name": "all_consolidated_sha256_hashes_match",
+      "status": "PASS",
+      "details": "verified=161, mismatched=0"
+    },
+    {
+      "name": "all_manifest_json_valid",
+      "status": "PASS",
+      "details": "manifests=21, invalid=0"
+    },
+    {
+      "name": "phase5_manifest_coverage",
+      "status": "PASS",
+      "details": "phase5_manifests=14"
+    },
+    {
+      "name": "phase6_manifest_coverage",
+      "status": "PASS",
+      "details": "phase6_manifests=4"
+    },
+    {
+      "name": "required_phase6_scripts_present",
+      "status": "PASS",
+      "details": "required=3, missing=0"
+    },
+    {
+      "name": "phase6_scientific_chain_present",
+      "status": "PASS",
+      "details": "chain_artifacts=3, missing=0"
+    },
+    {
+      "name": "frozen_transformer_checkpoint_present",
+      "status": "PASS",
+      "details": "models\\v2\\advanced\\crss_2024_v2_temporal_transformer_best.pt"
+    },
+    {
+      "name": "frozen_transformer_checkpoint_hash_match",
+      "status": "PASS",
+      "details": "actual=d54cfc5fb5613fef5bdfd6ac4b2ce780ebd2e64ca47b7e57c630dae3d323a754"
+    },
+    {
+      "name": "duplicate_phase62_artifacts_identified",
+      "status": "PASS",
+      "details": "duplicate_or_multi_location_files=3"
+    }
+  ],
+  "hash_verification": {
+    "records_total": 161,
+    "verified": 161,
+    "missing": [],
+    "mismatched": []
+  },
+  "manifest_validation": {
+    "total": 21,
+    "invalid": []
+  },
+  "phase_coverage": {
+    "phase5": [
+      "experiments\\can_hil\\phase5_10\\phase5_10_cyber_physical_attack_manifest.json",
+      "experiments\\can_hil\\phase5_11\\phase5_11_predictive_detection_manifest.json",
+      "experiments\\can_hil\\phase5_12\\phase5_12_uncertainty_ood_manifest.json",
+      "experiments\\can_hil\\phase5_13\\phase5_13_latency_realtime_manifest.json",
+      "experiments\\can_hil\\phase5_13\\phase5_13_ood_uncertainty_manifest.json",
+      "experiments\\can_hil\\phase5_14\\phase5_14_forensic_buffer_manifest.json",
+      "experiments\\can_hil\\phase5_15\\phase5_15_integrity_tamper_manifest.json",
+      "experiments\\can_hil\\phase5_16\\phase5_16_connectivity_recovery_manifest.json",
+      "experiments\\can_hil\\phase5_17\\phase5_17_secure_synchronization_manifest.json",
+      "experiments\\can_hil\\phase5_18\\phase5_18_adversarial_integrity_validation_manifest.json",
+      "experiments\\can_hil\\phase5_19\\phase5_19_end_to_end_resilience_validation_manifest.json",
+      "experiments\\can_hil\\phase5_20\\phase5_20_resilience_scorecard_manifest.json",
+      "experiments\\can_hil\\phase5_21\\phase5_21_resilience_evidence_matrix_manifest.json",
+      "experiments\\can_hil\\phase5_9\\phase5_9_controlled_can_anomaly_manifest.json"
+    ],
+    "phase6": [
+      "experiments\\phase6_1\\phase6_1_integrated_validation_manifest.json",
+      "experiments\\phase6_2\\phase6_2_corrected_ood_manifest.json",
+      "experiments\\phase6_3\\phase6_3_scientific_review_manifest.json",
+      "experiments\\phase6_4\\phase6_4_uncertainty_calibration_manifest.json"
+    ]
+  },
+  "required_scripts": {
+    "required": [
+      "scripts\\phase6_1\\integrated_research_system_validation.py",
+      "scripts\\phase6_2\\corrected_ood_recomputation.py",
+      "scripts\\phase6_3\\scientific_review_ood_validation.py"
+    ],
+    "missing": []
+  },
+  "phase6_scientific_chain": {
+    "chain": [
+      "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.csv",
+      "data\\processed\\can_hil\\phase6_3\\phase6_3_ood_scientific_review.json",
+      "data\\processed\\can_hil\\phase6_4\\phase6_4_uncertainty_calibration.json"
+    ],
+    "missing": []
+  },
+  "model_checkpoint": {
+    "path": "models\\v2\\advanced\\crss_2024_v2_temporal_transformer_best.pt",
+    "exists": true,
+    "sha256": "d54cfc5fb5613fef5bdfd6ac4b2ce780ebd2e64ca47b7e57c630dae3d323a754",
+    "expected_sha256": "d54cfc5fb5613fef5bdfd6ac4b2ce780ebd2e64ca47b7e57c630dae3d323a754",
+    "hash_match": true
+  },
+  "phase6_2_duplicate_locations": [
+    {
+      "filename": "phase6_2_corrected_ood.csv",
+      "matches": [
+        "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.csv",
+        "data\\processed\\phase6_2\\phase6_2_corrected_ood.csv"
+      ],
+      "count": 2
+    },
+    {
+      "filename": "phase6_2_corrected_ood.jsonl",
+      "matches": [
+        "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.jsonl",
+        "data\\processed\\phase6_2\\phase6_2_corrected_ood.jsonl"
+      ],
+      "count": 2
+    },
+    {
+      "filename": "phase6_2_corrected_ood_schema.json",
+      "matches": [
+        "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood_schema.json",
+        "data\\processed\\phase6_2\\phase6_2_corrected_ood_schema.json"
+      ],
+      "count": 2
+    }
+  ]
+}

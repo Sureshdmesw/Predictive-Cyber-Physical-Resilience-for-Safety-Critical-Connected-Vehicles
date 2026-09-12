@@ -1,0 +1,233 @@
+{
+  "claims_limitations_audit": {
+    "name": "FINAL_RESEARCH_RELEASE_CLAIMS_LIMITATIONS_AUDIT",
+    "timestamp_utc": "2026-09-12T06:24:34.113817+00:00",
+    "project_root": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+    "read_only_source_validation": true,
+    "audit_method": "evidence_and_governance_based_claim_validation",
+    "unsupported_claim_detection": "affirmative_claim_patterns_only"
+  },
+  "summary": {
+    "status": "PASS",
+    "checks_passed": 10,
+    "checks_failed": 0,
+    "checks_total": 10,
+    "completion_percentage": 100.0
+  },
+  "checks": [
+    {
+      "name": "evidence_consolidation_valid",
+      "status": "PASS",
+      "details": "records=161"
+    },
+    {
+      "name": "documentation_available",
+      "status": "PASS",
+      "details": "documentation_files=9"
+    },
+    {
+      "name": "phase6_manifests_available",
+      "status": "PASS",
+      "details": "phase6_manifests=4"
+    },
+    {
+      "name": "research_limitations_supported_by_evidence",
+      "status": "PASS",
+      "details": "unsupported=[]"
+    },
+    {
+      "name": "phase6_statuses_preserved",
+      "status": "PASS",
+      "details": "missing=[]"
+    },
+    {
+      "name": "synthetic_telemetry_boundary_supported",
+      "status": "PASS",
+      "details": "documentation_mentions_synthetic=True"
+    },
+    {
+      "name": "cortex_xdr_architecture_boundary_supported",
+      "status": "PASS",
+      "details": "documentation_mentions_cortex_xdr=True"
+    },
+    {
+      "name": "ood_and_calibration_boundary_supported",
+      "status": "PASS",
+      "details": "ood=True, calibration_or_uncertainty=True"
+    },
+    {
+      "name": "no_unsupported_unqualified_claims",
+      "status": "PASS",
+      "details": "unsupported_claim_patterns=0"
+    },
+    {
+      "name": "limited_phase6_results_not_upgraded",
+      "status": "PASS",
+      "details": "preserved=3/3"
+    }
+  ],
+  "limitation_results": {
+    "synthetic_cyber_telemetry_not_real_world_attack_evidence": {
+      "documented_terms_found": [
+        "synthetic cyber telemetry",
+        "synthetic",
+        "real-world cyberattack",
+        "cyberattack labels"
+      ],
+      "manifest_terms_found": [],
+      "evidence_sources": [
+        "documentation"
+      ],
+      "supported": true
+    },
+    "no_physical_vehicle_validation": {
+      "documented_terms_found": [
+        "physical vehicle",
+        "road testing",
+        "vehicle deployment"
+      ],
+      "manifest_terms_found": [
+        "vehicle deployment"
+      ],
+      "evidence_sources": [
+        "documentation",
+        "manifests"
+      ],
+      "supported": true
+    },
+    "no_production_ecu_can": {
+      "documented_terms_found": [
+        "production ECU",
+        "production CAN",
+        "production vehicle",
+        "production deployment",
+        "ECU/CAN"
+      ],
+      "manifest_terms_found": [
+        "production vehicle"
+      ],
+      "evidence_sources": [
+        "documentation",
+        "manifests"
+      ],
+      "supported": true
+    },
+    "no_live_cortex_xdr": {
+      "documented_terms_found": [
+        "Cortex XDR",
+        "live Cortex XDR"
+      ],
+      "manifest_terms_found": [],
+      "evidence_sources": [
+        "documentation"
+      ],
+      "supported": true
+    },
+    "no_direct_vehicle_actuation": {
+      "documented_terms_found": [
+        "vehicle actuation",
+        "actuation"
+      ],
+      "manifest_terms_found": [
+        "actuation"
+      ],
+      "evidence_sources": [
+        "documentation",
+        "manifests"
+      ],
+      "supported": true
+    },
+    "no_iso_26262_asil_certification": {
+      "documented_terms_found": [
+        "ISO 26262",
+        "ASIL",
+        "certification",
+        "certified"
+      ],
+      "manifest_terms_found": [
+        "certification"
+      ],
+      "evidence_sources": [
+        "documentation",
+        "manifests"
+      ],
+      "supported": true
+    },
+    "ood_is_incomplete": {
+      "documented_terms_found": [
+        "OOD",
+        "out-of-distribution",
+        "uncertainty"
+      ],
+      "manifest_terms_found": [
+        "OOD",
+        "uncertainty"
+      ],
+      "evidence_sources": [
+        "documentation",
+        "manifests"
+      ],
+      "supported": true
+    },
+    "ood_calibration_has_limitations": {
+      "documented_terms_found": [
+        "calibration",
+        "limitation"
+      ],
+      "manifest_terms_found": [
+        "calibration",
+        "limitation",
+        "scientific review"
+      ],
+      "evidence_sources": [
+        "documentation",
+        "manifests"
+      ],
+      "supported": true
+    }
+  },
+  "phase6_status_results": {
+    "phase6_1": {
+      "expected": "PASS_WITH_SCIENTIFIC_REVIEW_REQUIRED",
+      "found": true
+    },
+    "phase6_2": {
+      "expected": "PASS",
+      "found": true
+    },
+    "phase6_3": {
+      "expected": "SCIENTIFIC_REVIEW_ACCEPTED_WITH_LIMITATIONS",
+      "found": true
+    },
+    "phase6_4": {
+      "expected": "PASS_WITH_CALIBRATION_LIMITATIONS",
+      "found": true
+    }
+  },
+  "unsupported_claim_results": {
+    "\\b(?:we|this project|the project|the system|the model)\\s+(?:have|has|is|are|was|were)\\s+(?:proven|validated|certified)\\s+[^.\\n]{0,120}\\breal[-\\s]?world\\b": [],
+    "\\b(?:we|this project|the project|the system|the model)\\s+(?:is|are)\\s+production[-\\s]?ready\\b": [],
+    "\\bproduction\\s+vehicle\\s+deployment\\s+(?:has\\s+been\\s+)?validated\\b": [],
+    "\\blive\\s+cortex\\s+xdr\\s+deployment\\s+(?:has\\s+been\\s+)?(?:validated|completed|demonstrated)\\b": [],
+    "\\b(?:we|this project|the project|the system)\\s+(?:is|are)\\s+iso\\s*26262\\s+certified\\b": [],
+    "\\b(?:we|this project|the project|the system)\\s+(?:is|are)\\s+asil\\s+certified\\b": [],
+    "\\broad[-\\s]?validated\\s+vehicle\\s+system\\b": []
+  },
+  "documentation_files": [
+    "docs\\connectivity_resilience.md",
+    "docs\\cortex_xdr_integration.md",
+    "docs\\data_architecture.md",
+    "docs\\final_research_claims_and_limitations.md",
+    "docs\\research_questions.md",
+    "docs\\safety_architecture.md",
+    "docs\\system_architecture.md",
+    "docs\\threat_model.md",
+    "README.md"
+  ],
+  "phase6_manifests": [
+    "experiments\\phase6_1\\phase6_1_integrated_validation_manifest.json",
+    "experiments\\phase6_2\\phase6_2_corrected_ood_manifest.json",
+    "experiments\\phase6_3\\phase6_3_scientific_review_manifest.json",
+    "experiments\\phase6_4\\phase6_4_uncertainty_calibration_manifest.json"
+  ]
+}

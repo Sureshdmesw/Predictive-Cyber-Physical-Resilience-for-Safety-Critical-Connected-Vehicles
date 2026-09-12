@@ -1,0 +1,313 @@
+{
+  "phase": "5.14",
+  "title": "Forensic Buffer",
+  "status": "PASS",
+  "input_rows": 99000,
+  "scenario_count": 11,
+  "event_count": 10,
+  "evidence_records": 4650,
+  "buffer_capacity_timesteps": 20,
+  "event_timestep": 300,
+  "post_event_timesteps": 10,
+  "scenarios": [
+    "C01_SPEED_SENSOR_SPOOFING",
+    "C02_BRAKE_ACCELERATOR_ATTACK",
+    "C03_TORQUE_DYNAMICS_ATTACK",
+    "C04_HV_POWER_ATTACK",
+    "C05_BATTERY_THERMAL_ATTACK",
+    "C06_HV_CONTACTOR_ATTACK",
+    "C07_HEARTBEAT_INTEGRITY_ATTACK",
+    "C08_SEQUENCE_GATEWAY_ATTACK",
+    "C09_RESTRAINT_DOMAIN_ATTACK",
+    "C10_MULTI_DOMAIN_ATTACK",
+    "S00_NORMAL_BASELINE"
+  ],
+  "input_sha256": "f8cabaa9747d7088081eeaf0434eb5ed5efd58be031c28e88d71d7a6848f6691",
+  "output_sha256": "9c6aa37b6572f668112b326043a8602bc9726249b6fab04408faf5830db8c775",
+  "checks_passed": 42,
+  "checks_total": 42,
+  "laboratory_only": true,
+  "physical_vehicle": false,
+  "direct_actuation": false,
+  "model_retraining": false,
+  "live_cortex_xdr": false,
+  "notes": [
+    "Forensic evidence is generated from controlled laboratory CAN scenarios.",
+    "The buffer is local and does not require connectivity to preserve evidence.",
+    "This phase does not perform vehicle actuation.",
+    "This phase does not claim real-world attack validation.",
+    "Cortex XDR integration remains abstraction-only."
+  ],
+  "event_summaries": [
+    {
+      "scenario_id": "C01_SPEED_SENSOR_SPOOFING",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C02_BRAKE_ACCELERATOR_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C03_TORQUE_DYNAMICS_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C04_HV_POWER_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C05_BATTERY_THERMAL_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C06_HV_CONTACTOR_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C07_HEARTBEAT_INTEGRITY_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C08_SEQUENCE_GATEWAY_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C09_RESTRAINT_DOMAIN_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    },
+    {
+      "scenario_id": "C10_MULTI_DOMAIN_ATTACK",
+      "event_timestep": 300,
+      "pre_event_timesteps": 20,
+      "event_timesteps": 1,
+      "post_event_timesteps": 10,
+      "evidence_records": 465,
+      "buffer_capacity_timesteps": 20,
+      "connectivity_state": "CONNECTED"
+    }
+  ],
+  "validation": [
+    {
+      "check": "input_exists",
+      "status": "PASS"
+    },
+    {
+      "check": "required_columns_present",
+      "status": "PASS"
+    },
+    {
+      "check": "input_rows_99000",
+      "status": "PASS"
+    },
+    {
+      "check": "scenario_count_11",
+      "status": "PASS"
+    },
+    {
+      "check": "expected_scenarios_present",
+      "status": "PASS"
+    },
+    {
+      "check": "buffer_rollover_behavior",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C01_SPEED_SENSOR_SPOOFING_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C02_BRAKE_ACCELERATOR_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C03_TORQUE_DYNAMICS_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C04_HV_POWER_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C05_BATTERY_THERMAL_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C06_HV_CONTACTOR_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C07_HEARTBEAT_INTEGRITY_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C08_SEQUENCE_GATEWAY_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C09_RESTRAINT_DOMAIN_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "C10_MULTI_DOMAIN_ATTACK_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "S00_NORMAL_BASELINE_records_9000",
+      "status": "PASS"
+    },
+    {
+      "check": "S00_NORMAL_BASELINE_timesteps_600",
+      "status": "PASS"
+    },
+    {
+      "check": "attack_event_count_10",
+      "status": "PASS"
+    },
+    {
+      "check": "evidence_nonempty",
+      "status": "PASS"
+    },
+    {
+      "check": "pre_event_retention",
+      "status": "PASS"
+    },
+    {
+      "check": "event_retention",
+      "status": "PASS"
+    },
+    {
+      "check": "post_event_retention",
+      "status": "PASS"
+    },
+    {
+      "check": "chronological_evidence",
+      "status": "PASS"
+    },
+    {
+      "check": "event_ids_present",
+      "status": "PASS"
+    },
+    {
+      "check": "scenario_ids_present",
+      "status": "PASS"
+    },
+    {
+      "check": "can_payload_present",
+      "status": "PASS"
+    },
+    {
+      "check": "decoded_signal_evidence_present",
+      "status": "PASS"
+    },
+    {
+      "check": "local_buffer_source",
+      "status": "PASS"
+    },
+    {
+      "check": "laboratory_only",
+      "status": "PASS"
+    },
+    {
+      "check": "no_physical_vehicle",
+      "status": "PASS"
+    },
+    {
+      "check": "no_direct_actuation",
+      "status": "PASS"
+    }
+  ]
+}

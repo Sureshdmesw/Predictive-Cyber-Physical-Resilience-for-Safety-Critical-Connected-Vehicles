@@ -1,0 +1,158 @@
+{
+  "phase": "6.2",
+  "title": "Corrected OOD Statistical Recomposition",
+  "rows": 6479,
+  "scenarios": [
+    "S00_NORMAL_BASELINE",
+    "C01_SPEED_SENSOR_SPOOFING",
+    "C02_BRAKE_ACCELERATOR_ATTACK",
+    "C03_TORQUE_DYNAMICS_ATTACK",
+    "C04_HV_POWER_ATTACK",
+    "C05_BATTERY_THERMAL_ATTACK",
+    "C06_HV_CONTACTOR_ATTACK",
+    "C07_HEARTBEAT_INTEGRITY_ATTACK",
+    "C08_SEQUENCE_GATEWAY_ATTACK",
+    "C09_RESTRAINT_DOMAIN_ATTACK",
+    "C10_MULTI_DOMAIN_ATTACK"
+  ],
+  "feature_count_model": 59,
+  "active_ood_features": 10,
+  "excluded_near_constant_features": 49,
+  "excluded_feature_indices": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    58
+  ],
+  "std_exclusion_threshold": 1e-12,
+  "baseline_id": "S00_NORMAL_BASELINE",
+  "thresholds": {
+    "feature_z_rms_99": 1.235996627807617,
+    "feature_z_max_99": 1.913436770439148,
+    "diagonal_mahalanobis_99": 1.5276877355575562,
+    "temporal_delta_rms_99": 0.011704414710402488
+  },
+  "baseline_ood_rate": 0.02037351443123939,
+  "attack_ood_rate": 0.0466893039049236,
+  "diagonal_mahalanobis_identity_pass": true,
+  "maximum_identity_error": 0.5587415099143982,
+  "columns": [
+    {
+      "name": "scenario_id",
+      "dtype": "str"
+    },
+    {
+      "name": "window_index",
+      "dtype": "int64"
+    },
+    {
+      "name": "start_timestep",
+      "dtype": "int64"
+    },
+    {
+      "name": "end_timestep",
+      "dtype": "int64"
+    },
+    {
+      "name": "corrected_feature_z_rms",
+      "dtype": "float64"
+    },
+    {
+      "name": "corrected_feature_z_max",
+      "dtype": "float64"
+    },
+    {
+      "name": "corrected_diagonal_mahalanobis",
+      "dtype": "float64"
+    },
+    {
+      "name": "corrected_temporal_delta_rms",
+      "dtype": "float64"
+    },
+    {
+      "name": "ood_statistical_features",
+      "dtype": "int64"
+    },
+    {
+      "name": "excluded_near_constant_features",
+      "dtype": "int64"
+    },
+    {
+      "name": "laboratory_generated",
+      "dtype": "bool"
+    },
+    {
+      "name": "physical_vehicle",
+      "dtype": "bool"
+    },
+    {
+      "name": "direct_actuation",
+      "dtype": "bool"
+    },
+    {
+      "name": "model_retraining",
+      "dtype": "bool"
+    },
+    {
+      "name": "live_cortex_xdr",
+      "dtype": "bool"
+    },
+    {
+      "name": "real_world_cyberattack",
+      "dtype": "bool"
+    },
+    {
+      "name": "corrected_ood_score",
+      "dtype": "float64"
+    },
+    {
+      "name": "corrected_ood_flag",
+      "dtype": "bool"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "phase": "6.3",
+  "title": "Scientific Review and OOD Validation",
+  "status": "SCIENTIFIC_REVIEW_ACCEPTED_WITH_LIMITATIONS",
+  "input_phase": "6.2",
+  "input_sha256": "b5e356442180d124dd3bc625aeba9bb120d9d5352c9c966aab1e570ffee534ff",
+  "record_count": 6479,
+  "scenario_count": 11,
+  "model_feature_count": 59,
+  "ood_statistical_feature_count": 2,
+  "ood_excluded_feature_count": 57,
+  "ecu_count_excluded": true,
+  "baseline": {
+    "window_count": 589,
+    "ood_rate": 0.02037351443123939,
+    "mean_score": 0.6380811093799151,
+    "median_score": 0.6636996611610488
+  },
+  "attacks": {
+    "window_count": 5890,
+    "ood_rate": 0.036162988115449914,
+    "mean_score": 0.9094755734911257,
+    "median_score": 0.6733796513266815
+  },
+  "global": {
+    "max_corrected_ood_score": 31.31580025786467
+  },
+  "scientific_interpretation": {
+    "baseline_tail_is_expected_statistical_behavior": true,
+    "attack_ood_rate_exceeds_baseline": true,
+    "perfect_attack_separation_not_claimed": true,
+    "pathological_feature49_tail_removed": true,
+    "model_input_dimensions_modified": false,
+    "attack_specific_threshold_tuning": false
+  },
+  "limitations": [
+    "OOD score is a laboratory statistical distance measure.",
+    "OOD detection is not equivalent to attack detection.",
+    "The corrected OOD result does not establish production automotive safety.",
+    "The result does not establish OEM or regulatory compliance.",
+    "Synthetic cyber telemetry remains synthetic experimental data.",
+    "Baseline and attack distributions remain partially overlapping."
+  ],
+  "validation": {
+    "Phase 6.2 manifest PASS": true,
+    "Expected 6479 OOD records": true,
+    "Expected 11 scenarios": true,
+    "59 model dimensions preserved": true,
+    "ecu_count excluded from OOD statistics": true,
+    "Model input unchanged": true,
+    "No non-finite corrected OOD scores": true,
+    "No non-finite corrected metrics": true,
+    "Baseline rate remains approximately 1% tail": true,
+    "Attack OOD rate is not lower than baseline": true,
+    "Corrected result removes million-scale pathological score": true,
+    "No claim of perfect attack separation": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "phase": "5.9",
+  "name": "controlled_can_anomaly_scenarios",
+  "status": "PASS",
+  "validation": {
+    "checks_total": 20,
+    "checks_passed": 20,
+    "checks_failed": 0,
+    "failures": []
+  },
+  "input": {
+    "path": "data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.csv",
+    "rows": 9000,
+    "sha256": "035182c423e666f385d6c57e094f2247913a5fdd468711ef50088f52ef5c47e5"
+  },
+  "output": {
+    "csv": "data\\processed\\can_hil\\phase5_9\\phase5_9_controlled_can_anomalies.csv",
+    "csv_sha256": "58799e7bf1287ba6bb29fdb0ffec2bae35a55c682f2adb08043d04db7d1423f5",
+    "jsonl": "data\\processed\\can_hil\\phase5_9\\phase5_9_controlled_can_anomalies.jsonl",
+    "jsonl_sha256": "6b38dec07f1a8a741a07ab680f6cbee76871c07b28345954a00bb7bdfa94ba97",
+    "schema": "data\\processed\\can_hil\\phase5_9\\phase5_9_controlled_can_anomaly_schema.json"
+  },
+  "counts": {
+    "baseline_rows": 9000,
+    "scenario_streams": 17,
+    "total_streams": 18,
+    "total_output_rows": 162000,
+    "active_timesteps_per_scenario": 20,
+    "active_records_per_scenario": 300,
+    "active_timesteps_by_scenario": {
+      "S01_CAN_TIMING_ANOMALY": 20,
+      "S02_SEQUENCE_COUNTER_ANOMALY": 20,
+      "S03_PAYLOAD_INTEGRITY_ANOMALY": 20,
+      "S04_GATEWAY_INTEGRITY_ANOMALY": 20,
+      "S05_SENSOR_CONSISTENCY_ANOMALY": 20,
+      "S06_SPEED_WHEEL_SPEED_ANOMALY": 20,
+      "S07_BRAKE_ACCELERATOR_CONFLICT": 20,
+      "S08_TORQUE_TRACKING_ANOMALY": 20,
+      "S09_HV_VOLTAGE_ANOMALY": 20,
+      "S10_HV_CURRENT_ANOMALY": 20,
+      "S11_BATTERY_TEMPERATURE_ANOMALY": 20,
+      "S12_CELL_VOLTAGE_DEVIATION_ANOMALY": 20,
+      "S13_CELL_TEMPERATURE_DEVIATION_ANOMALY": 20,
+      "S14_HV_CONTACTOR_PRECHARGE_CONFLICT": 20,
+      "S15_ECU_HEARTBEAT_ANOMALY": 20,
+      "S16_RESTRAINT_SAFETY_ANOMALY": 20,
+      "S17_CROSS_DOMAIN_ANOMALY": 20
+    },
+    "active_records_by_scenario": {
+      "S01_CAN_TIMING_ANOMALY": 300,
+      "S02_SEQUENCE_COUNTER_ANOMALY": 300,
+      "S03_PAYLOAD_INTEGRITY_ANOMALY": 300,
+      "S04_GATEWAY_INTEGRITY_ANOMALY": 300,
+      "S05_SENSOR_CONSISTENCY_ANOMALY": 300,
+      "S06_SPEED_WHEEL_SPEED_ANOMALY": 300,
+      "S07_BRAKE_ACCELERATOR_CONFLICT": 300,
+      "S08_TORQUE_TRACKING_ANOMALY": 300,
+      "S09_HV_VOLTAGE_ANOMALY": 300,
+      "S10_HV_CURRENT_ANOMALY": 300,
+      "S11_BATTERY_TEMPERATURE_ANOMALY": 300,
+      "S12_CELL_VOLTAGE_DEVIATION_ANOMALY": 300,
+      "S13_CELL_TEMPERATURE_DEVIATION_ANOMALY": 300,
+      "S14_HV_CONTACTOR_PRECHARGE_CONFLICT": 300,
+      "S15_ECU_HEARTBEAT_ANOMALY": 300,
+      "S16_RESTRAINT_SAFETY_ANOMALY": 300,
+      "S17_CROSS_DOMAIN_ANOMALY": 300
+    },
+    "payload_changes_by_scenario": {
+      "S02_SEQUENCE_COUNTER_ANOMALY": 20,
+      "S03_PAYLOAD_INTEGRITY_ANOMALY": 20,
+      "S04_GATEWAY_INTEGRITY_ANOMALY": 20,
+      "S05_SENSOR_CONSISTENCY_ANOMALY": 20,
+      "S06_SPEED_WHEEL_SPEED_ANOMALY": 20,
+      "S07_BRAKE_ACCELERATOR_CONFLICT": 20,
+      "S08_TORQUE_TRACKING_ANOMALY": 20,
+      "S09_HV_VOLTAGE_ANOMALY": 20,
+      "S10_HV_CURRENT_ANOMALY": 20,
+      "S11_BATTERY_TEMPERATURE_ANOMALY": 20,
+      "S12_CELL_VOLTAGE_DEVIATION_ANOMALY": 20,
+      "S13_CELL_TEMPERATURE_DEVIATION_ANOMALY": 20,
+      "S14_HV_CONTACTOR_PRECHARGE_CONFLICT": 20,
+      "S15_ECU_HEARTBEAT_ANOMALY": 20,
+      "S16_RESTRAINT_SAFETY_ANOMALY": 20,
+      "S17_CROSS_DOMAIN_ANOMALY": 20
+    }
+  },
+  "boundaries": {
+    "laboratory_generated": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "production_dbc": false,
+    "real_world_cyberattack_labels": false,
+    "live_cortex_xdr": false
+  }
+}

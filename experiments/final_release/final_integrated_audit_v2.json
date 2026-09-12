@@ -1,0 +1,385 @@
+{
+  "audit": {
+    "name": "FINAL_RESEARCH_RELEASE_INTEGRATED_AUDIT_V2",
+    "timestamp_utc": "2026-09-12T04:48:34.404999+00:00",
+    "project_root": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles",
+    "read_only": true
+  },
+  "discovered_phase5_manifests": [
+    {
+      "path": "experiments\\can_hil\\phase5_10\\phase5_10_cyber_physical_attack_manifest.json",
+      "filename": "phase5_10_cyber_physical_attack_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 1573
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_11\\phase5_11_predictive_detection_manifest.json",
+      "filename": "phase5_11_predictive_detection_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 13000
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_12\\phase5_12_uncertainty_ood_manifest.json",
+      "filename": "phase5_12_uncertainty_ood_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 4268
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_13\\phase5_13_latency_realtime_manifest.json",
+      "filename": "phase5_13_latency_realtime_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 20747
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_13\\phase5_13_ood_uncertainty_manifest.json",
+      "filename": "phase5_13_ood_uncertainty_manifest.json",
+      "status": "PASS",
+      "checks": {
+        "PASS input_exists": true,
+        "PASS input_rows_positive": true,
+        "PASS required_columns_detected": true,
+        "PASS uncertainty_finite": true,
+        "PASS ood_finite": true,
+        "PASS y3_finite": true,
+        "PASS y6_finite": true,
+        "PASS scenarios_present": true,
+        "PASS scenario_csv_exists": true,
+        "PASS extreme_ood_csv_exists": true,
+        "PASS extreme_uncertainty_csv_exists": true,
+        "PASS summary_json_exists": true
+      },
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 1608
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_14\\phase5_14_forensic_buffer_manifest.json",
+      "filename": "phase5_14_forensic_buffer_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 8232
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_15\\phase5_15_integrity_tamper_manifest.json",
+      "filename": "phase5_15_integrity_tamper_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 7086
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_16\\phase5_16_connectivity_recovery_manifest.json",
+      "filename": "phase5_16_connectivity_recovery_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 7906
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_17\\phase5_17_secure_synchronization_manifest.json",
+      "filename": "phase5_17_secure_synchronization_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 17826
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_18\\phase5_18_adversarial_integrity_validation_manifest.json",
+      "filename": "phase5_18_adversarial_integrity_validation_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 15374
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_19\\phase5_19_end_to_end_resilience_validation_manifest.json",
+      "filename": "phase5_19_end_to_end_resilience_validation_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 16532
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_20\\phase5_20_resilience_scorecard_manifest.json",
+      "filename": "phase5_20_resilience_scorecard_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 19518
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_21\\phase5_21_resilience_evidence_matrix_manifest.json",
+      "filename": "phase5_21_resilience_evidence_matrix_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 19349
+    },
+    {
+      "path": "experiments\\can_hil\\phase5_9\\phase5_9_controlled_can_anomaly_manifest.json",
+      "filename": "phase5_9_controlled_can_anomaly_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 3668
+    }
+  ],
+  "discovered_phase6_manifests": [
+    {
+      "path": "experiments\\phase6_1\\phase6_1_integrated_validation_manifest.json",
+      "filename": "phase6_1_integrated_validation_manifest.json",
+      "status": "PASS_WITH_SCIENTIFIC_REVIEW_REQUIRED",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 2669
+    },
+    {
+      "path": "experiments\\phase6_2\\phase6_2_corrected_ood_manifest.json",
+      "filename": "phase6_2_corrected_ood_manifest.json",
+      "status": "PASS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 4767
+    },
+    {
+      "path": "experiments\\phase6_3\\phase6_3_scientific_review_manifest.json",
+      "filename": "phase6_3_scientific_review_manifest.json",
+      "status": "SCIENTIFIC_REVIEW_ACCEPTED_WITH_LIMITATIONS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 1028
+    },
+    {
+      "path": "experiments\\phase6_4\\phase6_4_uncertainty_calibration_manifest.json",
+      "filename": "phase6_4_uncertainty_calibration_manifest.json",
+      "status": "PASS_WITH_CALIBRATION_LIMITATIONS",
+      "checks": null,
+      "gate": null,
+      "json_valid": true,
+      "size_bytes": 1032
+    }
+  ],
+  "phase_directories": [
+    "data\\processed\\can_hil\\phase5_10",
+    "data\\processed\\can_hil\\phase5_11",
+    "data\\processed\\can_hil\\phase5_12",
+    "data\\processed\\can_hil\\phase5_13",
+    "data\\processed\\can_hil\\phase5_14",
+    "data\\processed\\can_hil\\phase5_15",
+    "data\\processed\\can_hil\\phase5_16",
+    "data\\processed\\can_hil\\phase5_17",
+    "data\\processed\\can_hil\\phase5_18",
+    "data\\processed\\can_hil\\phase5_19",
+    "data\\processed\\can_hil\\phase5_20",
+    "data\\processed\\can_hil\\phase5_21",
+    "data\\processed\\can_hil\\phase5_3",
+    "data\\processed\\can_hil\\phase5_4",
+    "data\\processed\\can_hil\\phase5_5",
+    "data\\processed\\can_hil\\phase5_6",
+    "data\\processed\\can_hil\\phase5_7",
+    "data\\processed\\can_hil\\phase5_8",
+    "data\\processed\\can_hil\\phase5_9",
+    "data\\processed\\can_hil\\phase6_2",
+    "data\\processed\\can_hil\\phase6_3",
+    "data\\processed\\can_hil\\phase6_4",
+    "data\\processed\\phase6_1",
+    "data\\processed\\phase6_2",
+    "experiments\\can_hil\\phase5_1",
+    "experiments\\can_hil\\phase5_10",
+    "experiments\\can_hil\\phase5_11",
+    "experiments\\can_hil\\phase5_12",
+    "experiments\\can_hil\\phase5_13",
+    "experiments\\can_hil\\phase5_14",
+    "experiments\\can_hil\\phase5_15",
+    "experiments\\can_hil\\phase5_16",
+    "experiments\\can_hil\\phase5_17",
+    "experiments\\can_hil\\phase5_18",
+    "experiments\\can_hil\\phase5_19",
+    "experiments\\can_hil\\phase5_2",
+    "experiments\\can_hil\\phase5_20",
+    "experiments\\can_hil\\phase5_21",
+    "experiments\\can_hil\\phase5_3",
+    "experiments\\can_hil\\phase5_4",
+    "experiments\\can_hil\\phase5_5",
+    "experiments\\can_hil\\phase5_6",
+    "experiments\\can_hil\\phase5_7",
+    "experiments\\can_hil\\phase5_8",
+    "experiments\\can_hil\\phase5_9",
+    "experiments\\integration\\phase4_28",
+    "experiments\\integration\\phase4_28c",
+    "experiments\\integration\\phase4_29",
+    "experiments\\integration\\phase4_30",
+    "experiments\\integration\\phase4_31",
+    "experiments\\integration\\phase4_32",
+    "experiments\\integration\\phase4_32b",
+    "experiments\\integration\\phase4_32c",
+    "experiments\\integration\\phase4_33",
+    "experiments\\integration\\phase4_34",
+    "experiments\\integration\\phase4_35",
+    "experiments\\integration\\phase4_36",
+    "experiments\\integration\\phase4_37",
+    "experiments\\integration\\phase4_38",
+    "experiments\\integration\\phase4_39",
+    "experiments\\integration\\phase4_40",
+    "experiments\\modeling\\v2\\error_analysis\\phase4_26",
+    "experiments\\modeling\\v2\\generalization\\phase4_16",
+    "experiments\\modeling\\v2\\uncertainty\\phase4_27",
+    "experiments\\modeling\\v2\\uncertainty\\phase4_27b",
+    "experiments\\modeling\\v2\\uncertainty\\phase4_27b_1",
+    "experiments\\modeling\\v2\\uncertainty\\phase4_27b_2",
+    "experiments\\modeling\\v2\\uncertainty\\phase4_27b_3",
+    "experiments\\phase6_1",
+    "experiments\\phase6_2",
+    "experiments\\phase6_3",
+    "experiments\\phase6_4"
+  ],
+  "documentation": [
+    {
+      "path": "README.md",
+      "exists": true,
+      "size_bytes": 2340
+    },
+    {
+      "path": "docs\\connectivity_resilience.md",
+      "exists": true,
+      "size_bytes": 3459
+    },
+    {
+      "path": "docs\\cortex_xdr_integration.md",
+      "exists": true,
+      "size_bytes": 10274
+    },
+    {
+      "path": "docs\\data_architecture.md",
+      "exists": true,
+      "size_bytes": 7554
+    },
+    {
+      "path": "docs\\research_questions.md",
+      "exists": true,
+      "size_bytes": 3064
+    },
+    {
+      "path": "docs\\safety_architecture.md",
+      "exists": true,
+      "size_bytes": 7741
+    },
+    {
+      "path": "docs\\system_architecture.md",
+      "exists": true,
+      "size_bytes": 4820
+    },
+    {
+      "path": "docs\\threat_model.md",
+      "exists": true,
+      "size_bytes": 3504
+    }
+  ],
+  "phase6_scripts": [
+    {
+      "path": "scripts\\phase6_1\\integrated_research_system_validation.py",
+      "exists": true,
+      "size_bytes": 18212
+    },
+    {
+      "path": "scripts\\phase6_2\\corrected_ood_recomputation.py",
+      "exists": true,
+      "size_bytes": 20176
+    },
+    {
+      "path": "scripts\\phase6_3\\scientific_review_ood_validation.py",
+      "exists": true,
+      "size_bytes": 12325
+    }
+  ],
+  "phase6_outputs": [
+    {
+      "path": "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.csv",
+      "exists": true,
+      "size_bytes": 898450
+    },
+    {
+      "path": "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood.jsonl",
+      "exists": true,
+      "size_bytes": 2060294
+    },
+    {
+      "path": "data\\processed\\can_hil\\phase6_2\\phase6_2_corrected_ood_schema.json",
+      "exists": true,
+      "size_bytes": 1367
+    },
+    {
+      "path": "data\\processed\\can_hil\\phase6_3\\phase6_3_ood_scenario_summary.csv",
+      "exists": true,
+      "size_bytes": 3083
+    },
+    {
+      "path": "data\\processed\\can_hil\\phase6_3\\phase6_3_ood_scientific_review.json",
+      "exists": true,
+      "size_bytes": 2229
+    },
+    {
+      "path": "data\\processed\\can_hil\\phase6_4\\phase6_4_ood_calibration_summary.csv",
+      "exists": true,
+      "size_bytes": 1927
+    },
+    {
+      "path": "data\\processed\\can_hil\\phase6_4\\phase6_4_uncertainty_calibration.json",
+      "exists": true,
+      "size_bytes": 2393
+    }
+  ],
+  "model_checkpoints": [
+    {
+      "path": "models\\v2\\advanced\\crss_2024_v2_temporal_transformer_best.pt",
+      "exists": true,
+      "size_bytes": 4946461,
+      "sha256": "d54cfc5fb5613fef5bdfd6ac4b2ce780ebd2e64ca47b7e57c630dae3d323a754"
+    }
+  ],
+  "critical_checks": {
+    "project_root_exists": true,
+    "phase5_manifests_discovered": true,
+    "phase5_21_manifest_present": true,
+    "phase6_manifests_discovered": true,
+    "phase6_4_manifest_present": true,
+    "required_documentation_present": true,
+    "required_phase6_scripts_present": true,
+    "required_phase6_outputs_present": true,
+    "frozen_model_checkpoint_present": true,
+    "manifest_json_valid": true
+  },
+  "summary": {
+    "status": "PASS",
+    "checks_passed": 10,
+    "checks_total": 10,
+    "completion_percentage": 100.0,
+    "phase5_manifest_count": 14,
+    "phase6_manifest_count": 4
+  }
+}

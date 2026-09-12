@@ -1,0 +1,35 @@
+{
+  "phase": "5.13",
+  "status": "PASS",
+  "input_csv": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_12\\phase5_12_uncertainty_ood.csv",
+  "input_rows": 6479,
+  "scenario_count": 11,
+  "columns": {
+    "scenario": "scenario_id",
+    "uncertainty": "uncertainty_score",
+    "ood_score": "ood_score",
+    "ood_flag": "ood_flag",
+    "y3": "y3_probability",
+    "y6": "y6_probability"
+  },
+  "checks": {
+    "PASS input_exists": true,
+    "PASS input_rows_positive": true,
+    "PASS required_columns_detected": true,
+    "PASS uncertainty_finite": true,
+    "PASS ood_finite": true,
+    "PASS y3_finite": true,
+    "PASS y6_finite": true,
+    "PASS scenarios_present": true,
+    "PASS scenario_csv_exists": true,
+    "PASS extreme_ood_csv_exists": true,
+    "PASS extreme_uncertainty_csv_exists": true,
+    "PASS summary_json_exists": true
+  },
+  "outputs": [
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_13\\phase5_13_scenario_summary.csv",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_13\\phase5_13_extreme_ood_windows.csv",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_13\\phase5_13_extreme_uncertainty_windows.csv",
+    "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\can_hil\\phase5_13\\phase5_13_distribution_summary.json"
+  ]
+}
