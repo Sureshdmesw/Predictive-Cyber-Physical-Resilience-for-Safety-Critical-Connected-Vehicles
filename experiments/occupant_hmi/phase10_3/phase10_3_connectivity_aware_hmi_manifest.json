@@ -1,0 +1,54 @@
+{
+  "phase": "10.3",
+  "title": "Connectivity-Aware Occupant HMI",
+  "status": "PASS",
+  "inputs": {
+    "phase10_2_hmi": "data\\processed\\occupant_hmi\\phase10_2\\phase10_2_occupant_hmi_states.csv",
+    "phase10_2_hmi_sha256": "7eca20712025f1e82ea10f06cb69e16bbf6e8cea84da270a1384a560a7da3c65",
+    "phase5_16_connectivity": "data\\processed\\can_hil\\phase5_16\\phase5_16_connectivity_recovery.csv",
+    "phase5_16_connectivity_sha256": "24ef250be739dfc17bf5c1a6f0aba4e9a39d0a010754d2948b0e953b3c3d0cfe"
+  },
+  "output": "data\\processed\\occupant_hmi\\phase10_3\\phase10_3_connectivity_aware_hmi.csv",
+  "records": 30,
+  "state_counts": {
+    "RECOVERED": 10,
+    "DISCONNECTED": 10,
+    "CONNECTED": 10
+  },
+  "hmi_states": [
+    "NORMAL",
+    "CONNECTIVITY_DEGRADED",
+    "RECOVERY_READY"
+  ],
+  "connectivity_states": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "RECOVERED"
+  ],
+  "read_only": true,
+  "can_transmission": false,
+  "direct_vehicle_actuation": false,
+  "physical_vehicle": false,
+  "live_cortex_xdr": false,
+  "frozen_transformer_modified": false,
+  "hcrl_fused": false,
+  "laboratory_generated": true,
+  "validation": {
+    "input_hmi_exists": true,
+    "input_connectivity_exists": true,
+    "three_connectivity_states": true,
+    "state_records_30": true,
+    "connected_states_10": true,
+    "disconnected_states_10": true,
+    "recovered_states_10": true,
+    "disconnect_local_buffer": true,
+    "disconnect_sync_deferred": true,
+    "disconnect_soc_deferred": true,
+    "recovery_queue": true,
+    "recovery_sync_ready": true,
+    "recovery_soc_ready": true,
+    "laboratory_only": true,
+    "no_physical_vehicle": true,
+    "no_direct_actuation": true
+  }
+}

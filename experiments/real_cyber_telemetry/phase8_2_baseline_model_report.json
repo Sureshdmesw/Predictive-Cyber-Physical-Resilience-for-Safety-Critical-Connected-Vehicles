@@ -1,0 +1,124 @@
+{
+  "phase": "8.2",
+  "name": "HCRL real cyber telemetry -- baseline RandomForest detection model",
+  "data_class": "REAL_DATA_BASELINE_MODEL",
+  "fused_with_main_pipeline": false,
+  "note": "This model is trained and evaluated independently of the project's existing frozen Transformer checkpoint. It is a detection baseline (Layer 3), not a prediction or fusion component.",
+  "split_method": "time-based, per source file, 70/30",
+  "model_hyperparameters": {
+    "n_estimators": 50,
+    "max_depth": 20,
+    "n_jobs": -1,
+    "random_state": 42
+  },
+  "train_rows": 11598631,
+  "test_rows": 4970844,
+  "classification_report": {
+    "DOS": {
+      "precision": 0.999810758385769,
+      "recall": 0.9985352485352486,
+      "f1-score": 0.9991725963925203,
+      "support": 21164.0
+    },
+    "FUZZY": {
+      "precision": 0.9969834087481146,
+      "recall": 0.9894525942472883,
+      "f1-score": 0.9932037263921959,
+      "support": 43423.0
+    },
+    "GEAR_SPOOFING": {
+      "precision": 0.0009758987853545476,
+      "recall": 0.0016223184669090487,
+      "f1-score": 0.0012186961039808925,
+      "support": 69037.0
+    },
+    "NORMAL": {
+      "precision": 0.984404354069313,
+      "recall": 0.9661958773120923,
+      "f1-score": 0.9752151293822617,
+      "support": 4754568.0
+    },
+    "RPM_SPOOFING": {
+      "precision": 0.1335297828673646,
+      "recall": 0.20230605429995643,
+      "f1-score": 0.1608755261575466,
+      "support": 82652.0
+    },
+    "accuracy": 0.9404388872392696,
+    "macro avg": {
+      "precision": 0.6231408405711831,
+      "recall": 0.631622418572299,
+      "f1-score": 0.625937134885701,
+      "support": 4970844.0
+    },
+    "weighted avg": {
+      "precision": 0.9567738040270763,
+      "recall": 0.9404388872392696,
+      "f1-score": 0.9484067173761327,
+      "support": 4970844.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "DOS",
+      "FUZZY",
+      "GEAR_SPOOFING",
+      "NORMAL",
+      "RPM_SPOOFING"
+    ],
+    "matrix": [
+      [
+        21133,
+        0,
+        0,
+        31,
+        0
+      ],
+      [
+        0,
+        42965,
+        0,
+        458,
+        0
+      ],
+      [
+        0,
+        0,
+        112,
+        6359,
+        62566
+      ],
+      [
+        4,
+        130,
+        114654,
+        4593844,
+        45936
+      ],
+      [
+        0,
+        0,
+        0,
+        65931,
+        16721
+      ]
+    ]
+  },
+  "binary_detection_metrics": {
+    "true_positives": 143497,
+    "false_positives": 160724,
+    "false_negatives": 72779,
+    "true_negatives": 4593844,
+    "true_positive_rate_recall": 0.6634901699680038,
+    "false_positive_rate": 0.033804122687907716,
+    "precision": 0.47168670144401603
+  },
+  "feature_importances": {
+    "delta_t": 0.5080792884369553,
+    "freq_1s": 0.38588765886538745,
+    "dlc": 0.0007104943634588398,
+    "hamming_dist": 0.10519688721017291,
+    "dlc_changed": 0.00012567112402550162
+  },
+  "model_path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\real_cyber_telemetry_baseline\\rf_baseline_model.joblib"
+}

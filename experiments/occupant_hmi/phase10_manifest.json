@@ -1,0 +1,16 @@
+﻿{
+  "phase": "10",
+  "name": "Occupant HMI",
+  "status": "PREPARATION_STARTED",
+  "baseline": "EXISTING_VALIDATED_CAN_HIL_AND_SAFETY_FEATURES",
+  "objective": "Develop and validate an occupant-facing safety and cyber-physical resilience HMI concept using existing validated laboratory signals.",
+  "physical_vehicle": false,
+  "direct_vehicle_actuation": false,
+  "external_can_bus": false,
+  "live_cortex_xdr": false,
+  "frozen_transformer_modified": false,
+  "hcrl_data_fused": false,
+  "production_hmi": false,
+  "evidence_boundary": "Separate from the frozen Transformer and Phase 9 CAN/HIL evidence chains.",
+  "next_validation": "Inspect existing occupant, restraint, airbag, connectivity, and safety-state assets before implementation."
+}

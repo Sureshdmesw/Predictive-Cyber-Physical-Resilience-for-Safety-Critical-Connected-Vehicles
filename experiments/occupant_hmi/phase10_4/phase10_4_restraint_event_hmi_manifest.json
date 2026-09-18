@@ -1,0 +1,44 @@
+{
+  "phase": "10.4",
+  "title": "Controlled Restraint-Domain Event HMI",
+  "status": "PASS",
+  "target_scenario": "C09_RESTRAINT_DOMAIN_ATTACK",
+  "input": "data\\processed\\occupant_hmi\\phase10_3\\phase10_3_connectivity_aware_hmi.csv",
+  "input_sha256": "e8a685bac864145d1b5d26c6f5eb010dc2ce60237185288bc7a4e7df2d46beca",
+  "output": "data\\processed\\occupant_hmi\\phase10_4\\phase10_4_restraint_event_hmi.csv",
+  "records": 3,
+  "event_states": [
+    "EVENT_OBSERVED",
+    "RESILIENCE_MODE",
+    "RECOVERY_READY"
+  ],
+  "connectivity_states": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "RECOVERED"
+  ],
+  "read_only": true,
+  "can_transmission": false,
+  "direct_vehicle_actuation": false,
+  "physical_vehicle": false,
+  "live_cortex_xdr": false,
+  "frozen_transformer_modified": false,
+  "hcrl_fused": false,
+  "laboratory_generated": true,
+  "validation": {
+    "target_scenario_present": true,
+    "connected_present": true,
+    "disconnected_present": true,
+    "recovered_present": true,
+    "event_observed": true,
+    "local_forensic_buffer": true,
+    "sync_deferred": true,
+    "soc_deferred": true,
+    "recovery_queue": true,
+    "sync_ready": true,
+    "soc_ready": true,
+    "laboratory_only": true,
+    "no_physical_vehicle": true,
+    "no_direct_actuation": true
+  }
+}

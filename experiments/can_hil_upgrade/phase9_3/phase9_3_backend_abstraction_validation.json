@@ -1,0 +1,35 @@
+{
+  "phase": "9.3",
+  "title": "CAN/HIL Backend Abstraction Validation",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-18T08:41:42.686894+00:00",
+  "virtual_backend": "VirtualCANBackend",
+  "hardware_backend": {
+    "type": "HardwareBackendDisabled",
+    "enabled": false,
+    "hardware_access_attempted": false
+  },
+  "received_frames": 3,
+  "checks": {
+    "virtual_backend_available": true,
+    "virtual_backend_enabled": true,
+    "hardware_backend_instantiated": true,
+    "hardware_backend_enabled": true,
+    "interface_backend_replaceable": true,
+    "frame_count_preserved": true,
+    "can_ids_preserved": true,
+    "payloads_preserved": true,
+    "physical_vehicle": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "hardware_access_attempted": false
+  },
+  "safety_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "hardware_backend_enabled": false,
+    "hardware_access_attempted": false
+  }
+}

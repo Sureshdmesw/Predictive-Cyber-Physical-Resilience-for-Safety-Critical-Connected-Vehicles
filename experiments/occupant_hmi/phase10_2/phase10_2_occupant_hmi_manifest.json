@@ -1,0 +1,21 @@
+{
+  "phase": "10.2",
+  "title": "Occupant HMI State Interpreter",
+  "status": "PASS",
+  "input": "data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.csv",
+  "input_sha256": "035182c423e666f385d6c57e094f2247913a5fdd468711ef50088f52ef5c47e5",
+  "output": "data\\processed\\occupant_hmi\\phase10_2\\phase10_2_occupant_hmi_states.csv",
+  "records_processed": 600,
+  "hmi_states": [
+    "NORMAL"
+  ],
+  "connectivity_state": "CONNECTED",
+  "read_only": true,
+  "can_transmission": false,
+  "direct_vehicle_actuation": false,
+  "physical_vehicle": false,
+  "live_cortex_xdr": false,
+  "frozen_transformer_modified": false,
+  "hcrl_fused": false,
+  "laboratory_generated": true
+}

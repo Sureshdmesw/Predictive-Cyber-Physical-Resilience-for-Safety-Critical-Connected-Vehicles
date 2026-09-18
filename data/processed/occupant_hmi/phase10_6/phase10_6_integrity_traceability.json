@@ -1,0 +1,86 @@
+{
+  "phase": "10.6",
+  "title": "HMI Integrity and Traceability Validation",
+  "status": "PASS",
+  "traceability_chain": [
+    "Phase 10.4 Controlled Restraint-Domain Event HMI",
+    "Phase 10.5 HMI Evidence Package",
+    "Phase 10.6 Integrity and Traceability Validation"
+  ],
+  "scenario_id": "C09_RESTRAINT_DOMAIN_ATTACK",
+  "phase10_4_input": "data\\processed\\occupant_hmi\\phase10_4\\phase10_4_restraint_event_hmi.csv",
+  "phase10_4_input_sha256": "f35ef1828d509d3d7c68c57600d71d89b6693f28d6e98161da59dc3bf6228d25",
+  "phase10_5_evidence": "data\\processed\\occupant_hmi\\phase10_5\\phase10_5_hmi_evidence_package.csv",
+  "phase10_5_evidence_sha256": "e17efd61d327b702a090f5f866ef982fa8d351158480db8b0d99720a12b1602f",
+  "phase10_5_summary": "data\\processed\\occupant_hmi\\phase10_5\\phase10_5_hmi_state_summary.json",
+  "phase10_5_summary_sha256": "c1f016e864db13a1643fa960eefa4527eca21a81fed1676d7378e256ab540400",
+  "phase10_4_manifest_status": "PASS",
+  "state_sequence": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "RECOVERED"
+  ],
+  "event_sequence": [
+    "EVENT_OBSERVED",
+    "RESILIENCE_MODE",
+    "RECOVERY_READY"
+  ],
+  "hmi_sequence": [
+    "SAFETY_EVENT_MONITORED",
+    "CONNECTIVITY_DEGRADED",
+    "RECOVERY_READY"
+  ],
+  "forensic_sequence": [
+    "CONNECTED_STREAM",
+    "LOCAL_FORENSIC_BUFFER",
+    "RECOVERY_QUEUE"
+  ],
+  "synchronization_sequence": [
+    "NOT_REQUIRED",
+    "DEFERRED",
+    "READY"
+  ],
+  "soc_handoff_sequence": [
+    "NOT_REQUIRED",
+    "DEFERRED",
+    "READY"
+  ],
+  "record_count": 3,
+  "safety_boundary": {
+    "read_only": true,
+    "can_transmission": false,
+    "direct_vehicle_actuation": false,
+    "physical_vehicle": false,
+    "live_cortex_xdr": false,
+    "frozen_transformer_modified": false,
+    "hcrl_fused": false,
+    "laboratory_generated": true
+  },
+  "validation": {
+    "phase10_4_input_exists": true,
+    "phase10_5_evidence_exists": true,
+    "phase10_5_summary_exists": true,
+    "phase10_4_manifest_exists": true,
+    "phase10_4_status_pass": true,
+    "phase10_4_record_count": true,
+    "phase10_5_record_count": true,
+    "state_sequence_preserved": true,
+    "event_sequence_preserved": true,
+    "hmi_sequence_preserved": true,
+    "forensic_sequence_preserved": true,
+    "sync_sequence_preserved": true,
+    "soc_sequence_preserved": true,
+    "phase10_4_to_10_5_traceable": true,
+    "summary_state_sequence_valid": true,
+    "summary_event_sequence_valid": true,
+    "summary_hmi_sequence_valid": true,
+    "summary_laboratory_only": true,
+    "summary_no_physical_vehicle": true,
+    "summary_no_direct_actuation": true,
+    "summary_no_can_transmission": true,
+    "summary_read_only": true,
+    "phase10_4_input_hash_valid": true,
+    "phase10_5_output_hash_valid": true,
+    "phase10_5_summary_hash_valid": true
+  }
+}

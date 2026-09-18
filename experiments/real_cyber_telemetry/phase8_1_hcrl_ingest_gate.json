@@ -1,0 +1,180 @@
+{
+  "phase": "8.1",
+  "name": "HCRL Car-Hacking real cyber telemetry ingest + gate (v2)",
+  "data_class": "REAL_CYBER_TELEMETRY_BASELINE",
+  "status": "PASS",
+  "summary": {
+    "pass": 26,
+    "fail": 0,
+    "total_checks": 26
+  },
+  "checks": [
+    {
+      "name": "file_present::DoS_dataset.csv",
+      "passed": true,
+      "detail": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\real_cyber_telemetry\\hcrl_car_hacking\\DoS_dataset.csv"
+    },
+    {
+      "name": "timestamp_monotonic::DoS_dataset.csv",
+      "passed": true,
+      "detail": "0 violations out of 3665771 rows (tolerance 1.0s)"
+    },
+    {
+      "name": "can_id_valid_hex::DoS_dataset.csv",
+      "passed": true,
+      "detail": "0 invalid CAN IDs out of 3665771 rows"
+    },
+    {
+      "name": "dlc_in_range::DoS_dataset.csv",
+      "passed": true,
+      "detail": "0 out-of-range/unparseable DLC values out of 3665771 rows"
+    },
+    {
+      "name": "row_width_matches_dlc::DoS_dataset.csv",
+      "passed": true,
+      "detail": "0 rows where column count didn't match 3+DLC+1, out of 3665771 rows"
+    },
+    {
+      "name": "flag_value_known::DoS_dataset.csv",
+      "passed": true,
+      "detail": "0 unrecognized flag values out of 3665771 rows"
+    },
+    {
+      "name": "file_present::Fuzzy_dataset.csv",
+      "passed": true,
+      "detail": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\real_cyber_telemetry\\hcrl_car_hacking\\Fuzzy_dataset.csv"
+    },
+    {
+      "name": "timestamp_monotonic::Fuzzy_dataset.csv",
+      "passed": true,
+      "detail": "0 violations out of 3838860 rows (tolerance 1.0s)"
+    },
+    {
+      "name": "can_id_valid_hex::Fuzzy_dataset.csv",
+      "passed": true,
+      "detail": "0 invalid CAN IDs out of 3838860 rows"
+    },
+    {
+      "name": "dlc_in_range::Fuzzy_dataset.csv",
+      "passed": true,
+      "detail": "0 out-of-range/unparseable DLC values out of 3838860 rows"
+    },
+    {
+      "name": "row_width_matches_dlc::Fuzzy_dataset.csv",
+      "passed": true,
+      "detail": "0 rows where column count didn't match 3+DLC+1, out of 3838860 rows"
+    },
+    {
+      "name": "flag_value_known::Fuzzy_dataset.csv",
+      "passed": true,
+      "detail": "0 unrecognized flag values out of 3838860 rows"
+    },
+    {
+      "name": "file_present::gear_dataset.csv",
+      "passed": true,
+      "detail": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\real_cyber_telemetry\\hcrl_car_hacking\\gear_dataset.csv"
+    },
+    {
+      "name": "timestamp_monotonic::gear_dataset.csv",
+      "passed": true,
+      "detail": "0 violations out of 4443142 rows (tolerance 1.0s)"
+    },
+    {
+      "name": "can_id_valid_hex::gear_dataset.csv",
+      "passed": true,
+      "detail": "0 invalid CAN IDs out of 4443142 rows"
+    },
+    {
+      "name": "dlc_in_range::gear_dataset.csv",
+      "passed": true,
+      "detail": "0 out-of-range/unparseable DLC values out of 4443142 rows"
+    },
+    {
+      "name": "row_width_matches_dlc::gear_dataset.csv",
+      "passed": true,
+      "detail": "0 rows where column count didn't match 3+DLC+1, out of 4443142 rows"
+    },
+    {
+      "name": "flag_value_known::gear_dataset.csv",
+      "passed": true,
+      "detail": "0 unrecognized flag values out of 4443142 rows"
+    },
+    {
+      "name": "file_present::RPM_dataset.csv",
+      "passed": true,
+      "detail": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\real_cyber_telemetry\\hcrl_car_hacking\\RPM_dataset.csv"
+    },
+    {
+      "name": "timestamp_monotonic::RPM_dataset.csv",
+      "passed": true,
+      "detail": "0 violations out of 4621702 rows (tolerance 1.0s)"
+    },
+    {
+      "name": "can_id_valid_hex::RPM_dataset.csv",
+      "passed": true,
+      "detail": "0 invalid CAN IDs out of 4621702 rows"
+    },
+    {
+      "name": "dlc_in_range::RPM_dataset.csv",
+      "passed": true,
+      "detail": "0 out-of-range/unparseable DLC values out of 4621702 rows"
+    },
+    {
+      "name": "row_width_matches_dlc::RPM_dataset.csv",
+      "passed": true,
+      "detail": "0 rows where column count didn't match 3+DLC+1, out of 4621702 rows"
+    },
+    {
+      "name": "flag_value_known::RPM_dataset.csv",
+      "passed": true,
+      "detail": "0 unrecognized flag values out of 4621702 rows"
+    },
+    {
+      "name": "no_exact_duplicate_rows",
+      "passed": true,
+      "detail": "0 exact-duplicate rows detected across all files"
+    },
+    {
+      "name": "at_least_one_file_ingested",
+      "passed": true,
+      "detail": "no source file was successfully ingested"
+    }
+  ],
+  "per_file_summary": {
+    "DoS_dataset.csv": {
+      "status": "INGESTED",
+      "row_count": 3665771,
+      "label_counts": {
+        "NORMAL": 3078250,
+        "DOS": 587521
+      }
+    },
+    "Fuzzy_dataset.csv": {
+      "status": "INGESTED",
+      "row_count": 3838860,
+      "label_counts": {
+        "NORMAL": 3347013,
+        "FUZZY": 491847
+      }
+    },
+    "gear_dataset.csv": {
+      "status": "INGESTED",
+      "row_count": 4443142,
+      "label_counts": {
+        "NORMAL": 3845890,
+        "GEAR_SPOOFING": 597252
+      }
+    },
+    "RPM_dataset.csv": {
+      "status": "INGESTED",
+      "row_count": 4621702,
+      "label_counts": {
+        "NORMAL": 3966805,
+        "RPM_SPOOFING": 654897
+      }
+    }
+  },
+  "canonical_row_count": 16569475,
+  "canonical_output": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\processed\\real_cyber_telemetry\\hcrl_car_hacking\\hcrl_canonical.csv",
+  "note": "This is a real, labeled dataset (not synthetic). Do not merge canonical_output with any SYNTHETIC-tagged telemetry file without an explicit, separately-reviewed fusion step."
+}

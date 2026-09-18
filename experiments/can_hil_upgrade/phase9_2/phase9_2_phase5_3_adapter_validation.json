@@ -1,0 +1,34 @@
+{
+  "phase": "9.2",
+  "title": "Phase 5.3 Virtual CAN Laboratory Adapter Validation",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-18T08:40:21.999558+00:00",
+  "source_artifact": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\data\\raw\\can_hil\\phase5_3\\virtual_ev_can_normal.csv",
+  "source_sha256": "035182C423E666F385D6C57E094F2247913A5FDD468711EF50088F52EF5C47E5",
+  "expected_source_sha256": "035182C423E666F385D6C57E094F2247913A5FDD468711EF50088F52EF5C47E5",
+  "source_records": 9000,
+  "received_frames": 9000,
+  "backend": "VirtualCANBackend",
+  "checks": {
+    "source_exists": true,
+    "source_sha256_preserved": true,
+    "source_record_count": true,
+    "received_record_count": true,
+    "frame_count_preserved": true,
+    "can_ids_preserved": true,
+    "dlc_preserved": true,
+    "payloads_preserved": true,
+    "timestamps_preserved": true,
+    "physical_vehicle": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "hardware_backend_enabled": false
+  },
+  "safety_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "hardware_backend_enabled": false
+  }
+}

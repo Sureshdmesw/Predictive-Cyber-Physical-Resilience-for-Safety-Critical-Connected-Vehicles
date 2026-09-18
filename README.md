@@ -1242,3 +1242,182 @@ All conclusions must remain bounded by the datasets, experimental scenarios, mod
 <!-- FINAL_RESEARCH_RELEASE_END -->
 
 
+
+---
+
+# Post-Release Research: Phase 8 — Real Cyber Telemetry
+
+**Status: Evidence milestone documented 2026-09-18**
+
+This addendum documents work undertaken after the Final Research Release
+(2026-09-15 onward). It does not modify, retract, or supersede any claim
+in the finalized release. It extends the project into real-data territory
+that the release explicitly listed as future work.
+
+## Phase 8.1 — Real Cyber Telemetry Ingestion
+
+**Status: PASS — 26/26 integrity checks.**
+
+- Dataset: HCRL Car-Hacking Dataset
+- Vehicle: Hyundai YF Sonata
+- Real CAN frames ingested: **16,569,475**
+- Data class: `REAL_CYBER_TELEMETRY_BASELINE`
+- Code:
+  `scripts/real_cyber_telemetry/phase8_1_hcrl_car_hacking_ingest_and_gate.py`
+- Evidence:
+  `experiments/real_cyber_telemetry/phase8_1_hcrl_ingest_gate.json`
+
+The real telemetry remains separate from the project's synthetic
+cyber-physical telemetry. No implicit fusion is performed.
+
+## Phase 8.2 — Baseline Detection Model
+
+**Status: COMPLETED — 2026-09-16**
+
+A Random Forest baseline was evaluated using a time-based 70/30 split and
+standard CAN-IDS timing/payload features without CAN ID.
+
+Key results:
+
+| Metric | Result |
+|---|---:|
+| GEAR_SPOOFING F1 | 0.0012 |
+| RPM_SPOOFING F1 | 0.1609 |
+| Binary TPR | 0.6635 |
+| Binary FPR | 0.0338 |
+
+The principal diagnosed failure was GEAR_SPOOFING being classified as
+RPM_SPOOFING in **62,566 of 69,037 cases (90.6%)**.
+
+CAN ID was not provided to the model, preventing direct identification of
+the specific arbitration ID associated with the spoofing behavior.
+
+Code:
+
+`scripts/real_cyber_telemetry/phase8_2_hcrl_feature_baseline_model.py`
+
+Evidence:
+
+`experiments/real_cyber_telemetry/phase8_2_baseline_model_report.json`
+
+## Phase 8.3 — CAN-ID-Aware Detection Model
+
+**Status: COMPLETED — 2026-09-18**
+
+Phase 8.3 retained the Phase 8.2 model configuration and time-based split,
+while adding CAN ID as a feature.
+
+The real dataset contains 2,048 distinct CAN IDs. An unrestricted one-hot
+representation was therefore not retained. The implemented model uses
+the top 30 training IDs individually plus an `OTHER` bucket.
+
+### Verified targeted result
+
+The specific GEAR↔RPM crossover identified in Phase 8.2 was eliminated in
+both directions:
+
+- GEAR_SPOOFING → RPM_SPOOFING: **0**
+- RPM_SPOOFING → GEAR_SPOOFING: **0**
+
+This was confirmed directly from the Phase 8.3 confusion matrix.
+
+### Phase 8.2 vs Phase 8.3
+
+| Metric | Phase 8.2 | Phase 8.3 |
+|---|---:|---:|
+| GEAR_SPOOFING F1 | 0.0012 | **0.8403** |
+| RPM_SPOOFING F1 | 0.1609 | **0.7651** |
+| Binary TPR | 0.6635 | **0.9019** |
+| Binary FPR | 0.0338 | **0.0101** |
+| Binary precision | 0.4717 | **0.8023** |
+| Overall accuracy | 94.04% | **98.61%** |
+
+### Residual errors
+
+Phase 8.3 does not eliminate all errors.
+
+**GEAR_SPOOFING recall gap**
+
+- 18,838 GEAR_SPOOFING samples were classified as NORMAL.
+- This represents approximately **27.3%** of the GEAR_SPOOFING test
+  support.
+
+**RPM_SPOOFING precision gap**
+
+- 47,747 NORMAL samples were classified as RPM_SPOOFING.
+- This is the largest individual error component in the Phase 8.3
+  confusion matrix.
+
+The possible explanation that legitimate RPM variability contributes to
+this error is currently a hypothesis and has not been independently
+verified using decoded physical RPM values.
+
+Code:
+
+`scripts/real_cyber_telemetry/phase8_3_hcrl_can_id_feature_model.py`
+
+Evidence:
+
+`experiments/real_cyber_telemetry/phase8_3_canid_feature_model_report.json`
+
+Model:
+
+`models/real_cyber_telemetry_baseline/rf_v2_canid_model.joblib`
+
+## Phase 8.4 — Future Work
+
+**Status: DEFERRED — NOT STARTED**
+
+Two candidate directions have been identified:
+
+1. Per-CAN-ID rolling statistical baseline features.
+2. Physical signal decoding using a verified DBC file for RPM/gear
+   plausibility analysis.
+
+DBC availability and accuracy for the exact HCRL capture remain
+unverified.
+
+## Experimental Boundary
+
+Phase 8 remains an independent real-cyber-telemetry detection track.
+
+It does not:
+
+- modify the frozen Transformer checkpoint
+- retrain the frozen Transformer checkpoint
+- merge real telemetry with the existing synthetic telemetry
+- claim validation of the project's cyber-physical prediction model
+- establish cross-vehicle generalization
+- establish production-vehicle safety validation
+
+Any future fusion with the existing 59-dimensional vehicle-state schema
+must be treated as a separate experiment with its own methodology,
+controls, metrics, and evidence artifacts.
+
+## Not Yet Implemented
+
+The following remain outside the implemented Phase 8 track:
+
+- Feature-level fusion with the existing 59-dimensional vehicle-state
+  schema
+- Occupant HMI alert implementation
+- V2X external communication implementation
+- ISO 26262 / ISO/SAE 21434 mapping for this real-data track
+- Physical CAN/HIL hardware bench
+
+The current Phase 8 evidence therefore represents a completed
+real-data **detection baseline through Phase 8.3**, not a completed
+cyber-physical integration.
+
+## Phase 8 Decision
+
+**Phase 8.1: PASS**
+
+**Phase 8.2: COMPLETE**
+
+**Phase 8.3: COMPLETE**
+
+**Phase 8.4: DEFERRED**
+
+The project will not proceed automatically into Phase 8.4. Further
+refinement should begin only if required by a specific research question.

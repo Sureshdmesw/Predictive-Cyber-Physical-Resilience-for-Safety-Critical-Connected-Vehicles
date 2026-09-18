@@ -1,0 +1,30 @@
+{
+  "phase": "9",
+  "name": "CAN/HIL Upgrade",
+  "status": "VALIDATED_VIRTUAL_INTERFACE",
+  "baseline": "EXISTING_VIRTUAL_CAN_HIL_LABORATORY",
+  "physical_hardware_integration": false,
+  "frozen_transformer_modified": false,
+  "hcrl_data_fused": false,
+  "objective": "Establish a hardware-independent CAN/HIL abstraction boundary while preserving the validated virtual laboratory.",
+  "evidence_boundary": "Separate from the frozen Transformer evidence chain.",
+  "next_validation": "Define controlled future hardware-backend integration boundary without enabling physical vehicle access.",
+  "completed_validations": [
+    "9.1_HARDWARE_INDEPENDENT_INTERFACE",
+    "9.2_PHASE5_3_FRAME_FIDELITY",
+    "9.3_BACKEND_ABSTRACTION"
+  ],
+  "validation_status": {
+    "phase9_1": "PASS",
+    "phase9_2": "PASS",
+    "phase9_3": "PASS"
+  },
+  "evidence_artifacts": [
+    "experiments/can_hil_upgrade/phase9_1/phase9_1_virtual_backend_validation.json",
+    "experiments/can_hil_upgrade/phase9_2/phase9_2_phase5_3_adapter_validation.json",
+    "experiments/can_hil_upgrade/phase9_3/phase9_3_backend_abstraction_validation.json"
+  ],
+  "external_can_bus": false,
+  "direct_vehicle_actuation": false,
+  "last_validated_utc": "2026-09-18T08:42:54.970349+00:00"
+}

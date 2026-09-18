@@ -1,0 +1,54 @@
+{
+  "phase": "9.1",
+  "title": "Hardware-Independent CAN/HIL Interface Validation",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-18T08:34:14.399304+00:00",
+  "backend": "VirtualCANBackend",
+  "received_frames": [
+    {
+      "timestamp_s": 0.0,
+      "can_id": 256,
+      "dlc": 8,
+      "data_hex": "0102030405060708"
+    },
+    {
+      "timestamp_s": 0.05,
+      "can_id": 257,
+      "dlc": 8,
+      "data_hex": "1112131415161718"
+    },
+    {
+      "timestamp_s": 0.1,
+      "can_id": 262,
+      "dlc": 8,
+      "data_hex": "2122232425262728"
+    },
+    {
+      "timestamp_s": 0.15,
+      "can_id": 267,
+      "dlc": 8,
+      "data_hex": "3132333435363738"
+    }
+  ],
+  "checks": {
+    "interface_created": true,
+    "frames_transmitted": 4,
+    "frames_received": 4,
+    "frame_count_preserved": true,
+    "can_ids_preserved": true,
+    "payloads_preserved": true,
+    "all_dlc_8": true,
+    "physical_vehicle": false,
+    "direct_vehicle_actuation": false,
+    "external_can_bus": false,
+    "hardware_backend_enabled": false
+  },
+  "evidence_digest": "9b5763095aaa228092834e58c3e156a6aa34b49c3970238dd76e72d129e57ce4",
+  "safety_boundary": {
+    "laboratory_simulation": true,
+    "physical_vehicle": false,
+    "external_can_bus": false,
+    "direct_vehicle_actuation": false,
+    "hardware_backend_enabled": false
+  }
+}

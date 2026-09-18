@@ -59,3 +59,13 @@ Cortex_XDR_Occupant.docx
 *.log
 *.tmp
 *.bak
+
+# ============================================================
+# Large HCRL real cyber telemetry datasets
+# Keep locally; repository tracks scripts, schemas, manifests,
+# documentation, and compact evidence summaries.
+# ============================================================
+data/processed/real_cyber_telemetry/hcrl_car_hacking/*.csv
+
+# Large generated HCRL baseline model
+models/real_cyber_telemetry_baseline/rf_baseline_model.joblib

@@ -1,0 +1,39 @@
+{
+  "scenario_id": "C09_RESTRAINT_DOMAIN_ATTACK",
+  "state_sequence": [
+    "CONNECTED",
+    "DISCONNECTED",
+    "RECOVERED"
+  ],
+  "event_sequence": [
+    "EVENT_OBSERVED",
+    "RESILIENCE_MODE",
+    "RECOVERY_READY"
+  ],
+  "hmi_sequence": [
+    "SAFETY_EVENT_MONITORED",
+    "CONNECTIVITY_DEGRADED",
+    "RECOVERY_READY"
+  ],
+  "forensic_sequence": [
+    "CONNECTED_STREAM",
+    "LOCAL_FORENSIC_BUFFER",
+    "RECOVERY_QUEUE"
+  ],
+  "synchronization_sequence": [
+    "NOT_REQUIRED",
+    "DEFERRED",
+    "READY"
+  ],
+  "soc_handoff_sequence": [
+    "NOT_REQUIRED",
+    "DEFERRED",
+    "READY"
+  ],
+  "evidence_records": 3,
+  "laboratory_generated": true,
+  "physical_vehicle": false,
+  "direct_actuation": false,
+  "can_transmission": false,
+  "read_only": true
+}

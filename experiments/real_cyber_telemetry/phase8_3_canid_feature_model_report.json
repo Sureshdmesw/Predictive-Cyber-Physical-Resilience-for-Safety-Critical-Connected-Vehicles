@@ -1,0 +1,142 @@
+{
+  "phase": "8.3",
+  "name": "HCRL real cyber telemetry -- CAN-ID-aware detection model",
+  "data_class": "REAL_DATA_BASELINE_MODEL",
+  "fused_with_main_pipeline": false,
+  "hypothesis": "Phase 8.2's GEAR/RPM confusion was caused by omitting CAN ID from the feature set. Adding it as a one-hot feature should improve GEAR_SPOOFING and RPM_SPOOFING detection without requiring any new data source.",
+  "model_hyperparameters": {
+    "n_estimators": 50,
+    "max_depth": 20,
+    "n_jobs": -1,
+    "random_state": 42
+  },
+  "train_rows": 11598631,
+  "test_rows": 4970844,
+  "num_can_id_categories": 31,
+  "can_id_other_fraction_train": 0.03809078847322585,
+  "can_id_other_fraction_test": 0.008601758574600209,
+  "classification_report": {
+    "DOS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 21164.0
+    },
+    "FUZZY": {
+      "precision": 0.998441026595621,
+      "recall": 0.9881859843861548,
+      "f1-score": 0.993287037037037,
+      "support": 43423.0
+    },
+    "GEAR_SPOOFING": {
+      "precision": 0.9952220459952419,
+      "recall": 0.7271318278604226,
+      "f1-score": 0.8403123613749927,
+      "support": 69037.0
+    },
+    "NORMAL": {
+      "precision": 0.9955122225677017,
+      "recall": 0.9898928777546141,
+      "f1-score": 0.9926945978706849,
+      "support": 4754568.0
+    },
+    "RPM_SPOOFING": {
+      "precision": 0.6285234142204725,
+      "recall": 0.9774234138314862,
+      "f1-score": 0.7650732769846343,
+      "support": 82652.0
+    },
+    "accuracy": 0.9860643383699026,
+    "macro avg": {
+      "precision": 0.9235397418758075,
+      "recall": 0.9365268207665356,
+      "f1-score": 0.9182734546534699,
+      "support": 4970844.0
+    },
+    "weighted avg": {
+      "precision": 0.9894508303516785,
+      "recall": 0.9860643383699026,
+      "f1-score": 0.9868297924456422,
+      "support": 4970844.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "DOS",
+      "FUZZY",
+      "GEAR_SPOOFING",
+      "NORMAL",
+      "RPM_SPOOFING"
+    ],
+    "matrix": [
+      [
+        21164,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        42910,
+        0,
+        513,
+        0
+      ],
+      [
+        0,
+        0,
+        50199,
+        18838,
+        0
+      ],
+      [
+        0,
+        67,
+        241,
+        4706513,
+        47747
+      ],
+      [
+        0,
+        0,
+        0,
+        1866,
+        80786
+      ]
+    ]
+  },
+  "binary_detection_metrics": {
+    "true_positives": 195059,
+    "false_positives": 48055,
+    "false_negatives": 21217,
+    "true_negatives": 4706513,
+    "true_positive_rate_recall": 0.9018985000647322,
+    "false_positive_rate": 0.010107122245385911,
+    "precision": 0.8023355298337406
+  },
+  "comparison_vs_phase_8_2": {
+    "phase_8_2_baseline": {
+      "run_date": "2026-09-16",
+      "f1_gear_spoofing": 0.0012,
+      "f1_rpm_spoofing": 0.1609,
+      "binary_tpr": 0.6634901699680038,
+      "binary_fpr": 0.033804122687907716,
+      "binary_precision": 0.47168670144401603
+    },
+    "phase_8_3_result": {
+      "f1_gear_spoofing": 0.8403123613749927,
+      "f1_rpm_spoofing": 0.7650732769846343,
+      "binary_tpr": 0.9018985000647322,
+      "binary_fpr": 0.010107122245385911,
+      "binary_precision": 0.8023355298337406
+    },
+    "delta": {
+      "f1_gear_spoofing": 0.8391123613749927,
+      "f1_rpm_spoofing": 0.6041732769846344,
+      "binary_tpr": 0.23840833009672835,
+      "binary_fpr": -0.023697000442521807
+    }
+  },
+  "model_path": "E:\\Predictive Cyber-Physical Resilience for Safety-Critical Connected Vehicles\\models\\real_cyber_telemetry_baseline\\rf_v2_canid_model.joblib"
+}
